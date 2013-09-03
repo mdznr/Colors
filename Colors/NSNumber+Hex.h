@@ -1,5 +1,5 @@
 //
-//  NSNumber+numberWithHex.h
+//  NSNumber+Hex.h
 //  Colors
 //
 //  Created by Matt on 9/2/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSNumber (numberWithHex)
+@interface NSNumber (Hex)
 
 + (NSNumber *)numberWithHex:(NSString *)hexString;
 

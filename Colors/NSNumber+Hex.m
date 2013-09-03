@@ -1,14 +1,14 @@
 //
-//  NSNumber+numberWithHex.m
+//  NSNumber+Hex.m
 //  Colors
 //
 //  Created by Matt on 9/2/13.
 //  Copyright (c) 2013 Matt Zanchelli. All rights reserved.
 //
 
-#import "NSNumber+numberWithHex.h"
+#import "NSNumber+Hex.h"
 
-@implementation NSNumber (numberWithHex)
+@implementation NSNumber (Hex)
 
 NSUInteger integerFromHexCharacter(unichar hexCharacter)
 {

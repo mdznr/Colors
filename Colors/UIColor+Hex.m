@@ -7,7 +7,7 @@
 //
 
 #import "UIColor+Hex.h"
-#import "NSNumber+numberWithHex.h"
+#import "NSNumber+Hex.h"
 
 @implementation UIColor (Hex)
 
@@ -47,6 +47,12 @@
 						   green:green.floatValue/255.0f
 							blue: blue.floatValue/255.0f
 						   alpha:1.0f];
+}
+
+- (NSString *)hexString
+{
+#warning TODO: get r,g,b convert back to hex.
+	return nil;
 }
 
 @end
