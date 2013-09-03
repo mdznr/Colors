@@ -22,6 +22,9 @@
 		C926219F17D51C250095AE1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217E17D51C250095AE1C /* UIKit.framework */; };
 		C92621A717D51C250095AE1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92621A517D51C250095AE1C /* InfoPlist.strings */; };
 		C92621A917D51C250095AE1C /* ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92621A817D51C250095AE1C /* ColorsTests.m */; };
+		C92621B417D51C4F0095AE1C /* UIColor+NeueColors.m in Sources */ = {isa = PBXBuildFile; fileRef = C92621B317D51C4F0095AE1C /* UIColor+NeueColors.m */; };
+		C92621B717D522080095AE1C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C92621B617D522080095AE1C /* UIColor+Hex.m */; };
+		C92621BD17D528550095AE1C /* NSNumber+numberWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = C92621BC17D528550095AE1C /* NSNumber+numberWithHex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,12 @@
 		C92621A417D51C250095AE1C /* ColorsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorsTests-Info.plist"; sourceTree = "<group>"; };
 		C92621A617D51C250095AE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C92621A817D51C250095AE1C /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
+		C92621B217D51C4F0095AE1C /* UIColor+NeueColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NeueColors.h"; sourceTree = "<group>"; };
+		C92621B317D51C4F0095AE1C /* UIColor+NeueColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NeueColors.m"; sourceTree = "<group>"; };
+		C92621B517D522080095AE1C /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		C92621B617D522080095AE1C /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		C92621BB17D528550095AE1C /* NSNumber+numberWithHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+numberWithHex.h"; sourceTree = "<group>"; };
+		C92621BC17D528550095AE1C /* NSNumber+numberWithHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+numberWithHex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +129,12 @@
 				C926218F17D51C250095AE1C /* Main_iPad.storyboard */,
 				C926219217D51C250095AE1C /* MTZViewController.h */,
 				C926219317D51C250095AE1C /* MTZViewController.m */,
+				C92621B217D51C4F0095AE1C /* UIColor+NeueColors.h */,
+				C92621B317D51C4F0095AE1C /* UIColor+NeueColors.m */,
+				C92621B517D522080095AE1C /* UIColor+Hex.h */,
+				C92621B617D522080095AE1C /* UIColor+Hex.m */,
+				C92621BB17D528550095AE1C /* NSNumber+numberWithHex.h */,
+				C92621BC17D528550095AE1C /* NSNumber+numberWithHex.m */,
 				C926219517D51C250095AE1C /* Images.xcassets */,
 				C926218117D51C250095AE1C /* Supporting Files */,
 			);
@@ -203,6 +218,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Matt Zanchelli";
 				TargetAttributes = {
+					C926217617D51C250095AE1C = {
+						DevelopmentTeam = 3SZ7MS7NXC;
+					};
 					C926219A17D51C250095AE1C = {
 						TestTargetID = C926217617D51C250095AE1C;
 					};
@@ -255,8 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C926218B17D51C250095AE1C /* MTZAppDelegate.m in Sources */,
+				C92621B717D522080095AE1C /* UIColor+Hex.m in Sources */,
 				C926218717D51C250095AE1C /* main.m in Sources */,
+				C92621B417D51C4F0095AE1C /* UIColor+NeueColors.m in Sources */,
 				C926219417D51C250095AE1C /* MTZViewController.m in Sources */,
+				C92621BD17D528550095AE1C /* NSNumber+numberWithHex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,9 +410,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colors/Colors-Prefix.pch";
 				INFOPLIST_FILE = "Colors/Colors-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -402,9 +425,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colors/Colors-Prefix.pch";
 				INFOPLIST_FILE = "Colors/Colors-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -469,6 +494,7 @@
 				C92621AE17D51C250095AE1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C92621AF17D51C250095AE1C /* Build configuration list for PBXNativeTarget "ColorsTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +503,7 @@
 				C92621B117D51C250095AE1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
