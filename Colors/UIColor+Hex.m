@@ -7,6 +7,7 @@
 //
 
 #import "UIColor+Hex.h"
+#import "UIColor+Components.h"
 #import "NSNumber+Hex.h"
 
 @implementation UIColor (Hex)
@@ -51,8 +52,18 @@
 
 - (NSString *)hexString
 {
-#warning TODO: get r,g,b convert back to hex.
-	return nil;
+#warning what about rounding issues? Over time? Store original values?
+#warning is round() the correct function?
+	NSInteger red   = round(self.redComponent   * 255);
+	NSInteger green = round(self.greenComponent * 255);
+	NSInteger blue  = round(self.blueComponent  * 255);
+	
+	NSString *r = [NSNumber hexStringWith];
+	NSString *g = [];
+	NSString *b = [];
+#warning convert back to hex
+	NSString *hexString = [NSString stringWithFormat:@"%@%@%@", r,g,b];
+	return hexString;
 }
 
 @end

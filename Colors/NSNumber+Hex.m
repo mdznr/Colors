@@ -10,7 +10,7 @@
 
 @implementation NSNumber (Hex)
 
-NSUInteger integerFromHexCharacter(unichar hexCharacter)
+NSInteger integerFromHexCharacter(unichar hexCharacter)
 {
 	switch (hexCharacter) {
 		case '0':
@@ -93,13 +93,25 @@ NSUInteger integerFromHexCharacter(unichar hexCharacter)
 		return nil;
 	}
 	
-	NSUInteger runningTotal = 0;
+	NSInteger runningTotal = 0;
 	for ( NSUInteger i=0; i<hexString.length; ++i ) {
 		unichar hexCharacter = [hexString characterAtIndex:i];
 		runningTotal *= (i*16);
 		runningTotal += integerFromHexCharacter(hexCharacter);
 	}
-	return [NSNumber numberWithUnsignedInteger:runningTotal];
+	return [NSNumber numberWithInt:runningTotal];
+}
+
+
+- (NSString *)hexString
+{
+	NSUInteger runningInt = [self integerValue];
+	while ( runningInt > 0 ) {
+		NSUInteger digit = runningInt / 16;
+		unichar character = hexCharacterForInteger(digit);
+	}
+	return [NSString stringWithFormat:<#(NSString *), ...#>];
+	// Could create new strings for each character appending, or just have an array of characters, then create the nsstring that way.
 }
 
 @end

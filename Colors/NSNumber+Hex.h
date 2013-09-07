@@ -12,4 +12,6 @@
 
 + (NSNumber *)numberWithHex:(NSString *)hexString;
 
+- (NSString *)hexString;
+
 @end
