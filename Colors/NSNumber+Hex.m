@@ -13,63 +13,52 @@
 NSInteger integerFromHexCharacter(unichar hexCharacter)
 {
 	switch (hexCharacter) {
-		case '0':
-			return 0;
-			break;
-		case '1':
-			return 1;
-			break;
-		case '2':
-			return 2;
-			break;
-		case '3':
-			return 3;
-			break;
-		case '4':
-			return 4;
-			break;
-		case '5':
-			return 5;
-			break;
-		case '6':
-			return 6;
-			break;
-		case '7':
-			return 7;
-			break;
-		case '8':
-			return 8;
-			break;
-		case '9':
-			return 9;
-			break;
+		case '0': return 0;
+		case '1': return 1;
+		case '2': return 2;
+		case '3': return 3;
+		case '4': return 4;
+		case '5': return 5;
+		case '6': return 6;
+		case '7': return 7;
+		case '8': return 8;
+		case '9': return 9;
 		case 'a':
-		case 'A':
-			return 10;
-			break;
+		case 'A': return 10;
 		case 'b':
-		case 'B':
-			return 11;
-			break;
+		case 'B': return 11;
 		case 'c':
-		case 'C':
-			return 12;
-			break;
+		case 'C': return 12;
 		case 'd':
-		case 'D':
-			return 13;
-			break;
+		case 'D': return 13;
 		case 'e':
-		case 'E':
-			return 14;
-			break;
+		case 'E': return 14;
 		case 'f':
-		case 'F':
-			return 15;
-			break;
-		default:
-			return 0;
-			break;
+		case 'F': return 15;
+		default: return 0;
+	}
+}
+
+unichar hexCharacterForInteger(NSInteger integer)
+{
+	switch (integer) {
+		case 0:  return '0';
+		case 1:  return '1';
+		case 2:  return '2';
+		case 3:  return '3';
+		case 4:  return '4';
+		case 5:  return '5';
+		case 6:  return '6';
+		case 7:  return '7';
+		case 8:  return '8';
+		case 9:  return '9';
+		case 10: return 'A';
+		case 11: return 'B';
+		case 12: return 'C';
+		case 13: return 'D';
+		case 14: return 'E';
+		case 15: return 'F';
+		default: return 0;
 	}
 }
 
@@ -106,11 +95,13 @@ NSInteger integerFromHexCharacter(unichar hexCharacter)
 - (NSString *)hexString
 {
 	NSUInteger runningInt = [self integerValue];
+	NSString *runningString = @"";
 	while ( runningInt > 0 ) {
 		NSUInteger digit = runningInt / 16;
 		unichar character = hexCharacterForInteger(digit);
+		runningString = [runningString stringByAppendingFormat:@"%hu", character];
 	}
-	return [NSString stringWithFormat:<#(NSString *), ...#>];
+	return runningString;
 	// Could create new strings for each character appending, or just have an array of characters, then create the nsstring that way.
 }
 

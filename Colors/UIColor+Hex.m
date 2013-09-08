@@ -54,14 +54,13 @@
 {
 #warning what about rounding issues? Over time? Store original values?
 #warning is round() the correct function?
-	NSInteger red   = round(self.redComponent   * 255);
-	NSInteger green = round(self.greenComponent * 255);
-	NSInteger blue  = round(self.blueComponent  * 255);
+	NSNumber *red   = [NSNumber numberWithInteger:round(self.redComponent   * 255)];
+	NSNumber *green = [NSNumber numberWithInteger:round(self.greenComponent * 255)];
+	NSNumber *blue  = [NSNumber numberWithInteger:round(self.blueComponent  * 255)];
 	
-	NSString *r = [NSNumber hexStringWith];
-	NSString *g = [];
-	NSString *b = [];
-#warning convert back to hex
+	NSString *r = [red hexString];
+	NSString *g = [green hexString];
+	NSString *b = [blue hexString];
 	NSString *hexString = [NSString stringWithFormat:@"%@%@%@", r,g,b];
 	return hexString;
 }
