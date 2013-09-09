@@ -52,16 +52,16 @@
 
 - (NSString *)hexString
 {
-#warning what about rounding issues? Over time? Store original values?
-#warning is round() the correct function?
-	NSNumber *red   = [NSNumber numberWithInteger:round(self.redComponent   * 255)];
-	NSNumber *green = [NSNumber numberWithInteger:round(self.greenComponent * 255)];
-	NSNumber *blue  = [NSNumber numberWithInteger:round(self.blueComponent  * 255)];
+	CGFloat red = 0.0, green = 0.0, blue = 0.0, alpha = 0.0;
+	[self getRed:&red green:&green blue:&blue alpha:&alpha];
 	
-	NSString *r = [red hexString];
-	NSString *g = [green hexString];
-	NSString *b = [blue hexString];
-	NSString *hexString = [NSString stringWithFormat:@"%@%@%@", r,g,b];
+	NSNumber *r = [NSNumber numberWithFloat:red   * 255];
+	NSNumber *g = [NSNumber numberWithFloat:green * 255];
+	NSNumber *b = [NSNumber numberWithFloat:blue  * 255];
+	
+	NSString *hexString = [NSString stringWithFormat:@"%@%@%@", [r hexString],
+															    [g hexString],
+															    [b hexString]];
 	return hexString;
 }
 
