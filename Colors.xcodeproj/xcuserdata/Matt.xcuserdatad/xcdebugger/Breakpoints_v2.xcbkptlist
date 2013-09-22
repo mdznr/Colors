@@ -9,14 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Colors/MTZViewController.m"
-            timestampString = "400302849.663519"
+            filePath = "Colors/UIColor+Hex.m"
+            timestampString = "400381457.644355"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "@implementation UIColor(Hex)"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

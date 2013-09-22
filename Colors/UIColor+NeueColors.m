@@ -11,6 +11,8 @@
 
 @implementation UIColor (NeueColors)
 
+#pragma mark iOS 7 UI Colors
+
 // #FF3B30
 + (UIColor *)neueRed
 {
@@ -69,6 +71,60 @@
 + (UIColor *)neueLightGray
 {
 	return [UIColor colorWithHex:@"C7C7CC"];
+}
+
+
+#pragma mark iPhone 5c Colors
+
+// #46ABE0
++ (UIColor *)cBlue
+{
+	return [UIColor colorWithHex:@"46ABE0"];
+}
+
+// #A1E877
++ (UIColor *)cGreen
+{
+	return [UIColor colorWithHex:@"A1E877"];
+}
+
+// #F5F4F7
++ (UIColor *)cWhite
+{
+	return [UIColor colorWithHex:@"F5F4F7"];
+}
+
+// #FAF189
++ (UIColor *)cYellow
+{
+	return [UIColor colorWithHex:@"FAF189"];
+}
+
+// #FE767A
++ (UIColor *)cPink
+{
+	return [UIColor colorWithHex:@"FE767A"];
+}
+
+
+#pragma mark iPhone 5s Colors
+
+// #99989B
++ (UIColor *)sSpaceGray
+{
+	return [UIColor colorWithHex:@"99989B"];
+}
+
+// #D7D9D8
++ (UIColor *)sGold
+{
+	return [UIColor colorWithHex:@"D7D9D8"];
+}
+
+// #D4C5B3
++ (UIColor *)sSilver
+{
+	return [UIColor colorWithHex:@"D4C5B3"];
 }
 
 @end

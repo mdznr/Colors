@@ -97,12 +97,16 @@ unichar hexCharacterForInteger(NSInteger integer)
 	NSUInteger runningInt = [self integerValue];
 	NSString *runningString = @"";
 	while ( runningInt > 0 ) {
-		NSUInteger digit = runningInt / 16;
+		NSUInteger digit = floor(runningInt / 16);
+		runningInt -= (digit*16);
 		unichar character = hexCharacterForInteger(digit);
 		runningString = [runningString stringByAppendingFormat:@"%hu", character];
+		if ( digit == 0 ) {
+			break;
+		}
 	}
 	return runningString;
-	// Could create new strings for each character appending, or just have an array of characters, then create the nsstring that way.
+	// Could create new strings for each character appending, or just have an array of characters, then create the NSString that way.
 }
 
 @end

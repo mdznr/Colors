@@ -8,6 +8,7 @@
 
 #import "MTZViewController.h"
 #import "UIColor+NeueColors.h"
+#import "UIColor+Hex.h"
 
 @interface MTZViewController ()
 
@@ -61,6 +62,8 @@
 	UIView *lg = [[UIView alloc] initWithFrame:CGRectMake(0, 9*height, 320, height)];
 	lg.backgroundColor = UIColor.neueLightGray;
 	[self.view addSubview:lg];
+	
+	NSLog(@"%@", [[UIColor neuePink] hexString]);
 }
 
 - (void)didReceiveMemoryWarning
