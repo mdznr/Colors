@@ -21,7 +21,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
-	CGFloat height = (self.view.bounds.size.height/10);
+	CGFloat height = (self.view.bounds.size.height/18);
 	
 	UIView *red = [[UIView alloc] initWithFrame:CGRectMake(0, 0*height, 320, height)];
 	red.backgroundColor = UIColor.neueRed;
@@ -62,6 +62,38 @@
 	UIView *lg = [[UIView alloc] initWithFrame:CGRectMake(0, 9*height, 320, height)];
 	lg.backgroundColor = UIColor.neueLightGray;
 	[self.view addSubview:lg];
+	
+	UIView *cb = [[UIView alloc] initWithFrame:CGRectMake(0, 10*height, 320, height)];
+	cb.backgroundColor = UIColor.cBlue;
+	[self.view addSubview:cb];
+	
+	UIView *cg = [[UIView alloc] initWithFrame:CGRectMake(0, 11*height, 320, height)];
+	cg.backgroundColor = UIColor.cGreen;
+	[self.view addSubview:cg];
+	
+	UIView *cw = [[UIView alloc] initWithFrame:CGRectMake(0, 12*height, 320, height)];
+	cw.backgroundColor = UIColor.cWhite;
+	[self.view addSubview:cw];
+	
+	UIView *cy = [[UIView alloc] initWithFrame:CGRectMake(0, 13*height, 320, height)];
+	cy.backgroundColor = UIColor.cYellow;
+	[self.view addSubview:cy];
+	
+	UIView *cp = [[UIView alloc] initWithFrame:CGRectMake(0, 14*height, 320, height)];
+	cp.backgroundColor = UIColor.cPink;
+	[self.view addSubview:cp];
+	
+	UIView *ssg = [[UIView alloc] initWithFrame:CGRectMake(0, 15*height, 320, height)];
+	ssg.backgroundColor = UIColor.sSpaceGray;
+	[self.view addSubview:ssg];
+	
+	UIView *sg = [[UIView alloc] initWithFrame:CGRectMake(0, 16*height, 320, height)];
+	sg.backgroundColor = UIColor.sGold;
+	[self.view addSubview:sg];
+	
+	UIView *ss = [[UIView alloc] initWithFrame:CGRectMake(0, 17*height, 320, height)];
+	ss.backgroundColor = UIColor.sSilver;
+	[self.view addSubview:ss];
 	
 	NSLog(@"%@", [[UIColor neuePink] hexString]);
 }
