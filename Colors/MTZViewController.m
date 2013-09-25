@@ -25,6 +25,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
+	/*
+	// Draw a bunch of lines for the neue colors
 	CGFloat height = (self.view.bounds.size.height/18);
 	
 	UIView *red = [[UIView alloc] initWithFrame:CGRectMake(0, 0*height, 320, height)];
@@ -98,8 +100,9 @@
 	UIView *ss = [[UIView alloc] initWithFrame:CGRectMake(0, 17*height, 320, height)];
 	ss.backgroundColor = UIColor.sSilver;
 	[self.view addSubview:ss];
+	 */
 	
-#warning RGB -> YUV
+	/*
 	NSLog(@"%f", [[UIColor neuePink] redComponent]   * 255);
 	NSLog(@"%f", [[UIColor neuePink] greenComponent] * 255);
 	NSLog(@"%f", [[UIColor neuePink] blueComponent]  * 255);
@@ -108,14 +111,17 @@
 	NSLog(@"%f", [[UIColor neuePink] vValue]);
 	NSLog(@"%f", [UIColor euclideanDistanceFromColor:[UIColor neuePink]
 											 toColor:[UIColor cPink]]);
+	 */
 	
-	// An example of a cropped image
+	// An example of an image
 	UIImageView *iv = [[UIImageView alloc] initWithFrame:(CGRect){20,40,240,240}];
 	UIImage *img = [UIImage imageNamed:@"example"];
 	img = [img croppedImageWithRect:(CGRect){0,0,240,240}];
-	UIColor *fg = [img foregroundColor];
 	iv.image = img;
 	[self.view addSubview:iv];
+	
+	UIColor *bg = [img backgroundColor];
+	self.view.backgroundColor = bg;
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,6 +10,10 @@
 
 @interface UIImage (Crop)
 
+///
 - (UIImage *)croppedImageWithRect:(CGRect)rect;
+
+///
+- (UIImage*)scaleToSize:(CGSize)size;
 
 @end
