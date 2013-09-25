@@ -26,4 +26,9 @@
 - (CGFloat)saturation;
 - (CGFloat)brightness;
 
+// YUV
+- (CGFloat)yValue;
+- (CGFloat)uValue;
+- (CGFloat)vValue;
+
 @end

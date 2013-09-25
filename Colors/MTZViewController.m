@@ -7,8 +7,9 @@
 //
 
 #import "MTZViewController.h"
-#import "UIColor+NeueColors.h"
+#import "UIColor+Components.h"
 #import "UIColor+Hex.h"
+#import "UIColor+NeueColors.h"
 #import "UIImage+Crop.h"
 
 @interface MTZViewController ()
@@ -98,8 +99,12 @@
 	
 #warning testing
 	NSLog(@"%@", [[UIColor neuePink] hexString]);
+	NSLog(@"%f", [[UIColor neuePink] yValue]);
+	NSLog(@"%f", [[UIColor neuePink] uValue]);
+	NSLog(@"%f", [[UIColor neuePink] vValue]);
 	
-	UIImageView *iv = [[UIImageView alloc] initWithFrame:(CGRect){20,20,280,280}];
+	// An example of a cropped image
+	UIImageView *iv = [[UIImageView alloc] initWithFrame:(CGRect){20,40,240,240}];
 	UIImage *img = [UIImage imageNamed:@"example"];
 	img = [img croppedImageWithRect:(CGRect){0,0,240,240}];
 	iv.image = img;
