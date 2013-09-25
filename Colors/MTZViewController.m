@@ -9,6 +9,7 @@
 #import "MTZViewController.h"
 #import "UIColor+NeueColors.h"
 #import "UIColor+Hex.h"
+#import "UIImage+Crop.h"
 
 @interface MTZViewController ()
 
@@ -95,7 +96,14 @@
 	ss.backgroundColor = UIColor.sSilver;
 	[self.view addSubview:ss];
 	
+#warning testing
 	NSLog(@"%@", [[UIColor neuePink] hexString]);
+	
+	UIImageView *iv = [[UIImageView alloc] initWithFrame:(CGRect){20,20,280,280}];
+	UIImage *img = [UIImage imageNamed:@"example"];
+	img = [img croppedImageWithRect:(CGRect){0,0,240,240}];
+	iv.image = img;
+	[self.view addSubview:iv];
 }
 
 - (void)didReceiveMemoryWarning

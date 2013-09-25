@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "UIColor+Hex.h"
+#import "NSNumber+Hex.h"
 
 @interface ColorsTests : XCTestCase
 
