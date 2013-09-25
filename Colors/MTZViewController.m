@@ -114,9 +114,8 @@
 	 */
 	
 	// An example of an image
-	UIImageView *iv = [[UIImageView alloc] initWithFrame:(CGRect){20,40,240,240}];
-	UIImage *img = [UIImage imageNamed:@"example"];
-	img = [img croppedImageWithRect:(CGRect){0,0,240,240}];
+	UIImageView *iv = [[UIImageView alloc] initWithFrame:(CGRect){20,40,280,280}];
+	UIImage *img = [UIImage imageNamed:@"strange_weekend"];
 	iv.image = img;
 	[self.view addSubview:iv];
 	
