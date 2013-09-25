@@ -53,7 +53,7 @@
 	for ( UIColor *color in colors ) {
 #warning when to ignore unsaturated colors and when not to?
 		// Only use saturated colors
-		if ( color.saturation < 0.3f ) {
+		if ( color.saturation < 0.25f ) {
 			continue;
 		}
 		NSMutableArray *bestFitGroup = nil;
