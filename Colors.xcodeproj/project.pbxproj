@@ -31,6 +31,7 @@
 		C9C182F917F29489005AF9A3 /* UIImage+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C182F817F29489005AF9A3 /* UIImage+Colors.m */; };
 		C9C182FC17F295E5005AF9A3 /* UIColor+Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C182FB17F295E5005AF9A3 /* UIColor+Manipulation.m */; };
 		C9C1830217F2A89C005AF9A3 /* UIImage+Pixels.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */; };
+		C9C1830417F2C2CC005AF9A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		C9C182FB17F295E5005AF9A3 /* UIColor+Manipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Manipulation.m"; sourceTree = "<group>"; };
 		C9C1830017F2A895005AF9A3 /* UIImage+Pixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Pixels.h"; sourceTree = "<group>"; };
 		C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Pixels.m"; sourceTree = "<group>"; };
+		C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C1830417F2C2CC005AF9A3 /* MediaPlayer.framework in Frameworks */,
 				C926217D17D51C250095AE1C /* CoreGraphics.framework in Frameworks */,
 				C926217F17D51C250095AE1C /* UIKit.framework in Frameworks */,
 				C926217B17D51C250095AE1C /* Foundation.framework in Frameworks */,
@@ -130,6 +133,7 @@
 		C926217917D51C250095AE1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */,
 				C926217A17D51C250095AE1C /* Foundation.framework */,
 				C926217C17D51C250095AE1C /* CoreGraphics.framework */,
 				C926217E17D51C250095AE1C /* UIKit.framework */,

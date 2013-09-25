@@ -94,6 +94,12 @@
 	}
 	NSLog(@"%lu", (unsigned long)groups.count);
 	
+	// If no good colors found, return something
+	if ( !groups.count ) {
+#warning return black, gray, or white?
+		return [UIColor blackColor];
+	}
+	
 	return groups[0][0];
 }
 
