@@ -115,7 +115,7 @@
 	
 	// An example of an image
 	UIImageView *iv = [[UIImageView alloc] initWithFrame:(CGRect){20,40,280,280}];
-	UIImage *img = [UIImage imageNamed:@"strange_weekend"];
+	UIImage *img = [UIImage imageNamed:@"actor"];
 	iv.image = img;
 	[self.view addSubview:iv];
 	

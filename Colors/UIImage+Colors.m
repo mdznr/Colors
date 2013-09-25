@@ -17,7 +17,10 @@
 
 - (UIColor *)backgroundColor
 {
-	CGFloat tolerance = 55.5f;
+	// .1 different colors
+	// .2 minimum different dominant colors
+	// .5 for contrast
+	CGFloat tolerance = 0.1f * 255.0f;
 	
 #warning determine a good size to get good color data (multiple of size)
 	// Scale down image to make computation less intensive
@@ -48,6 +51,11 @@
 	
 	// Iterate over every color and add it to a group
 	for ( UIColor *color in colors ) {
+#warning when to ignore unsaturated colors and when not to?
+		// Only use saturated colors
+		if ( color.saturation < 0.5f ) {
+			continue;
+		}
 		NSMutableArray *bestFitGroup = nil;
 		CGFloat smallestDistance = CGFLOAT_MAX;
 		// Check every group and see if it fits in
