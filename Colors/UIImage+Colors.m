@@ -20,7 +20,7 @@
 	// .1 different colors
 	// .2 minimum different dominant colors
 	// .5 for contrast
-	CGFloat tolerance = 0.1f * 255.0f;
+	CGFloat tolerance = 0.2f * 255.0f;
 	
 #warning determine a good size to get good color data (multiple of size)
 	// Scale down image to make computation less intensive
@@ -53,7 +53,7 @@
 	for ( UIColor *color in colors ) {
 #warning when to ignore unsaturated colors and when not to?
 		// Only use saturated colors
-		if ( color.saturation < 0.5f ) {
+		if ( color.saturation < 0.3f ) {
 			continue;
 		}
 		NSMutableArray *bestFitGroup = nil;
@@ -100,7 +100,23 @@
 		return [UIColor blackColor];
 	}
 	
-	return groups[0][0];
+	// Get average color in dominant bucket
+	NSMutableArray *group = groups[0];
+	CGFloat r = 0.0f;
+	CGFloat g = 0.0f;
+	CGFloat b = 0.0f;
+	for ( UIColor *color in group ) {
+		r += [color redComponent];
+		g += [color greenComponent];
+		b += [color blueComponent];
+	}
+	r /= group.count;
+	g /= group.count;
+	b /= group.count;
+	return [UIColor colorWithRed:r
+						   green:g
+							blue:b
+						   alpha:1.0f];
 }
 
 - (UIColor *)foregroundColor
