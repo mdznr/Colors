@@ -97,8 +97,10 @@
 	ss.backgroundColor = UIColor.sSilver;
 	[self.view addSubview:ss];
 	
-#warning testing
-	NSLog(@"%@", [[UIColor neuePink] hexString]);
+#warning RGB -> YUV
+	NSLog(@"%f", [[UIColor neuePink] redComponent] * 255);
+	NSLog(@"%f", [[UIColor neuePink] greenComponent] * 255);
+	NSLog(@"%f", [[UIColor neuePink] blueComponent] * 255);
 	NSLog(@"%f", [[UIColor neuePink] yValue]);
 	NSLog(@"%f", [[UIColor neuePink] uValue]);
 	NSLog(@"%f", [[UIColor neuePink] vValue]);
