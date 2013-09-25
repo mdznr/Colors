@@ -44,7 +44,7 @@
 	
 	UIImage *track = [UIImage imageNamed:@"Track"];
 	[self setMaximumTrackImage:[track resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
-					  forState:UIControlStateNormal];≥
+					  forState:UIControlStateNormal];
 	
 	[self setFillImage];
 }
