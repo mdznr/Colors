@@ -30,6 +30,7 @@
 		C9C182F217F100B1005AF9A3 /* CGRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C182F117F100B1005AF9A3 /* CGRectManipulation.m */; };
 		C9C182F917F29489005AF9A3 /* UIImage+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C182F817F29489005AF9A3 /* UIImage+Colors.m */; };
 		C9C182FC17F295E5005AF9A3 /* UIColor+Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C182FB17F295E5005AF9A3 /* UIColor+Manipulation.m */; };
+		C9C1830217F2A89C005AF9A3 /* UIImage+Pixels.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		C9C182F817F29489005AF9A3 /* UIImage+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Colors.m"; sourceTree = "<group>"; };
 		C9C182FA17F295E5005AF9A3 /* UIColor+Manipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Manipulation.h"; sourceTree = "<group>"; };
 		C9C182FB17F295E5005AF9A3 /* UIColor+Manipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Manipulation.m"; sourceTree = "<group>"; };
+		C9C1830017F2A895005AF9A3 /* UIImage+Pixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Pixels.h"; sourceTree = "<group>"; };
+		C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Pixels.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				C9C182F817F29489005AF9A3 /* UIImage+Colors.m */,
 				C9C182EA17F0FE21005AF9A3 /* UIImage+Crop.h */,
 				C9C182EB17F0FE21005AF9A3 /* UIImage+Crop.m */,
+				C9C1830017F2A895005AF9A3 /* UIImage+Pixels.h */,
+				C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */,
 				C92621BB17D528550095AE1C /* NSNumber+Hex.h */,
 				C92621BC17D528550095AE1C /* NSNumber+Hex.m */,
 				C926219517D51C250095AE1C /* Images.xcassets */,
@@ -297,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C1830217F2A89C005AF9A3 /* UIImage+Pixels.m in Sources */,
 				C926218B17D51C250095AE1C /* MTZAppDelegate.m in Sources */,
 				C9C182EC17F0FE21005AF9A3 /* UIImage+Crop.m in Sources */,
 				C92621B717D522080095AE1C /* UIColor+Hex.m in Sources */,

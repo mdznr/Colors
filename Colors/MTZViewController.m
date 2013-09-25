@@ -11,6 +11,7 @@
 #import "UIColor+Hex.h"
 #import "UIColor+Manipulation.h"
 #import "UIColor+NeueColors.h"
+#import "UIImage+Colors.h"
 #import "UIImage+Crop.h"
 
 @interface MTZViewController ()
@@ -99,9 +100,9 @@
 	[self.view addSubview:ss];
 	
 #warning RGB -> YUV
-	NSLog(@"%f", [[UIColor neuePink] redComponent] * 255);
+	NSLog(@"%f", [[UIColor neuePink] redComponent]   * 255);
 	NSLog(@"%f", [[UIColor neuePink] greenComponent] * 255);
-	NSLog(@"%f", [[UIColor neuePink] blueComponent] * 255);
+	NSLog(@"%f", [[UIColor neuePink] blueComponent]  * 255);
 	NSLog(@"%f", [[UIColor neuePink] yValue]);
 	NSLog(@"%f", [[UIColor neuePink] uValue]);
 	NSLog(@"%f", [[UIColor neuePink] vValue]);
@@ -112,6 +113,7 @@
 	UIImageView *iv = [[UIImageView alloc] initWithFrame:(CGRect){20,40,240,240}];
 	UIImage *img = [UIImage imageNamed:@"example"];
 	img = [img croppedImageWithRect:(CGRect){0,0,240,240}];
+	UIColor *fg = [img foregroundColor];
 	iv.image = img;
 	[self.view addSubview:iv];
 }
