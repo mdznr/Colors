@@ -63,6 +63,9 @@
 {
 #warning animate this change? Animate the change of album art (if it changes), too?
 	UIColor *bg = [_iv.image backgroundColor];
+	self.view.tintColor = bg;
+	
+#warning why do I have to change this myself?
 	_trackSlider.tintColor = bg;
 	_volumeSlider.tintColor = bg;
 }
