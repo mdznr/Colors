@@ -32,6 +32,8 @@
 		C9C182FC17F295E5005AF9A3 /* UIColor+Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C182FB17F295E5005AF9A3 /* UIColor+Manipulation.m */; };
 		C9C1830217F2A89C005AF9A3 /* UIImage+Pixels.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */; };
 		C9C1830417F2C2CC005AF9A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */; };
+		C9C1830717F3A4AC005AF9A3 /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830617F3A4AC005AF9A3 /* MTZSlider.m */; };
+		C9C1830A17F3A9AF005AF9A3 /* UIImage+TBTint.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830917F3A9AF005AF9A3 /* UIImage+TBTint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,10 @@
 		C9C1830017F2A895005AF9A3 /* UIImage+Pixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Pixels.h"; sourceTree = "<group>"; };
 		C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Pixels.m"; sourceTree = "<group>"; };
 		C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C9C1830517F3A4AC005AF9A3 /* MTZSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlider.h; sourceTree = "<group>"; };
+		C9C1830617F3A4AC005AF9A3 /* MTZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlider.m; sourceTree = "<group>"; };
+		C9C1830817F3A9AA005AF9A3 /* UIImage+TBTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TBTint.h"; sourceTree = "<group>"; };
+		C9C1830917F3A9AF005AF9A3 /* UIImage+TBTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TBTint.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,8 @@
 				C926218F17D51C250095AE1C /* Main_iPad.storyboard */,
 				C926219217D51C250095AE1C /* MTZViewController.h */,
 				C926219317D51C250095AE1C /* MTZViewController.m */,
+				C9C1830517F3A4AC005AF9A3 /* MTZSlider.h */,
+				C9C1830617F3A4AC005AF9A3 /* MTZSlider.m */,
 				C9C182F017F100B1005AF9A3 /* CGRectManipulation.h */,
 				C9C182F117F100B1005AF9A3 /* CGRectManipulation.m */,
 				C97A233D17D6321C00B87FC1 /* UIColor+Components.h */,
@@ -167,6 +175,8 @@
 				C9C182EB17F0FE21005AF9A3 /* UIImage+Crop.m */,
 				C9C1830017F2A895005AF9A3 /* UIImage+Pixels.h */,
 				C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */,
+				C9C1830817F3A9AA005AF9A3 /* UIImage+TBTint.h */,
+				C9C1830917F3A9AF005AF9A3 /* UIImage+TBTint.m */,
 				C92621BB17D528550095AE1C /* NSNumber+Hex.h */,
 				C92621BC17D528550095AE1C /* NSNumber+Hex.m */,
 				C926219517D51C250095AE1C /* Images.xcassets */,
@@ -308,12 +318,14 @@
 			files = (
 				C9C1830217F2A89C005AF9A3 /* UIImage+Pixels.m in Sources */,
 				C926218B17D51C250095AE1C /* MTZAppDelegate.m in Sources */,
+				C9C1830A17F3A9AF005AF9A3 /* UIImage+TBTint.m in Sources */,
 				C9C182EC17F0FE21005AF9A3 /* UIImage+Crop.m in Sources */,
 				C92621B717D522080095AE1C /* UIColor+Hex.m in Sources */,
 				C926218717D51C250095AE1C /* main.m in Sources */,
 				C92621B417D51C4F0095AE1C /* UIColor+NeueColors.m in Sources */,
 				C9C182F217F100B1005AF9A3 /* CGRectManipulation.m in Sources */,
 				C926219417D51C250095AE1C /* MTZViewController.m in Sources */,
+				C9C1830717F3A4AC005AF9A3 /* MTZSlider.m in Sources */,
 				C97A233F17D6321C00B87FC1 /* UIColor+Components.m in Sources */,
 				C92621BD17D528550095AE1C /* NSNumber+Hex.m in Sources */,
 				C9C182F917F29489005AF9A3 /* UIImage+Colors.m in Sources */,

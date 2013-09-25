@@ -17,13 +17,15 @@
 #import "UIImage+Colors.h"
 #import "UIImage+Crop.h"
 
+#import "MTZSlider.h"
+
 @interface MTZViewController ()
 
 @property (strong, nonatomic) MPMusicPlayerController *player;
-@property (strong, nonatomic) UIImageView *iv;
+@property (strong, nonatomic) IBOutlet UIImageView *iv;
 
-@property (strong, nonatomic) UISlider *trackSlider;
-@property (strong, nonatomic) UISlider *volumeSlider;
+@property (strong, nonatomic) IBOutlet MTZSlider *trackSlider;
+@property (strong, nonatomic) IBOutlet MTZSlider *volumeSlider;
 
 @end
 
@@ -44,23 +46,8 @@
                              object:_player];
     [_player beginGeneratingPlaybackNotifications];
 	
-	// An example of an image
-	_iv = [[UIImageView alloc] initWithFrame:(CGRect){0,64,320,320}];
-	[self.view addSubview:_iv];
-	
-#warning DO NOT HARDCODE FRAMES!
-	
-	// Track Position Slider
-	_trackSlider = [[UISlider alloc] init];
-	_trackSlider.frame = (CGRect){52,400,216,12};
 	_trackSlider.value = 0.5f;
-	[self.view addSubview:_trackSlider];
-	
-	// Volume Slider
-	_volumeSlider = [[UISlider alloc] init];
-	_volumeSlider.frame = (CGRect){52,521,216,12};
 	_volumeSlider.value = 0.5f;
-	[self.view addSubview:_volumeSlider];
 }
 
 - (void)songChanged:(id)sender
