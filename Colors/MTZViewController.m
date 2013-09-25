@@ -9,6 +9,7 @@
 #import "MTZViewController.h"
 #import "UIColor+Components.h"
 #import "UIColor+Hex.h"
+#import "UIColor+Manipulation.h"
 #import "UIColor+NeueColors.h"
 #import "UIImage+Crop.h"
 
@@ -104,6 +105,8 @@
 	NSLog(@"%f", [[UIColor neuePink] yValue]);
 	NSLog(@"%f", [[UIColor neuePink] uValue]);
 	NSLog(@"%f", [[UIColor neuePink] vValue]);
+	NSLog(@"%f", [UIColor euclideanDistanceFromColor:[UIColor neuePink]
+											 toColor:[UIColor cPink]]);
 	
 	// An example of a cropped image
 	UIImageView *iv = [[UIImageView alloc] initWithFrame:(CGRect){20,40,240,240}];
