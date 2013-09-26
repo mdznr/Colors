@@ -19,6 +19,8 @@
 
 #import "MTZSlider.h"
 
+#define DEBUG_MODE 0
+
 @interface MTZViewController ()
 
 @property (strong, nonatomic) MPMusicPlayerController *player;
@@ -79,8 +81,10 @@
 	[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
 						forState:UIControlStateNormal];
 	
+#if DEBUG_MODE
 	_imgv = [[UIImageView alloc] initWithFrame:(CGRect){0,20,64,64}];
 	[self.view addSubview:_imgv];
+#endif
 }
 
 - (void)checkPlaybackStatus
@@ -100,7 +104,10 @@
     _iv.image = albumArtwork;
 	[self refreshColors];
 	
-	_imgv.image = [albumArtwork scaleToSize:(CGSize){64,64}];
+#if DEBUG_MODE
+	_imgv.image = [albumArtwork scaleToSize:(CGSize){64,64}
+				   withInterpolationQuality:kCGInterpolationLow];
+#endif
 	
 	_trackTitle.text = [currentItem valueForProperty:MPMediaItemPropertyTitle];
 	NSString *artist = [currentItem valueForProperty:MPMediaItemPropertyArtist];

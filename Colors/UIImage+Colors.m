@@ -23,8 +23,10 @@
 	CGFloat tolerance = 0.2f * 255.0f;
 	
 #warning determine a good size to get good color data (multiple of size)
+#warning determine proper interpolation quality for level of detail of image (lower quality for higher detail)
 	// Scale down image to make computation less intensive
-	UIImage *smallImage = [self scaleToSize:(CGSize){64,64}];
+	UIImage *smallImage = [self scaleToSize:(CGSize){64,64}
+				   withInterpolationQuality:kCGInterpolationLow];
 	
 	// Create an array for all the colors
 	NSMutableArray *colors = [[NSMutableArray alloc] initWithCapacity:smallImage.size.height*smallImage.size.width];
