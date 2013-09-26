@@ -30,8 +30,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *trackTitle;
 @property (strong, nonatomic) IBOutlet UILabel *artistAndAlbumTitles;
 
-@property (strong, nonatomic) IBOutlet UILabel *trackLabel;
-@property (strong, nonatomic) IBOutlet UILabel *ofTotalTracksLabel;
+@property (strong, nonatomic) IBOutlet UILabel *trackNumbersLabel;
 
 @property (strong, nonatomic) IBOutlet UILabel *timeElapsed;
 @property (strong, nonatomic) IBOutlet UILabel *timeRemaining;
@@ -101,8 +100,20 @@
 	NSString *album = [currentItem valueForProperty:MPMediaItemPropertyAlbumTitle];
 	_artistAndAlbumTitles.text = [NSString stringWithFormat:@"%@ - %@", artist, album];
 	
-	_trackLabel.text = [NSString stringWithFormat:@"%@", [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackNumber]];
-	_ofTotalTracksLabel.text = [NSString stringWithFormat:@"%@", [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackCount]];
+	NSString *trackNo = [NSString stringWithFormat:@"%@", [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackNumber]];
+	NSString *trackOf = [NSString stringWithFormat:@"%@", [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackCount]];
+	NSString *title = [NSString stringWithFormat:@"%@ of %@", trackNo, trackOf];
+	NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:title];
+	[attributedTitle addAttribute:NSFontAttributeName
+							value:[UIFont boldSystemFontOfSize:15.0f]
+							range:NSMakeRange(0, trackNo.length)];
+	[attributedTitle addAttribute:NSFontAttributeName
+							value:[UIFont systemFontOfSize:15.0f]
+							range:NSMakeRange(trackNo.length, 4)];
+	[attributedTitle addAttribute:NSFontAttributeName
+							value:[UIFont boldSystemFontOfSize:15.0f]
+							range:NSMakeRange(trackNo.length + 4, trackOf.length)];
+	_trackNumbersLabel.attributedText = attributedTitle;
 	
 	CGFloat minutes, seconds;
 	
