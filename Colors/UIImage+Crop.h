@@ -16,4 +16,8 @@
 ///
 - (UIImage*)scaleToSize:(CGSize)size;
 
+///
+- (UIImage *)scaleToSize:(CGSize)size
+withInterpolationQuality:(CGInterpolationQuality)interpolationQuality;
+
 @end

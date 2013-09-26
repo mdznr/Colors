@@ -37,6 +37,8 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *playPause;
 
+@property (strong, nonatomic) UIImageView *imgv;
+
 @end
 
 @implementation MTZViewController
@@ -76,6 +78,9 @@
 	_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
 	[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
 						forState:UIControlStateNormal];
+	
+	_imgv = [[UIImageView alloc] initWithFrame:(CGRect){0,20,64,64}];
+	[self.view addSubview:_imgv];
 }
 
 - (void)checkPlaybackStatus
@@ -94,6 +99,8 @@
 	UIImage *albumArtwork = [artwork imageWithSize:CGSizeMake(320, 320)];
     _iv.image = albumArtwork;
 	[self refreshColors];
+	
+	_imgv.image = [albumArtwork scaleToSize:(CGSize){64,64}];
 	
 	_trackTitle.text = [currentItem valueForProperty:MPMediaItemPropertyTitle];
 	NSString *artist = [currentItem valueForProperty:MPMediaItemPropertyArtist];
