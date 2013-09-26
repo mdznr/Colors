@@ -24,7 +24,7 @@
 	
 #warning determine a good size to get good color data (multiple of size)
 	// Scale down image to make computation less intensive
-	UIImage *smallImage = [self scaleToSize:(CGSize){32,32}];
+	UIImage *smallImage = [self scaleToSize:(CGSize){64,64}];
 	
 	// Create an array for all the colors
 	NSMutableArray *colors = [[NSMutableArray alloc] initWithCapacity:smallImage.size.height*smallImage.size.width];
@@ -41,7 +41,7 @@
 											 green:[[NSNumber numberWithUnsignedChar:g] floatValue]/255.0f
 											  blue:[[NSNumber numberWithUnsignedChar:b] floatValue]/255.0f
 											 alpha:[[NSNumber numberWithUnsignedChar:a] floatValue]/255.0f];
-			NSLog(@"%f %f %f", [color redComponent], [color greenComponent], [color blueComponent]);
+			//NSLog(@"%f %f %f", [color redComponent], [color greenComponent], [color blueComponent]);
 			[colors addObject:color];
 		}
 	}
@@ -87,7 +87,6 @@
 			}];
 	
 	// Print out the main color for each group
-	NSLog(@"--");
 	for ( NSMutableArray *group in groups ) {
 		UIColor *color = (UIColor *)[group objectAtIndex:0];
 		NSLog(@"%lu %f %f %f", (unsigned long)group.count, [color redComponent], [color greenComponent], [color blueComponent]);

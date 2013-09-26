@@ -10,4 +10,7 @@
 
 @interface MTZSlider : UISlider
 
+@property (strong, nonatomic) UIImage *fillImage;
+@property (strong, nonatomic) UIImage *trackImage;
+
 @end

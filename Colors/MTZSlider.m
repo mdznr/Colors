@@ -42,16 +42,28 @@
 {
 	[self setThumbImage:[UIImage imageNamed:@"Thumb"] forState:UIControlStateNormal];
 	
-	UIImage *track = [UIImage imageNamed:@"Track"];
-	[self setMaximumTrackImage:[track resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
+	[self setMaximumTrackImage:[_trackImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
 					  forState:UIControlStateNormal];
 	
 	[self setFillImage];
 }
 
+- (void)setTrackImage:(UIImage *)trackImage
+{
+	_trackImage = trackImage;
+	[self setMaximumTrackImage:[_trackImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
+					  forState:UIControlStateNormal];
+}
+
+- (void)setFillImage:(UIImage *)fillImage
+{
+	_fillImage = fillImage;
+	[self setFillImage];
+}
+
 - (void)setFillImage
 {
-	UIImage *fill = [[UIImage imageNamed:@"Fill"] tintedImageWithColor:self.tintColor];
+	UIImage *fill = [_fillImage tintedImageWithColor:self.tintColor];
     [self setMinimumTrackImage:[fill resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
 					  forState:UIControlStateNormal];
 }

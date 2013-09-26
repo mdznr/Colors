@@ -27,6 +27,15 @@
 @property (strong, nonatomic) IBOutlet MTZSlider *trackSlider;
 @property (strong, nonatomic) IBOutlet MTZSlider *volumeSlider;
 
+@property (strong, nonatomic) IBOutlet UILabel *trackTitle;
+@property (strong, nonatomic) IBOutlet UILabel *artistAndAlbumTitles;
+
+@property (strong, nonatomic) IBOutlet UILabel *trackLabel;
+@property (strong, nonatomic) IBOutlet UILabel *ofTotalTracksLabel;
+
+@property (strong, nonatomic) IBOutlet UILabel *timeElapsed;
+@property (strong, nonatomic) IBOutlet UILabel *timeRemaining;
+
 @end
 
 @implementation MTZViewController
@@ -46,7 +55,16 @@
                              object:_player];
     [_player beginGeneratingPlaybackNotifications];
 	
+	_trackSlider.fillImage = [UIImage imageNamed:@"ProgressFill"];
+	_trackSlider.trackImage = [UIImage imageNamed:@"ProgressTrack"];
+	[_trackSlider setThumbImage:[UIImage imageNamed:@"ProgressThumb"]
+					   forState:UIControlStateNormal];
 	_trackSlider.value = 0.5f;
+	
+	_volumeSlider.fillImage = [UIImage imageNamed:@"VolumeFill"];
+	_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
+	[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
+						forState:UIControlStateNormal];
 	_volumeSlider.value = 0.5f;
 }
 
@@ -57,6 +75,24 @@
 	UIImage *albumArtwork = [artwork imageWithSize:CGSizeMake(320, 320)];
     _iv.image = albumArtwork;
 	[self refreshColors];
+	
+	_trackTitle.text = [currentItem valueForProperty:MPMediaItemPropertyTitle];
+	NSString *artist = [currentItem valueForProperty:MPMediaItemPropertyArtist];
+	NSString *album = [currentItem valueForProperty:MPMediaItemPropertyAlbumTitle];
+	_artistAndAlbumTitles.text = [NSString stringWithFormat:@"%@ - %@", artist, album];
+	
+	_trackLabel.text = [NSString stringWithFormat:@"%@", [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackNumber]];
+	_ofTotalTracksLabel.text = [NSString stringWithFormat:@"%@", [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackCount]];
+	
+	
+	NSTimeInterval elapsed = 0;
+	
+	NSNumber *playbackDuration = [currentItem valueForProperty:MPMediaItemPropertyPlaybackDuration];
+	NSTimeInterval duration = playbackDuration.doubleValue;
+	NSTimeInterval remaining = duration - elapsed;
+	float minutes = floor(remaining / 60);
+	float seconds = round(remaining - minutes * 60);
+	_timeRemaining.text = [NSString stringWithFormat:@"-%.0f:%.0f", minutes, seconds];
 }
 
 - (void)refreshColors
