@@ -2,7 +2,7 @@
 //  MTZViewController.m
 //  Colors
 //
-//  Created by Matt on 9/2/13.
+//  Created by Matt Zanchelli on 9/2/13.
 //  Copyright (c) 2013 Matt Zanchelli. All rights reserved.
 //
 
@@ -32,14 +32,18 @@
 @property (strong, nonatomic) IBOutlet UILabel *trackTitle;
 @property (strong, nonatomic) IBOutlet UILabel *artistAndAlbumTitles;
 
-@property (strong, nonatomic) IBOutlet UILabel *trackNumbersLabel;
+@property (strong, nonatomic) UILabel *trackNumbersLabel;
+
+@property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
 @property (strong, nonatomic) IBOutlet UILabel *timeElapsed;
 @property (strong, nonatomic) IBOutlet UILabel *timeRemaining;
 
 @property (strong, nonatomic) IBOutlet UIButton *playPause;
 
+#if DEBUG_MODE
 @property (strong, nonatomic) UIImageView *imgv;
+#endif
 
 @end
 
@@ -80,6 +84,13 @@
 	_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
 	[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
 						forState:UIControlStateNormal];
+	
+	
+	_trackNumbersLabel = [[UILabel alloc] initWithFrame:(CGRect){0,0,160,32}];
+	_trackNumbersLabel.textAlignment = NSTextAlignmentCenter;
+	_trackNumbersLabel.text = @"1 of 16";
+	self.navigationBar.topItem.titleView = _trackNumbersLabel;
+	[self.navigationBar.topItem setHidesBackButton:NO animated:NO];
 	
 #if DEBUG_MODE
 	_imgv = [[UIImageView alloc] initWithFrame:(CGRect){0,20,64,64}];
@@ -213,6 +224,11 @@
 - (IBAction)volumeChanged:(id)sender
 {
 	_player.volume = _volumeSlider.value;
+}
+
+- (void)didTapRightBarButtonItem:(id)sender
+{
+	NSLog(@"%@", sender);
 }
 
 - (void)dealloc
