@@ -25,12 +25,10 @@
                                 <rect key="frame" x="52" y="388" width="216" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="crC-2W-J97" customClass="MTZSlider">
                                 <rect key="frame" x="52" y="502" width="216" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="volumeChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="NB7-Je-v5a"/>
                                 </connections>
@@ -136,7 +134,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="zFx-qo-xhb">
-                                        <barButtonItem key="rightBarButtonItem" image="List" id="YbQ-zj-3yF"/>
+                                        <barButtonItem key="rightBarButtonItem" image="List" id="YbQ-zj-3yF">
+                                            <connections>
+                                                <action selector="didTapRightBarButtonItem:" destination="vXZ-lx-hvc" id="WNK-7r-ps7"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

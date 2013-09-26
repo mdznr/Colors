@@ -45,7 +45,7 @@
 	[self setMaximumTrackImage:[_trackImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
 					  forState:UIControlStateNormal];
 	
-	[self setFillImage];
+	[self updateFillImage];
 }
 
 - (void)setTrackImage:(UIImage *)trackImage
@@ -58,10 +58,10 @@
 - (void)setFillImage:(UIImage *)fillImage
 {
 	_fillImage = fillImage;
-	[self setFillImage];
+	[self updateFillImage];
 }
 
-- (void)setFillImage
+- (void)updateFillImage
 {
 	UIImage *fill = [_fillImage tintedImageWithColor:self.tintColor];
     [self setMinimumTrackImage:[fill resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
@@ -71,7 +71,7 @@
 - (void)tintColorDidChange
 {
 	[super tintColorDidChange];
-	[self setFillImage];
+	[self updateFillImage];
 }
 
 @end

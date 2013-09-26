@@ -53,9 +53,28 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
+	
+	[self.view setTintAdjustmentMode:UIViewTintAdjustmentModeAutomatic];
+	
+	_trackSlider.fillImage = [UIImage imageNamed:@"ProgressFill"];
+	_trackSlider.trackImage = [UIImage imageNamed:@"ProgressTrack"];
+	[_trackSlider setThumbImage:[UIImage imageNamed:@"ProgressThumb"]
+					   forState:UIControlStateNormal];
+	
+	_volumeSlider.value = _player.volume;
+	_volumeSlider.fillImage = [UIImage imageNamed:@"VolumeFill"];
+	_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
+	[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
+						forState:UIControlStateNormal];
+	
+	_trackNumbersLabel = [[UILabel alloc] initWithFrame:(CGRect){0,0,160,32}];
+	_trackNumbersLabel.textAlignment = NSTextAlignmentCenter;
+	_trackNumbersLabel.text = @"1 of 16";
+	self.navigationBar.topItem.titleView = _trackNumbersLabel;
+	[self.navigationBar.topItem setHidesBackButton:NO animated:NO];
+	
 	_player = [MPMusicPlayerController iPodMusicPlayer];
-
+	
 	// Register for media player notifications
 	NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self
@@ -73,24 +92,6 @@
     [_player beginGeneratingPlaybackNotifications];
 	
 	[self checkPlaybackStatus];
-	
-	_trackSlider.fillImage = [UIImage imageNamed:@"ProgressFill"];
-	_trackSlider.trackImage = [UIImage imageNamed:@"ProgressTrack"];
-	[_trackSlider setThumbImage:[UIImage imageNamed:@"ProgressThumb"]
-					   forState:UIControlStateNormal];
-	
-	_volumeSlider.value = _player.volume;
-	_volumeSlider.fillImage = [UIImage imageNamed:@"VolumeFill"];
-	_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
-	[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
-						forState:UIControlStateNormal];
-	
-	
-	_trackNumbersLabel = [[UILabel alloc] initWithFrame:(CGRect){0,0,160,32}];
-	_trackNumbersLabel.textAlignment = NSTextAlignmentCenter;
-	_trackNumbersLabel.text = @"1 of 16";
-	self.navigationBar.topItem.titleView = _trackNumbersLabel;
-	[self.navigationBar.topItem setHidesBackButton:NO animated:NO];
 	
 #if DEBUG_MODE
 	_imgv = [[UIImageView alloc] initWithFrame:(CGRect){0,20,64,64}];
@@ -195,10 +196,6 @@
 #warning animate this change? Animate the change of album art (if it changes), too?
 	UIColor *bg = [_iv.image backgroundColor];
 	self.view.tintColor = bg;
-	
-#warning why do I have to change this myself?
-	_trackSlider.tintColor = bg;
-	_volumeSlider.tintColor = bg;
 }
 
 - (IBAction)playPause:(id)sender
@@ -226,9 +223,15 @@
 	_player.volume = _volumeSlider.value;
 }
 
-- (void)didTapRightBarButtonItem:(id)sender
+- (IBAction)didTapRightBarButtonItem:(id)sender
 {
-	NSLog(@"%@", sender);
+	// Showing an action sheet to test tintColor change of items on screen.
+	UIActionSheet *as = [[UIActionSheet alloc] initWithTitle:@""
+													delegate:Nil
+										   cancelButtonTitle:@"Cancel"
+									  destructiveButtonTitle:nil
+										   otherButtonTitles:nil];
+	[as showFromBarButtonItem:sender animated:YES];
 }
 
 - (void)dealloc
