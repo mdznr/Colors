@@ -104,14 +104,21 @@
 	_trackLabel.text = [NSString stringWithFormat:@"%@", [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackNumber]];
 	_ofTotalTracksLabel.text = [NSString stringWithFormat:@"%@", [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackCount]];
 	
+	/*
+	MPNowPlayingInfoCenter *nowPlaying = [MPNowPlayingInfoCenter defaultCenter];
+	NSNumber *playbackElapsed = [[nowPlaying nowPlayingInfo] valueForKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
 	
-	NSTimeInterval elapsed = 0;
+	double elapsed = playbackElapsed.doubleValue;
+	float minutes = floor(elapsed / 60 );
+	float seconds = round(elapsed - minutes * 60);
+	_timeElapsed.text = [NSString stringWithFormat:@"%.0f:%.0f", minutes, seconds];
+	 */
 	
 	NSNumber *playbackDuration = [currentItem valueForProperty:MPMediaItemPropertyPlaybackDuration];
 	NSTimeInterval duration = playbackDuration.doubleValue;
 	NSTimeInterval remaining = duration - elapsed;
-	float minutes = floor(remaining / 60);
-	float seconds = round(remaining - minutes * 60);
+	minutes = floor(remaining / 60);
+	seconds = round(remaining - minutes * 60);
 	_timeRemaining.text = [NSString stringWithFormat:@"-%.0f:%.0f", minutes, seconds];
 }
 
