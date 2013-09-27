@@ -107,6 +107,7 @@
     [_player beginGeneratingPlaybackNotifications];
 	
 	[self checkPlaybackStatus];
+	[self updatePlaybackTime];
 	
 #warning remove timer when paused
 	_pollElapsedTime = [NSTimer scheduledTimerWithTimeInterval:1.0f
@@ -169,7 +170,6 @@
 
 - (void)updatePlaybackTime
 {
-	NSLog(@"UPDATE PLAYBACK TIME %@", [NSDate date]);
 	NSTimeInterval elapsed = _player.currentPlaybackTime;
 	_trackSlider.value = elapsed;
 	
@@ -278,6 +278,11 @@
 		default:
 			break;
 	}
+}
+
+- (IBAction)trackSliderChangedValue:(id)sender
+{
+	_player.currentPlaybackTime = _trackSlider.value;
 }
 
 - (IBAction)volumeChanged:(id)sender

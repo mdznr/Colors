@@ -56,6 +56,9 @@
                                 <rect key="frame" x="52" y="388" width="216" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="trackSliderChangedValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="bHS-yp-cvb"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="crC-2W-J97" userLabel="Volume Slider" customClass="MTZSlider">
                                 <rect key="frame" x="52" y="502" width="216" height="34"/>
