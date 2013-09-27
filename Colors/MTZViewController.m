@@ -21,7 +21,7 @@
 
 #define DEBUG_MODE 0
 
-@interface MTZViewController ()
+@interface MTZViewController () <MPMediaPickerControllerDelegate>
 
 @property (strong, nonatomic) MPMusicPlayerController *player;
 @property (strong, nonatomic) IBOutlet UIImageView *iv;
@@ -43,6 +43,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *timeRemaining;
 
 @property (strong, nonatomic) IBOutlet UIButton *playPause;
+
+@property (strong, nonatomic) MPMediaPickerController *mediaPicker;
 
 #if DEBUG_MODE
 @property (strong, nonatomic) UIImageView *imgv;
@@ -83,6 +85,10 @@
 	[self.navigationBar.topItem setHidesBackButton:NO animated:NO];
 	
 	_player = [MPMusicPlayerController iPodMusicPlayer];
+	
+	_mediaPicker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeMusic];
+    _mediaPicker.delegate = self;
+    _mediaPicker.allowsPickingMultipleItems = YES;
 	
 	// Register for media player notifications
 	NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
@@ -216,18 +222,50 @@
         [_player pause];
     } else {
         [_player play];
+		// Loop to get playback time
+		NSTimeInterval elapsed = _player.currentPlaybackTime;
+//		NSTimeInterval total = _player..;
+		_trackSlider.value = _player.currentPlaybackTime;
     }
 }
 
-- (IBAction)fastForward:(id)sender
+- (IBAction)skip:(id)sender
 {
 	[_player skipToNextItem];
 }
 
-- (IBAction)rewind:(id)sender
+- (IBAction)fastForward:(UILongPressGestureRecognizer *)sender
+{
+	switch (sender.state) {
+		case UIGestureRecognizerStateBegan:
+			[_player beginSeekingForward];
+			break;
+		case UIGestureRecognizerStateEnded:
+			[_player endSeeking];
+			break;
+		default:
+			break;
+	}
+}
+
+- (IBAction)previous:(id)sender
 {
 #warning go to previous item if in the first few seconds of playback else, go to beginning of song
 	[_player skipToPreviousItem];
+}
+
+- (IBAction)rewind:(UILongPressGestureRecognizer *)sender
+{
+	switch (sender.state) {
+		case UIGestureRecognizerStateBegan:
+			[_player beginSeekingBackward];
+			break;
+		case UIGestureRecognizerStateEnded:
+			[_player endSeeking];
+			break;
+		default:
+			break;
+	}
 }
 
 - (IBAction)volumeChanged:(id)sender
@@ -237,14 +275,43 @@
 
 - (IBAction)didTapRightBarButtonItem:(id)sender
 {
-	// Showing an action sheet to test tintColor change of items on screen.
+	/*
+	// Testing showing an action sheet to test tintColor change of items on screen.
 	UIActionSheet *as = [[UIActionSheet alloc] initWithTitle:@""
 													delegate:Nil
 										   cancelButtonTitle:@"Cancel"
 									  destructiveButtonTitle:nil
 										   otherButtonTitles:nil];
 	[as showFromBarButtonItem:sender animated:YES];
+	*/
+	
+	[self presentViewController:_mediaPicker
+					   animated:YES
+					 completion:^{}];
 }
+
+
+#pragma mark Media Picker
+
+- (void)mediaPicker:(MPMediaPickerController *)mediaPicker
+  didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection
+{
+    if ( mediaItemCollection ) {
+        [_player setQueueWithItemCollection:mediaItemCollection];
+        [_player play];
+    }
+	[mediaPicker dismissViewControllerAnimated:YES
+									completion:^{}];
+}
+
+- (void)mediaPickerDidCancel:(MPMediaPickerController *)mediaPicker
+{
+	[mediaPicker dismissViewControllerAnimated:YES
+									completion:^{}];
+}
+
+
+#pragma mark View Controller end
 
 - (void)dealloc
 {

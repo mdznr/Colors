@@ -117,23 +117,27 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWM-Hx-hT1" userLabel="FastForward">
                                 <rect key="frame" x="233" y="475" width="30" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="FastForward">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="fastForward:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="owh-jN-Anw"/>
+                                    <action selector="skip:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="C9P-oe-MfY"/>
+                                    <outletCollection property="gestureRecognizers" destination="X0O-8M-9gq" appends="YES" id="jE6-VQ-nYA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQF-iw-4iZ" userLabel="Rewind">
                                 <rect key="frame" x="58" y="475" width="30" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="Rewind">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="rewind:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="97e-LV-Plb"/>
+                                    <action selector="previous:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SVp-C1-at1"/>
+                                    <outletCollection property="gestureRecognizers" destination="VeH-K6-k2s" appends="YES" id="YbD-xK-UEG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqd-8a-tLV" userLabel="Time Elapsed">
@@ -174,6 +178,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="X0O-8M-9gq">
+                    <connections>
+                        <action selector="fastForward:" destination="vXZ-lx-hvc" id="uMP-JL-zww"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="VeH-K6-k2s">
+                    <connections>
+                        <action selector="rewind:" destination="vXZ-lx-hvc" id="kbT-lF-rzn"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
         </scene>
     </scenes>
