@@ -46,6 +46,8 @@
 
 @property (strong, nonatomic) MPMediaPickerController *mediaPicker;
 
+@property (strong, nonatomic) NSTimer *pollElapsedTime;
+
 #if DEBUG_MODE
 @property (strong, nonatomic) UIImageView *imgv;
 #endif
@@ -59,7 +61,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
-	[self.view setTintAdjustmentMode:UIViewTintAdjustmentModeAutomatic];
+	_player = [MPMusicPlayerController iPodMusicPlayer];
 	
 	_trackSlider.fillImage = [UIImage imageNamed:@"ProgressFill"];
 	_trackSlider.trackImage = [UIImage imageNamed:@"ProgressTrack"];
@@ -84,8 +86,6 @@
 	self.navigationBar.topItem.titleView = _trackNumbersLabel;
 	[self.navigationBar.topItem setHidesBackButton:NO animated:NO];
 	
-	_player = [MPMusicPlayerController iPodMusicPlayer];
-	
 	_mediaPicker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeMusic];
     _mediaPicker.delegate = self;
     _mediaPicker.allowsPickingMultipleItems = YES;
@@ -107,6 +107,13 @@
     [_player beginGeneratingPlaybackNotifications];
 	
 	[self checkPlaybackStatus];
+	
+#warning remove timer when paused
+	_pollElapsedTime = [NSTimer scheduledTimerWithTimeInterval:1.0f
+														target:self
+													  selector:@selector(updatePlaybackTime)
+													  userInfo:nil
+													   repeats:YES];
 	
 #if DEBUG_MODE
 	_imgv = [[UIImageView alloc] initWithFrame:(CGRect){0,20,64,64}];
@@ -156,27 +163,35 @@
 							range:NSMakeRange(trackNo.length + 4, trackOf.length)];
 	_trackNumbersLabel.attributedText = attributedTitle;
 	
-	CGFloat minutes, seconds;
-	
-	/*
-	MPNowPlayingInfoCenter *nowPlaying = [MPNowPlayingInfoCenter defaultCenter];
-	NSNumber *playbackElapsed = [[nowPlaying nowPlayingInfo] valueForKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
-	
-	double elapsed = playbackElapsed.doubleValue;
-	float minutes = floor(elapsed / 60 );
-	float seconds = round(elapsed - minutes * 60);
-	_timeElapsed.text = [NSString stringWithFormat:@"%.0f:%.0f", minutes, seconds];
-	 */
-	
-	double elapsed = 0.0f;
-	
 	NSNumber *playbackDuration = [currentItem valueForProperty:MPMediaItemPropertyPlaybackDuration];
-	NSTimeInterval duration = playbackDuration.doubleValue;
-	NSTimeInterval remaining = duration - elapsed;
-	minutes = floor(remaining / 60);
-	seconds = round(remaining - minutes * 60);
+	_trackSlider.maximumValue = playbackDuration.floatValue;
+}
+
+- (void)updatePlaybackTime
+{
+	NSLog(@"UPDATE PLAYBACK TIME %@", [NSDate date]);
+	NSTimeInterval elapsed = _player.currentPlaybackTime;
+	_trackSlider.value = elapsed;
+	
+	CGFloat minutes, seconds;
 	NSString *secondsString;
 	
+	minutes = floor(elapsed / 60);
+	seconds = roundf(elapsed - minutes * 60);
+	if ( seconds < 10 ) {
+		secondsString = [NSString stringWithFormat:@"0%.0f", seconds];
+	} else {
+		secondsString = [NSString stringWithFormat:@"%.0f", seconds];
+	}
+	_timeElapsed.text = [NSString stringWithFormat:@"%.0f:%@", minutes, secondsString];
+	
+	MPMediaItem *currentItem = [_player nowPlayingItem];
+	NSNumber *playbackDuration = [currentItem valueForProperty:MPMediaItemPropertyPlaybackDuration];
+	
+#warning round playbackDuration to nearest second?
+	NSTimeInterval remaining = playbackDuration.doubleValue - elapsed;
+	minutes = floor(remaining / 60);
+	seconds = round(remaining - minutes * 60);
 	if ( seconds < 10 ) {
 		secondsString = [NSString stringWithFormat:@"0%.0f", seconds];
 	} else {
@@ -189,13 +204,14 @@
 - (void)playbackStateDidChange:(id)sender
 {
 	switch ( _player.playbackState ) {
-		case MPMusicPlaybackStatePlaying:
-			[_playPause setImage:[UIImage imageNamed:@"Pause"] forState:UIControlStateNormal];
-			break;
 		case MPMusicPlaybackStateStopped:
 			[_player stop];
 		case MPMusicPlaybackStatePaused:
 			[_playPause setImage:[UIImage imageNamed:@"Play"] forState:UIControlStateNormal];
+			break;
+		case MPMusicPlaybackStatePlaying:
+			[_playPause setImage:[UIImage imageNamed:@"Pause"] forState:UIControlStateNormal];
+			break;
 		default:
 			break;
 	}
@@ -222,10 +238,6 @@
         [_player pause];
     } else {
         [_player play];
-		// Loop to get playback time
-		NSTimeInterval elapsed = _player.currentPlaybackTime;
-//		NSTimeInterval total = _player..;
-		_trackSlider.value = _player.currentPlaybackTime;
     }
 }
 
