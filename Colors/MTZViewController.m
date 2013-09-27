@@ -36,6 +36,9 @@
 
 @property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
+@property (strong, nonatomic) IBOutlet UIImageView *topShadow;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomShadow;
+
 @property (strong, nonatomic) IBOutlet UILabel *timeElapsed;
 @property (strong, nonatomic) IBOutlet UILabel *timeRemaining;
 
@@ -66,6 +69,12 @@
 	_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
 	[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
 						forState:UIControlStateNormal];
+	
+	UIInterpolatingMotionEffect *verticalMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+	verticalMotion.minimumRelativeValue = @2;
+	verticalMotion.maximumRelativeValue = @-2;
+	_topShadow.motionEffects = @[verticalMotion];
+	_bottomShadow.motionEffects = @[verticalMotion];
 	
 	_trackNumbersLabel = [[UILabel alloc] initWithFrame:(CGRect){0,0,160,32}];
 	_trackNumbersLabel.textAlignment = NSTextAlignmentCenter;
@@ -194,7 +203,10 @@
 - (void)refreshColors
 {
 #warning animate this change? Animate the change of album art (if it changes), too?
-	UIColor *bg = [_iv.image backgroundColor];
+	UIColor *bg = [_iv.image keyColor];
+	if ( !bg ) {
+		bg = [UIColor blackColor];
+	}
 	self.view.tintColor = bg;
 }
 
