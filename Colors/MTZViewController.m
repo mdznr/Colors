@@ -208,9 +208,15 @@
 			[_player stop];
 		case MPMusicPlaybackStatePaused:
 			[_playPause setImage:[UIImage imageNamed:@"Play"] forState:UIControlStateNormal];
+			_pollElapsedTime = nil;
 			break;
 		case MPMusicPlaybackStatePlaying:
 			[_playPause setImage:[UIImage imageNamed:@"Pause"] forState:UIControlStateNormal];
+			_pollElapsedTime = [NSTimer scheduledTimerWithTimeInterval:1.0f
+																target:self
+															  selector:@selector(updatePlaybackTime)
+															  userInfo:nil
+															   repeats:YES];
 			break;
 		default:
 			break;
@@ -248,6 +254,7 @@
 
 - (IBAction)fastForward:(UILongPressGestureRecognizer *)sender
 {
+#warning this should behave differently if paused
 	switch (sender.state) {
 		case UIGestureRecognizerStateBegan:
 			[_player beginSeekingForward];
@@ -268,6 +275,7 @@
 
 - (IBAction)rewind:(UILongPressGestureRecognizer *)sender
 {
+#warning this should behave differently if paused
 	switch (sender.state) {
 		case UIGestureRecognizerStateBegan:
 			[_player beginSeekingBackward];
@@ -278,6 +286,27 @@
 		default:
 			break;
 	}
+}
+
+- (IBAction)trackSliderDidBegin:(id)sender
+{
+	// Stop timer
+	NSLog(@"Slider begin");
+	[_pollElapsedTime invalidate];
+	_pollElapsedTime = nil;
+}
+
+- (IBAction)trackSliderDidEnd:(id)sender
+{
+	// Start timer back up
+	NSLog(@"Slider end");
+	[_pollElapsedTime invalidate];
+	_pollElapsedTime = nil;
+	_pollElapsedTime = [NSTimer scheduledTimerWithTimeInterval:1.0f
+														target:self
+													  selector:@selector(updatePlaybackTime)
+													  userInfo:nil
+													   repeats:YES];
 }
 
 - (IBAction)trackSliderChangedValue:(id)sender
