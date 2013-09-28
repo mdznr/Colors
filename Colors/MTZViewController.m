@@ -63,6 +63,10 @@
 	
 	_player = [MPMusicPlayerController iPodMusicPlayer];
 	
+	// Add volume view to hide volume HUD when changing volume
+	MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:CGRectMake(-1280.0, -1280.0, 0.0f, 0.0f)];
+	[self.view addSubview:volumeView];
+	
 	_trackSlider.fillImage = [UIImage imageNamed:@"ProgressFill"];
 	_trackSlider.trackImage = [UIImage imageNamed:@"ProgressTrack"];
 	[_trackSlider setThumbImage:[UIImage imageNamed:@"ProgressThumb"]
