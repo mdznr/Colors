@@ -129,4 +129,145 @@
 	return v;
 }
 
+
+// LAB
+// RGB -> XYZ via http://www.cs.rit.edu/~ncs/color/t_convert.html
+// XYZ -> LAB via http://www.easyrgb.com/index.php?X=MATH&H=07#text7
+
+/*
+ CGFloat r,g,b,a;
+ [self getRed:&r green:&g blue:&b alpha:&a];
+ 
+ // Convert to XYZ
+ CGFloat x = (0.412453 + 0.212671 + 0.019334) * r;
+ CGFloat y = (0.357580 + 0.715160 + 0.119193) * g;
+ CGFloat z = (0.180423 + 0.072169 + 0.950227) * b;
+ 
+ // Observer = 2°, Illuminant = D65
+ x /= 95.047;
+ y /= 100.000;
+ z /= 108.883;
+ 
+ if ( x > 0.008856 ) x = powf(x, 1.0f/3.0f);
+ else                x = ( 7.787 * x ) + ( 16 / 116 );
+ if ( y > 0.008856 ) y = powf(y, 1.0f/3.0f);
+ else                y = ( 7.787 * y ) + ( 16 / 116 );
+ if ( z > 0.008856 ) z = powf(z, 1.0f/3.0f);
+ else                z = ( 7.787 * z ) + ( 16 / 116 );
+ 
+ CGFloat labL = ( 116 * y ) - 16;
+ CGFloat labA = 500 * ( z - y );
+ CGFloat labB = 200 * ( y - z );
+ 
+ return labL;
+ */
+
+- (CGFloat)lValue
+{
+	CGFloat r,g,b,a;
+	[self getRed:&r green:&g blue:&b alpha:&a];
+	
+	// Convert to XYZ
+	if ( r > 0.04045 ) r = powf(((r + 0.055)/1.055), 2.4);
+	else               r /= 12.92;
+	if ( g > 0.04045 ) g = powf(((g + 0.055)/1.055), 2.4);
+	else               g /= 12.92;
+	if ( b > 0.04045 ) b = powf(((b + 0.055)/1.055), 2.4);
+	else               b /= 12.92;
+	
+	r *= 100;
+	g *= 100;
+	b *= 100;
+	
+	//Observer. = 2°, Illuminant = D65
+	CGFloat x = r * 0.4124 + g * 0.3576 + b * 0.1805;
+	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
+	CGFloat z = r * 0.0193 + g * 0.1192 + b * 0.9505;
+	
+	// Convert to LAB
+	// Observer = 2°, Illuminant = D65
+	y /= 100.000;
+	
+	if ( y > 0.008856 ) y = powf(y, 1.0f/3.0f);
+	else                y = ( 7.787 * y ) + ( 16 / 116 );
+
+	CGFloat labL = ( 116 * y ) - 16;
+	
+	return labL;
+}
+
+- (CGFloat)aValue
+{
+	CGFloat r,g,b,a;
+	[self getRed:&r green:&g blue:&b alpha:&a];
+	
+	// Convert to XYZ
+	if ( r > 0.04045 ) r = powf(((r + 0.055)/1.055), 2.4);
+	else               r /= 12.92;
+	if ( g > 0.04045 ) g = powf(((g + 0.055)/1.055), 2.4);
+	else               g /= 12.92;
+	if ( b > 0.04045 ) b = powf(((b + 0.055)/1.055), 2.4);
+	else               b /= 12.92;
+
+	r *= 100;
+	g *= 100;
+	b *= 100;
+
+	//Observer. = 2°, Illuminant = D65
+	CGFloat x = r * 0.4124 + g * 0.3576 + b * 0.1805;
+	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
+	CGFloat z = r * 0.0193 + g * 0.1192 + b * 0.9505;
+	
+	// Convert to LAB
+	// Observer = 2°, Illuminant = D65
+	x /= 95.047;
+	y /= 100.000;
+	
+	if ( x > 0.008856 ) x = powf(x, 1.0f/3.0f);
+	else                x = ( 7.787 * x ) + ( 16 / 116 );
+	if ( y > 0.008856 ) y = powf(y, 1.0f/3.0f);
+	else                y = ( 7.787 * y ) + ( 16 / 116 );
+	
+	CGFloat labA = 500 * ( x - y );
+	
+	return labA;
+}
+
+- (CGFloat)bValue
+{
+	CGFloat r,g,b,a;
+	[self getRed:&r green:&g blue:&b alpha:&a];
+	
+	// Convert to XYZ
+	if ( r > 0.04045 ) r = powf(((r + 0.055)/1.055), 2.4);
+	else               r /= 12.92;
+	if ( g > 0.04045 ) g = powf(((g + 0.055)/1.055), 2.4);
+	else               g /= 12.92;
+	if ( b > 0.04045 ) b = powf(((b + 0.055)/1.055), 2.4);
+	else               b /= 12.92;
+	
+	r *= 100;
+	g *= 100;
+	b *= 100;
+	
+	//Observer. = 2°, Illuminant = D65
+	CGFloat x = r * 0.4124 + g * 0.3576 + b * 0.1805;
+	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
+	CGFloat z = r * 0.0193 + g * 0.1192 + b * 0.9505;
+	
+	// Convert to LAB
+	// Observer = 2°, Illuminant = D65
+	y /= 100.000;
+	z /= 108.883;
+	
+	if ( y > 0.008856 ) y = powf(y, 1.0f/3.0f);
+	else                y = ( 7.787 * y ) + ( 16 / 116 );
+	if ( z > 0.008856 ) z = powf(z, 1.0f/3.0f);
+	else                z = ( 7.787 * z ) + ( 16 / 116 );
+	
+	CGFloat labB = 200 * ( y - z );
+	
+	return labB;
+}
+
 @end

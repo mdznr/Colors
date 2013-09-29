@@ -31,4 +31,9 @@
 - (CGFloat)uValue;
 - (CGFloat)vValue;
 
+// LAB
+- (CGFloat)lValue;
+- (CGFloat)aValue;
+- (CGFloat)bValue;
+
 @end

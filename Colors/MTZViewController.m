@@ -243,7 +243,7 @@
 	self.view.tintColor = keyColor;
 	
 	UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor]]
-													   withContrast:0.2f];
+													   withContrast:0.3f];
 	// Default to dark gray color for sliders
 	if ( !bg ) {
 		bg = [UIColor neueDarkGray];

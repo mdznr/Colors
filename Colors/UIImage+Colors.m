@@ -35,10 +35,8 @@
 
 - (UIColor *)keyColor
 {
+#warning there has to be a better way
 	return [self keyColorToContrastAgainstColors:@[[UIColor whiteColor],
-												   [UIColor lightGrayColor],
-												   [UIColor grayColor],
-												   [UIColor darkGrayColor],
 												   [UIColor blackColor]]
 									withContrast:1.0f];
 }
@@ -86,16 +84,16 @@
 			BOOL failsToleranceTest = NO;
 			for ( UIColor *color in colors ) {
 				float distance = [UIColor euclideanDistanceFromColor:newColor
-															   toColor:color];
-//				NSLog(@"%f %f %f", distance, tolerance, distance/255.0f);
+															 toColor:color];
+				NSLog(@"%f %f %f", distance, tolerance, distance/255.0f);
 				if ( distance < tolerance ) {
-//					NSLog(@"FAIL");
+//					NSLog(@"FAILED: %@", newColor);
 					failsToleranceTest = YES;
 					break;
 				}
 			}
 			if ( !failsToleranceTest ) {
-//				NSLog(@"PASS");
+//				NSLog(@"PASSED: %@", newColor);
 				[imgColors addObject:newColor];
 			}
 		}

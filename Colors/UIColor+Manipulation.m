@@ -13,19 +13,38 @@
 
 @implementation UIColor (Manipulation)
 
-+ (float)euclideanDistanceFromColor:(UIColor *)color
-							toColor:(UIColor *)anotherColor
+/*
++ (CGFloat)euclideanDistanceFromColor:(UIColor *)color
+							  toColor:(UIColor *)anotherColor
 {
-	float y1 = color.yValue;
-	float y2 = anotherColor.yValue;
+	CGFloat y1 = color.yValue;
+	CGFloat y2 = anotherColor.yValue;
 	
-	float u1 = color.uValue;
-	float u2 = anotherColor.uValue;
+	CGFloat u1 = color.uValue;
+	CGFloat u2 = anotherColor.uValue;
 	
-	float v1 = color.vValue;
-	float v2 = anotherColor.vValue;
+	CGFloat v1 = color.vValue;
+	CGFloat v2 = anotherColor.vValue;
 	
-	float distance = sqrtf(SQUARED(y1-y2) + SQUARED(u1-u2) + SQUARED(v1-v2));
+	CGFloat distance = sqrtf(SQUARED(y1-y2) + SQUARED(u1-u2) + SQUARED(v1-v2));
+	
+	return distance;
+}
+*/
+
++ (CGFloat)euclideanDistanceFromColor:(UIColor *)color
+							  toColor:(UIColor *)anotherColor
+{
+	CGFloat l1 = color.lValue;
+	CGFloat l2 = anotherColor.lValue;
+	
+	CGFloat a1 = color.aValue;
+	CGFloat a2 = anotherColor.aValue;
+	
+	CGFloat b1 = color.aValue;
+	CGFloat b2 = anotherColor.bValue;
+	
+	CGFloat distance = sqrtf(SQUARED(l1-l2) + SQUARED(a1-a2) + SQUARED(b1-b2));
 	
 	return distance;
 }
