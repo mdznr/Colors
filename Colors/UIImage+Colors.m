@@ -15,37 +15,59 @@
 
 @implementation UIImage (Colors)
 
+#pragma mark Background Color
+
 - (UIColor *)backgroundColor
 {
-	return nil;
+	return [self backgroundColorToContrastAgainstColors:nil
+										   withContrast:0.0f];
 }
 
-- (UIColor *)foregroundColor
+- (UIColor *)backgroundColorToContrastAgainstColors:(NSArray *)colors
+									   withContrast:(float)contast
 {
-	return nil;
+	return [self colorToContrastAgainstColors:colors
+								 withContrast:contast];
 }
+
+
+#pragma mark Key Color
 
 - (UIColor *)keyColor
 {
-	return [self keyColorToContrastAgainstColor:[UIColor whiteColor]
-								   withContrast:0.2f];
+	return [self keyColorToContrastAgainstColors:@[[UIColor whiteColor],
+												   [UIColor lightGrayColor],
+												   [UIColor grayColor],
+												   [UIColor darkGrayColor],
+												   [UIColor blackColor]]
+									withContrast:1.0f];
 }
 
-- (UIColor *)keyColorToContrastAgainstColor:(UIColor *)color
-							   withContrast:(CGFloat)contrast
+- (UIColor *)keyColorToContrastAgainstColors:(NSArray *)colors
+								withContrast:(float)contrast
+{
+	return [self colorToContrastAgainstColors:colors
+								 withContrast:contrast];
+}
+
+
+#pragma mark Color
+
+- (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
+							 withContrast:(float)contrast
 {
 	NSDate *startDate = [NSDate date];
-	CGFloat tolerance = contrast * 255.0f;
+	float tolerance = contrast * 255.0f;
 	
 #warning determine a good size to get good color data (multiple of size)
-#warning determine proper interpolation quality for level of detail of image (lower quality for higher detail)
 	// Scale down image to make computation less intensive
 	CGSize size = (CGSize){24,24};
 	UIImage *smallImage = [self scaleToSize:size
 				   withInterpolationQuality:kCGInterpolationLow];
 	
 	// Create an array for all the colors
-	NSMutableArray *colors = [[NSMutableArray alloc] initWithCapacity:smallImage.size.height*smallImage.size.width];
+	NSUInteger cap = smallImage.size.height * smallImage.size.width;
+	NSMutableArray *imgColors = [[NSMutableArray alloc] initWithCapacity:cap];
 	
 	// Go through each pixel and add UIColor to array<
 	unsigned char *pixelData = [smallImage rgbaPixels];
@@ -55,12 +77,27 @@
 			unsigned char g = pixelData[(x*((int)smallImage.size.width)*4)+(y*4)+1];
 			unsigned char b = pixelData[(x*((int)smallImage.size.width)*4)+(y*4)+2];
 			unsigned char a = pixelData[(x*((int)smallImage.size.width)*4)+(y*4)+3];
-			UIColor *color = [UIColor colorWithRed:[[NSNumber numberWithUnsignedChar:r] floatValue]/255.0f
-											 green:[[NSNumber numberWithUnsignedChar:g] floatValue]/255.0f
-											  blue:[[NSNumber numberWithUnsignedChar:b] floatValue]/255.0f
-											 alpha:[[NSNumber numberWithUnsignedChar:a] floatValue]/255.0f];
-			//NSLog(@"%f %f %f", [color redComponent], [color greenComponent], [color blueComponent]);
-			[colors addObject:color];
+			UIColor *newColor = [UIColor colorWithRed:[[NSNumber numberWithUnsignedChar:r] floatValue]/255.0f
+												green:[[NSNumber numberWithUnsignedChar:g] floatValue]/255.0f
+												 blue:[[NSNumber numberWithUnsignedChar:b] floatValue]/255.0f
+												alpha:[[NSNumber numberWithUnsignedChar:a] floatValue]/255.0f];
+			
+			// Make sure it contrasts enough with the desired color and has enough saturation
+			BOOL failsToleranceTest = NO;
+			for ( UIColor *color in colors ) {
+				float distance = [UIColor euclideanDistanceFromColor:newColor
+															   toColor:color];
+//				NSLog(@"%f %f %f", distance, tolerance, distance/255.0f);
+				if ( distance < tolerance ) {
+//					NSLog(@"FAIL");
+					failsToleranceTest = YES;
+					break;
+				}
+			}
+			if ( !failsToleranceTest ) {
+//				NSLog(@"PASS");
+				[imgColors addObject:newColor];
+			}
 		}
 	}
 	
@@ -68,39 +105,26 @@
 	NSMutableArray *groups = [[NSMutableArray alloc] initWithCapacity:4];
 	
 	// Iterate over every color and add it to a group
-	for ( UIColor *myColor in colors ) {
-		// Make sure it contrasts enough with the desired color
-		if ( [UIColor euclideanDistanceFromColor:color
-										 toColor:myColor] < tolerance ) {
-			continue;
-		}
-		
-#warning when to ignore unsaturated colors and when not to?
-		// Only use saturated colors
-		if ( myColor.saturation < 0.25f ) {
-//			continue;
-		}
-		
+	for ( UIColor *eachColor in imgColors ) {
 		NSMutableArray *bestFitGroup = nil;
-		CGFloat smallestDistance = CGFLOAT_MAX;
+		float smallestDistance = FLT_MAX;
 		// Check every group and see if it fits in
 		for ( NSMutableArray *group in groups ) {
 			UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
-			CGFloat distance = [UIColor euclideanDistanceFromColor:myColor
-														   toColor:groupColor];
+			float distance = [UIColor euclideanDistanceFromColor:eachColor
+														 toColor:groupColor];
 			if ( distance < smallestDistance ) {
 				smallestDistance = distance;
 				bestFitGroup = group;
 			}
 		}
 		
-		// Add to group that had highest match
 		if ( smallestDistance < tolerance ) {
-			[bestFitGroup addObject:myColor];
-		}
-		// Or create a new group if not within tolerance
-		else {
-			NSMutableArray *newGroup = [[NSMutableArray alloc] initWithObjects:myColor, nil];
+			// Add to group that had highest match
+			[bestFitGroup addObject:eachColor];
+		} else {
+			// Or create a new group if not within tolerance
+			NSMutableArray *newGroup = [[NSMutableArray alloc] initWithObjects:eachColor, nil];
 			[groups addObject:newGroup];
 		}
 	}
@@ -116,29 +140,35 @@
 	
 	// Print out the main color for each group
 	for ( NSMutableArray *group in groups ) {
-		UIColor *color = (UIColor *)[group objectAtIndex:0];
-		NSLog(@"GROUP SIZE: %lu COLOR: %f %f %f", (unsigned long)group.count, [color redComponent], [color greenComponent], [color blueComponent]);
+		UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
+		NSLog(@"GROUP SIZE: %lu COLOR: %f %f %f",
+			  (unsigned long)group.count,
+			  [groupColor redComponent],
+			  [groupColor greenComponent],
+			  [groupColor blueComponent]);
 	}
 	NSLog(@"NUMGROUPS: %lu", (unsigned long)groups.count);
 	
 	// Get average color in dominant bucket
 	NSMutableArray *group = groups[0];
-	CGFloat r = 0.0f;
-	CGFloat g = 0.0f;
-	CGFloat b = 0.0f;
-	for ( UIColor *color in group ) {
-		r += [color redComponent];
-		g += [color greenComponent];
-		b += [color blueComponent];
+	float r = 0.0f;
+	float g = 0.0f;
+	float b = 0.0f;
+	for ( UIColor *eachColor in group ) {
+		r += [eachColor redComponent];
+		g += [eachColor greenComponent];
+		b += [eachColor blueComponent];
 	}
 	r /= group.count;
 	g /= group.count;
 	b /= group.count;
+	UIColor *returnColor = [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
+	
 	NSLog(@"DURATION: %f", [[NSDate date] timeIntervalSinceDate:startDate]);
-	return [UIColor colorWithRed:r
-						   green:g
-							blue:b
-						   alpha:1.0f];
+	
+	NSLog(@"SAT: %f", returnColor.saturation);
+	
+	return returnColor;
 }
 
 @end

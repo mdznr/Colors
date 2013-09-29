@@ -11,6 +11,7 @@
 @interface UIColor (Manipulation)
 
 /// Calculate the Euclidean Distance between colors in the YUV colorspace.
-+ (CGFloat)euclideanDistanceFromColor:(UIColor *)color toColor:(UIColor *)anotherColor;
++ (float)euclideanDistanceFromColor:(UIColor *)color
+							toColor:(UIColor *)anotherColor;
 
 @end

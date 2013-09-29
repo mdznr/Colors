@@ -13,18 +13,19 @@
 
 @implementation UIColor (Manipulation)
 
-+ (CGFloat)euclideanDistanceFromColor:(UIColor *)color toColor:(UIColor *)anotherColor
++ (float)euclideanDistanceFromColor:(UIColor *)color
+							toColor:(UIColor *)anotherColor
 {
-	CGFloat y1 = color.yValue;
-	CGFloat y2 = anotherColor.yValue;
+	float y1 = color.yValue;
+	float y2 = anotherColor.yValue;
 	
-	CGFloat u1 = color.uValue;
-	CGFloat u2 = anotherColor.uValue;
+	float u1 = color.uValue;
+	float u2 = anotherColor.uValue;
 	
-	CGFloat v1 = color.vValue;
-	CGFloat v2 = anotherColor.vValue;
+	float v1 = color.vValue;
+	float v2 = anotherColor.vValue;
 	
-	CGFloat distance = sqrtl(SQUARED(y1-y2) + SQUARED(u1-u2) + SQUARED(v1-v2));
+	float distance = sqrtf(SQUARED(y1-y2) + SQUARED(u1-u2) + SQUARED(v1-v2));
 	
 	return distance;
 }

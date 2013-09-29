@@ -235,11 +235,21 @@
 - (void)refreshColors
 {
 #warning animate this change? Animate the change of album art (if it changes), too?
-	UIColor *bg = [_iv.image keyColor];
-	if ( !bg ) {
-		bg = [UIColor blackColor];
+	UIColor *keyColor = [_iv.image keyColor];
+	// Default to neue blue color for elements that require saturated colors
+	if ( !keyColor ) {
+		keyColor = [UIColor neueBlue];
 	}
-	self.view.tintColor = bg;
+	self.view.tintColor = keyColor;
+	
+	UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor]]
+													   withContrast:0.2f];
+	// Default to dark gray color for sliders
+	if ( !bg ) {
+		bg = [UIColor neueDarkGray];
+	}
+	_volumeSlider.tintColor = bg;
+	_trackSlider.tintColor = bg;
 }
 
 - (IBAction)playPause:(id)sender
@@ -295,7 +305,6 @@
 - (IBAction)trackSliderDidBegin:(id)sender
 {
 	// Stop timer
-	NSLog(@"Slider begin");
 	[_pollElapsedTime invalidate];
 	_pollElapsedTime = nil;
 }
@@ -303,7 +312,6 @@
 - (IBAction)trackSliderDidEnd:(id)sender
 {
 	// Start timer back up
-	NSLog(@"Slider end");
 	[_pollElapsedTime invalidate];
 	_pollElapsedTime = nil;
 	_pollElapsedTime = [NSTimer scheduledTimerWithTimeInterval:1.0f
