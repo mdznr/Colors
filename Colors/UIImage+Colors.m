@@ -54,7 +54,7 @@
 - (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
 							 withContrast:(float)contrast
 {
-	NSDate *startDate = [NSDate date];
+//	NSDate *startDate = [NSDate date];
 	float tolerance = contrast * 255.0f;
 	
 #warning determine a good size to get good color data (multiple of size)
@@ -85,7 +85,7 @@
 			for ( UIColor *color in colors ) {
 				float distance = [UIColor euclideanDistanceFromColor:newColor
 															 toColor:color];
-				NSLog(@"%f %f %f", distance, tolerance, distance/255.0f);
+//				NSLog(@"%f %f %f", distance, tolerance, distance/255.0f);
 				if ( distance < tolerance ) {
 //					NSLog(@"FAILED: %@", newColor);
 					failsToleranceTest = YES;
@@ -139,13 +139,13 @@
 	// Print out the main color for each group
 	for ( NSMutableArray *group in groups ) {
 		UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
-		NSLog(@"GROUP SIZE: %lu COLOR: %f %f %f",
-			  (unsigned long)group.count,
-			  [groupColor redComponent],
-			  [groupColor greenComponent],
-			  [groupColor blueComponent]);
+//		NSLog(@"GROUP SIZE: %lu COLOR: %f %f %f",
+//			  (unsigned long)group.count,
+//			  [groupColor redComponent],
+//			  [groupColor greenComponent],
+//			  [groupColor blueComponent]);
 	}
-	NSLog(@"NUMGROUPS: %lu", (unsigned long)groups.count);
+//	NSLog(@"NUMGROUPS: %lu", (unsigned long)groups.count);
 	
 	// Get average color in dominant bucket
 	NSMutableArray *group = groups[0];
@@ -162,9 +162,9 @@
 	b /= group.count;
 	UIColor *returnColor = [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
 	
-	NSLog(@"DURATION: %f", [[NSDate date] timeIntervalSinceDate:startDate]);
+//	NSLog(@"DURATION: %f", [[NSDate date] timeIntervalSinceDate:startDate]);
 	
-	NSLog(@"SAT: %f", returnColor.saturation);
+//	NSLog(@"SAT: %f", returnColor.saturation);
 	
 	return returnColor;
 }

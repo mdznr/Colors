@@ -113,13 +113,6 @@
 	[self checkPlaybackStatus];
 	[self updatePlaybackTime];
 	
-#warning remove timer when paused
-	_pollElapsedTime = [NSTimer scheduledTimerWithTimeInterval:1.0f
-														target:self
-													  selector:@selector(updatePlaybackTime)
-													  userInfo:nil
-													   repeats:YES];
-	
 #if DEBUG_MODE
 	_imgv = [[UIImageView alloc] initWithFrame:(CGRect){0,20,64,64}];
 	[self.view addSubview:_imgv];
@@ -170,12 +163,33 @@
 	
 	NSNumber *playbackDuration = [currentItem valueForProperty:MPMediaItemPropertyPlaybackDuration];
 	_trackSlider.maximumValue = playbackDuration.floatValue;
+	
+	[self updatePlaybackTime];
 }
 
 - (void)updatePlaybackTime
 {
+	[self updatePlaybackTimeWithAnimation:NO];
+}
+
+- (void)updatePlaybackTimeWithAnimation
+{
+	[self updatePlaybackTimeWithAnimation:YES];
+}
+
+- (void)updatePlaybackTimeWithAnimation:(BOOL)animated
+{
 	NSTimeInterval elapsed = _player.currentPlaybackTime;
-	_trackSlider.value = elapsed;
+	if ( animated ) {
+		[UIView beginAnimations:nil context:nil];
+		[UIView setAnimationBeginsFromCurrentState:YES];
+		[UIView setAnimationCurve:UIViewAnimationCurveLinear];
+		[UIView setAnimationDuration:1.0f];
+		[_trackSlider setValue:(elapsed+1) animated:YES];
+		[UIView commitAnimations];
+	} else {
+		[_trackSlider setValue:(elapsed) animated:NO];
+	}
 	
 	CGFloat minutes, seconds;
 	NSString *secondsString;
@@ -212,13 +226,16 @@
 			[_player stop];
 		case MPMusicPlaybackStatePaused:
 			[_playPause setImage:[UIImage imageNamed:@"Play"] forState:UIControlStateNormal];
+			[_pollElapsedTime invalidate];
 			_pollElapsedTime = nil;
 			break;
 		case MPMusicPlaybackStatePlaying:
 			[_playPause setImage:[UIImage imageNamed:@"Pause"] forState:UIControlStateNormal];
+			[_pollElapsedTime invalidate];
+			_pollElapsedTime = nil;
 			_pollElapsedTime = [NSTimer scheduledTimerWithTimeInterval:1.0f
 																target:self
-															  selector:@selector(updatePlaybackTime)
+															  selector:@selector(updatePlaybackTimeWithAnimation)
 															  userInfo:nil
 															   repeats:YES];
 			break;
@@ -240,7 +257,7 @@
 	if ( !keyColor ) {
 		keyColor = [UIColor neueBlue];
 	}
-	self.view.tintColor = keyColor;
+	[[UIApplication sharedApplication] keyWindow].tintColor = keyColor;
 	
 	UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor]]
 													   withContrast:0.3f];
@@ -316,7 +333,7 @@
 	_pollElapsedTime = nil;
 	_pollElapsedTime = [NSTimer scheduledTimerWithTimeInterval:1.0f
 														target:self
-													  selector:@selector(updatePlaybackTime)
+													  selector:@selector(updatePlaybackTimeWithAnimation)
 													  userInfo:nil
 													   repeats:YES];
 }
