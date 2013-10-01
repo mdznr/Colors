@@ -21,8 +21,8 @@
 /// @param colors An array of colors that the key color needs to contrast with
 /// @param contrast The perceived difference in color difference.
 /// @discussion Returns nil if no good color is found
-- (UIColor *)backgroundColorToContrastAgainstColors:(NSArray *)color
-									   withContrast:(float)contast;
+- (UIColor *)backgroundColorToContrastAgainstColors:(NSArray *)colors
+									   withContrast:(float)contrast;
 
 
 /// The primary saturated color that appears to dominate the image
