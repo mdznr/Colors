@@ -24,7 +24,7 @@
 }
 
 - (UIColor *)backgroundColorToContrastAgainstColors:(NSArray *)colors
-									   withContrast:(float)contast
+									   withContrast:(UIColorContrast)contast
 {
 	return [self colorToContrastAgainstColors:colors
 								 withContrast:contast];
@@ -42,7 +42,7 @@
 }
 
 - (UIColor *)keyColorToContrastAgainstColors:(NSArray *)colors
-								withContrast:(float)contrast
+								withContrast:(UIColorContrast)contrast
 {
 	return [self colorToContrastAgainstColors:colors
 								 withContrast:contrast];
@@ -52,10 +52,23 @@
 #pragma mark Color
 
 - (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
-							 withContrast:(float)contrast
+							 withContrast:(UIColorContrast)contrast
 {
 //	NSDate *startDate = [NSDate date];
-	float tolerance = contrast * 255.0f;
+	float tolerance;
+	switch ( contrast ) {
+		case UIColorContrastLevelLow:
+			tolerance = 0.2f * 255.0f;
+			break;
+		case UIColorContrastLevelMedium:
+			tolerance = 0.5f * 255.0f;
+			break;
+		case UIColorContrastLevelHigh:
+			break;
+			tolerance = 0.8f * 255.0f;
+		default:
+			break;
+	}
 	
 #warning determine a good size to get good color data (multiple of size)
 	// Scale down image to make computation less intensive
@@ -80,19 +93,26 @@
 												 blue:[[NSNumber numberWithUnsignedChar:b] floatValue]/255.0f
 												alpha:[[NSNumber numberWithUnsignedChar:a] floatValue]/255.0f];
 			
+			// Make sure it is a key color
+#warning should only apply to keyColor method
+			if ( [newColor brightness] + ((5.0f/7.0f)*[newColor saturation]) <= (17.0f/14.0f)  ) {
+				continue;
+			}
+			
 			// Make sure it contrasts enough with the desired color and has enough saturation
-			BOOL failsToleranceTest = NO;
+			BOOL failsTest = NO;
 			for ( UIColor *color in colors ) {
 				float distance = [UIColor euclideanDistanceFromColor:newColor
 															 toColor:color];
 //				NSLog(@"%f %f %f", distance, tolerance, distance/255.0f);
 				if ( distance < tolerance ) {
 //					NSLog(@"FAILED: %@", newColor);
-					failsToleranceTest = YES;
+					failsTest = YES;
 					break;
 				}
 			}
-			if ( !failsToleranceTest ) {
+			
+			if ( !failsTest ) {
 //				NSLog(@"PASSED: %@", newColor);
 				[imgColors addObject:newColor];
 			}
