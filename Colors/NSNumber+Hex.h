@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Matt Zanchelli. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSNumber (Hex)
 

@@ -6,9 +6,7 @@
 //  Copyright (c) 2013 Matt Zanchelli. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-#warning expose contrast in a few separate values? low medium and high?
+@import UIKit;
 
 typedef enum {
 	UIColorContrastLevelLow,
@@ -22,7 +20,6 @@ typedef enum {
 /// @discussion Returns nil if no good color is found
 - (UIColor *)backgroundColor;
 
-#warning offer method without contrast?
 /// The color that appears to dominate the background of the image
 /// @param colors An array of colors that the returned color needs to contrast with
 /// @param contrast The perceived difference in color difference.
@@ -35,7 +32,6 @@ typedef enum {
 /// @discussion Returns nil if no good color is found
 - (UIColor *)keyColor;
 
-#warning offer method without contrast?
 /// The primary saturated color that appears to dominate the image
 /// @param color An array of colors that the returned color needs to contrast with
 /// @param contrast The perceived difference in color difference.

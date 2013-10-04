@@ -8,7 +8,7 @@
 
 #import "MTZViewController.h"
 
-#import <MediaPlayer/MediaPlayer.h>
+@import MediaPlayer;
 
 #import "UIColor+Components.h"
 #import "UIColor+Hex.h"

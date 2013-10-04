@@ -19,7 +19,7 @@
  * 1.0 (23/08/2011)
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIImage (Pixels)
 

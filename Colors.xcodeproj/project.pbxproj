@@ -14,7 +14,6 @@
 		C926218717D51C250095AE1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C926218617D51C250095AE1C /* main.m */; };
 		C926218B17D51C250095AE1C /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C926218A17D51C250095AE1C /* MTZAppDelegate.m */; };
 		C926218E17D51C250095AE1C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C926218C17D51C250095AE1C /* Main_iPhone.storyboard */; };
-		C926219117D51C250095AE1C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C926218F17D51C250095AE1C /* Main_iPad.storyboard */; };
 		C926219417D51C250095AE1C /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C926219317D51C250095AE1C /* MTZViewController.m */; };
 		C926219617D51C250095AE1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C926219517D51C250095AE1C /* Images.xcassets */; };
 		C926219D17D51C250095AE1C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926219C17D51C250095AE1C /* XCTest.framework */; };
@@ -58,7 +57,6 @@
 		C926218917D51C250095AE1C /* MTZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZAppDelegate.h; sourceTree = "<group>"; };
 		C926218A17D51C250095AE1C /* MTZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZAppDelegate.m; sourceTree = "<group>"; };
 		C926218D17D51C250095AE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		C926219017D51C250095AE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		C926219217D51C250095AE1C /* MTZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZViewController.h; sourceTree = "<group>"; };
 		C926219317D51C250095AE1C /* MTZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZViewController.m; sourceTree = "<group>"; };
 		C926219517D51C250095AE1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				C926218917D51C250095AE1C /* MTZAppDelegate.h */,
 				C926218A17D51C250095AE1C /* MTZAppDelegate.m */,
 				C926218C17D51C250095AE1C /* Main_iPhone.storyboard */,
-				C926218F17D51C250095AE1C /* Main_iPad.storyboard */,
 				C926219217D51C250095AE1C /* MTZViewController.h */,
 				C926219317D51C250095AE1C /* MTZViewController.m */,
 				C9C1830517F3A4AC005AF9A3 /* MTZSlider.h */,
@@ -294,7 +291,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C926219117D51C250095AE1C /* Main_iPad.storyboard in Resources */,
 				C926219617D51C250095AE1C /* Images.xcassets in Resources */,
 				C926218E17D51C250095AE1C /* Main_iPhone.storyboard in Resources */,
 				C926218517D51C250095AE1C /* InfoPlist.strings in Resources */,
@@ -366,14 +362,6 @@
 				C926218D17D51C250095AE1C /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		C926218F17D51C250095AE1C /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C926219017D51C250095AE1C /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		C92621A517D51C250095AE1C /* InfoPlist.strings */ = {
@@ -468,6 +456,7 @@
 				INFOPLIST_FILE = "Colors/Colors-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -483,6 +472,7 @@
 				INFOPLIST_FILE = "Colors/Colors-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
