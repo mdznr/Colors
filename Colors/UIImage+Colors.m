@@ -38,7 +38,7 @@
 #warning there has to be a better way
 	return [self keyColorToContrastAgainstColors:@[[UIColor whiteColor],
 												   [UIColor blackColor]]
-									withContrast:1.0f];
+									withContrast:0.2f];
 }
 
 - (UIColor *)keyColorToContrastAgainstColors:(NSArray *)colors
