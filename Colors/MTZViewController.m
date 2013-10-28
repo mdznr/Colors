@@ -48,6 +48,8 @@
 
 @property (strong, nonatomic) NSTimer *pollElapsedTime;
 
+@property (strong, nonatomic) IBOutlet UIImageView *speakerOffImage;
+
 #if DEBUG_MODE
 @property (strong, nonatomic) UIImageView *imgv;
 #endif
@@ -67,16 +69,25 @@
 	MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:CGRectMake(-1280.0, -1280.0, 0.0f, 0.0f)];
 	[self.view addSubview:volumeView];
 	
+	_trackSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,395,216,19}];
+	_trackSlider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	_trackSlider.fillImage = [UIImage imageNamed:@"ProgressFill"];
 	_trackSlider.trackImage = [UIImage imageNamed:@"ProgressTrack"];
 	[_trackSlider setThumbImage:[UIImage imageNamed:@"ProgressThumb"]
 					   forState:UIControlStateNormal];
+	[self.view addSubview:_trackSlider];
 	
+	_volumeSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,510,216,19}];
+	[_volumeSlider addTarget:self
+					  action:@selector(volumeChanged:)
+			forControlEvents:UIControlEventValueChanged];
+	_volumeSlider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	_volumeSlider.value = _player.volume;
 	_volumeSlider.fillImage = [UIImage imageNamed:@"VolumeFill"];
 	_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
 	[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
 						forState:UIControlStateNormal];
+	[self.view addSubview:_volumeSlider];
 	
 	UIInterpolatingMotionEffect *verticalMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
 	verticalMotion.minimumRelativeValue = @2;
