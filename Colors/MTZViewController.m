@@ -69,7 +69,7 @@
 	MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:CGRectMake(-1280.0, -1280.0, 0.0f, 0.0f)];
 	[self.view addSubview:volumeView];
 	
-	_trackSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,386,216,34}];
+	_trackSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,385,216,34}];
 	[_trackSlider addTarget:self
 					 action:@selector(trackSliderChangedValue:)
 		   forControlEvents:UIControlEventValueChanged];
@@ -86,7 +86,7 @@
 					   forState:UIControlStateNormal];
 	[self.view addSubview:_trackSlider];
 	
-	_volumeSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,498,216,34}];
+	_volumeSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,505,216,34}];
 	[_volumeSlider addTarget:self
 					  action:@selector(volumeChanged:)
 			forControlEvents:UIControlEventValueChanged];
