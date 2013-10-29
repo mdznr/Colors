@@ -10,8 +10,12 @@
 
 @interface UIColor (Manipulation)
 
-/// Calculate the Euclidean Distance between colors in the YUV colorspace.
+/// Calculate the Euclidean Distance between colors in the LAB colorspace.
 + (float)euclideanDistanceFromColor:(UIColor *)color
 							toColor:(UIColor *)anotherColor;
+
+/// The perceived difference between two colors.
+/// Calculated using the CIEDE2000 Color-Difference Formula.
++ (CGFloat)differenceBetweenColor:(UIColor *)color1 andColor:(UIColor *)color2;
 
 @end

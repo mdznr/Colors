@@ -102,8 +102,8 @@
 			// Make sure it contrasts enough with the desired color and has enough saturation
 			BOOL failsTest = NO;
 			for ( UIColor *color in colors ) {
-				float distance = [UIColor euclideanDistanceFromColor:newColor
-															 toColor:color];
+				float distance = [UIColor differenceBetweenColor:newColor
+														andColor:color];
 //				NSLog(@"%f %f %f", distance, tolerance, distance/255.0f);
 				if ( distance < tolerance ) {
 //					NSLog(@"FAILED: %@", newColor);
@@ -129,8 +129,8 @@
 		// Check every group and see if it fits in
 		for ( NSMutableArray *group in groups ) {
 			UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
-			float distance = [UIColor euclideanDistanceFromColor:eachColor
-														 toColor:groupColor];
+			float distance = [UIColor differenceBetweenColor:eachColor
+													andColor:groupColor];
 			if ( distance < smallestDistance ) {
 				smallestDistance = distance;
 				bestFitGroup = group;
