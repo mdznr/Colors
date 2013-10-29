@@ -58,14 +58,14 @@
 	float tolerance;
 	switch ( contrast ) {
 		case UIColorContrastLevelLow:
-			tolerance = 0.2f * 255.0f;
+			tolerance = 0.23f * 255.0f;
 			break;
 		case UIColorContrastLevelMedium:
-			tolerance = 0.5f * 255.0f;
+			tolerance = 0.46f * 255.0f;
 			break;
 		case UIColorContrastLevelHigh:
 			break;
-			tolerance = 0.8f * 255.0f;
+			tolerance = 0.92f * 255.0f;
 		default:
 			break;
 	}
