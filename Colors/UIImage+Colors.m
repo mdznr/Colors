@@ -54,7 +54,7 @@
 - (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
 							 withContrast:(UIColorContrast)contrast
 {
-//	NSDate *startDate = [NSDate date];
+	//	NSDate *startDate = [NSDate date];
 	float tolerance;
 	switch ( contrast ) {
 		case UIColorContrastLevelLow:
@@ -104,16 +104,16 @@
 			for ( UIColor *color in colors ) {
 				float distance = [UIColor differenceBetweenColor:newColor
 														andColor:color];
-//				NSLog(@"%f %f %f", distance, tolerance, distance/255.0f);
+				//				NSLog(@"%f %f %f", distance, tolerance, distance/255.0f);
 				if ( distance < tolerance ) {
-//					NSLog(@"FAILED: %@", newColor);
+					//					NSLog(@"FAILED: %@", newColor);
 					failsTest = YES;
 					break;
 				}
 			}
 			
 			if ( !failsTest ) {
-//				NSLog(@"PASSED: %@", newColor);
+				//				NSLog(@"PASSED: %@", newColor);
 				[imgColors addObject:newColor];
 			}
 		}
@@ -157,34 +157,36 @@
 			}];
 	
 	// Print out the main color for each group
-	for ( NSMutableArray *group in groups ) {
-		UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
-//		NSLog(@"GROUP SIZE: %lu COLOR: %f %f %f",
-//			  (unsigned long)group.count,
-//			  [groupColor redComponent],
-//			  [groupColor greenComponent],
-//			  [groupColor blueComponent]);
-	}
-//	NSLog(@"NUMGROUPS: %lu", (unsigned long)groups.count);
+	/*
+	 for ( NSMutableArray *group in groups ) {
+	 UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
+	 NSLog(@"GROUP SIZE: %lu COLOR: %f %f %f",
+	 (unsigned long)group.count,
+	 [groupColor redComponent],
+	 [groupColor greenComponent],
+	 [groupColor blueComponent]);
+	 }
+	 NSLog(@"NUMGROUPS: %lu", (unsigned long)groups.count);
+	 */
 	
 	// Get average color in dominant bucket
 	NSMutableArray *group = groups[0];
-	float r = 0.0f;
-	float g = 0.0f;
+	float l = 0.0f;
+	float a = 0.0f;
 	float b = 0.0f;
 	for ( UIColor *eachColor in group ) {
-		r += [eachColor redComponent];
-		g += [eachColor greenComponent];
-		b += [eachColor blueComponent];
+		l += [eachColor lValue];
+		a += [eachColor aValue];
+		b += [eachColor bValue];
 	}
-	r /= group.count;
-	g /= group.count;
+	l /= group.count;
+	a /= group.count;
 	b /= group.count;
-	UIColor *returnColor = [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
+	UIColor *returnColor = [UIColor colorWithLabL:l a:a b:b];
 	
-//	NSLog(@"DURATION: %f", [[NSDate date] timeIntervalSinceDate:startDate]);
+	//	NSLog(@"DURATION: %f", [[NSDate date] timeIntervalSinceDate:startDate]);
 	
-//	NSLog(@"SAT: %f", returnColor.saturation);
+	//	NSLog(@"SAT: %f", returnColor.saturation);
 	
 	return returnColor;
 }
