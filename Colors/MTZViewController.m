@@ -22,7 +22,10 @@
 @interface MTZViewController ()
 
 @property (strong, nonatomic) IBOutlet UIView *color1Viewer;
+@property (strong, nonatomic) IBOutlet UIView *color2ViewerSmall;
+
 @property (strong, nonatomic) IBOutlet UIView *color2Viewer;
+@property (strong, nonatomic) IBOutlet UIView *color1ViewerSmall;
 
 @property (strong, nonatomic) IBOutlet UILabel *colorContrastLabel;
 
@@ -56,6 +59,7 @@
 									   blue:_bSlider1.value/255.0f
 									  alpha:1.0f];
 	_color1Viewer.backgroundColor = color1;
+	_color1ViewerSmall.backgroundColor = color1;
 	_rSlider1.tintColor = color1;
 	_gSlider1.tintColor = color1;
 	_bSlider1.tintColor = color1;
@@ -65,6 +69,7 @@
 									   blue:_bSlider2.value/255.0f
 									  alpha:1.0f];
 	_color2Viewer.backgroundColor = color2;
+	_color2ViewerSmall.backgroundColor = color2;
 	_rSlider2.tintColor = color2;
 	_gSlider2.tintColor = color2;
 	_bSlider2.tintColor = color2;

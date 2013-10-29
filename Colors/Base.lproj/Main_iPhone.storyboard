@@ -20,11 +20,25 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GN3-Rr-DvB" userLabel="Color 1">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nHJ-fB-9b5">
+                                        <rect key="frame" x="50" y="50" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKO-pX-aXY" userLabel="Color 2">
                                 <rect key="frame" x="160" y="0.0" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWB-Uk-Ejy">
+                                        <rect key="frame" x="50" y="50" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-3l-pHL">
@@ -89,7 +103,9 @@
                         <outlet property="bSlider1" destination="HKc-pP-7Jd" id="sav-td-9jj"/>
                         <outlet property="bSlider2" destination="h1s-Nb-nzg" id="K8k-v3-NYm"/>
                         <outlet property="color1Viewer" destination="GN3-Rr-DvB" id="Wbj-3f-xVt"/>
+                        <outlet property="color1ViewerSmall" destination="AWB-Uk-Ejy" id="tFO-08-85W"/>
                         <outlet property="color2Viewer" destination="tKO-pX-aXY" id="itf-mq-N0d"/>
+                        <outlet property="color2ViewerSmall" destination="nHJ-fB-9b5" id="203-9f-SNo"/>
                         <outlet property="colorContrastLabel" destination="wY5-3l-pHL" id="vFA-ZG-oFn"/>
                         <outlet property="gSlider1" destination="j7H-ny-F4e" id="FZJ-aq-bSs"/>
                         <outlet property="gSlider2" destination="QXd-Kk-LSB" id="Vla-Xa-L06"/>
