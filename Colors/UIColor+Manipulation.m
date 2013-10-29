@@ -43,14 +43,14 @@
 + (CGFloat)euclideanDistanceFromColor:(UIColor *)color
 							  toColor:(UIColor *)anotherColor
 {
-	CGFloat l1 = color.lValue;
-	CGFloat l2 = anotherColor.lValue;
+	CGFloat l1 = color.CIELab_LValue;
+	CGFloat l2 = anotherColor.CIELab_LValue;
 	
-	CGFloat a1 = color.aValue;
-	CGFloat a2 = anotherColor.aValue;
+	CGFloat a1 = color.CIELab_aValue;
+	CGFloat a2 = anotherColor.CIELab_aValue;
 	
-	CGFloat b1 = color.bValue;
-	CGFloat b2 = anotherColor.bValue;
+	CGFloat b1 = color.CIELab_bValue;
+	CGFloat b2 = anotherColor.CIELab_bValue;
 	
 	CGFloat distance = sqrtf(SQUARED(l1-l2) + SQUARED(a1-a2) + SQUARED(b1-b2));
 	
@@ -105,14 +105,14 @@ float radians(float x) {
 	CGFloat Kh = 1;
 	
 	// Color 1
-	CGFloat L1 = color1.lValue;
-	CGFloat a1 = color1.aValue;
-    CGFloat b1 = color1.bValue;
+	CGFloat L1 = color1.CIELab_LValue;
+	CGFloat a1 = color1.CIELab_aValue;
+    CGFloat b1 = color1.CIELab_bValue;
 	
 	// Color 2
-    CGFloat L2 = color2.lValue;
-    CGFloat a2 = color2.aValue;
-    CGFloat b2 = color2.bValue;
+    CGFloat L2 = color2.CIELab_LValue;
+    CGFloat a2 = color2.CIELab_aValue;
+    CGFloat b2 = color2.CIELab_bValue;
 	
     CGFloat avg_Lp = (L1 + L2) / 2.0;
 	CGFloat C1 = sqrt(pow(a1, 2) + pow(b1, 2));

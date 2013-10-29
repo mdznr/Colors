@@ -31,12 +31,11 @@
 - (CGFloat)uValue;
 - (CGFloat)vValue;
 
-// LAB (-1,1)
-#warning TODO: Rename these to be less conflicting with other color spaces (ex: labLValue)
-- (CGFloat)lValue; // Unsigned
-- (CGFloat)aValue; // Signed
-- (CGFloat)bValue; // Signed
+// CIE-L*ab
+- (CGFloat)CIELab_LValue;
+- (CGFloat)CIELab_aValue;
+- (CGFloat)CIELab_bValue;
 
-+ (UIColor *)colorWithLabL:(CGFloat)l a:(CGFloat)a b:(CGFloat)b;
++ (UIColor *)colorWithCIELabL:(CGFloat)labL a:(CGFloat)labA b:(CGFloat)labB;
 
 @end

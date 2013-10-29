@@ -175,18 +175,18 @@
 	float a = 0.0f;
 	float b = 0.0f;
 	for ( UIColor *eachColor in group ) {
-		l += [eachColor lValue];
-		a += [eachColor aValue];
-		b += [eachColor bValue];
+		l += [eachColor CIELab_LValue];
+		a += [eachColor CIELab_aValue];
+		b += [eachColor CIELab_bValue];
 	}
 	l /= group.count;
 	a /= group.count;
 	b /= group.count;
-	UIColor *returnColor = [UIColor colorWithLabL:l a:a b:b];
+	UIColor *returnColor = [UIColor colorWithCIELabL:l a:a b:b];
 	
-	//	NSLog(@"DURATION: %f", [[NSDate date] timeIntervalSinceDate:startDate]);
+//	NSLog(@"DURATION: %f", [[NSDate date] timeIntervalSinceDate:startDate]);
 	
-	//	NSLog(@"SAT: %f", returnColor.saturation);
+//	NSLog(@"SAT: %f", returnColor.saturation);
 	
 	return returnColor;
 }
