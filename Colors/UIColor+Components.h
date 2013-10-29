@@ -32,6 +32,7 @@
 - (CGFloat)vValue;
 
 // LAB (-1,1)
+#warning TODO: Rename these to be less conflicting with other color spaces (ex: labLValue)
 - (CGFloat)lValue; // Unsigned
 - (CGFloat)aValue; // Signed
 - (CGFloat)bValue; // Signed
