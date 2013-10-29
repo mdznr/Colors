@@ -15,19 +15,33 @@
 
 @implementation UIImage (Colors)
 
+CGFloat getContrastLevel(UIColorContrast contrast)
+{
+	switch ( contrast ) {
+		// Values based off of "Just noticeable difference" of 2.3. Value determined by Mahy et al. (1994)
+		case UIColorContrastLevelLow:    return 23.0f; // 100 * JND
+		case UIColorContrastLevelMedium: return 46.0f; // 200 * JND
+		case UIColorContrastLevelHigh:   return 69.0f; // 300 * JND
+		default: return 0.0f;
+	}
+}
+
 #pragma mark Background Color
 
 - (UIColor *)backgroundColor
 {
+#warning Use system preference for color contrast level
 	return [self backgroundColorToContrastAgainstColors:nil
 										   withContrast:0.0f];
 }
 
 - (UIColor *)backgroundColorToContrastAgainstColors:(NSArray *)colors
-									   withContrast:(UIColorContrast)contast
+									   withContrast:(UIColorContrast)contrast
 {
+	contrast = getContrastLevel(contrast);
 	return [self colorToContrastAgainstColors:colors
-								 withContrast:contast];
+								 withContrast:contrast
+								   isKeyColor:NO];
 }
 
 
@@ -35,67 +49,55 @@
 
 - (UIColor *)keyColor
 {
-#warning there has to be a better way
-	return [self keyColorToContrastAgainstColors:@[[UIColor whiteColor],
-												   [UIColor blackColor]]
-									withContrast:0.2f];
+#warning Use system preference for color contrast level
+	return [self keyColorToContrastAgainstColors:nil
+									withContrast:0.0f];
 }
 
 - (UIColor *)keyColorToContrastAgainstColors:(NSArray *)colors
 								withContrast:(UIColorContrast)contrast
 {
+	contrast = getContrastLevel(contrast);
 	return [self colorToContrastAgainstColors:colors
-								 withContrast:contrast];
+								 withContrast:contrast
+								   isKeyColor:YES];
 }
 
 
 #pragma mark Color
 
 - (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
-							 withContrast:(UIColorContrast)contrast
+							 withContrast:(CGFloat)contrast
+							   isKeyColor:(BOOL)keyColor
 {
 //	NSDate *startDate = [NSDate date];
-	float tolerance;
-	switch ( contrast ) {
-		case UIColorContrastLevelLow:
-			tolerance = 0.23f * 255.0f;
-			break;
-		case UIColorContrastLevelMedium:
-			tolerance = 0.46f * 255.0f;
-			break;
-		case UIColorContrastLevelHigh:
-			break;
-			tolerance = 0.92f * 255.0f;
-		default:
-			break;
-	}
 	
 #warning determine a good size to get good color data (multiple of size)
 	// Scale down image to make computation less intensive
-	CGSize size = (CGSize){24,24};
-	UIImage *smallImage = [self scaleToSize:size
+	CGSize size = (CGSize){16,16};
+	UIImage *smallImage = [self scaleToSize:(CGSize){16,16}
 				   withInterpolationQuality:kCGInterpolationLow];
 	
 	// Create an array for all the colors
-	NSUInteger cap = smallImage.size.height * smallImage.size.width;
+	NSUInteger cap = size.height * size.width;
 	NSMutableArray *imgColors = [[NSMutableArray alloc] initWithCapacity:cap];
 	
 	// Go through each pixel and add UIColor to array<
 	unsigned char *pixelData = [smallImage rgbaPixels];
-	for ( unsigned int x=0; x < smallImage.size.height; ++x ) {
-		for ( unsigned int y=0; y < smallImage.size.width; ++y ) {
-			unsigned char r = pixelData[(x*((int)smallImage.size.width)*4)+(y*4)];
-			unsigned char g = pixelData[(x*((int)smallImage.size.width)*4)+(y*4)+1];
-			unsigned char b = pixelData[(x*((int)smallImage.size.width)*4)+(y*4)+2];
-			unsigned char a = pixelData[(x*((int)smallImage.size.width)*4)+(y*4)+3];
+	for ( unsigned int x=0; x < size.height; ++x ) {
+		for ( unsigned int y=0; y < size.width; ++y ) {
+			unsigned char r = pixelData[(x*((int)size.width)*4)+(y*4)];
+			unsigned char g = pixelData[(x*((int)size.width)*4)+(y*4)+1];
+			unsigned char b = pixelData[(x*((int)size.width)*4)+(y*4)+2];
+			unsigned char a = pixelData[(x*((int)size.width)*4)+(y*4)+3];
 			UIColor *newColor = [UIColor colorWithRed:[[NSNumber numberWithUnsignedChar:r] floatValue]/255.0f
 												green:[[NSNumber numberWithUnsignedChar:g] floatValue]/255.0f
 												 blue:[[NSNumber numberWithUnsignedChar:b] floatValue]/255.0f
 												alpha:[[NSNumber numberWithUnsignedChar:a] floatValue]/255.0f];
 			
-			// Make sure it is a key color
-#warning should only apply to keyColor method
-			if ( [newColor brightness] + ((5.0f/7.0f)*[newColor saturation]) <= (17.0f/14.0f)  ) {
+			// Make sure it is a key color, if desired
+			// Checks for required brightness and saturation levels
+			if ( keyColor && [newColor brightness] + ((5.0f/7.0f)*[newColor saturation]) <= (17.0f/14.0f) ) {
 				continue;
 			}
 			
@@ -105,7 +107,7 @@
 				float distance = [UIColor differenceBetweenColor:newColor
 														andColor:color];
 //				NSLog(@"%f %f %f", distance, tolerance, distance/255.0f);
-				if ( distance < tolerance ) {
+				if ( distance < contrast ) {
 //					NSLog(@"FAILED: %@", newColor);
 					failsTest = YES;
 					break;
@@ -137,7 +139,7 @@
 			}
 		}
 		
-		if ( smallestDistance < tolerance ) {
+		if ( smallestDistance < contrast ) {
 			// Add to group that had highest match
 			[bestFitGroup addObject:eachColor];
 		} else {
@@ -157,30 +159,32 @@
 			}];
 	
 	// Print out the main color for each group
-	for ( NSMutableArray *group in groups ) {
-		UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
-//		NSLog(@"GROUP SIZE: %lu COLOR: %f %f %f",
-//			  (unsigned long)group.count,
-//			  [groupColor redComponent],
-//			  [groupColor greenComponent],
-//			  [groupColor blueComponent]);
-	}
-//	NSLog(@"NUMGROUPS: %lu", (unsigned long)groups.count);
+	/*
+	 for ( NSMutableArray *group in groups ) {
+	 UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
+	 NSLog(@"GROUP SIZE: %lu COLOR: %f %f %f",
+	 (unsigned long)group.count,
+	 [groupColor redComponent],
+	 [groupColor greenComponent],
+	 [groupColor blueComponent]);
+	 }
+	 NSLog(@"NUMGROUPS: %lu", (unsigned long)groups.count);
+	 */
 	
 	// Get average color in dominant bucket
 	NSMutableArray *group = groups[0];
-	float r = 0.0f;
-	float g = 0.0f;
+	float l = 0.0f;
+	float a = 0.0f;
 	float b = 0.0f;
 	for ( UIColor *eachColor in group ) {
-		r += [eachColor redComponent];
-		g += [eachColor greenComponent];
-		b += [eachColor blueComponent];
+		l += [eachColor CIELab_LValue];
+		a += [eachColor CIELab_aValue];
+		b += [eachColor CIELab_bValue];
 	}
-	r /= group.count;
-	g /= group.count;
+	l /= group.count;
+	a /= group.count;
 	b /= group.count;
-	UIColor *returnColor = [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
+	UIColor *returnColor = [UIColor colorWithCIELabL:l a:a b:b];
 	
 //	NSLog(@"DURATION: %f", [[NSDate date] timeIntervalSinceDate:startDate]);
 	

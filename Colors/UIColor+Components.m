@@ -38,25 +38,25 @@
 
 - (CGFloat)cyanComponent
 {
-#warning TODO
+#warning cyanComponent
 	return 0;
 }
 
 - (CGFloat)magentaComponent
 {
-#warning TODO
+#warning magentaComponent
 	return 0;
 }
 
 - (CGFloat)yellowComponent
 {
-#warning TODO
+#warning yellowComponent
 	return 0;
 }
 
 - (CGFloat)blackComponent
 {
-#warning TODO
+#warning blackComponent
 	return 0;
 }
 
@@ -85,7 +85,8 @@
 }
 
 
-// YUV
+#pragma mark YUV
+
 // Conversion with help from http://www.fourcc.org/fccyvrgb.php
 - (CGFloat)yValue
 {
@@ -130,39 +131,10 @@
 }
 
 
-// LAB
-// RGB -> XYZ via http://www.cs.rit.edu/~ncs/color/t_convert.html
-// XYZ -> LAB via http://www.easyrgb.com/index.php?X=MATH&H=07#text7
+#pragma mark CIE-L*ab
+// RGB -> XYZ -> CIE-L*ab via http://www.easyrgb.com/index.php?X=MATH&H=07#text7
 
-/*
- CGFloat r,g,b,a;
- [self getRed:&r green:&g blue:&b alpha:&a];
- 
- // Convert to XYZ
- CGFloat x = (0.412453 + 0.212671 + 0.019334) * r;
- CGFloat y = (0.357580 + 0.715160 + 0.119193) * g;
- CGFloat z = (0.180423 + 0.072169 + 0.950227) * b;
- 
- // Observer = 2°, Illuminant = D65
- x /= 95.047;
- y /= 100.000;
- z /= 108.883;
- 
- if ( x > 0.008856 ) x = powf(x, 1.0f/3.0f);
- else                x = ( 7.787 * x ) + ( 16 / 116 );
- if ( y > 0.008856 ) y = powf(y, 1.0f/3.0f);
- else                y = ( 7.787 * y ) + ( 16 / 116 );
- if ( z > 0.008856 ) z = powf(z, 1.0f/3.0f);
- else                z = ( 7.787 * z ) + ( 16 / 116 );
- 
- CGFloat labL = ( 116 * y ) - 16;
- CGFloat labA = 500 * ( z - y );
- CGFloat labB = 200 * ( y - z );
- 
- return labL;
- */
-
-- (CGFloat)lValue
+- (CGFloat)CIELab_LValue
 {
 	CGFloat r,g,b,a;
 	[self getRed:&r green:&g blue:&b alpha:&a];
@@ -179,7 +151,7 @@
 	g *= 100;
 	b *= 100;
 	
-	//Observer. = 2°, Illuminant = D65
+	//Observer = 2°, Illuminant = D65
 	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
 	
 	// Convert to LAB
@@ -194,7 +166,7 @@
 	return labL;
 }
 
-- (CGFloat)aValue
+- (CGFloat)CIELab_aValue
 {
 	CGFloat r,g,b,a;
 	[self getRed:&r green:&g blue:&b alpha:&a];
@@ -211,7 +183,7 @@
 	g *= 100;
 	b *= 100;
 
-	//Observer. = 2°, Illuminant = D65
+	//Observer = 2°, Illuminant = D65
 	CGFloat x = r * 0.4124 + g * 0.3576 + b * 0.1805;
 	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
 	
@@ -230,7 +202,7 @@
 	return labA;
 }
 
-- (CGFloat)bValue
+- (CGFloat)CIELab_bValue
 {
 	CGFloat r,g,b,a;
 	[self getRed:&r green:&g blue:&b alpha:&a];
@@ -247,7 +219,7 @@
 	g *= 100;
 	b *= 100;
 	
-	//Observer. = 2°, Illuminant = D65
+	// Observer = 2°, Illuminant = D65
 	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
 	CGFloat z = r * 0.0193 + g * 0.1192 + b * 0.9505;
 	
@@ -266,7 +238,7 @@
 	return labB;
 }
 
-+ (UIColor *)colorWithLabL:(CGFloat)labL a:(CGFloat)labA b:(CGFloat)labB
++ (UIColor *)colorWithCIELabL:(CGFloat)labL a:(CGFloat)labA b:(CGFloat)labB;
 {
 	// Convert to XYZ
 	CGFloat y = ( labL + 16 ) / 116;
@@ -280,7 +252,7 @@
 	if ( pow(z,3) > 0.008856 ) z = pow(z,3);
 	else                       z = ( z - 16 / 116 ) / 7.787;
 	
-	// Observer= 2°, Illuminant= D65
+	// Observer = 2°, Illuminant= D65
 	x *= 95.047;
 	y *= 100.000;
 	z *= 108.883;
