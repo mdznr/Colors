@@ -38,25 +38,25 @@
 
 - (CGFloat)cyanComponent
 {
-#warning TODO
+#warning cyanComponent
 	return 0;
 }
 
 - (CGFloat)magentaComponent
 {
-#warning TODO
+#warning magentaComponent
 	return 0;
 }
 
 - (CGFloat)yellowComponent
 {
-#warning TODO
+#warning yellowComponent
 	return 0;
 }
 
 - (CGFloat)blackComponent
 {
-#warning TODO
+#warning blackComponent
 	return 0;
 }
 
