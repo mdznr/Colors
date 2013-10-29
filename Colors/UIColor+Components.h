@@ -31,10 +31,10 @@
 - (CGFloat)uValue;
 - (CGFloat)vValue;
 
-// LAB
-- (CGFloat)lValue;
-- (CGFloat)aValue;
-- (CGFloat)bValue;
+// LAB (-1,1)
+- (CGFloat)lValue; // Unsigned
+- (CGFloat)aValue; // Signed
+- (CGFloat)bValue; // Signed
 
 + (UIColor *)colorWithLabL:(CGFloat)l a:(CGFloat)a b:(CGFloat)b;
 

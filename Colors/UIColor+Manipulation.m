@@ -32,11 +32,14 @@
 }
 */
 
+// CIE ΔE*ab (Delta E)
+// Example outputs:
 // White - Black: 116.000000
 // White - Red:   114.558990
 // White - Green: 120.415581
 // White - Blue:  149.955170
 // Blue  - Green: 258.693024
+// Original colors gathered from RGB colorspace
 + (CGFloat)euclideanDistanceFromColor:(UIColor *)color
 							  toColor:(UIColor *)anotherColor
 {

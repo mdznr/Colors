@@ -9,9 +9,9 @@
 @import UIKit;
 
 typedef enum {
-	UIColorContrastLevelLow,
-	UIColorContrastLevelMedium,
-	UIColorContrastLevelHigh,
+	UIColorContrastLevelLow,    // JND (Just noticeable difference). Value determined by Mahy et al. (1994)
+	UIColorContrastLevelMedium, // Two times JND
+	UIColorContrastLevelHigh,	// Four times JND
 } UIColorContrast;
 
 @interface UIImage (Colors)
