@@ -11,6 +11,62 @@
 
 @implementation UIColor (NeueColors)
 
+#pragma mark Color Sets
+
++ (NSSet *)neueColors
+{
+	return [NSSet setWithObjects:[UIColor neueRed],
+			                     [UIColor neueOrange],
+			                     [UIColor neueYellow],
+			                     [UIColor neueGreen],
+			                     [UIColor neueLightBlue],
+			                     [UIColor neueBlue],
+			                     [UIColor neuePurple],
+			                     [UIColor neuePink],
+			                     [UIColor neueDarkGray],
+			                     [UIColor neueLightGray],
+			                     [UIColor cBlue],
+			                     [UIColor cGreen],
+			                     [UIColor cWhite],
+			                     [UIColor cYellow],
+			                     [UIColor cPink],
+			                     [UIColor sSpaceGray],
+			                     [UIColor sSilver],
+			                     [UIColor sGold], nil];
+}
+
++ (NSSet *)neueKeyColors
+{
+	return [NSSet setWithObjects:[UIColor neueRed],
+			                     [UIColor neueOrange],
+			                     [UIColor neueYellow],
+			                     [UIColor neueGreen],
+			                     [UIColor neueLightBlue],
+			                     [UIColor neueBlue],
+			                     [UIColor neuePurple],
+			                     [UIColor neuePink],
+			                     [UIColor cBlue],
+			                     [UIColor cGreen],
+			                     [UIColor cYellow],
+			                     [UIColor cPink],nil];
+}
+
++ (NSSet *)cColors
+{
+	return [NSSet setWithObjects:[UIColor cBlue],
+			                     [UIColor cGreen],
+			                     [UIColor cWhite],
+			                     [UIColor cYellow],
+			                     [UIColor cPink], nil];
+}
+
++ (NSSet *)sColors
+{
+	return [NSSet setWithObjects:[UIColor sSpaceGray],
+			                     [UIColor sSilver],
+			                     [UIColor sGold], nil];
+}
+
 #pragma mark iOS 7 UI Colors
 
 // #FF3B30
