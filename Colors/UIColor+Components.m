@@ -180,9 +180,7 @@
 	b *= 100;
 	
 	//Observer. = 2°, Illuminant = D65
-	CGFloat x = r * 0.4124 + g * 0.3576 + b * 0.1805;
 	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
-	CGFloat z = r * 0.0193 + g * 0.1192 + b * 0.9505;
 	
 	// Convert to LAB
 	// Observer = 2°, Illuminant = D65
@@ -216,7 +214,6 @@
 	//Observer. = 2°, Illuminant = D65
 	CGFloat x = r * 0.4124 + g * 0.3576 + b * 0.1805;
 	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
-	CGFloat z = r * 0.0193 + g * 0.1192 + b * 0.9505;
 	
 	// Convert to LAB
 	// Observer = 2°, Illuminant = D65
@@ -251,7 +248,6 @@
 	b *= 100;
 	
 	//Observer. = 2°, Illuminant = D65
-	CGFloat x = r * 0.4124 + g * 0.3576 + b * 0.1805;
 	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
 	CGFloat z = r * 0.0193 + g * 0.1192 + b * 0.9505;
 	
@@ -268,6 +264,43 @@
 	CGFloat labB = 200 * ( y - z );
 	
 	return labB;
+}
+
++ (UIColor *)colorWithLabL:(CGFloat)labL a:(CGFloat)labA b:(CGFloat)labB
+{
+	// Convert to XYZ
+	CGFloat y = ( labL + 16 ) / 116;
+	CGFloat x = labA / 500 + y;
+	CGFloat z = y - labB / 200;
+	
+	if ( pow(y,3) > 0.008856 ) y = pow(y,3);
+	else                  y = ( y - 16 / 116 ) / 7.787;
+	if ( pow(x,3) > 0.008856 ) x = pow(x,3);
+	else                  x = ( x - 16 / 116 ) / 7.787;
+	if ( pow(z,3) > 0.008856 ) z = pow(z,3);
+	else                  z = ( z - 16 / 116 ) / 7.787;
+	
+	// Observer= 2°, Illuminant= D65
+	x *= 95.047;
+	y *= 100.000;
+	z *= 108.883;
+	
+	x /= 100; // X from 0 to  95.047
+	y /= 100; // Y from 0 to 100.000
+	z /= 100; // Z from 0 to 108.883
+	
+	CGFloat r = x *  3.2406 + y * -1.5372 + z * -0.4986;
+	CGFloat g = x * -0.9689 + y *  1.8758 + z *  0.0415;
+	CGFloat b = x *  0.0557 + y * -0.2040 + z *  1.0570;
+	
+	if ( r > 0.0031308 ) r = 1.055 * ( pow(r,(1/2.4)) ) - 0.055;
+	else                 r = 12.92 * r;
+	if ( g > 0.0031308 ) g = 1.055 * ( pow(g,(1/2.4)) ) - 0.055;
+	else                 g = 12.92 * g;
+	if ( b > 0.0031308 ) b = 1.055 * ( pow(b,(1/2.4)) ) - 0.055;
+	else                 b = 12.92 * b;
+	
+	return [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
 }
 
 @end

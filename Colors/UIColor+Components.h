@@ -36,4 +36,6 @@
 - (CGFloat)aValue;
 - (CGFloat)bValue;
 
++ (UIColor *)colorWithLabL:(CGFloat)l a:(CGFloat)a b:(CGFloat)b;
+
 @end
