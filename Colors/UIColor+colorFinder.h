@@ -10,6 +10,6 @@
 
 @interface UIColor (colorFinder)
 
-- (UIColor *)closestColorInSet:(NSSet *)colors;
+- (UIColor *)mostSimilarColorInSet:(NSSet *)colors;
 
 @end

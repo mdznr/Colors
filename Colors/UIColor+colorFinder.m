@@ -7,12 +7,22 @@
 //
 
 #import "UIColor+colorFinder.h"
+#import "UIColor+Manipulation.h"
 
 @implementation UIColor (colorFinder)
 
-- (UIColor *)closestColorInSet:(NSSet *)colors
+- (UIColor *)mostSimilarColorInSet:(NSSet *)colors
 {
-	
+	UIColor *closestColor = nil;
+	CGFloat closestDifference = FLT_MAX;
+	for ( UIColor *color in colors ) {
+		CGFloat difference = [UIColor differenceBetweenColor:self andColor:color];
+		if ( difference < closestDifference ) {
+			closestDifference = difference;
+			closestColor = color;
+		}
+	}
+	return  closestColor;
 }
 
 @end
