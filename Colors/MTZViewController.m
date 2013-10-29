@@ -73,6 +73,10 @@
 	_rSlider2.tintColor = color2;
 	_gSlider2.tintColor = color2;
 	_bSlider2.tintColor = color2;
+	
+	CGFloat difference = [UIColor euclideanDistanceFromColor:color1
+													 toColor:color2];
+	_colorContrastLabel.text = [NSString stringWithFormat:@"%f", difference];
 }
 
 #pragma mark View Controller end

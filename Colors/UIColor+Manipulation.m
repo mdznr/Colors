@@ -32,6 +32,11 @@
 }
 */
 
+// White - Black: 116.000000
+// White - Red:   114.558990
+// White - Green: 120.415581
+// White - Blue:  149.955170
+// Blue  - Green: 258.693024
 + (CGFloat)euclideanDistanceFromColor:(UIColor *)color
 							  toColor:(UIColor *)anotherColor
 {
@@ -41,7 +46,7 @@
 	CGFloat a1 = color.aValue;
 	CGFloat a2 = anotherColor.aValue;
 	
-	CGFloat b1 = color.aValue;
+	CGFloat b1 = color.bValue;
 	CGFloat b2 = anotherColor.bValue;
 	
 	CGFloat distance = sqrtf(SQUARED(l1-l2) + SQUARED(a1-a2) + SQUARED(b1-b2));
