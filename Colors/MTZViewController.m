@@ -51,6 +51,13 @@
 						  blue:_bSlider.value];
 }
 
+- (IBAction)textFieldDidChange:(id)sender
+{
+	[self refreshColorsWithRed:_inputRValue.text.floatValue
+						 green:_inputGValue.text.floatValue
+						  blue:_inputBValue.text.floatValue];
+}
+
 // Expects RGB values from 0-255
 - (void)refreshColorsWithRed:(CGFloat)r green:(CGFloat)g blue:(CGFloat)b
 {
@@ -63,6 +70,10 @@
 	_inputRValue.text = [NSString stringWithFormat:@"%.0f", r];
 	_inputGValue.text = [NSString stringWithFormat:@"%.0f", g];
 	_inputBValue.text = [NSString stringWithFormat:@"%.0f", b];
+	_rSlider.value = r;
+	_gSlider.value = g;
+	_bSlider.value = b;
+	self.view.tintColor = inputColor;
 	
 	// Convert to new colorspace
 	CGFloat labL = [inputColor lValue];
