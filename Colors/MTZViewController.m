@@ -272,21 +272,23 @@
 - (void)refreshColors
 {
 #warning animate this change? Animate the change of album art (if it changes), too?
-	UIColor *keyColor = [_iv.image keyColor];
+	UIColor *keyColor = [_iv.image keyColorToContrastAgainstColors:@[[UIColor whiteColor]]
+													  withContrast:UIColorContrastLevelLow];
 	// Default to neue blue color for elements that require saturated colors
 	if ( !keyColor ) {
 		keyColor = [UIColor neueBlue];
 	}
 	[[UIApplication sharedApplication] keyWindow].tintColor = keyColor;
 	
-	UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor]]
-													   withContrast:0.3f];
+	UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
+																	  [UIColor lightGrayColor]]
+													   withContrast:UIColorContrastLevelLow];
 	// Default to dark gray color for sliders
 	if ( !bg ) {
 		bg = [UIColor neueDarkGray];
 	}
-	_volumeSlider.tintColor = bg;
 	_trackSlider.tintColor = bg;
+	_volumeSlider.tintColor = bg;
 }
 
 - (IBAction)playPause:(id)sender
