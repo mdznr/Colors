@@ -274,11 +274,11 @@
 	CGFloat z = y - labB / 200;
 	
 	if ( pow(y,3) > 0.008856 ) y = pow(y,3);
-	else                  y = ( y - 16 / 116 ) / 7.787;
+	else                       y = ( y - 16 / 116 ) / 7.787;
 	if ( pow(x,3) > 0.008856 ) x = pow(x,3);
-	else                  x = ( x - 16 / 116 ) / 7.787;
+	else                       x = ( x - 16 / 116 ) / 7.787;
 	if ( pow(z,3) > 0.008856 ) z = pow(z,3);
-	else                  z = ( z - 16 / 116 ) / 7.787;
+	else                       z = ( z - 16 / 116 ) / 7.787;
 	
 	// Observer= 2°, Illuminant= D65
 	x *= 95.047;
