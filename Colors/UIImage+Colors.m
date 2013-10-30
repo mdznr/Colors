@@ -106,8 +106,8 @@ bool isColorKeyColorAppropriate(UIColor *color) {
 			// Make sure it contrasts enough with the desired color and has enough saturation
 			BOOL failsTest = NO;
 			for ( UIColor *color in colors ) {
-				float distance = [UIColor differenceBetweenColor:newColor
-														andColor:color];
+				CGFloat distance = [UIColor differenceBetweenColor:newColor
+														  andColor:color];
 				if ( distance < requiredMinimumContrast ) {
 					failsTest = YES;
 					break;
@@ -126,12 +126,12 @@ bool isColorKeyColorAppropriate(UIColor *color) {
 	// Iterate over every color and add it to a group
 	for ( UIColor *eachColor in imgColors ) {
 		NSMutableArray *bestFitGroup = nil;
-		float smallestDistance = FLT_MAX;
+		CGFloat smallestDistance = FLT_MAX;
 		// Check every group and see if it fits in
 		for ( NSMutableArray *group in groups ) {
 			UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
-			float distance = [UIColor differenceBetweenColor:eachColor
-													andColor:groupColor];
+			CGFloat distance = [UIColor differenceBetweenColor:eachColor
+													  andColor:groupColor];
 			if ( distance < smallestDistance ) {
 				smallestDistance = distance;
 				bestFitGroup = group;
@@ -159,9 +159,9 @@ bool isColorKeyColorAppropriate(UIColor *color) {
 	
 	// Get average color in dominant bucket
 	NSMutableArray *group = groups[0];
-	float L = 0.0f;
-	float a = 0.0f;
-	float b = 0.0f;
+	CGFloat L = 0.0f;
+	CGFloat a = 0.0f;
+	CGFloat b = 0.0f;
 	for ( UIColor *eachColor in group ) {
 		L += [eachColor CIELab_LValue];
 		a += [eachColor CIELab_aValue];
