@@ -78,8 +78,7 @@
 	_bSlider2.tintColor = color2;
 	_color2Label.text = [NSString stringWithFormat:@"%.1f %.1f %.1f", color2.CIELab_LValue, color2.CIELab_aValue, color2.CIELab_bValue];
 	
-	CGFloat difference = [UIColor euclideanDistanceFromColor:color1
-													 toColor:color2];
+	CGFloat difference = [UIColor differenceBetweenColor:color1 andColor:color2];
 	_colorContrastLabel.text = [NSString stringWithFormat:@"%.2f", difference];
 }
 
