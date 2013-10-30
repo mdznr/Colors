@@ -22,9 +22,6 @@ CGFloat radians(CGFloat x) {
 	return x * (M_1_PI / 180);
 }
 
-#pragma mark This returns NaN for Beatles white album
-/// The perceived difference between two colors.
-/// Calculated using the CIEDE2000 Color-Difference Formula.
 + (CGFloat)differenceBetweenColor:(UIColor *)color1 andColor:(UIColor *)color2
 {
 	// Modification of python algorithm https://github.com/gtaylor/python-colormath/blob/master/colormath/color_diff.py
