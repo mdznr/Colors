@@ -15,7 +15,7 @@
 
 @implementation UIImage (Colors)
 
-CGFloat getContrastLevel(UIColorContrast contrast)
+double getContrastLevel(UIColorContrast contrast)
 {
 	switch ( contrast ) {
 		// Values based off of "Just noticeable difference" of 2.3. Value determined by Mahy et al. (1994)
@@ -71,7 +71,7 @@ bool isColorKeyColorAppropriate(UIColor *color) {
 }
 
 - (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
-							 withContrast:(CGFloat)requiredMinimumContrast
+							 withContrast:(double)requiredMinimumContrast
 							   isKeyColor:(BOOL)keyColor
 {
 #warning determine a good size to get good color data (multiple of size)
@@ -106,7 +106,7 @@ bool isColorKeyColorAppropriate(UIColor *color) {
 			// Make sure it contrasts enough with the desired color and has enough saturation
 			BOOL failsTest = NO;
 			for ( UIColor *color in colors ) {
-				float distance = [UIColor differenceBetweenColor:newColor
+				double distance = [UIColor differenceBetweenColor:newColor
 														andColor:color];
 				if ( distance < requiredMinimumContrast ) {
 					failsTest = YES;
@@ -130,7 +130,7 @@ bool isColorKeyColorAppropriate(UIColor *color) {
 		// Check every group and see if it fits in
 		for ( NSMutableArray *group in groups ) {
 			UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
-			float distance = [UIColor differenceBetweenColor:eachColor
+			double distance = [UIColor differenceBetweenColor:eachColor
 													andColor:groupColor];
 			if ( distance < smallestDistance ) {
 				smallestDistance = distance;

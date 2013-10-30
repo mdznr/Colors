@@ -282,7 +282,7 @@
 		_volumeSlider.tintColor = keyColor;
 	} else {
 		UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
-																		  [UIColor lightGrayColor]]
+																	      [UIColor lightGrayColor]]
 														   withContrast:UIColorContrastLevelLow];
 		
 		NSLog(@"BG: %@", bg);
