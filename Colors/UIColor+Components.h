@@ -32,10 +32,10 @@
 - (CGFloat)vValue;
 
 // CIE-L*ab
-- (double)CIELab_LValue;
-- (double)CIELab_aValue;
-- (double)CIELab_bValue;
+- (CGFloat)CIELab_LValue;
+- (CGFloat)CIELab_aValue;
+- (CGFloat)CIELab_bValue;
 
-+ (UIColor *)colorWithCIELabL:(double)labL a:(double)labA b:(double)labB;
++ (UIColor *)colorWithCIELabL:(CGFloat)labL a:(CGFloat)labA b:(CGFloat)labB;
 
 @end

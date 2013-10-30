@@ -228,7 +228,7 @@
 	NSNumber *playbackDuration = [currentItem valueForProperty:MPMediaItemPropertyPlaybackDuration];
 	
 #warning round playbackDuration to nearest second?
-	NSTimeInterval remaining = playbackDuration.doubleValue - elapsed;
+	NSTimeInterval remaining = playbackDuration.floatValue - elapsed;
 	minutes = floor(remaining / 60);
 	seconds = round(remaining - minutes * 60);
 	if ( seconds < 10 ) {

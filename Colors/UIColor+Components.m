@@ -7,6 +7,7 @@
 //
 
 #import "UIColor+Components.h"
+#import <tgmath.h>
 
 @implementation UIColor (Components)
 
@@ -134,72 +135,68 @@
 #pragma mark CIE-L*ab
 // RGB -> XYZ -> CIE-L*ab via http://www.easyrgb.com/index.php?X=MATH&H=07#text7
 
-- (double)CIELab_LValue
+- (CGFloat)CIELab_LValue
 {
 	CGFloat r,g,b,a;
 	[self getRed:&r green:&g blue:&b alpha:&a];
 	
-	double R,G,B;
-	
 	// Convert to XYZ
-	if ( r > 0.04045 ) R = powf(((r + 0.055)/1.055), 2.4);
-	else               R = r/12.92;
-	if ( g > 0.04045 ) G = powf(((g + 0.055)/1.055), 2.4);
-	else               G = r/12.92;
-	if ( b > 0.04045 ) B = powf(((b + 0.055)/1.055), 2.4);
-	else               B = b/12.92;
+	if ( r > 0.04045 ) r = pow(((r + 0.055)/1.055), 2.4);
+	else               r /= 12.92;
+	if ( g > 0.04045 ) g = pow(((g + 0.055)/1.055), 2.4);
+	else               g /= 12.92;
+	if ( b > 0.04045 ) b = pow(((b + 0.055)/1.055), 2.4);
+	else               b /= 12.92;
 	
-	R *= 100;
-	G *= 100;
-	B *= 100;
+	r *= 100;
+	g *= 100;
+	b *= 100;
 	
 	// Observer = 2°, Illuminant = D65
-	double y = R * 0.2126 + G * 0.7152 + B * 0.0722;
+	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
 	
 	// Convert to LAB
 	// Observer = 2°, Illuminant = D65
 	y /= 100.000;
 	
-	if ( y > 0.008856 ) y = powf(y, 1.0f/3.0f);
+	if ( y > 0.008856 ) y = pow(y, 1.0f/3.0f);
 	else                y = ( 7.787 * y ) + ( 16 / 116 );
 
-	double labL = ( 116 * y ) - 16;
+	CGFloat labL = ( 116 * y ) - 16;
 	
 	// RGB: (-16, labL, 100)
 	return MIN(MAX(-16,labL),100);
 }
 
-- (double)CIELab_aValue
+- (CGFloat)CIELab_aValue
 {
 	CGFloat r,g,b,a;
 	[self getRed:&r green:&g blue:&b alpha:&a];
 	
-	double R,G,B;
-	
 	// Convert to XYZ
-	if ( r > 0.04045 ) R = powf(((r + 0.055)/1.055), 2.4);
-	else               R = r/12.92;
-	if ( g > 0.04045 ) G = powf(((g + 0.055)/1.055), 2.4);
-	else               G = g/12.92;
-	if ( b > 0.04045 ) B = powf(((b + 0.055)/1.055), 2.4);
-	else               B = b/12.92;
+	if ( r > 0.04045 ) r = pow(((r + 0.055)/1.055), 2.4);
+	else               r /= 12.92;
+	if ( g > 0.04045 ) g = pow(((g + 0.055)/1.055), 2.4);
+	else               g /= 12.92;
+	if ( b > 0.04045 ) b = pow(((b + 0.055)/1.055), 2.4);
+	else               b /= 12.92;
 
-	R *= 100;
-	G *= 100;
-	B *= 100;
+	r *= 100;
+	g *= 100;
+	b *= 100;
 
 	//Observer = 2°, Illuminant = D65
-	CGFloat x = R * 0.4124 + G * 0.3576 + B * 0.1805;
-	CGFloat y = R * 0.2126 + G * 0.7152 + B * 0.0722;
+	CGFloat x = r * 0.4124 + g * 0.3576 + b * 0.1805;
+	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
 	
 	// Convert to LAB
 	// Observer = 2°, Illuminant = D65
 	x /= 95.047;
 	y /= 100.000;
 	
-	if ( x > 0.008856 ) x = powf(x, 1.0f/3.0f);
+	if ( x > 0.008856 ) x = pow(x, 1.0f/3.0f);
 	else                x = ( 7.787 * x ) + ( 16 / 116 );
-	if ( y > 0.008856 ) y = powf(y, 1.0f/3.0f);
+	if ( y > 0.008856 ) y = pow(y, 1.0f/3.0f);
 	else                y = ( 7.787 * y ) + ( 16 / 116 );
 	
 	CGFloat labA = 500 * ( x - y );
@@ -208,37 +205,35 @@
 	return MIN(MAX(-86.2,labA),98.3);
 }
 
-- (double)CIELab_bValue
+- (CGFloat)CIELab_bValue
 {
 	CGFloat r,g,b,a;
 	[self getRed:&r green:&g blue:&b alpha:&a];
 	
-	double R,G,B;
-	
 	// Convert to XYZ
-	if ( r > 0.04045 ) R = powf(((r + 0.055)/1.055), 2.4);
-	else               R = r/12.92;
-	if ( g > 0.04045 ) G = powf(((g + 0.055)/1.055), 2.4);
-	else               G = g/12.92;
-	if ( b > 0.04045 ) B = powf(((b + 0.055)/1.055), 2.4);
-	else               B = b/12.92;
+	if ( r > 0.04045 ) r = pow(((r + 0.055)/1.055), 2.4);
+	else               r /= 12.92;
+	if ( g > 0.04045 ) g = pow(((g + 0.055)/1.055), 2.4);
+	else               g /= 12.92;
+	if ( b > 0.04045 ) b = pow(((b + 0.055)/1.055), 2.4);
+	else               b /= 12.92;
 	
-	R *= 100;
-	G *= 100;
-	B *= 100;
+	r *= 100;
+	g *= 100;
+	b *= 100;
 	
 	// Observer = 2°, Illuminant = D65
-	CGFloat y = R * 0.2126 + G * 0.7152 + B * 0.0722;
-	CGFloat z = R * 0.0193 + G * 0.1192 + B * 0.9505;
+	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
+	CGFloat z = r * 0.0193 + g * 0.1192 + b * 0.9505;
 	
 	// Convert to LAB
 	// Observer = 2°, Illuminant = D65
 	y /= 100.000;
 	z /= 108.883;
 	
-	if ( y > 0.008856 ) y = powf(y, 1.0f/3.0f);
+	if ( y > 0.008856 ) y = pow(y, 1.0f/3.0f);
 	else                y = ( 7.787 * y ) + ( 16 / 116 );
-	if ( z > 0.008856 ) z = powf(z, 1.0f/3.0f);
+	if ( z > 0.008856 ) z = pow(z, 1.0f/3.0f);
 	else                z = ( 7.787 * z ) + ( 16 / 116 );
 	
 	CGFloat labB = 200 * ( y - z );
@@ -247,7 +242,7 @@
 	return MIN(MAX(-86.2,labB),98.3);
 }
 
-+ (UIColor *)colorWithCIELabL:(double)labL a:(double)labA b:(double)labB;
++ (UIColor *)colorWithCIELabL:(CGFloat)labL a:(CGFloat)labA b:(CGFloat)labB;
 {
 	// Convert to XYZ
 	CGFloat y = ( labL + 16 ) / 116;
@@ -280,6 +275,7 @@
 	else                 g = 12.92 * g;
 	if ( b > 0.0031308 ) b = 1.055 * ( pow(b,(1/2.4)) ) - 0.055;
 	else                 b = 12.92 * b;
+	
 	
 	return [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
 }

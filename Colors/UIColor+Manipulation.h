@@ -12,6 +12,6 @@
 
 /// The perceived difference between two colors.
 /// Calculated using the CIEDE2000 Color-Difference Formula.
-+ (double)differenceBetweenColor:(UIColor *)color1 andColor:(UIColor *)color2;
++ (CGFloat)differenceBetweenColor:(UIColor *)color1 andColor:(UIColor *)color2;
 
 @end
