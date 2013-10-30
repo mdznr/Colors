@@ -201,7 +201,7 @@
 	CGFloat labA = 500 * ( x - y );
 	
 	// RGB: (-86.2, labA, 100)
-	return MAX(MIN(-86.2,labA),98.3);
+	return MIN(MAX(-86.2,labA),98.3);
 }
 
 - (CGFloat)CIELab_bValue
@@ -238,7 +238,7 @@
 	CGFloat labB = 200 * ( y - z );
 	
 	// RGB: (-86.2, labA, 100)
-	return MAX(MIN(-86.2,labB),98.3);
+	return MIN(MAX(-86.2,labB),98.3);
 }
 
 + (UIColor *)colorWithCIELabL:(CGFloat)labL a:(CGFloat)labA b:(CGFloat)labB;
