@@ -31,11 +31,11 @@
 - (CGFloat)uValue;
 - (CGFloat)vValue;
 
-// LAB
-- (CGFloat)lValue;
-- (CGFloat)aValue;
-- (CGFloat)bValue;
+// CIE-L*ab
+- (CGFloat)CIELab_LValue;
+- (CGFloat)CIELab_aValue;
+- (CGFloat)CIELab_bValue;
 
-+ (UIColor *)colorWithLabL:(CGFloat)l a:(CGFloat)a b:(CGFloat)b;
++ (UIColor *)colorWithCIELabL:(CGFloat)labL a:(CGFloat)labA b:(CGFloat)labB;
 
 @end
