@@ -42,7 +42,7 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-3l-pHL">
-                                <rect key="frame" x="74" y="188" width="172" height="21"/>
+                                <rect key="frame" x="128" y="188" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -96,14 +96,30 @@
                                     <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Uzt-nW-D66"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNt-oW-lNa">
+                                <rect key="frame" x="0.0" y="188" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sau-P5-71g">
+                                <rect key="frame" x="200" y="188" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="bSlider1" destination="HKc-pP-7Jd" id="sav-td-9jj"/>
                         <outlet property="bSlider2" destination="h1s-Nb-nzg" id="K8k-v3-NYm"/>
+                        <outlet property="color1Label" destination="uNt-oW-lNa" id="vW2-GB-zz0"/>
                         <outlet property="color1Viewer" destination="GN3-Rr-DvB" id="Wbj-3f-xVt"/>
                         <outlet property="color1ViewerSmall" destination="AWB-Uk-Ejy" id="tFO-08-85W"/>
+                        <outlet property="color2Label" destination="Sau-P5-71g" id="f8g-gS-CEG"/>
                         <outlet property="color2Viewer" destination="tKO-pX-aXY" id="itf-mq-N0d"/>
                         <outlet property="color2ViewerSmall" destination="nHJ-fB-9b5" id="203-9f-SNo"/>
                         <outlet property="colorContrastLabel" destination="wY5-3l-pHL" id="vFA-ZG-oFn"/>

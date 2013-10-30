@@ -23,9 +23,11 @@
 
 @property (strong, nonatomic) IBOutlet UIView *color1Viewer;
 @property (strong, nonatomic) IBOutlet UIView *color2ViewerSmall;
+@property (strong, nonatomic) IBOutlet UILabel *color1Label;
 
 @property (strong, nonatomic) IBOutlet UIView *color2Viewer;
 @property (strong, nonatomic) IBOutlet UIView *color1ViewerSmall;
+@property (strong, nonatomic) IBOutlet UILabel *color2Label;
 
 @property (strong, nonatomic) IBOutlet UILabel *colorContrastLabel;
 
@@ -63,6 +65,7 @@
 	_rSlider1.tintColor = color1;
 	_gSlider1.tintColor = color1;
 	_bSlider1.tintColor = color1;
+	_color1Label.text = [NSString stringWithFormat:@"%.1f %.1f %.1f", color1.CIELab_LValue, color1.CIELab_aValue, color1.CIELab_bValue];
 	
 	UIColor *color2 = [UIColor colorWithRed:_rSlider2.value/255.0f
 									  green:_gSlider2.value/255.0f
@@ -73,10 +76,11 @@
 	_rSlider2.tintColor = color2;
 	_gSlider2.tintColor = color2;
 	_bSlider2.tintColor = color2;
+	_color2Label.text = [NSString stringWithFormat:@"%.1f %.1f %.1f", color2.CIELab_LValue, color2.CIELab_aValue, color2.CIELab_bValue];
 	
 	CGFloat difference = [UIColor euclideanDistanceFromColor:color1
 													 toColor:color2];
-	_colorContrastLabel.text = [NSString stringWithFormat:@"%f", difference];
+	_colorContrastLabel.text = [NSString stringWithFormat:@"%.2f", difference];
 }
 
 #pragma mark View Controller end
