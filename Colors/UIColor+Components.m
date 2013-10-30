@@ -163,7 +163,8 @@
 
 	CGFloat labL = ( 116 * y ) - 16;
 	
-	return labL;
+	// RGB: (-16, labL, 100)
+	return MIN(MAX(-16,labL),100);
 }
 
 - (CGFloat)CIELab_aValue
