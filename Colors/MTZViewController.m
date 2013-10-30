@@ -10,6 +10,7 @@
 
 @import MediaPlayer;
 
+#import "UIColor+colorFinder.h"
 #import "UIColor+Components.h"
 #import "UIColor+Hex.h"
 #import "UIColor+Manipulation.h"
@@ -274,21 +275,30 @@
 #warning animate this change? Animate the change of album art (if it changes), too?
 	UIColor *keyColor = [_iv.image keyColorToContrastAgainstColors:@[[UIColor whiteColor]]
 													  withContrast:UIColorContrastLevelLow];
-	// Default to neue blue color for elements that require saturated colors
-	if ( !keyColor ) {
-		keyColor = [UIColor neueBlue];
-	}
-	[[UIApplication sharedApplication] keyWindow].tintColor = keyColor;
 	
-	UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
-																	  [UIColor lightGrayColor]]
-													   withContrast:UIColorContrastLevelLow];
-	// Default to dark gray color for sliders
-	if ( !bg ) {
-		bg = [UIColor neueDarkGray];
+	if ( keyColor ) {
+		[[UIApplication sharedApplication] keyWindow].tintColor = keyColor;
+		_trackSlider.tintColor = keyColor;
+		_volumeSlider.tintColor = keyColor;
+	} else {
+		UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
+																		  [UIColor lightGrayColor]]
+														   withContrast:UIColorContrastLevelLow];
+		
+		NSLog(@"BG: %@", bg);
+		NSLog(@"DIFF: %f", [UIColor differenceBetweenColor:bg andColor:[UIColor whiteColor]]);
+		
+		// Default to dark gray color for sliders
+		if ( !bg ) {
+			bg = [UIColor neueDarkGray];
+		}
+		
+		[[UIApplication sharedApplication] keyWindow].tintColor = [UIColor neueBlue];
+		
+#warning set unfilled slider to translucent version of bg color
+		_trackSlider.tintColor = bg;
+		_volumeSlider.tintColor = bg;
 	}
-	_trackSlider.tintColor = bg;
-	_volumeSlider.tintColor = bg;
 }
 
 - (IBAction)playPause:(id)sender

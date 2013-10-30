@@ -151,7 +151,7 @@
 	g *= 100;
 	b *= 100;
 	
-	//Observer = 2°, Illuminant = D65
+	// Observer = 2°, Illuminant = D65
 	CGFloat y = r * 0.2126 + g * 0.7152 + b * 0.0722;
 	
 	// Convert to LAB
