@@ -65,6 +65,7 @@ float radians(float x) {
 	return x * (M_1_PI / 180);
 }
 
+#pragma mark This returns NaN for Beatles white album
 /// The perceived difference between two colors.
 /// Calculated using the CIEDE2000 Color-Difference Formula.
 + (CGFloat)differenceBetweenColor:(UIColor *)color1 andColor:(UIColor *)color2
@@ -98,11 +99,11 @@ float radians(float x) {
 	 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	 */
 	
-	// Default values.
+	// Default values
 #warning should these be configurable?
-	CGFloat Kl = 1;
-	CGFloat Kc = 1;
-	CGFloat Kh = 1;
+	CGFloat Kl = 1.0f;
+	CGFloat Kc = 1.0f;
+	CGFloat Kh = 1.0f;
 	
 	// Color 1
 	CGFloat L1 = color1.CIELab_LValue;
@@ -114,18 +115,18 @@ float radians(float x) {
     CGFloat a2 = color2.CIELab_aValue;
     CGFloat b2 = color2.CIELab_bValue;
 	
-    CGFloat avg_Lp = (L1 + L2) / 2.0;
+    CGFloat avg_Lp = (L1 + L2) / 2.0f;
 	CGFloat C1 = sqrt(pow(a1, 2) + pow(b1, 2));
 	CGFloat C2 = sqrt(pow(a2, 2) + pow(b2, 2));
-    CGFloat avg_C1_C2 = (C1 + C2) / 2.0;
+    CGFloat avg_C1_C2 = (C1 + C2) / 2.0f;
 	
-    CGFloat G = 0.5 * (1 - sqrt(pow(avg_C1_C2 , 7.0) / (pow(avg_C1_C2, 7.0) + pow(25.0, 7.0))));
+    CGFloat G = 0.5f * (1.0f - sqrt(pow(avg_C1_C2 , 7.0f) / (pow(avg_C1_C2, 7.0f) + pow(25.0f, 7.0f))));
 	
-    CGFloat a1p = (1.0 + G) * a1;
-    CGFloat a2p = (1.0 + G) * a2;
+    CGFloat a1p = (1.0f + G) * a1;
+    CGFloat a2p = (1.0f + G) * a2;
     CGFloat C1p = sqrt(pow(a1p, 2) + pow(b1, 2));
     CGFloat C2p = sqrt(pow(a2p, 2) + pow(b2, 2));
-    CGFloat avg_C1p_C2p =(C1p + C2p) / 2.0;
+    CGFloat avg_C1p_C2p =(C1p + C2p) / 2.0f;
 	
 	CGFloat h1p;
 	if ( degrees(atan2(b1,a1p)) >= 0 ) {
@@ -143,12 +144,12 @@ float radians(float x) {
 
 	CGFloat avg_Hp;
 	if ( fabs(h1p - h2p) > 180 ) {
-		avg_Hp = (h1p + h2p + 360) / 2.0;
+		avg_Hp = (h1p + h2p + 360) / 2.0f;
 	} else {
-		avg_Hp = (h1p + h2p) / 2.0;
+		avg_Hp = (h1p + h2p) / 2.0f;
 	}
 	
-	CGFloat T = 1 - 0.17 * cos(radians(avg_Hp - 30)) + 0.24 * cos(radians(2 * avg_Hp)) + 0.32 * cos(radians(3 * avg_Hp + 6)) - 0.2  * cos(radians(4 * avg_Hp - 63));
+	CGFloat T = 1 - 0.17 * cos(radians(avg_Hp - 30)) + 0.24f * cos(radians(2 * avg_Hp)) + 0.32f * cos(radians(3 * avg_Hp + 6)) - 0.2f  * cos(radians(4 * avg_Hp - 63));
 	
 	CGFloat diff_h2p_h1p = h2p - h1p;
 	CGFloat delta_hp;
@@ -164,12 +165,12 @@ float radians(float x) {
 	CGFloat delta_Cp = C2p - C1p;
 	CGFloat delta_Hp = 2 * sqrt(C2p * C1p) * sin(radians(delta_hp) / 2.0);
 
-	CGFloat S_L = 1 + ((0.015 * pow(avg_Lp - 50, 2)) / sqrt(20 + pow(avg_Lp - 50, 2.0)));
-	CGFloat S_C = 1 + 0.045 * avg_C1p_C2p;
-	CGFloat S_H = 1 + 0.015 * avg_C1p_C2p * T;
+	CGFloat S_L = 1 + ((0.015f * pow(avg_Lp - 50, 2)) / sqrt(20 + pow(avg_Lp - 50, 2.0f)));
+	CGFloat S_C = 1 + 0.045f * avg_C1p_C2p;
+	CGFloat S_H = 1 + 0.015f * avg_C1p_C2p * T;
 
-	CGFloat delta_ro = 30 * exp(-(pow(((avg_Hp - 275) / 25), 2.0)));
-	CGFloat R_C = sqrt((pow(avg_C1p_C2p, 7.0)) / (pow(avg_C1p_C2p, 7.0) + pow(25.0, 7.0)));
+	CGFloat delta_ro = 30 * exp(-(pow(((avg_Hp - 275) / 25), 2.0f)));
+	CGFloat R_C = sqrt((pow(avg_C1p_C2p, 7.0f)) / (pow(avg_C1p_C2p, 7.0f) + pow(25.0f, 7.0f)));
 	CGFloat R_T = -2 * R_C * sin(2 * radians(delta_ro));
 
 	CGFloat delta_E = sqrt(pow(delta_Lp /(S_L * Kl), 2) + pow(delta_Cp /(S_C * Kc), 2) + pow(delta_Hp /(S_H * Kh), 2) + R_T * (delta_Cp /(S_C * Kc)) * (delta_Hp / (S_H * Kh)));
