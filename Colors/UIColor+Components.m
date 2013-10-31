@@ -86,7 +86,7 @@
 }
 
 
-#pragma mark YUV
+#pragma mark - YUV
 
 // Conversion with help from http://www.fourcc.org/fccyvrgb.php
 - (CGFloat)yValue
@@ -132,8 +132,8 @@
 }
 
 
-#pragma mark CIE-L*ab
-// RGB -> XYZ -> CIE-L*ab via http://www.easyrgb.com/index.php?X=MATH&H=07#text7
+#pragma mark - CIE-LAB
+// RGB -> XYZ -> CIE-LAB via http://www.easyrgb.com/index.php?X=MATH&H=07#text7
 
 - (CGFloat)CIELab_LValue
 {

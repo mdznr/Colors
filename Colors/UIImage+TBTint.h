@@ -8,7 +8,14 @@
 
 @interface UIImage (TBTint)
 
+/// Creates a tinted image with a specified color and retain its original brightness gradient.
+/// @param tintColor The color to tint the image with/
+/// @return An image object with the specified tint color applied to the receiver.
 - (UIImage *)tintedGradientImageWithColor:(UIColor *)tintColor;
+
+/// Creates a tinted image with a specified color.
+/// @param tintColor The color to tint the image with.
+/// @return An image object with the specified tint color applied to the receiver.
 - (UIImage *)tintedImageWithColor:(UIColor *)tintColor;
 
 @end
