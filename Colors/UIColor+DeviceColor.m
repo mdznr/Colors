@@ -23,6 +23,12 @@
 	return nil;
 }
 
++ (UIColor *)caseColor
+{
+#warning TODO: Implement
+	return nil;
+}
+
 + (UIColor *)userWallpaperColor
 {
 #warning TODO: Implement
