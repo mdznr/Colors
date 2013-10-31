@@ -42,7 +42,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 	contrast = getContrastLevel(contrast);
 	return [self colorToContrastAgainstColors:colors
 								 withContrast:contrast
-								   isKeyColor:NO];
+								 toBeKeyColor:NO];
 }
 
 
@@ -61,7 +61,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 	contrast = getContrastLevel(contrast);
 	return [self colorToContrastAgainstColors:colors
 								 withContrast:contrast
-								   isKeyColor:YES];
+								 toBeKeyColor:YES];
 }
 
 
@@ -69,7 +69,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 
 - (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
 							 withContrast:(CGFloat)requiredMinimumContrast
-							   isKeyColor:(BOOL)keyColor
+							 toBeKeyColor:(BOOL)toBeKeyColor
 {
 #warning determine a good size to get good color data (multiple of size)
 	// Scale down image to make computation less intensive
@@ -96,7 +96,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 			
 			// Make sure it is a key color, if desired
 			// Checks for required brightness and saturation levels
-			if ( keyColor && [newColor isKeyColorAppropriate] ) {
+			if ( toBeKeyColor && [newColor isKeyColorAppropriate] ) {
 				continue;
 			}
 			
