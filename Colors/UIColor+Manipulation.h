@@ -12,6 +12,9 @@
 
 /// The perceived difference between two colors.
 /// Calculated using the CIEDE2000 Color-Difference Formula.
+/// @param color1 The first of the two colors to compare.
+/// @param color2 The second of the two colors to compare.
+/// @return A floating point number representing the difference between the two colors.
 + (CGFloat)differenceBetweenColor:(UIColor *)color1 andColor:(UIColor *)color2;
 
 @end

@@ -8,34 +8,35 @@
 
 @import UIKit;
 
+/// Describes the level of contrast (perceived difference) between colors.
 typedef enum {
-	UIColorContrastLevelLow,
-	UIColorContrastLevelMedium,
-	UIColorContrastLevelHigh,
+	UIColorContrastLevelLow,    /// Describes a low level of contrast.
+	UIColorContrastLevelMedium, /// Describes a medium level of contrast.
+	UIColorContrastLevelHigh,   /// Describes a high level of contrast.
 } UIColorContrast;
 
 @interface UIImage (Colors)
 
-/// The color that appears to dominate the background of the image
-/// @discussion Returns nil if no good color is found
+/// The color that appears to dominate the background of the image.
+/// @discussion Returns nil if no good color is found.
 - (UIColor *)backgroundColor;
 
-/// The color that appears to dominate the background of the image
-/// @param colors An array of colors that the returned color needs to contrast with
+/// The color that appears to dominate the background of the image.
+/// @param colors An array of colors that the returned color needs to contrast with.
 /// @param contrast The perceived difference in color difference.
-/// @discussion Returns nil if no good color is found
+/// @discussion Returns nil if no sufficient color is found.
 - (UIColor *)backgroundColorToContrastAgainstColors:(NSArray *)colors
 									   withContrast:(UIColorContrast)contrast;
 
 
-/// The primary, bright and saturated color that appears to dominate the image
-/// @discussion Returns nil if no good color is found
+/// The primary, bright and saturated color that appears to dominate the image.
+/// @discussion Returns nil if no good color is found.
 - (UIColor *)keyColor;
 
-/// The primary saturated color that appears to dominate the image
-/// @param color An array of colors that the returned color needs to contrast with
+/// The primary saturated color that appears to dominate the image.
+/// @param color An array of colors that the returned color needs to contrast with.
 /// @param contrast The perceived difference in color difference.
-/// @discussion Returns nil if no good color is found
+/// @discussion Returns nil if no sufficient color is found.
 - (UIColor *)keyColorToContrastAgainstColors:(NSArray *)colors
 								withContrast:(UIColorContrast)contrast;
 
