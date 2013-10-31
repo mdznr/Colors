@@ -1,15 +1,15 @@
 //
-//  UIColor+colorFinder.m
+//  UIColor+ColorFinder.m
 //  Colors
 //
 //  Created by Matt on 10/29/13.
 //  Copyright (c) 2013 Matt Zanchelli. All rights reserved.
 //
 
-#import "UIColor+colorFinder.h"
+#import "UIColor+ColorFinder.h"
 #import "UIColor+Manipulation.h"
 
-@implementation UIColor (colorFinder)
+@implementation UIColor (ColorFinder)
 
 - (UIColor *)mostSimilarColorInSet:(NSSet *)colors
 {

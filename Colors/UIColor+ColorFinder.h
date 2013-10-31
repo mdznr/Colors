@@ -1,5 +1,5 @@
 //
-//  UIColor+colorFinder.h
+//  UIColor+ColorFinder.h
 //  Colors
 //
 //  Created by Matt on 10/29/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (colorFinder)
+@interface UIColor (ColorFinder)
 
 /// Finds and returns the color in the set that is most like the receiver.
 /// @param colors A set of colors to compare against the receiver.
