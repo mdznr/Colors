@@ -35,6 +35,7 @@
 		C9C1830717F3A4AC005AF9A3 /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830617F3A4AC005AF9A3 /* MTZSlider.m */; };
 		C9C1830A17F3A9AF005AF9A3 /* UIImage+TBTint.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830917F3A9AF005AF9A3 /* UIImage+TBTint.m */; };
 		C9EACDB51821EDB6002821A7 /* UIColor+DeviceColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EACDB41821EDB6002821A7 /* UIColor+DeviceColor.m */; };
+		C9EACDB81821F681002821A7 /* UIColor+KeyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EACDB71821F681002821A7 /* UIColor+KeyColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		C9C1830917F3A9AF005AF9A3 /* UIImage+TBTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TBTint.m"; sourceTree = "<group>"; };
 		C9EACDB31821EDB6002821A7 /* UIColor+DeviceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DeviceColor.h"; sourceTree = "<group>"; };
 		C9EACDB41821EDB6002821A7 /* UIColor+DeviceColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DeviceColor.m"; sourceTree = "<group>"; };
+		C9EACDB61821F681002821A7 /* UIColor+KeyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KeyColor.h"; sourceTree = "<group>"; };
+		C9EACDB71821F681002821A7 /* UIColor+KeyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KeyColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 				C98AC8741820407D00ED66F8 /* UIColor+ColorFinder.m */,
 				C9EACDB31821EDB6002821A7 /* UIColor+DeviceColor.h */,
 				C9EACDB41821EDB6002821A7 /* UIColor+DeviceColor.m */,
+				C9EACDB61821F681002821A7 /* UIColor+KeyColor.h */,
+				C9EACDB71821F681002821A7 /* UIColor+KeyColor.m */,
 				C9C182FA17F295E5005AF9A3 /* UIColor+Manipulation.h */,
 				C9C182FB17F295E5005AF9A3 /* UIColor+Manipulation.m */,
 				C92621B217D51C4F0095AE1C /* UIColor+NeueColors.h */,
@@ -324,6 +329,7 @@
 			files = (
 				C9C1830217F2A89C005AF9A3 /* UIImage+Pixels.m in Sources */,
 				C926218B17D51C250095AE1C /* MTZAppDelegate.m in Sources */,
+				C9EACDB81821F681002821A7 /* UIColor+KeyColor.m in Sources */,
 				C9C1830A17F3A9AF005AF9A3 /* UIImage+TBTint.m in Sources */,
 				C9C182EC17F0FE21005AF9A3 /* UIImage+Crop.m in Sources */,
 				C92621B717D522080095AE1C /* UIColor+Hex.m in Sources */,
