@@ -26,6 +26,10 @@
 + (UIColor *)caseColor
 {
 #warning TODO: Implement
+	/*
+	 How this would work:
+	 A case can broadcast it's color to the device using NFC or something similar. This method will ask iOS for that color. The OS can make things more efficient by storing the color locally and updating that value whenever a change in case is detected. The OS can also notify apps that are watching for updates on this color.
+	 */
 	return nil;
 }
 

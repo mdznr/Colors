@@ -19,7 +19,7 @@
 + (UIColor *)deviceColor;
 
 /// Returns the color of the case on the device
-/// @return A newly instantiated color object representing the color of the case the beautiful device is unfortunately covered with.
+/// @return A newly instantiated color object representing the color of the case the beautiful device is unfortunately covered with. Returns nil if no complying case is detected on the device.
 #warning TODO: Write API to get notified of udpates of this property (like Dynamic Type)
 + (UIColor *)caseColor;
 
