@@ -9,6 +9,7 @@
 
 /// Returns a rectangle with an origin that is offset from that of the source rectangle.
 /// @param rect The source rectangle.
-/// @param scale The scale value to multiply the dimensions of the rect.
-/// @return A rectangle that is at the same origin as the source, but with its width and height multiplied by the scale.
+/// @param scale The scale value to multiply the origin and dimensions of the rect.
+/// @discussion Both the origin and dimensions are multiplied by the scale
+/// @return A rectangle that has been scaled by a multiplier.
 CGRect CGRectScale(CGRect rect, CGFloat scale);
