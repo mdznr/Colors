@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C912316018220FAB00DD137D /* UIColor+KeyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C912315F18220FAB00DD137D /* UIColor+KeyColor.m */; };
 		C926217B17D51C250095AE1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217A17D51C250095AE1C /* Foundation.framework */; };
 		C926217D17D51C250095AE1C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217C17D51C250095AE1C /* CoreGraphics.framework */; };
 		C926217F17D51C250095AE1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217E17D51C250095AE1C /* UIKit.framework */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C912315E18220FAB00DD137D /* UIColor+KeyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KeyColor.h"; sourceTree = "<group>"; };
+		C912315F18220FAB00DD137D /* UIColor+KeyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KeyColor.m"; sourceTree = "<group>"; };
 		C926217717D51C250095AE1C /* Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C926217A17D51C250095AE1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C926217C17D51C250095AE1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -165,6 +168,8 @@
 				C98AC8771820BEB800ED66F8 /* UIColor+colorFinder.m */,
 				C97A233D17D6321C00B87FC1 /* UIColor+Components.h */,
 				C97A233E17D6321C00B87FC1 /* UIColor+Components.m */,
+				C912315E18220FAB00DD137D /* UIColor+KeyColor.h */,
+				C912315F18220FAB00DD137D /* UIColor+KeyColor.m */,
 				C9C182FA17F295E5005AF9A3 /* UIColor+Manipulation.h */,
 				C9C182FB17F295E5005AF9A3 /* UIColor+Manipulation.m */,
 				C92621B217D51C4F0095AE1C /* UIColor+NeueColors.h */,
@@ -330,6 +335,7 @@
 				C97A233F17D6321C00B87FC1 /* UIColor+Components.m in Sources */,
 				C92621BD17D528550095AE1C /* NSNumber+Hex.m in Sources */,
 				C9C182F917F29489005AF9A3 /* UIImage+Colors.m in Sources */,
+				C912316018220FAB00DD137D /* UIColor+KeyColor.m in Sources */,
 				C9C182FC17F295E5005AF9A3 /* UIColor+Manipulation.m in Sources */,
 				C98AC8781820BEB800ED66F8 /* UIColor+colorFinder.m in Sources */,
 			);

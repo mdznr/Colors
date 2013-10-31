@@ -11,6 +11,7 @@
 #import "UIImage+Pixels.h"
 
 #import "UIColor+Components.h"
+#import "UIColor+KeyColor.h"
 #import "UIColor+Manipulation.h"
 
 @implementation UIImage (Colors)
@@ -66,10 +67,6 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 
 #pragma mark Color
 
-bool isColorKeyColorAppropriate(UIColor *color) {
-	return [color brightness] + ((5.0f/7.0f)*[color saturation]) <= (17.0f/14.0f);
-}
-
 - (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
 							 withContrast:(CGFloat)requiredMinimumContrast
 							   isKeyColor:(BOOL)keyColor
@@ -99,7 +96,7 @@ bool isColorKeyColorAppropriate(UIColor *color) {
 			
 			// Make sure it is a key color, if desired
 			// Checks for required brightness and saturation levels
-			if ( keyColor && isColorKeyColorAppropriate(newColor) ) {
+			if ( keyColor && [newColor isKeyColorAppropriate] ) {
 				continue;
 			}
 			
