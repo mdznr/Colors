@@ -10,10 +10,17 @@
 
 @interface UIColor (DeviceColor)
 
+/// Returns the dominant color on the app's icon.
+/// @return A newly instantiated color object representing the dominant color of the app's icon.
 + (UIColor *)appIconColor;
 
+/// Returns the color of the device.
+/// @return A newly instantiated color object representing the color of the device running the application.
 + (UIColor *)deviceColor;
 
+/// Returns the dominant color of the user's wallpaper.
+/// @return A newly instantiated color object representing the dominant color of the user's wallpaper.
+#warning TODO: Write API to get notified of udpates of this property (like Dynamic Type)
 + (UIColor *)userWallpaperColor;
 
 @end
