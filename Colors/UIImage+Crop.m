@@ -11,6 +11,9 @@
 
 @implementation UIImage (Crop)
 
+
+#pragma mark Crop
+
 // Implementation with help from http://stackoverflow.com/questions/158914/cropping-a-uiimage
 - (UIImage *)croppedImageWithRect:(CGRect)rect
 {
@@ -28,7 +31,40 @@
 	return newImage;
 }
 
-#warning keep aspect ratio?
+
+#pragma mark Scale
+
+- (UIImage*)scaleToSize:(CGSize)size
+{
+	return [self scaleToSize:size
+	withInterpolationQuality:kCGInterpolationDefault];
+}
+
+- (UIImage *)scaleToSize:(CGSize)size
+      keepingAspectRatio:(BOOL)keepAspectRatio
+{
+    return [self scaleToSize:size
+    withInterpolationQuality:kCGInterpolationDefault
+          keepingAspectRatio:keepAspectRatio];
+}
+
+- (UIImage *)scaleToSize:(CGSize)size
+withInterpolationQuality:(CGInterpolationQuality)interpolationQuality
+      keepingAspectRatio:(BOOL)keepAspectRatio
+{
+    CGSize newSize = size;
+    if ( keepAspectRatio ) {
+        if ( self.size.width < self.size.height ) {
+            // Tall image
+            newSize = (CGSize){size.height * (self.size.width/self.size.height), size.height};
+        } else {
+            // Not-tall image
+            newSize = (CGSize){size.width, size.width * (self.size.width/self.size.height)};
+        }
+    }
+    return [self scaleToSize:newSize withInterpolationQuality:interpolationQuality];
+}
+
 // Implementation from http://stackoverflow.com/questions/11909502/scale-down-a-uiimage
 - (UIImage *)scaleToSize:(CGSize)size
 withInterpolationQuality:(CGInterpolationQuality)interpolationQuality
@@ -47,12 +83,6 @@ withInterpolationQuality:(CGInterpolationQuality)interpolationQuality
     UIGraphicsEndImageContext();
 	
     return scaledImage;
-}
-
-- (UIImage*)scaleToSize:(CGSize)size
-{
-	return [self scaleToSize:size
-	withInterpolationQuality:kCGInterpolationDefault];
 }
 
 @end
