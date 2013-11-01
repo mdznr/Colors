@@ -195,17 +195,16 @@
 
 - (void)updatePlaybackTime
 {
-	[self updatePlaybackTimeWithAnimation:NO];
+	[self updatePlaybackTimeForTime:_player.currentPlaybackTime withAnimation:NO];
 }
 
 - (void)updatePlaybackTimeWithAnimation
 {
-	[self updatePlaybackTimeWithAnimation:YES];
+	[self updatePlaybackTimeForTime:_player.currentPlaybackTime withAnimation:YES];
 }
 
-- (void)updatePlaybackTimeWithAnimation:(BOOL)animated
+- (void)updatePlaybackTimeForTime:(NSTimeInterval)elapsed withAnimation:(BOOL)animated
 {
-	NSTimeInterval elapsed = _player.currentPlaybackTime;
 	if ( animated ) {
 		[UIView beginAnimations:nil context:nil];
 		[UIView setAnimationBeginsFromCurrentState:YES];
@@ -390,6 +389,7 @@
 
 - (IBAction)trackSliderChangedValue:(id)sender
 {
+	[self updatePlaybackTimeForTime:_trackSlider.value withAnimation:NO];
 	_player.currentPlaybackTime = _trackSlider.value;
 }
 
