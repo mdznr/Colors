@@ -70,10 +70,6 @@
 	
 	_player = [MPMusicPlayerController iPodMusicPlayer];
 	
-	// Add volume view to hide volume HUD when changing volume
-	MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:CGRectMake(-1280.0, -1280.0, 0.0f, 0.0f)];
-	[self.view addSubview:volumeView];
-	
 	_trackSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,1,216,34}];
 	[_trackSlider addTarget:self
 					 action:@selector(trackSliderChangedValue:)
@@ -140,10 +136,6 @@
 	[notificationCenter addObserver:self
 						   selector:@selector(playbackStateDidChange:)
 							   name:MPMusicPlayerControllerPlaybackStateDidChangeNotification
-							 object:_player];
-	[notificationCenter addObserver:self
-						   selector:@selector(volumeDidChange:)
-							   name:MPMusicPlayerControllerVolumeDidChangeNotification
 							 object:_player];
     [_player beginGeneratingPlaybackNotifications];
 	
