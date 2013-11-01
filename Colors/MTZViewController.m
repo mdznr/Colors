@@ -233,7 +233,7 @@
 	if ( isnan(minutes) ) {
 		minutesString = @"--";
 	} else {
-		minutesString = [NSString stringWithFormat:@"%.0f", minutes];
+		minutesString = [NSString stringWithFormat:@"%.0f", MAX(0,minutes)];
 	}
 	
 	_timeElapsed.text = [NSString stringWithFormat:@"%@:%@", minutesString, secondsString];
@@ -256,7 +256,7 @@
 	if ( isnan(minutes) ) {
 		minutesString = @"--";
 	} else {
-		minutesString = [NSString stringWithFormat:@"-%.0f", minutes];
+		minutesString = [NSString stringWithFormat:@"-%.0f", MAX(0,minutes)];
 	}
 	
 	_timeRemaining.text = [NSString stringWithFormat:@"%@:%@", minutesString, secondsString];
