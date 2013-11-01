@@ -52,7 +52,7 @@
                                 <rect key="frame" x="0.0" y="381" width="320" height="6"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fp7-Qx-QHz" userLabel="Controls View">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fp7-Qx-QHz" userLabel="Controls View">
                                 <rect key="frame" x="0.0" y="384" width="320" height="184"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -157,6 +157,9 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wNu-fk-7du" firstAttribute="top" secondItem="Fp7-Qx-QHz" secondAttribute="bottom" id="wCt-iV-Pcp"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="artistAndAlbumTitles" destination="MUL-rb-BEm" id="35M-K9-WYi"/>

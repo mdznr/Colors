@@ -53,10 +53,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *speakerOffImage;
 
-#if DEBUG_MODE
-@property (strong, nonatomic) UIImageView *imgv;
-#endif
-
 @end
 
 @implementation MTZViewController
@@ -109,7 +105,8 @@
 	
 	_trackNumbersLabel = [[UILabel alloc] initWithFrame:(CGRect){0,0,160,32}];
 	_trackNumbersLabel.textAlignment = NSTextAlignmentCenter;
-	_trackNumbersLabel.text = @"1 of 16";
+	_trackNumbersLabel.text = @"Now Playing";
+	
 	self.navigationBar.topItem.titleView = _trackNumbersLabel;
 	[self.navigationBar.topItem setHidesBackButton:NO animated:NO];
 	
@@ -159,30 +156,36 @@
     _iv.image = albumArtwork;
 	[self refreshColors];
 	
-#if DEBUG_MODE
-	_imgv.image = [albumArtwork scaleToSize:(CGSize){64,64}
-				   withInterpolationQuality:kCGInterpolationLow];
-#endif
-	
-	_trackTitle.text = [currentItem valueForProperty:MPMediaItemPropertyTitle];
+	NSString *trackTitle = [currentItem valueForProperty:MPMediaItemPropertyTitle];
+	if ( !trackTitle ) trackTitle = @"Song";
+	_trackTitle.text = trackTitle;
 	NSString *artist = [currentItem valueForProperty:MPMediaItemPropertyArtist];
+	if ( !artist ) artist = @"Artist";
 	NSString *album = [currentItem valueForProperty:MPMediaItemPropertyAlbumTitle];
+	if ( !album ) album = @"Album";
 	_artistAndAlbumTitles.text = [NSString stringWithFormat:@"%@ - %@", artist, album];
 	
-	NSString *trackNo = [NSString stringWithFormat:@"%@", [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackNumber]];
-	NSString *trackOf = [NSString stringWithFormat:@"%@", [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackCount]];
-	NSString *title = [NSString stringWithFormat:@"%@ of %@", trackNo, trackOf];
-	NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:title];
-	[attributedTitle addAttribute:NSFontAttributeName
-							value:[UIFont boldSystemFontOfSize:15.0f]
-							range:NSMakeRange(0, trackNo.length)];
-	[attributedTitle addAttribute:NSFontAttributeName
-							value:[UIFont systemFontOfSize:15.0f]
-							range:NSMakeRange(trackNo.length, 4)];
-	[attributedTitle addAttribute:NSFontAttributeName
-							value:[UIFont boldSystemFontOfSize:15.0f]
-							range:NSMakeRange(trackNo.length + 4, trackOf.length)];
-	_trackNumbersLabel.attributedText = attributedTitle;
+	
+	NSNumber *trackNo = [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackNumber];
+	NSNumber *trackOf = [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackCount];
+	
+	if ( trackNo && trackOf ) {
+		NSString *title = [NSString stringWithFormat:@"%@ of %@", trackNo, trackOf];
+		NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:title];
+		NSUInteger length = [NSString stringWithFormat:@"%@", trackNo].length;
+		[attributedTitle addAttribute:NSFontAttributeName
+								value:[UIFont boldSystemFontOfSize:15.0f]
+								range:NSMakeRange(0, length)];
+		[attributedTitle addAttribute:NSFontAttributeName
+								value:[UIFont systemFontOfSize:15.0f]
+								range:NSMakeRange(length, 4)];
+		[attributedTitle addAttribute:NSFontAttributeName
+								value:[UIFont boldSystemFontOfSize:15.0f]
+								range:NSMakeRange(length + 4, [NSString stringWithFormat:@"%@", trackOf].length)];
+		_trackNumbersLabel.attributedText = attributedTitle;
+	} else {
+		_trackNumbersLabel.text = @"Now Playing";
+	}
 	
 	NSNumber *playbackDuration = [currentItem valueForProperty:MPMediaItemPropertyPlaybackDuration];
 	_trackSlider.maximumValue = playbackDuration.floatValue;
@@ -208,23 +211,32 @@
 		[UIView setAnimationBeginsFromCurrentState:YES];
 		[UIView setAnimationCurve:UIViewAnimationCurveLinear];
 		[UIView setAnimationDuration:1.0f];
-		[_trackSlider setValue:(elapsed+1) animated:YES];
+		[_trackSlider setValue:(elapsed + 0.5f) animated:YES];
 		[UIView commitAnimations];
 	} else {
 		[_trackSlider setValue:(elapsed) animated:NO];
 	}
 	
 	CGFloat minutes, seconds;
-	NSString *secondsString;
+	NSString *secondsString, *minutesString;
 	
 	minutes = floor(elapsed / 60);
 	seconds = roundf(elapsed - minutes * 60);
-	if ( seconds < 10 ) {
+	if ( isnan(seconds) ) {
+		secondsString = @"--";
+	} else if ( seconds < 10 ) {
 		secondsString = [NSString stringWithFormat:@"0%.0f", seconds];
 	} else {
 		secondsString = [NSString stringWithFormat:@"%.0f", seconds];
 	}
-	_timeElapsed.text = [NSString stringWithFormat:@"%.0f:%@", minutes, secondsString];
+	
+	if ( isnan(minutes) ) {
+		minutesString = @"--";
+	} else {
+		minutesString = [NSString stringWithFormat:@"%.0f", minutes];
+	}
+	
+	_timeElapsed.text = [NSString stringWithFormat:@"%@:%@", minutesString, secondsString];
 	
 	MPMediaItem *currentItem = [_player nowPlayingItem];
 	NSNumber *playbackDuration = [currentItem valueForProperty:MPMediaItemPropertyPlaybackDuration];
@@ -233,13 +245,21 @@
 	NSTimeInterval remaining = playbackDuration.floatValue - elapsed;
 	minutes = floor(remaining / 60);
 	seconds = round(remaining - minutes * 60);
-	if ( seconds < 10 ) {
+	if ( isnan(seconds) ){
+		secondsString = @"--";
+	} else if ( seconds < 10 ) {
 		secondsString = [NSString stringWithFormat:@"0%.0f", seconds];
 	} else {
 		secondsString = [NSString stringWithFormat:@"%.0f", seconds];
 	}
 	
-	_timeRemaining.text = [NSString stringWithFormat:@"-%.0f:%@", minutes, secondsString];
+	if ( isnan(minutes) ) {
+		minutesString = @"--";
+	} else {
+		minutesString = [NSString stringWithFormat:@"-%.0f", minutes];
+	}
+	
+	_timeRemaining.text = [NSString stringWithFormat:@"%@:%@", minutesString, secondsString];
 }
 
 - (void)playbackStateDidChange:(id)sender
@@ -258,7 +278,7 @@
 			_pollElapsedTime = nil;
 			_pollElapsedTime = [NSTimer scheduledTimerWithTimeInterval:1.0f
 																target:self
-															  selector:@selector(updatePlaybackTimeWithAnimation)
+															  selector:@selector(updatePlaybackTime)
 															  userInfo:nil
 															   repeats:YES];
 			break;
@@ -286,10 +306,6 @@
 		UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
 																	      [UIColor lightGrayColor]]
 														   withContrast:UIColorContrastLevelLow];
-		
-		NSLog(@"BG: %@", bg);
-		NSLog(@"DIFF: %f", [UIColor differenceBetweenColor:bg andColor:[UIColor whiteColor]]);
-		
 		// Default to dark gray color for sliders
 		if ( !bg ) {
 			bg = [UIColor neueDarkGray];
