@@ -27,8 +27,10 @@
 @property (strong, nonatomic) MPMusicPlayerController *player;
 @property (strong, nonatomic) IBOutlet UIImageView *iv;
 
-@property (strong, nonatomic) IBOutlet MTZSlider *trackSlider;
-@property (strong, nonatomic) IBOutlet MTZSlider *volumeSlider;
+@property (strong, nonatomic) MTZSlider *trackSlider;
+#warning should volumeSlider be removed?
+@property (strong, nonatomic) MTZSlider *volumeSlider;
+@property (strong, nonatomic) MPVolumeView *volumeView;
 
 @property (strong, nonatomic) IBOutlet UILabel *trackTitle;
 @property (strong, nonatomic) IBOutlet UILabel *artistAndAlbumTitles;
@@ -39,6 +41,8 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *topShadow;
 @property (strong, nonatomic) IBOutlet UIImageView *bottomShadow;
+
+@property (weak, nonatomic) IBOutlet UIView *controlsView;
 
 @property (strong, nonatomic) IBOutlet UILabel *timeElapsed;
 @property (strong, nonatomic) IBOutlet UILabel *timeRemaining;
@@ -70,7 +74,7 @@
 	MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:CGRectMake(-1280.0, -1280.0, 0.0f, 0.0f)];
 	[self.view addSubview:volumeView];
 	
-	_trackSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,385,216,34}];
+	_trackSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,1,216,34}];
 	[_trackSlider addTarget:self
 					 action:@selector(trackSliderChangedValue:)
 		   forControlEvents:UIControlEventValueChanged];
@@ -85,9 +89,20 @@
 	_trackSlider.trackImage = [UIImage imageNamed:@"ProgressTrack"];
 	[_trackSlider setThumbImage:[UIImage imageNamed:@"ProgressThumb"]
 					   forState:UIControlStateNormal];
-	[self.view addSubview:_trackSlider];
+	[_controlsView addSubview:_trackSlider];
 	
-	_volumeSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,505,216,34}];
+	_volumeView = [[MPVolumeView alloc] initWithFrame:(CGRect){52,121,216,34}];
+	_volumeView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	[_volumeView setMaximumVolumeSliderImage:[UIImage imageNamed:@"VolumeTrack"]
+									forState:UIControlStateNormal];
+	[_volumeView setMinimumVolumeSliderImage:[UIImage imageNamed:@"VolumeFill"]
+									forState:UIControlStateNormal];
+	[_volumeView setVolumeThumbImage:[UIImage imageNamed:@"VolumeThumb"]
+							forState:UIControlStateNormal];
+	[_controlsView addSubview:_volumeView];
+	
+	/*
+	_volumeSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,121,216,34}];
 	[_volumeSlider addTarget:self
 					  action:@selector(volumeChanged:)
 			forControlEvents:UIControlEventValueChanged];
@@ -97,7 +112,8 @@
 	_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
 	[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
 						forState:UIControlStateNormal];
-	[self.view addSubview:_volumeSlider];
+	[_controlsView addSubview:_volumeSlider];
+	 */
 	
 	UIInterpolatingMotionEffect *verticalMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
 	verticalMotion.minimumRelativeValue = @2;
@@ -265,10 +281,13 @@
 	}
 }
 
+#pragma mark Remove?
+/*
 - (void)volumeDidChange:(id)sender
 {
 	_volumeSlider.value = _player.volume;
 }
+ */
 
 - (void)refreshColors
 {
@@ -279,7 +298,9 @@
 	if ( keyColor ) {
 		[[UIApplication sharedApplication] keyWindow].tintColor = keyColor;
 		_trackSlider.tintColor = keyColor;
-		_volumeSlider.tintColor = keyColor;
+#warning remove?
+//		_volumeSlider.tintColor = keyColor;
+		_volumeView.tintColor = keyColor;
 	} else {
 		UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
 																	      [UIColor lightGrayColor]]
@@ -297,7 +318,9 @@
 		
 #warning set unfilled slider to translucent version of bg color
 		_trackSlider.tintColor = bg;
-		_volumeSlider.tintColor = bg;
+#warning remove?
+//		_volumeSlider.tintColor = bg;
+		_volumeView.tintColor = bg;
 	}
 }
 
@@ -375,10 +398,13 @@
 	_player.currentPlaybackTime = _trackSlider.value;
 }
 
+#warning remove?
+/*
 - (IBAction)volumeChanged:(id)sender
 {
 	_player.volume = _volumeSlider.value;
 }
+ */
 
 - (IBAction)didTapRightBarButtonItem:(id)sender
 {
