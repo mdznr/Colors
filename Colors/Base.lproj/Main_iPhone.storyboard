@@ -161,7 +161,7 @@
                     <connections>
                         <outlet property="artistAndAlbumTitles" destination="MUL-rb-BEm" id="35M-K9-WYi"/>
                         <outlet property="bottomShadow" destination="oyY-4O-Uun" id="v4x-NA-cDu"/>
-                        <outlet property="controlsView" destination="Fp7-Qx-QHz" id="Qhh-Ld-MnN"/>
+                        <outlet property="controlsView" destination="Fp7-Qx-QHz" id="r4B-Fn-r2N"/>
                         <outlet property="iv" destination="bVt-5P-T9h" id="d4h-el-BDZ"/>
                         <outlet property="navigationBar" destination="RDY-c5-mrg" id="Xdy-Lg-lcV"/>
                         <outlet property="playPause" destination="kFf-ez-yqJ" id="LJh-AZ-gTA"/>
