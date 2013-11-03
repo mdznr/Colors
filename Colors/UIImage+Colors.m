@@ -18,11 +18,12 @@
 
 CGFloat getContrastLevel(UIColorContrast contrast)
 {
+	// Values based off of "Just noticeable difference" of 2.3. Value determined by Mahy et al. (1994)
+	CGFloat JND = 2.3f;
 	switch ( contrast ) {
-		// Values based off of "Just noticeable difference" of 2.3. Value determined by Mahy et al. (1994)
-		case UIColorContrastLevelLow:    return 23.0f; // 100 * JND
-		case UIColorContrastLevelMedium: return 46.0f; // 200 * JND
-		case UIColorContrastLevelHigh:   return 69.0f; // 300 * JND
+		case UIColorContrastLevelLow:    return JND * 8;
+		case UIColorContrastLevelMedium: return JND * 16;
+		case UIColorContrastLevelHigh:   return JND * 24;
 		default: return 0.0f;
 	}
 }

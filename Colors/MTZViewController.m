@@ -47,6 +47,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	[self refreshColors];
 }
 
 - (IBAction)sliderValueChanged:(id)sender
@@ -79,7 +81,17 @@
 	_color2Label.text = [NSString stringWithFormat:@"%.1f %.1f %.1f", color2.CIELab_LValue, color2.CIELab_aValue, color2.CIELab_bValue];
 	
 	CGFloat difference = [UIColor differenceBetweenColor:color1 andColor:color2];
-	_colorContrastLabel.text = [NSString stringWithFormat:@"%.2f", difference];
+	_colorContrastLabel.text = [NSString stringWithFormat:@"Contrast: %.2f", difference];
+	
+	if ( difference < 2.3 * 8 ) {
+		_colorContrastLabel.textColor = [UIColor redColor];
+	} else if ( difference < 2.3 * 16 ) {
+		_colorContrastLabel.textColor = [UIColor orangeColor];
+	} else if ( difference < 2.3 * 24 ) {
+		_colorContrastLabel.textColor = [UIColor blackColor];
+	} else {
+		_colorContrastLabel.textColor = [UIColor greenColor];
+	}
 }
 
 #pragma mark View Controller end
