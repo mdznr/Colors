@@ -20,8 +20,6 @@
 
 #import "MTZSlider.h"
 
-#define DEBUG_MODE 0
-
 @interface MTZViewController () <MPMediaPickerControllerDelegate>
 
 @property (strong, nonatomic) MPMusicPlayerController *player;
@@ -132,11 +130,6 @@
 	
 	[self checkPlaybackStatus];
 	[self updatePlaybackTime];
-	
-#if DEBUG_MODE
-	_imgv = [[UIImageView alloc] initWithFrame:(CGRect){0,20,64,64}];
-	[self.view addSubview:_imgv];
-#endif
 }
 
 - (void)checkPlaybackStatus
