@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Playhead.png"
+      "filename" : "Thumb.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Playhead@2x.png"
+      "filename" : "Thumb@2x.png"
     }
   ],
   "info" : {
