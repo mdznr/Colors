@@ -69,6 +69,11 @@ CGFloat radians(CGFloat x) {
     CGFloat a2 = color2.CIELab_aValue;
     CGFloat b2 = color2.CIELab_bValue;
 	
+	// Using standard Euclidean
+	/*
+	return sqrt(SQUARED(L1-L2)+SQUARED(a1-a2)+SQUARED(b1-b2));
+	 */
+	
     CGFloat avg_Lp = (L1 + L2) / 2.0f;
 	CGFloat C1 = sqrt(pow(a1, 2) + pow(b1, 2));
 	CGFloat C2 = sqrt(pow(a2, 2) + pow(b2, 2));
