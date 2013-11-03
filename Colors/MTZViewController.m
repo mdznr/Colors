@@ -80,7 +80,15 @@
 										 brightness:.8 - (_contrastSlider.value / 1.25)
 											  alpha:1.0f];
 	_contrastSlider.tintColor = contrastColor;
-	_contrastLabel.textColor = contrastColor;
+	if ( _contrastSlider.value < 0.184f ) {
+		_contrastLabel.textColor = [UIColor redColor];
+	} else if ( _contrastSlider.value < .276f ) {
+		_contrastLabel.textColor = [UIColor orangeColor];
+	} else if ( _contrastSlider.value < .368f ) {
+		_contrastLabel.textColor = [UIColor blackColor];
+	} else {
+		_contrastLabel.textColor = [UIColor greenColor];
+	}
 }
 
 #pragma mark View Controller end

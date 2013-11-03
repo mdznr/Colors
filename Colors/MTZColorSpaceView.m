@@ -7,6 +7,7 @@
 //
 
 #import "MTZColorSpaceView.h"
+#import "UIColor+Manipulation.h"
 
 @implementation MTZColorSpaceView
 
@@ -47,12 +48,21 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
 	for ( NSUInteger x=rect.origin.x; x<rect.size.width; ++x ) {
 		for ( NSUInteger y=rect.origin.y; y<rect.size.height; ++y ) {
-			CGRect rectangle = CGRectMake(x, y, 1, 1);
 			UIColor *color = [UIColor colorWithHue:_hue
 										saturation:(x/(rect.size.width-rect.origin.x))
 										brightness:1-(y/(rect.size.height-rect.origin.y))
 											 alpha:1.0f];
-			CGContextSetFillColorWithColor(context, color.CGColor);
+			CGFloat contrast = [UIColor differenceBetweenColor:color
+													  andColor:[UIColor colorWithHue:0.0f
+																		  saturation:0.0f
+																		  brightness:_lightness
+																			   alpha:0.0f]];
+			if ( contrast > _contrast * 100 ) {
+				CGContextSetFillColorWithColor(context, color.CGColor);
+			} else {
+				CGContextSetRGBFillColor(context, 1.0f, 1.0f, 1.0f, 1.0f);
+			}
+			CGRect rectangle = CGRectMake(x, y, 1, 1);
 			CGContextFillRect(context, rectangle);
 		}
 	}
