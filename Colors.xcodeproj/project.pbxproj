@@ -34,6 +34,7 @@
 		C9C1830417F2C2CC005AF9A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */; };
 		C9C1830717F3A4AC005AF9A3 /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830617F3A4AC005AF9A3 /* MTZSlider.m */; };
 		C9C1830A17F3A9AF005AF9A3 /* UIImage+TBTint.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830917F3A9AF005AF9A3 /* UIImage+TBTint.m */; };
+		C9D1DDFE1825ED680045FAF6 /* MTZColorSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D1DDFD1825ED680045FAF6 /* MTZColorSpaceView.m */; };
 		C9EACDB51821EDB6002821A7 /* UIColor+DeviceColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EACDB41821EDB6002821A7 /* UIColor+DeviceColor.m */; };
 		C9EACDB81821F681002821A7 /* UIColor+KeyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EACDB71821F681002821A7 /* UIColor+KeyColor.m */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,8 @@
 		C9C1830617F3A4AC005AF9A3 /* MTZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlider.m; sourceTree = "<group>"; };
 		C9C1830817F3A9AA005AF9A3 /* UIImage+TBTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TBTint.h"; sourceTree = "<group>"; };
 		C9C1830917F3A9AF005AF9A3 /* UIImage+TBTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TBTint.m"; sourceTree = "<group>"; };
+		C9D1DDFC1825ED680045FAF6 /* MTZColorSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZColorSpaceView.h; path = Colors/MTZColorSpaceView.h; sourceTree = "<group>"; };
+		C9D1DDFD1825ED680045FAF6 /* MTZColorSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTZColorSpaceView.m; path = Colors/MTZColorSpaceView.m; sourceTree = "<group>"; };
 		C9EACDB31821EDB6002821A7 /* UIColor+DeviceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DeviceColor.h"; sourceTree = "<group>"; };
 		C9EACDB41821EDB6002821A7 /* UIColor+DeviceColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DeviceColor.m"; sourceTree = "<group>"; };
 		C9EACDB61821F681002821A7 /* UIColor+KeyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KeyColor.h"; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 		C926216E17D51C250095AE1C = {
 			isa = PBXGroup;
 			children = (
+				C9D1DDFC1825ED680045FAF6 /* MTZColorSpaceView.h */,
+				C9D1DDFD1825ED680045FAF6 /* MTZColorSpaceView.m */,
 				C926218017D51C250095AE1C /* Colors */,
 				C92621A217D51C250095AE1C /* ColorsTests */,
 				C926217917D51C250095AE1C /* Frameworks */,
@@ -334,6 +339,7 @@
 				C9C182EC17F0FE21005AF9A3 /* UIImage+Crop.m in Sources */,
 				C92621B717D522080095AE1C /* UIColor+Hex.m in Sources */,
 				C926218717D51C250095AE1C /* main.m in Sources */,
+				C9D1DDFE1825ED680045FAF6 /* MTZColorSpaceView.m in Sources */,
 				C92621B417D51C4F0095AE1C /* UIColor+NeueColors.m in Sources */,
 				C9EACDB51821EDB6002821A7 /* UIColor+DeviceColor.m in Sources */,
 				C9C182F217F100B1005AF9A3 /* CGRectManipulation.m in Sources */,
