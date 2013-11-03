@@ -19,7 +19,7 @@
 
 @interface MTZViewController ()
 
-@property (weak, nonatomic) IBOutlet MTZColorSpaceView *colorSapceViewer;
+@property (weak, nonatomic) IBOutlet MTZColorSpaceView *colorSpaceViewer;
 @property (weak, nonatomic) IBOutlet UISlider *hueSlider;
 @property (weak, nonatomic) IBOutlet UISlider *lightnessSlider;
 @property (weak, nonatomic) IBOutlet UISlider *contrastSlider;
@@ -36,23 +36,37 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	[self updateColors];
+	
+	// Probably shouldn't do this, but it's just a test app
+	[self sliderDidChange:_hueSlider];
+	[self sliderDidChange:_lightnessSlider];
+	[self sliderDidChange:_contrastSlider];
 }
 
 - (IBAction)sliderDidChange:(UISlider *)sender
 {
 	[self updateColors];
+	
+	if ( sender == _hueSlider ) {
+		[_colorSpaceViewer setHue:_hueSlider.value];
+	} else if ( sender == _lightnessSlider ) {
+		[_colorSpaceViewer setLightness:_lightnessSlider.value];
+	} else if ( sender == _contrastSlider ) {
+		[_colorSpaceViewer setContrast:_contrastSlider.value];
+	}
 }
 
 - (void)updateColors
 {
-	UIColor *hueColor = [UIColor colorWithHue:_hueSlider.value / 360.0f
+	// Update Hue
+	UIColor *hueColor = [UIColor colorWithHue:_hueSlider.value
 								   saturation:1.0f
 								   brightness:1.0f
 										alpha:1.0f];
 	_hueSlider.tintColor = hueColor;
 	_hueLabel.textColor = hueColor;
 	
+	// Update Lightness
 	UIColor *lightnessColor = [UIColor colorWithHue:0.0f
 										 saturation:0.0f
 										 brightness:(_lightnessSlider.value / 1.25)
@@ -60,9 +74,10 @@
 	_lightnessSlider.tintColor = lightnessColor;
 	_lightnessLabel.textColor = lightnessColor;
 	
+	// Update Contrast
 	UIColor *contrastColor = [UIColor colorWithHue:0.0f
 										 saturation:0.0f
-										 brightness:.8 - (_contrastSlider.value / 125)
+										 brightness:.8 - (_contrastSlider.value / 1.25)
 											  alpha:1.0f];
 	_contrastSlider.tintColor = contrastColor;
 	_contrastLabel.textColor = contrastColor;
