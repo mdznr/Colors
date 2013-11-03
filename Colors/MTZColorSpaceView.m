@@ -9,6 +9,8 @@
 #import "MTZColorSpaceView.h"
 #import "UIColor+Manipulation.h"
 
+#define SCALE 0.25f
+
 @implementation MTZColorSpaceView
 
 - (id)initWithFrame:(CGRect)frame
@@ -46,11 +48,11 @@
 	[super drawRect:rect];
 	
     CGContextRef context = UIGraphicsGetCurrentContext();
-	for ( NSUInteger x=rect.origin.x; x<rect.size.width; ++x ) {
-		for ( NSUInteger y=rect.origin.y; y<rect.size.height; ++y ) {
+	for ( CGFloat x=rect.origin.x; x<rect.size.width; x+=(1/SCALE) ) {
+		for ( CGFloat y=rect.origin.y; y<rect.size.height; y+=(1/SCALE) ) {
 			UIColor *color = [UIColor colorWithHue:_hue
-										saturation:(x/(rect.size.width-rect.origin.x))
-										brightness:1-(y/(rect.size.height-rect.origin.y))
+										saturation:(x/((rect.size.width)-(rect.origin.x)))
+										brightness:1-(y/((rect.size.height)-(rect.origin.y)))
 											 alpha:1.0f];
 			CGFloat contrast = [UIColor differenceBetweenColor:color
 													  andColor:[UIColor colorWithHue:0.0f
@@ -62,7 +64,7 @@
 			} else {
 				CGContextSetRGBFillColor(context, 1.0f, 1.0f, 1.0f, 1.0f);
 			}
-			CGRect rectangle = CGRectMake(x, y, 1, 1);
+			CGRect rectangle = CGRectMake(x, y, 1/SCALE, 1/SCALE);
 			CGContextFillRect(context, rectangle);
 		}
 	}
