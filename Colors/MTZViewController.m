@@ -10,7 +10,7 @@
 
 @import MediaPlayer;
 
-#import "UIColor+colorFinder.h"
+#import "UIColor+ColorFinder.h"
 #import "UIColor+Components.h"
 #import "UIColor+Hex.h"
 #import "UIColor+Manipulation.h"
