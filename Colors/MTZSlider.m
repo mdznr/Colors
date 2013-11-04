@@ -63,6 +63,7 @@
 
 - (void)updateFillImage
 {
+#warning set unfilled slider to translucent version of bg color?
 	UIImage *fill = [_fillImage tintedImageWithColor:self.tintColor];
     [self setMinimumTrackImage:[fill resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
 					  forState:UIControlStateNormal];

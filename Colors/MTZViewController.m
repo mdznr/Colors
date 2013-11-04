@@ -12,7 +12,9 @@
 
 #import "UIColor+ColorFinder.h"
 #import "UIColor+Components.h"
+#import "UIColor+DeviceColor.h"
 #import "UIColor+Hex.h"
+#import "UIColor+KeyColor.h"
 #import "UIColor+Manipulation.h"
 #import "UIColor+NeueColors.h"
 #import "UIImage+Colors.h"
@@ -304,8 +306,7 @@
 		}
 		
 		[[UIApplication sharedApplication] keyWindow].tintColor = [UIColor neueBlue];
-		
-#warning set unfilled slider to translucent version of bg color
+
 		_trackSlider.tintColor = bg;
 		_volumeSlider.tintColor = bg;
 	}
