@@ -297,6 +297,7 @@
 		_trackSlider.tintColor = keyColor;
 		_volumeSlider.tintColor = keyColor;
 	} else {
+#warning is there a better way to only run this if keyColor is nil?
 		UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
 																	      [UIColor lightGrayColor]]
 														   withContrast:UIColorContrastLevelLow];
@@ -306,7 +307,6 @@
 		}
 		
 		[[UIApplication sharedApplication] keyWindow].tintColor = [UIColor neueBlue];
-
 		_trackSlider.tintColor = bg;
 		_volumeSlider.tintColor = bg;
 	}

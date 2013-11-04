@@ -1,7 +1,7 @@
-Description
+Project Description
 =====
 
-UIColor categories and APIs for generating colors
+UIColor categories and APIs for generating colors. Bring beauty and life into your iOS application.
 
 ---
 
@@ -34,7 +34,7 @@ This method will search the image for a key-color appropriate color for use on a
 This document is about APIs in development and is subject to change. There are tons of changes, improvements, and simplifications I've been thinking about and may integrate in the future.
 
 
-Headers
+Header Descriptions
 =====
 
 ####`UIColor+Components.h`
