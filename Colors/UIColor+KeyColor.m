@@ -15,7 +15,14 @@
 {
 #warning TODO: Use CIE-LAB to determine if appropriate.
 	// TODO: Use some kind of addition or multiplication of a and b components of LAB.
-	return [self brightness] + ((5.0f/7.0f)*[self saturation]) <= (17.0f/14.0f);
+	return self.brightness + ((5.0f/7.0f)*self.saturation) <= (17.0f/14.0f);
+	
+	// Take Helmholtz–Kohlrausch effect into account.
+	// http://www.mikewoodconsulting.com/articles/Protocol%20Summer%202012%20-%20HK%20Effect.pdf
+	
+	// Mapping hue to minimum saturation requirement
+	CGFloat hue = self.hue;
+	CGFloat minSaturation = 21.77 + 6.858 * cos(0.7304 - 0.03361 * hue) - cos(-0.02785 * hue) * cos(5.38 - 0.04656 * hue) * sqrt(21.77 + 6.858 * cos(0.7304 - 0.03361 * hue)) - 2.305 * cos(-0.05006 * hue);
 }
 
 - (CGFloat)keyColorValue
