@@ -36,10 +36,10 @@ This contains a method to find the perceived difference in two colors. It uses t
 
 ---
 
-###`UIColor+NeueColors.h`
+####`UIColor+NeueColors.h`
 This contains the standard system colors used in Apple's default apps as well as the colors of device hardware.
 
 ---
 
-###`UIImage+Colors.h`
+####`UIImage+Colors.h`
 This contains methods for getting colors from images. You can specify that you want a general-purpose color or a color to be used as a key color. You can specify if you want to guarantee a specified minimum contrast against another color, which is useful when displaying another color (in button text, for example) against a background color.
