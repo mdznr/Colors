@@ -41,6 +41,48 @@
 	[self sliderDidChange:_hueSlider];
 	[self sliderDidChange:_lightnessSlider];
 	[self sliderDidChange:_contrastSlider];
+	
+	CGFloat minContrast = 18.4f;
+	// Generate data
+	NSMutableDictionary *saturationPoints = [[NSMutableDictionary alloc] initWithCapacity:360];
+	NSMutableDictionary *lightnessPoints = [[NSMutableDictionary alloc] initWithCapacity:360];
+	// For every hue 0-360
+	for ( CGFloat h=0; h<360; ++h ) {
+		// Find first saturation that fufills requirements
+		for ( CGFloat s=0; s<100; ++s ) {
+			UIColor *color = [UIColor colorWithHue:h/360.0f
+										saturation:s/100.0f
+										brightness:1.0f
+											 alpha:1.0f];
+			CGFloat contrast = [UIColor differenceBetweenColor:color andColor:[UIColor colorWithRed:1.0f
+																							  green:1.0f
+																							   blue:1.0f
+																							  alpha:1.0f]];
+			
+			if ( contrast > minContrast ) {
+				[saturationPoints setValue:@(s) forKey:[NSString stringWithFormat:@"%03.0f", h]];
+				break;
+			}
+		}
+		// Find first lightness that fufills requirements
+		for ( CGFloat l=0; l<100; ++l ) {
+			UIColor *color = [UIColor colorWithHue:h/360.0f
+										saturation:1.0
+										brightness:l/100.0f
+											 alpha:1.0f];
+			CGFloat contrast = [UIColor differenceBetweenColor:color andColor:[UIColor colorWithRed:0.0f
+																							  green:0.0f
+																							   blue:0.0f
+																							  alpha:1.0f]];
+			if ( contrast > 2 * minContrast ) {
+				[lightnessPoints setValue:@(l) forKey:[NSString stringWithFormat:@"%03.0f", h]];
+				break;
+			}
+		}
+	}
+	
+	NSLog(@"%@", saturationPoints);
+	NSLog(@"%@", lightnessPoints);
 }
 
 - (IBAction)sliderDidChange:(UISlider *)sender
