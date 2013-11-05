@@ -57,6 +57,7 @@
 /// @param a The value of the a component.
 /// @param b The value of the b component.
 /// @return The color object. The color information represented by this object is in the device RGB colorspace.
+/// @discussion Even though the CIELab colorspace can handle colors outside the range of RGB, this method converts to RGB for use with UIColor.
 + (UIColor *)colorWithCIELabL:(CGFloat)L a:(CGFloat)a b:(CGFloat)b;
 
 @end
