@@ -290,7 +290,7 @@
 {
 #warning animate this change? Animate the change of album art (if it changes), too?
 	UIColor *keyColor = [_iv.image keyColorToContrastAgainstColors:@[[UIColor whiteColor]]
-													  withContrast:UIColorContrastLevelLow];
+											   withMinimumContrast:UIColorContrastLevelLow];
 	
 	if ( keyColor ) {
 		[[UIApplication sharedApplication] keyWindow].tintColor = keyColor;
@@ -300,7 +300,7 @@
 #warning is there a better way to only run this if keyColor is nil?
 		UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
 																	      [UIColor lightGrayColor]]
-														   withContrast:UIColorContrastLevelLow];
+													withMinimumContrast:UIColorContrastLevelLow];
 		// Default to dark gray color for sliders
 		if ( !bg ) {
 			bg = [UIColor neueDarkGray];
