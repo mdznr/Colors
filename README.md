@@ -14,13 +14,13 @@ The code necessary for demo part of application shown above is simple. When the 
 	- (void)refreshColors
 	{
 		UIColor *keyColor = [_iv.image keyColorToContrastAgainstColors:@[[UIColor whiteColor]]
-														  withContrast:UIColorContrastLevelLow];
+		                                           withMinimumContrast:UIColorContrastLevelLow];
 		if ( keyColor ) {
 			[[UIApplication sharedApplication] keyWindow].tintColor = keyColor;
 		} else {
 			UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
-																		      [UIColor lightGrayColor]]
-															   withContrast:UIColorContrastLevelLow];
+			                                                                  [UIColor lightGrayColor]]
+			                                            withMinimumContrast:UIColorContrastLevelLow];
 			if ( !bg ) bg = [UIColor blackColor];
 			[[UIApplication sharedApplication] keyWindow].tintColor = [UIColor neueBlue];
 			_trackSlider.tintColor = bg;
