@@ -26,7 +26,7 @@ typedef enum {
 /// @param contrast The perceived difference in color difference.
 /// @discussion Returns nil if no sufficient color is found.
 - (UIColor *)backgroundColorToContrastAgainstColors:(NSArray *)colors
-									   withContrast:(UIColorContrast)contrast;
+								withMinimumContrast:(UIColorContrast)minimumContrast;
 
 
 /// The primary, bright and saturated color that appears to dominate the image.
@@ -38,6 +38,6 @@ typedef enum {
 /// @param contrast The perceived difference in color difference.
 /// @discussion Returns nil if no sufficient color is found.
 - (UIColor *)keyColorToContrastAgainstColors:(NSArray *)colors
-								withContrast:(UIColorContrast)contrast;
+						 withMinimumContrast:(UIColorContrast)minimumContrast;
 
 @end
