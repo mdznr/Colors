@@ -34,16 +34,16 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 {
 #warning Use system preference for color contrast level
 	return [self backgroundColorToContrastAgainstColors:nil
-										   withContrast:0.0f];
+									withMinimumContrast:0.0f];
 }
 
 - (UIColor *)backgroundColorToContrastAgainstColors:(NSArray *)colors
-									   withContrast:(UIColorContrast)contrast
+								withMinimumContrast:(UIColorContrast)requiredMinimumContrast
 {
-	contrast = getContrastLevel(contrast);
+	requiredMinimumContrast = getContrastLevel(requiredMinimumContrast);
 	return [self colorToContrastAgainstColors:colors
-								 withContrast:contrast
-								   isKeyColor:NO];
+						  withMinimumContrast:requiredMinimumContrast
+							 forUseAsKeyColor:NO];
 }
 
 
@@ -53,24 +53,24 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 {
 #warning Use system preference for color contrast level
 	return [self keyColorToContrastAgainstColors:nil
-									withContrast:0.0f];
+							 withMinimumContrast:0.0f];
 }
 
 - (UIColor *)keyColorToContrastAgainstColors:(NSArray *)colors
-								withContrast:(UIColorContrast)contrast
+						 withMinimumContrast:(UIColorContrast)requiredMinimumContrast
 {
-	contrast = getContrastLevel(contrast);
+	requiredMinimumContrast = getContrastLevel(requiredMinimumContrast);
 	return [self colorToContrastAgainstColors:colors
-								 withContrast:contrast
-								   isKeyColor:YES];
+						  withMinimumContrast:requiredMinimumContrast
+							 forUseAsKeyColor:YES];
 }
 
 
 #pragma mark Color
 
 - (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
-							 withContrast:(CGFloat)requiredMinimumContrast
-							   isKeyColor:(BOOL)keyColor
+							 withMinimumContrast:(CGFloat)requiredMinimumContrast
+						 forUseAsKeyColor:(BOOL)keyColor
 {
 #warning determine a good size to get good color data (multiple of size)
 	// Scale down image to make computation less intensive
