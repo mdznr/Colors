@@ -16,22 +16,25 @@
 - (CGFloat)redComponent
 {
 	CGFloat r,g,b,a;
-	[self getRed:&r green:&g blue:&b alpha:&a];
-	return r;
+	if ([self getRed:&r green:&g blue:&b alpha:&a])
+		return r;
+	return -1;
 }
 
 - (CGFloat)greenComponent
 {
 	CGFloat r,g,b,a;
-	[self getRed:&r green:&g blue:&b alpha:&a];
-	return g;
+	if ([self getRed:&r green:&g blue:&b alpha:&a])
+		return g;
+	return -1;
 }
 
 - (CGFloat)blueComponent
 {
 	CGFloat r,g,b,a;
-	[self getRed:&r green:&g blue:&b alpha:&a];
-	return b;
+	if ([self getRed:&r green:&g blue:&b alpha:&a])
+		return b;
+	return -1;
 }
 
 
