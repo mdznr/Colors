@@ -16,25 +16,28 @@
 - (CGFloat)redComponent
 {
 	CGFloat r,g,b,a;
-	if ([self getRed:&r green:&g blue:&b alpha:&a])
-		return r;
-	return -1;
+	if ( ![self getRed:&r green:&g blue:&b alpha:&a] ) {
+		return -1;
+	}
+	return r;
 }
 
 - (CGFloat)greenComponent
 {
 	CGFloat r,g,b,a;
-	if ([self getRed:&r green:&g blue:&b alpha:&a])
-		return g;
-	return -1;
+	if ( ![self getRed:&r green:&g blue:&b alpha:&a] ) {
+		return -1;
+	}
+	return g;
 }
 
 - (CGFloat)blueComponent
 {
 	CGFloat r,g,b,a;
-	if ([self getRed:&r green:&g blue:&b alpha:&a])
-		return b;
-	return -1;
+	if ( ![self getRed:&r green:&g blue:&b alpha:&a] ) {
+		return -1;
+	}
+	return b;
 }
 
 
@@ -70,21 +73,27 @@
 - (CGFloat)hue
 {
 	CGFloat h,s,b,a;
-	[self getHue:&h saturation:&s brightness:&b alpha:&a];
+	if ( ![self getHue:&h saturation:&s brightness:&b alpha:&a] ) {
+		return -1;
+	}
 	return h;
 }
 
 - (CGFloat)saturation
 {
 	CGFloat h,s,b,a;
-	[self getHue:&h saturation:&s brightness:&b alpha:&a];
+	if ( ![self getHue:&h saturation:&s brightness:&b alpha:&a] ) {
+		return -1;
+	}
 	return s;
 }
 
 - (CGFloat)brightness
 {
 	CGFloat h,s,b,a;
-	[self getHue:&h saturation:&s brightness:&b alpha:&a];
+	if ( ![self getHue:&h saturation:&s brightness:&b alpha:&a] ) {
+		return -1;
+	}
 	return b;
 }
 
@@ -96,7 +105,10 @@
 {
 	// RGB -> YUV conversion assumes 0-255 scale for components
 	CGFloat r,g,b,a;
-	[self getRed:&r green:&g blue:&b alpha:&a];
+	if ( ![self getRed:&r green:&g blue:&b alpha:&a] ) {
+		return -1;
+	}
+	
 	r *= 255;
 	g *= 255;
 	b *= 255;
@@ -110,7 +122,10 @@
 {
 	// RGB -> YUV conversion assumes 0-255 scale for components
 	CGFloat r,g,b,a;
-	[self getRed:&r green:&g blue:&b alpha:&a];
+	if ( ![self getRed:&r green:&g blue:&b alpha:&a] ) {
+		return -1;
+	}
+	
 	r *= 255;
 	g *= 255;
 	b *= 255;
@@ -124,7 +139,10 @@
 {
 	// RGB -> YUV conversion assumes 0-255 scale for components
 	CGFloat r,g,b,a;
-	[self getRed:&r green:&g blue:&b alpha:&a];
+	if ( ![self getRed:&r green:&g blue:&b alpha:&a] ) {
+		return -1;
+	}
+	
 	r *= 255;
 	g *= 255;
 	b *= 255;
@@ -141,7 +159,9 @@
 - (CGFloat)CIELab_LValue
 {
 	CGFloat r,g,b,a;
-	[self getRed:&r green:&g blue:&b alpha:&a];
+	if ( ![self getRed:&r green:&g blue:&b alpha:&a] ) {
+		return -1;
+	}
 	
 	// Convert to XYZ
 	if ( r > 0.04045 ) r = pow(((r + 0.055)/1.055), 2.4);
@@ -174,7 +194,9 @@
 - (CGFloat)CIELab_aValue
 {
 	CGFloat r,g,b,a;
-	[self getRed:&r green:&g blue:&b alpha:&a];
+	if ( ![self getRed:&r green:&g blue:&b alpha:&a] ) {
+		return -1;
+	}
 	
 	// Convert to XYZ
 	if ( r > 0.04045 ) r = pow(((r + 0.055)/1.055), 2.4);
@@ -211,7 +233,9 @@
 - (CGFloat)CIELab_bValue
 {
 	CGFloat r,g,b,a;
-	[self getRed:&r green:&g blue:&b alpha:&a];
+	if ( ![self getRed:&r green:&g blue:&b alpha:&a] ) {
+		return -1;
+	}
 	
 	// Convert to XYZ
 	if ( r > 0.04045 ) r = pow(((r + 0.055)/1.055), 2.4);
