@@ -12,13 +12,13 @@
 
 #pragma mark - RGB
 /// Returns the receiver’s red component (RGB).
-/// @returns A float value of the receiver’s red component in the RGB colorspace. If the receiver is unable to be converted into RGB colorspace, returns -1.
+/// @return A float value of the receiver’s red component in the RGB colorspace. If the receiver is unable to be converted into RGB colorspace, returns -1.
 - (CGFloat)redComponent NS_AVAILABLE_IOS(5_0);
 /// Returns the receiver's green component (RGB).
-/// @returns A float value of the receiver’s green component in the RGB colorspace. If the receiver is unable to be converted into RGB colorspace, returns -1.
+/// @return A float value of the receiver’s green component in the RGB colorspace. If the receiver is unable to be converted into RGB colorspace, returns -1.
 - (CGFloat)greenComponent NS_AVAILABLE_IOS(5_0);
 /// Returns the receiver's blue component (RGB).
-/// @returns A float value of the receiver’s blue component in the RGB colorspace. If the receiver is unable to be converted into RGB colorspace, returns -1.
+/// @return A float value of the receiver’s blue component in the RGB colorspace. If the receiver is unable to be converted into RGB colorspace, returns -1.
 - (CGFloat)blueComponent NS_AVAILABLE_IOS(5_0);
 
 #pragma mark - CMYK
