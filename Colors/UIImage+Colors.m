@@ -28,7 +28,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 	}
 }
 
-#pragma mark Background Color
+#pragma mark - Background Color
 
 - (UIColor *)backgroundColor
 {
@@ -47,7 +47,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 }
 
 
-#pragma mark Key Color
+#pragma mark - Key Color
 
 - (UIColor *)keyColor
 {
@@ -66,7 +66,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 }
 
 
-#pragma mark Color
+#pragma mark - Color
 
 - (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
 							 withMinimumContrast:(CGFloat)requiredMinimumContrast
