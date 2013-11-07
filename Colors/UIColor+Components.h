@@ -21,16 +21,6 @@
 /// @return The value of the receiver’s blue component (B) in the RGB colorspace. If the receiver is unable to be converted into RGB colorspace, returns -1.
 - (CGFloat)blueComponent NS_AVAILABLE_IOS(5_0);
 
-#pragma mark - CMYK
-/// Returns the receiver's cyan component (CMYK).
-- (CGFloat)cyanComponent NS_AVAILABLE_IOS(5_0);
-/// Returns the receiver's magenta component (CMYK).
-- (CGFloat)magentaComponent NS_AVAILABLE_IOS(5_0);
-/// Returns the receiver's yellow component (CMYK).
-- (CGFloat)yellowComponent NS_AVAILABLE_IOS(5_0);
-/// Returns the receiver's black component (CMYK).
-- (CGFloat)blackComponent NS_AVAILABLE_IOS(5_0);
-
 #pragma mark - HSB
 /// Returns the receiver's hue component (HSB).
 /// @return The value of the receiver's hue component (H) in the HSB colorspace. If the receiver is unable to converted into HSB colorspace, returns -1.

@@ -41,33 +41,6 @@
 }
 
 
-#pragma mark - CMYK
-
-- (CGFloat)cyanComponent
-{
-#warning cyanComponent
-	return 0;
-}
-
-- (CGFloat)magentaComponent
-{
-#warning magentaComponent
-	return 0;
-}
-
-- (CGFloat)yellowComponent
-{
-#warning yellowComponent
-	return 0;
-}
-
-- (CGFloat)blackComponent
-{
-#warning blackComponent
-	return 0;
-}
-
-
 #pragma mark - HSB
 
 - (CGFloat)hue
