@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92471A1182D932300A9644E /* MTZKeyColorSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C92471A0182D932300A9644E /* MTZKeyColorSpaceView.m */; };
 		C926217B17D51C250095AE1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217A17D51C250095AE1C /* Foundation.framework */; };
 		C926217D17D51C250095AE1C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217C17D51C250095AE1C /* CoreGraphics.framework */; };
 		C926217F17D51C250095AE1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217E17D51C250095AE1C /* UIKit.framework */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C924719F182D932300A9644E /* MTZKeyColorSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZKeyColorSpaceView.h; sourceTree = "<group>"; };
+		C92471A0182D932300A9644E /* MTZKeyColorSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZKeyColorSpaceView.m; sourceTree = "<group>"; };
 		C926217717D51C250095AE1C /* Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C926217A17D51C250095AE1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C926217C17D51C250095AE1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -168,6 +171,8 @@
 				C926219317D51C250095AE1C /* MTZViewController.m */,
 				C9D1DDFC1825ED680045FAF6 /* MTZColorSpaceView.h */,
 				C9D1DDFD1825ED680045FAF6 /* MTZColorSpaceView.m */,
+				C924719F182D932300A9644E /* MTZKeyColorSpaceView.h */,
+				C92471A0182D932300A9644E /* MTZKeyColorSpaceView.m */,
 				C9C1830517F3A4AC005AF9A3 /* MTZSlider.h */,
 				C9C1830617F3A4AC005AF9A3 /* MTZSlider.m */,
 				C9C182F017F100B1005AF9A3 /* CGRectManipulation.h */,
@@ -336,6 +341,7 @@
 				C926218B17D51C250095AE1C /* MTZAppDelegate.m in Sources */,
 				C9EACDB81821F681002821A7 /* UIColor+KeyColor.m in Sources */,
 				C9C1830A17F3A9AF005AF9A3 /* UIImage+TBTint.m in Sources */,
+				C92471A1182D932300A9644E /* MTZKeyColorSpaceView.m in Sources */,
 				C9C182EC17F0FE21005AF9A3 /* UIImage+Crop.m in Sources */,
 				C92621B717D522080095AE1C /* UIColor+Hex.m in Sources */,
 				C926218717D51C250095AE1C /* main.m in Sources */,

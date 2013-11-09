@@ -10,8 +10,13 @@
 
 @interface MTZColorSpaceView : UIView
 
+///
 @property (nonatomic) CGFloat hue;
+
+///
 @property (nonatomic) CGFloat lightness;
+
+///
 @property (nonatomic) CGFloat contrast;
 
 @end
