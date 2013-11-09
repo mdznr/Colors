@@ -15,14 +15,26 @@
 {
 #warning TODO: Use CIE-LAB to determine if appropriate.
 	// TODO: Use some kind of addition or multiplication of a and b components of LAB.
-	return self.brightness + ((5.0f/7.0f)*self.saturation) <= (17.0f/14.0f);
+	// return self.brightness + ((5.0f/7.0f)*self.saturation) >= (17.0f/14.0f);
 	
 	// Take Helmholtz–Kohlrausch effect into account.
 	// http://www.mikewoodconsulting.com/articles/Protocol%20Summer%202012%20-%20HK%20Effect.pdf
 	
-	// Mapping hue to minimum saturation requirement
 	CGFloat hue = self.hue;
-	CGFloat minSaturation = 21.77 + 6.858 * cos(0.7304 - 0.03361 * hue) - cos(-0.02785 * hue) * cos(5.38 - 0.04656 * hue) * sqrt(21.77 + 6.858 * cos(0.7304 - 0.03361 * hue)) - 2.305 * cos(-0.05006 * hue);
+	
+	// Mapping hue to minimum saturation requirement
+	CGFloat minSaturation = (21.77 + 6.858 * cos(0.7304 - 0.03361 * hue) - cos(-0.02785 * hue) * cos(5.38 - 0.04656 * hue) * sqrt(21.77 + 6.858 * cos(0.7304 - 0.03361 * hue)) - 2.305 * cos(-0.05006 * hue))/100;
+	
+	// Mapping hue to minimum brightness requirement
+	CGFloat minBrightness = (90.314602274097 + 4.67106830607091 * cos(5.76053102394881 + 0.0549832737885713 * hue) + 6.99308090421188 * atan2(0.078947879341588 * hue - 14.1391414696216, 3.78161629440642) * acosh(84.9134634977372 + sqrt(hue) * cos(5.76053102394881 + 0.0549832737885713 * hue)) - 0.259701255079698 * hue)/100;
+	
+	// Bottom half of ellipse centered around (1,1)
+	// ((x-1)^2)/((1-minSaturation)^2) + ((y-1)^2)/((1-minBrightness)^2) = 1;
+	
+	CGFloat a = pow(self.saturation-1, 2);
+	CGFloat b = pow(1-minSaturation, 2);
+	CGFloat c = pow(1-minBrightness, 2);
+	return self.brightness >= 1 - sqrt(c-((c*a)/b));
 }
 
 - (CGFloat)keyColorValue
