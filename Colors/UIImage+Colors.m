@@ -97,7 +97,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 			
 			// Make sure it is a key color, if desired
 			// Checks for required brightness and saturation levels
-			if ( keyColor && [newColor isKeyColorAppropriate] ) {
+			if ( keyColor && ![newColor isKeyColorAppropriate] ) {
 				continue;
 			}
 			
