@@ -22,57 +22,57 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 	CGFloat JND = 2.3f;
 	switch ( contrast ) {
 		case UIColorContrastLevelLow:    return JND * 8;
-		case UIColorContrastLevelMedium: return JND * 12;
-		case UIColorContrastLevelHigh:   return JND * 16;
+		case UIColorContrastLevelMedium: return JND * 16;
+		case UIColorContrastLevelHigh:   return JND * 24;
 		default: return 0.0f;
 	}
 }
 
-#pragma mark Background Color
+#pragma mark - Background Color
 
 - (UIColor *)backgroundColor
 {
 #warning Use system preference for color contrast level
 	return [self backgroundColorToContrastAgainstColors:nil
-										   withContrast:0.0f];
+									withMinimumContrast:0.0f];
 }
 
 - (UIColor *)backgroundColorToContrastAgainstColors:(NSArray *)colors
-									   withContrast:(UIColorContrast)contrast
+								withMinimumContrast:(UIColorContrast)requiredMinimumContrast
 {
-	contrast = getContrastLevel(contrast);
+	requiredMinimumContrast = getContrastLevel(requiredMinimumContrast);
 	return [self colorToContrastAgainstColors:colors
-								 withContrast:contrast
-								   isKeyColor:NO];
+						  withMinimumContrast:requiredMinimumContrast
+							 forUseAsKeyColor:NO];
 }
 
 
-#pragma mark Key Color
+#pragma mark - Key Color
 
 - (UIColor *)keyColor
 {
 #warning Use system preference for color contrast level
 	return [self keyColorToContrastAgainstColors:nil
-									withContrast:0.0f];
+							 withMinimumContrast:0.0f];
 }
 
 - (UIColor *)keyColorToContrastAgainstColors:(NSArray *)colors
-								withContrast:(UIColorContrast)contrast
+						 withMinimumContrast:(UIColorContrast)requiredMinimumContrast
 {
-	contrast = getContrastLevel(contrast);
+	requiredMinimumContrast = getContrastLevel(requiredMinimumContrast);
 	return [self colorToContrastAgainstColors:colors
-								 withContrast:contrast
-								   isKeyColor:YES];
+						  withMinimumContrast:requiredMinimumContrast
+							 forUseAsKeyColor:YES];
 }
 
 
-#pragma mark Color
+#pragma mark - Color
 
 - (UIColor *)colorToContrastAgainstColors:(NSArray *)colors
-							 withContrast:(CGFloat)requiredMinimumContrast
-							   isKeyColor:(BOOL)keyColor
+					  withMinimumContrast:(CGFloat)requiredMinimumContrast
+						 forUseAsKeyColor:(BOOL)keyColor
 {
-#warning determine a good size to get good color data (multiple of size)
+#warning determine a good size to get good color data (multiple of size?)
 	// Scale down image to make computation less intensive
 	CGSize size = (CGSize){16,16};
 	UIImage *smallImage = [self scaleToSize:size
