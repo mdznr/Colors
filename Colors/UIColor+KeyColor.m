@@ -33,7 +33,7 @@
 	CGFloat a = pow(self.saturation-1, 2);
 	CGFloat b = pow(1-minSaturation, 2);
 	CGFloat c = pow(1-minBrightness, 2);
-	return self.brightness >= 1 - sqrt(c-((c*a)/b));
+	return self.brightness >= 1 - sqrt(c-((c*a)/b));	
 }
 
 /// The distance from the receiver to the set of acceptable key colors
