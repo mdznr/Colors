@@ -23,7 +23,7 @@
 			                     [UIColor neueBlue],
 			                     [UIColor neuePurple],
 			                     [UIColor neuePink],
-			                     [UIColor neueDarkGray],
+			                     [UIColor neueGray],
 			                     [UIColor neueLightGray],
 			                     [UIColor cBlue],
 			                     [UIColor cGreen],
@@ -89,25 +89,21 @@
 	return [UIColor colorWithRed:76/255.0f green:217/255.0f blue:100/255.0f alpha:1.0f];
 }
 
-// #34AADC
 + (UIColor *)neueLightBlue
 {
 	return [UIColor colorWithHex:@"34AADC"];
 }
 
-// #007AFF
 + (UIColor *)neueBlue
 {
 	return [UIColor colorWithRed:0/255.0f green:122/255.0f blue:255/255.0f alpha:1.0f];
 }
 
-// #5856D6
 + (UIColor *)neuePurple
 {
 	return [UIColor colorWithHex:@"5856D6"];
 }
 
-// #FF2D55
 + (UIColor *)neuePink
 {
 	return [UIColor colorWithHex:@"FF2D55"];
@@ -118,7 +114,6 @@
 	return [UIColor colorWithRed:142/255.0f green:142/255.0f blue:147/255.0f alpha:1.0f];
 }
 
-// #C7C7CC
 + (UIColor *)neueLightGray
 {
 	return [UIColor colorWithHex:@"C7C7CC"];
@@ -127,31 +122,26 @@
 
 #pragma mark iPhone 5c Colors
 
-// #46ABE0
 + (UIColor *)cBlue
 {
 	return [UIColor colorWithHex:@"46ABE0"];
 }
 
-// #A1E877
 + (UIColor *)cGreen
 {
 	return [UIColor colorWithHex:@"A1E877"];
 }
 
-// #F5F4F7
 + (UIColor *)cWhite
 {
 	return [UIColor colorWithHex:@"F5F4F7"];
 }
 
-// #FAF189
 + (UIColor *)cYellow
 {
 	return [UIColor colorWithHex:@"FAF189"];
 }
 
-// #FE767A
 + (UIColor *)cPink
 {
 	return [UIColor colorWithHex:@"FE767A"];
@@ -160,19 +150,16 @@
 
 #pragma mark iPhone 5s Colors
 
-// #99989B
 + (UIColor *)sSpaceGray
 {
 	return [UIColor colorWithHex:@"99989B"];
 }
 
-// #D7D9D8
 + (UIColor *)sGold
 {
 	return [UIColor colorWithHex:@"D7D9D8"];
 }
 
-// #D4C5B3
 + (UIColor *)sSilver
 {
 	return [UIColor colorWithHex:@"D4C5B3"];
