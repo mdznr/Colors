@@ -69,28 +69,24 @@
 
 #pragma mark iOS 7 UI Colors
 
-// #FF3B30
 + (UIColor *)neueRed
 {
-	return [UIColor colorWithHex:@"FF3B30"];
+	return [UIColor colorWithRed:255/255.0f green:59/255.0f blue:48/255.0f alpha:1.0f];
 }
 
-// #FF9500
 + (UIColor *)neueOrange
 {
-	return [UIColor colorWithHex:@"FF9500"];
+	return [UIColor colorWithRed:255/255.0f green:149/255.0f blue:0/255.0f alpha:1.0f];
 }
 
-// #FFCC00
 + (UIColor *)neueYellow
 {
-	return [UIColor colorWithHex:@"FFCC00"];
+	return [UIColor colorWithRed:255/255.0f green:204/255.0f blue:0/255.0f alpha:1.0f];
 }
 
-// #4CD964
 + (UIColor *)neueGreen
 {
-	return [UIColor colorWithHex:@"4CD964"];
+	return [UIColor colorWithRed:76/255.0f green:217/255.0f blue:100/255.0f alpha:1.0f];
 }
 
 // #34AADC
@@ -102,7 +98,7 @@
 // #007AFF
 + (UIColor *)neueBlue
 {
-	return [UIColor colorWithHex:@"007AFF"];
+	return [UIColor colorWithRed:0/255.0f green:122/255.0f blue:255/255.0f alpha:1.0f];
 }
 
 // #5856D6
@@ -117,10 +113,9 @@
 	return [UIColor colorWithHex:@"FF2D55"];
 }
 
-// #8E8E93
-+ (UIColor *)neueDarkGray
++ (UIColor *)neueGray
 {
-	return [UIColor colorWithHex:@"8E8E93"];
+	return [UIColor colorWithRed:142/255.0f green:142/255.0f blue:147/255.0f alpha:1.0f];
 }
 
 // #C7C7CC
