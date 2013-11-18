@@ -46,46 +46,46 @@
 + (UIColor *)neueBlue;
 
 /// Returns the standard system color for purple.
-+ (UIColor *)neuePurple;	// #5856D6
++ (UIColor *)neuePurple;
 
 /// Returns the standard system color for pink.
-+ (UIColor *)neuePink;		// #FF2D55
++ (UIColor *)neuePink;
 
 /// Returns the standard system color for dark gray.
 + (UIColor *)neueGray;
 
 /// Returns the standard system color for light gray.
-+ (UIColor *)neueLightGray;	// #C7C7CC
++ (UIColor *)neueLightGray;
 
 
 #pragma mark - iPhone 5c Colors
 
 /// Returns the color of the Blue iPhone 5c.
-+ (UIColor *)cBlue;	  // #46ABE0
++ (UIColor *)cBlue;
 
 /// Returns the color of the Green iPhone 5c.
-+ (UIColor *)cGreen;  // #A1E877
++ (UIColor *)cGreen;
 
 /// Returns the color of the White iPhone 5c.
-+ (UIColor *)cWhite;  // #F5F4F7
++ (UIColor *)cWhite;
 
 /// Returns the color of the Yellow iPhone 5c.
-+ (UIColor *)cYellow; // #FAF189
++ (UIColor *)cYellow;
 
 /// Returns the color of the Pink iPhone 5c.
-+ (UIColor *)cPink;	  // #FE767A
++ (UIColor *)cPink;
 
 
 #pragma mark - iPhone 5s Colors
 
 /// Returns the color of the Space Gray iPhone 5s.
-+ (UIColor *)sSpaceGray; // #99989B
++ (UIColor *)sSpaceGray;
 
 /// Returns the color of the Gold iPhone 5s.
-+ (UIColor *)sGold;      // #D7D9D8
++ (UIColor *)sGold;
 
 /// Returns the color of the Silver iPhone 5s.
-+ (UIColor *)sSilver;    // #D4C5B3
++ (UIColor *)sSilver;
 
 
 @end
