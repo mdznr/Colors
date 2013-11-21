@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C95BF5FD183854C700B1B69F /* AppRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF5FC183854C700B1B69F /* AppRecord.m */; };
+		C95BF6001838565E00B1B69F /* MTZAppRecordDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF5FF1838565E00B1B69F /* MTZAppRecordDownloader.m */; };
+		C95BF6061838778200B1B69F /* MTZStarsRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6051838778200B1B69F /* MTZStarsRatingView.m */; };
+		C95BF609183895E600B1B69F /* UIImage+TBTint.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF608183895E600B1B69F /* UIImage+TBTint.m */; };
+		C95BF620183897F700B1B69F /* CGRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF60B183897F700B1B69F /* CGRectManipulation.m */; };
+		C95BF621183897F700B1B69F /* UIColor+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF60D183897F700B1B69F /* UIColor+Components.m */; };
+		C95BF622183897F700B1B69F /* UIColor+ColorFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF60F183897F700B1B69F /* UIColor+ColorFinder.m */; };
+		C95BF623183897F700B1B69F /* UIColor+DeviceColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF611183897F700B1B69F /* UIColor+DeviceColor.m */; };
+		C95BF624183897F700B1B69F /* UIColor+KeyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF613183897F700B1B69F /* UIColor+KeyColor.m */; };
+		C95BF625183897F700B1B69F /* UIColor+Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF615183897F700B1B69F /* UIColor+Manipulation.m */; };
+		C95BF626183897F700B1B69F /* UIColor+NeueColors.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF617183897F700B1B69F /* UIColor+NeueColors.m */; };
+		C95BF627183897F700B1B69F /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF619183897F700B1B69F /* UIColor+Hex.m */; };
+		C95BF628183897F700B1B69F /* UIImage+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF61B183897F700B1B69F /* UIImage+Colors.m */; };
+		C95BF629183897F700B1B69F /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF61D183897F700B1B69F /* UIImage+Crop.m */; };
+		C95BF62A183897F700B1B69F /* UIImage+Pixels.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF61F183897F700B1B69F /* UIImage+Pixels.m */; };
+		C95BF62D183897FD00B1B69F /* NSNumber+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF62C183897FD00B1B69F /* NSNumber+Hex.m */; };
+		C95BF6361838A32C00B1B69F /* MTZActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF62F1838A32C00B1B69F /* MTZActionSheet.m */; };
+		C95BF6371838A32C00B1B69F /* MTZAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6311838A32C00B1B69F /* MTZAlertView.m */; };
+		C95BF6381838A32C00B1B69F /* UIActionSheet+DelegateFix.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6331838A32C00B1B69F /* UIActionSheet+DelegateFix.m */; };
+		C95BF6391838A32C00B1B69F /* UIAlertView+DelegateFix.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6351838A32C00B1B69F /* UIAlertView+DelegateFix.m */; };
+		C95BF63C1839387A00B1B69F /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF63B1839387A00B1B69F /* UIImage+Mask.m */; };
+		C9BD2C081839C4E3006BBA5C /* MTZOutlinedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */; };
+		C9BD2C0B1839DE3C006BBA5C /* ScreenshotDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */; };
+		C9BD2C111839ECCB006BBA5C /* MTZScrollingCardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C101839ECCB006BBA5C /* MTZScrollingCardsView.m */; };
+		C9FBE0FA1836799200F1DEF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0F91836799200F1DEF5 /* Foundation.framework */; };
+		C9FBE0FC1836799200F1DEF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */; };
+		C9FBE0FE1836799200F1DEF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0FD1836799200F1DEF5 /* UIKit.framework */; };
+		C9FBE1041836799200F1DEF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9FBE1021836799200F1DEF5 /* InfoPlist.strings */; };
+		C9FBE1061836799200F1DEF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FBE1051836799200F1DEF5 /* main.m */; };
+		C9FBE10A1836799200F1DEF5 /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FBE1091836799200F1DEF5 /* MTZAppDelegate.m */; };
+		C9FBE10D1836799200F1DEF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FBE10B1836799200F1DEF5 /* Main.storyboard */; };
+		C9FBE1101836799200F1DEF5 /* MTZMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FBE10F1836799200F1DEF5 /* MTZMasterViewController.m */; };
+		C9FBE1131836799200F1DEF5 /* MTZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FBE1121836799200F1DEF5 /* MTZDetailViewController.m */; };
+		C9FBE1151836799200F1DEF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FBE1141836799200F1DEF5 /* Images.xcassets */; };
+		C9FBE11C1836799200F1DEF5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE11B1836799200F1DEF5 /* XCTest.framework */; };
+		C9FBE11D1836799200F1DEF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0F91836799200F1DEF5 /* Foundation.framework */; };
+		C9FBE11E1836799200F1DEF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0FD1836799200F1DEF5 /* UIKit.framework */; };
+		C9FBE1261836799200F1DEF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9FBE1241836799200F1DEF5 /* InfoPlist.strings */; };
+		C9FBE1281836799200F1DEF5 /* AppStoreSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FBE1271836799200F1DEF5 /* AppStoreSearchTests.m */; };
+		C9FBE1391836986C00F1DEF5 /* IconDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FBE1371836986C00F1DEF5 /* IconDownloader.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9FBE11F1836799200F1DEF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9FBE0EE1836799200F1DEF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9FBE0F51836799200F1DEF5;
+			remoteInfo = AppStoreSearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C95BF5FB183854C700B1B69F /* AppRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRecord.h; sourceTree = "<group>"; };
+		C95BF5FC183854C700B1B69F /* AppRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRecord.m; sourceTree = "<group>"; };
+		C95BF5FE1838565E00B1B69F /* MTZAppRecordDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZAppRecordDownloader.h; sourceTree = "<group>"; };
+		C95BF5FF1838565E00B1B69F /* MTZAppRecordDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZAppRecordDownloader.m; sourceTree = "<group>"; };
+		C95BF6041838778200B1B69F /* MTZStarsRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZStarsRatingView.h; sourceTree = "<group>"; };
+		C95BF6051838778200B1B69F /* MTZStarsRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZStarsRatingView.m; sourceTree = "<group>"; };
+		C95BF607183895E600B1B69F /* UIImage+TBTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TBTint.h"; sourceTree = "<group>"; };
+		C95BF608183895E600B1B69F /* UIImage+TBTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TBTint.m"; sourceTree = "<group>"; };
+		C95BF60A183897F700B1B69F /* CGRectManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectManipulation.h; sourceTree = "<group>"; };
+		C95BF60B183897F700B1B69F /* CGRectManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectManipulation.m; sourceTree = "<group>"; };
+		C95BF60C183897F700B1B69F /* UIColor+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Components.h"; sourceTree = "<group>"; };
+		C95BF60D183897F700B1B69F /* UIColor+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Components.m"; sourceTree = "<group>"; };
+		C95BF60E183897F700B1B69F /* UIColor+ColorFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorFinder.h"; sourceTree = "<group>"; };
+		C95BF60F183897F700B1B69F /* UIColor+ColorFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorFinder.m"; sourceTree = "<group>"; };
+		C95BF610183897F700B1B69F /* UIColor+DeviceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DeviceColor.h"; sourceTree = "<group>"; };
+		C95BF611183897F700B1B69F /* UIColor+DeviceColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DeviceColor.m"; sourceTree = "<group>"; };
+		C95BF612183897F700B1B69F /* UIColor+KeyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KeyColor.h"; sourceTree = "<group>"; };
+		C95BF613183897F700B1B69F /* UIColor+KeyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KeyColor.m"; sourceTree = "<group>"; };
+		C95BF614183897F700B1B69F /* UIColor+Manipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Manipulation.h"; sourceTree = "<group>"; };
+		C95BF615183897F700B1B69F /* UIColor+Manipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Manipulation.m"; sourceTree = "<group>"; };
+		C95BF616183897F700B1B69F /* UIColor+NeueColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NeueColors.h"; sourceTree = "<group>"; };
+		C95BF617183897F700B1B69F /* UIColor+NeueColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NeueColors.m"; sourceTree = "<group>"; };
+		C95BF618183897F700B1B69F /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		C95BF619183897F700B1B69F /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		C95BF61A183897F700B1B69F /* UIImage+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Colors.h"; sourceTree = "<group>"; };
+		C95BF61B183897F700B1B69F /* UIImage+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Colors.m"; sourceTree = "<group>"; };
+		C95BF61C183897F700B1B69F /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		C95BF61D183897F700B1B69F /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
+		C95BF61E183897F700B1B69F /* UIImage+Pixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Pixels.h"; sourceTree = "<group>"; };
+		C95BF61F183897F700B1B69F /* UIImage+Pixels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Pixels.m"; sourceTree = "<group>"; };
+		C95BF62B183897FD00B1B69F /* NSNumber+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Hex.h"; sourceTree = "<group>"; };
+		C95BF62C183897FD00B1B69F /* NSNumber+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Hex.m"; sourceTree = "<group>"; };
+		C95BF62E1838A32C00B1B69F /* MTZActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZActionSheet.h; sourceTree = "<group>"; };
+		C95BF62F1838A32C00B1B69F /* MTZActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZActionSheet.m; sourceTree = "<group>"; };
+		C95BF6301838A32C00B1B69F /* MTZAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZAlertView.h; sourceTree = "<group>"; };
+		C95BF6311838A32C00B1B69F /* MTZAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZAlertView.m; sourceTree = "<group>"; };
+		C95BF6321838A32C00B1B69F /* UIActionSheet+DelegateFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+DelegateFix.h"; sourceTree = "<group>"; };
+		C95BF6331838A32C00B1B69F /* UIActionSheet+DelegateFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+DelegateFix.m"; sourceTree = "<group>"; };
+		C95BF6341838A32C00B1B69F /* UIAlertView+DelegateFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+DelegateFix.h"; sourceTree = "<group>"; };
+		C95BF6351838A32C00B1B69F /* UIAlertView+DelegateFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+DelegateFix.m"; sourceTree = "<group>"; };
+		C95BF63A1839387A00B1B69F /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
+		C95BF63B1839387A00B1B69F /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
+		C9BD2C061839C4E3006BBA5C /* MTZOutlinedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZOutlinedButton.h; sourceTree = "<group>"; };
+		C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZOutlinedButton.m; sourceTree = "<group>"; };
+		C9BD2C091839DE3C006BBA5C /* ScreenshotDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenshotDownloader.h; sourceTree = "<group>"; };
+		C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenshotDownloader.m; sourceTree = "<group>"; };
+		C9BD2C0F1839ECCB006BBA5C /* MTZScrollingCardsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZScrollingCardsView.h; sourceTree = "<group>"; };
+		C9BD2C101839ECCB006BBA5C /* MTZScrollingCardsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZScrollingCardsView.m; sourceTree = "<group>"; };
+		C9FBE0F61836799200F1DEF5 /* AppStoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9FBE0F91836799200F1DEF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9FBE0FD1836799200F1DEF5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C9FBE1011836799200F1DEF5 /* AppStoreSearch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppStoreSearch-Info.plist"; sourceTree = "<group>"; };
+		C9FBE1031836799200F1DEF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9FBE1051836799200F1DEF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9FBE1071836799200F1DEF5 /* AppStoreSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppStoreSearch-Prefix.pch"; sourceTree = "<group>"; };
+		C9FBE1081836799200F1DEF5 /* MTZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZAppDelegate.h; sourceTree = "<group>"; };
+		C9FBE1091836799200F1DEF5 /* MTZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZAppDelegate.m; sourceTree = "<group>"; };
+		C9FBE10C1836799200F1DEF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9FBE10E1836799200F1DEF5 /* MTZMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZMasterViewController.h; sourceTree = "<group>"; };
+		C9FBE10F1836799200F1DEF5 /* MTZMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZMasterViewController.m; sourceTree = "<group>"; };
+		C9FBE1111836799200F1DEF5 /* MTZDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZDetailViewController.h; sourceTree = "<group>"; };
+		C9FBE1121836799200F1DEF5 /* MTZDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZDetailViewController.m; sourceTree = "<group>"; };
+		C9FBE1141836799200F1DEF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C9FBE11A1836799200F1DEF5 /* AppStoreSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppStoreSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9FBE11B1836799200F1DEF5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C9FBE1231836799200F1DEF5 /* AppStoreSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppStoreSearchTests-Info.plist"; sourceTree = "<group>"; };
+		C9FBE1251836799200F1DEF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9FBE1271836799200F1DEF5 /* AppStoreSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppStoreSearchTests.m; sourceTree = "<group>"; };
+		C9FBE1361836986C00F1DEF5 /* IconDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconDownloader.h; sourceTree = "<group>"; };
+		C9FBE1371836986C00F1DEF5 /* IconDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconDownloader.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9FBE0F31836799200F1DEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9FBE0FC1836799200F1DEF5 /* CoreGraphics.framework in Frameworks */,
+				C9FBE0FE1836799200F1DEF5 /* UIKit.framework in Frameworks */,
+				C9FBE0FA1836799200F1DEF5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9FBE1171836799200F1DEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9FBE11C1836799200F1DEF5 /* XCTest.framework in Frameworks */,
+				C9FBE11E1836799200F1DEF5 /* UIKit.framework in Frameworks */,
+				C9FBE11D1836799200F1DEF5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9FBE0ED1836799200F1DEF5 = {
+			isa = PBXGroup;
+			children = (
+				C9FBE0FF1836799200F1DEF5 /* AppStoreSearch */,
+				C9FBE1211836799200F1DEF5 /* AppStoreSearchTests */,
+				C9FBE0F81836799200F1DEF5 /* Frameworks */,
+				C9FBE0F71836799200F1DEF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9FBE0F71836799200F1DEF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9FBE0F61836799200F1DEF5 /* AppStoreSearch.app */,
+				C9FBE11A1836799200F1DEF5 /* AppStoreSearchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9FBE0F81836799200F1DEF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9FBE0F91836799200F1DEF5 /* Foundation.framework */,
+				C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */,
+				C9FBE0FD1836799200F1DEF5 /* UIKit.framework */,
+				C9FBE11B1836799200F1DEF5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9FBE0FF1836799200F1DEF5 /* AppStoreSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C9FBE1081836799200F1DEF5 /* MTZAppDelegate.h */,
+				C9FBE1091836799200F1DEF5 /* MTZAppDelegate.m */,
+				C9FBE10B1836799200F1DEF5 /* Main.storyboard */,
+				C9FBE10E1836799200F1DEF5 /* MTZMasterViewController.h */,
+				C9FBE10F1836799200F1DEF5 /* MTZMasterViewController.m */,
+				C9FBE1111836799200F1DEF5 /* MTZDetailViewController.h */,
+				C9FBE1121836799200F1DEF5 /* MTZDetailViewController.m */,
+				C95BF5FE1838565E00B1B69F /* MTZAppRecordDownloader.h */,
+				C95BF5FF1838565E00B1B69F /* MTZAppRecordDownloader.m */,
+				C95BF5FB183854C700B1B69F /* AppRecord.h */,
+				C95BF5FC183854C700B1B69F /* AppRecord.m */,
+				C9FBE1361836986C00F1DEF5 /* IconDownloader.h */,
+				C9FBE1371836986C00F1DEF5 /* IconDownloader.m */,
+				C9BD2C091839DE3C006BBA5C /* ScreenshotDownloader.h */,
+				C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */,
+				C95BF6041838778200B1B69F /* MTZStarsRatingView.h */,
+				C95BF6051838778200B1B69F /* MTZStarsRatingView.m */,
+				C95BF60A183897F700B1B69F /* CGRectManipulation.h */,
+				C95BF60B183897F700B1B69F /* CGRectManipulation.m */,
+				C95BF60C183897F700B1B69F /* UIColor+Components.h */,
+				C95BF60D183897F700B1B69F /* UIColor+Components.m */,
+				C95BF60E183897F700B1B69F /* UIColor+ColorFinder.h */,
+				C95BF60F183897F700B1B69F /* UIColor+ColorFinder.m */,
+				C95BF610183897F700B1B69F /* UIColor+DeviceColor.h */,
+				C95BF611183897F700B1B69F /* UIColor+DeviceColor.m */,
+				C95BF612183897F700B1B69F /* UIColor+KeyColor.h */,
+				C95BF613183897F700B1B69F /* UIColor+KeyColor.m */,
+				C95BF614183897F700B1B69F /* UIColor+Manipulation.h */,
+				C95BF615183897F700B1B69F /* UIColor+Manipulation.m */,
+				C95BF616183897F700B1B69F /* UIColor+NeueColors.h */,
+				C95BF617183897F700B1B69F /* UIColor+NeueColors.m */,
+				C95BF618183897F700B1B69F /* UIColor+Hex.h */,
+				C95BF619183897F700B1B69F /* UIColor+Hex.m */,
+				C95BF61A183897F700B1B69F /* UIImage+Colors.h */,
+				C95BF61B183897F700B1B69F /* UIImage+Colors.m */,
+				C95BF61C183897F700B1B69F /* UIImage+Crop.h */,
+				C95BF61D183897F700B1B69F /* UIImage+Crop.m */,
+				C95BF61E183897F700B1B69F /* UIImage+Pixels.h */,
+				C95BF61F183897F700B1B69F /* UIImage+Pixels.m */,
+				C95BF607183895E600B1B69F /* UIImage+TBTint.h */,
+				C95BF608183895E600B1B69F /* UIImage+TBTint.m */,
+				C95BF62B183897FD00B1B69F /* NSNumber+Hex.h */,
+				C95BF62C183897FD00B1B69F /* NSNumber+Hex.m */,
+				C95BF62E1838A32C00B1B69F /* MTZActionSheet.h */,
+				C95BF62F1838A32C00B1B69F /* MTZActionSheet.m */,
+				C95BF6301838A32C00B1B69F /* MTZAlertView.h */,
+				C95BF6311838A32C00B1B69F /* MTZAlertView.m */,
+				C95BF6321838A32C00B1B69F /* UIActionSheet+DelegateFix.h */,
+				C95BF6331838A32C00B1B69F /* UIActionSheet+DelegateFix.m */,
+				C95BF6341838A32C00B1B69F /* UIAlertView+DelegateFix.h */,
+				C95BF6351838A32C00B1B69F /* UIAlertView+DelegateFix.m */,
+				C95BF63A1839387A00B1B69F /* UIImage+Mask.h */,
+				C95BF63B1839387A00B1B69F /* UIImage+Mask.m */,
+				C9BD2C061839C4E3006BBA5C /* MTZOutlinedButton.h */,
+				C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */,
+				C9BD2C0F1839ECCB006BBA5C /* MTZScrollingCardsView.h */,
+				C9BD2C101839ECCB006BBA5C /* MTZScrollingCardsView.m */,
+				C9FBE1141836799200F1DEF5 /* Images.xcassets */,
+				C9FBE1001836799200F1DEF5 /* Supporting Files */,
+			);
+			path = AppStoreSearch;
+			sourceTree = "<group>";
+		};
+		C9FBE1001836799200F1DEF5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9FBE1011836799200F1DEF5 /* AppStoreSearch-Info.plist */,
+				C9FBE1021836799200F1DEF5 /* InfoPlist.strings */,
+				C9FBE1051836799200F1DEF5 /* main.m */,
+				C9FBE1071836799200F1DEF5 /* AppStoreSearch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9FBE1211836799200F1DEF5 /* AppStoreSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9FBE1271836799200F1DEF5 /* AppStoreSearchTests.m */,
+				C9FBE1221836799200F1DEF5 /* Supporting Files */,
+			);
+			path = AppStoreSearchTests;
+			sourceTree = "<group>";
+		};
+		C9FBE1221836799200F1DEF5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9FBE1231836799200F1DEF5 /* AppStoreSearchTests-Info.plist */,
+				C9FBE1241836799200F1DEF5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9FBE0F51836799200F1DEF5 /* AppStoreSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9FBE12B1836799200F1DEF5 /* Build configuration list for PBXNativeTarget "AppStoreSearch" */;
+			buildPhases = (
+				C9FBE0F21836799200F1DEF5 /* Sources */,
+				C9FBE0F31836799200F1DEF5 /* Frameworks */,
+				C9FBE0F41836799200F1DEF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppStoreSearch;
+			productName = AppStoreSearch;
+			productReference = C9FBE0F61836799200F1DEF5 /* AppStoreSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9FBE1191836799200F1DEF5 /* AppStoreSearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9FBE12E1836799200F1DEF5 /* Build configuration list for PBXNativeTarget "AppStoreSearchTests" */;
+			buildPhases = (
+				C9FBE1161836799200F1DEF5 /* Sources */,
+				C9FBE1171836799200F1DEF5 /* Frameworks */,
+				C9FBE1181836799200F1DEF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9FBE1201836799200F1DEF5 /* PBXTargetDependency */,
+			);
+			name = AppStoreSearchTests;
+			productName = AppStoreSearchTests;
+			productReference = C9FBE11A1836799200F1DEF5 /* AppStoreSearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9FBE0EE1836799200F1DEF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MTZ;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Matt Zanchelli";
+				TargetAttributes = {
+					C9FBE1191836799200F1DEF5 = {
+						TestTargetID = C9FBE0F51836799200F1DEF5;
+					};
+				};
+			};
+			buildConfigurationList = C9FBE0F11836799200F1DEF5 /* Build configuration list for PBXProject "AppStoreSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9FBE0ED1836799200F1DEF5;
+			productRefGroup = C9FBE0F71836799200F1DEF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9FBE0F51836799200F1DEF5 /* AppStoreSearch */,
+				C9FBE1191836799200F1DEF5 /* AppStoreSearchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9FBE0F41836799200F1DEF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9FBE1151836799200F1DEF5 /* Images.xcassets in Resources */,
+				C9FBE1041836799200F1DEF5 /* InfoPlist.strings in Resources */,
+				C9FBE10D1836799200F1DEF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9FBE1181836799200F1DEF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9FBE1261836799200F1DEF5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9FBE0F21836799200F1DEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BD2C111839ECCB006BBA5C /* MTZScrollingCardsView.m in Sources */,
+				C95BF6381838A32C00B1B69F /* UIActionSheet+DelegateFix.m in Sources */,
+				C95BF62A183897F700B1B69F /* UIImage+Pixels.m in Sources */,
+				C9BD2C0B1839DE3C006BBA5C /* ScreenshotDownloader.m in Sources */,
+				C95BF623183897F700B1B69F /* UIColor+DeviceColor.m in Sources */,
+				C95BF627183897F700B1B69F /* UIColor+Hex.m in Sources */,
+				C95BF5FD183854C700B1B69F /* AppRecord.m in Sources */,
+				C95BF609183895E600B1B69F /* UIImage+TBTint.m in Sources */,
+				C9FBE10A1836799200F1DEF5 /* MTZAppDelegate.m in Sources */,
+				C9FBE1131836799200F1DEF5 /* MTZDetailViewController.m in Sources */,
+				C95BF62D183897FD00B1B69F /* NSNumber+Hex.m in Sources */,
+				C95BF624183897F700B1B69F /* UIColor+KeyColor.m in Sources */,
+				C95BF626183897F700B1B69F /* UIColor+NeueColors.m in Sources */,
+				C95BF6371838A32C00B1B69F /* MTZAlertView.m in Sources */,
+				C95BF620183897F700B1B69F /* CGRectManipulation.m in Sources */,
+				C95BF63C1839387A00B1B69F /* UIImage+Mask.m in Sources */,
+				C95BF6391838A32C00B1B69F /* UIAlertView+DelegateFix.m in Sources */,
+				C95BF621183897F700B1B69F /* UIColor+Components.m in Sources */,
+				C9FBE1101836799200F1DEF5 /* MTZMasterViewController.m in Sources */,
+				C95BF629183897F700B1B69F /* UIImage+Crop.m in Sources */,
+				C95BF628183897F700B1B69F /* UIImage+Colors.m in Sources */,
+				C95BF6361838A32C00B1B69F /* MTZActionSheet.m in Sources */,
+				C9BD2C081839C4E3006BBA5C /* MTZOutlinedButton.m in Sources */,
+				C9FBE1061836799200F1DEF5 /* main.m in Sources */,
+				C95BF625183897F700B1B69F /* UIColor+Manipulation.m in Sources */,
+				C9FBE1391836986C00F1DEF5 /* IconDownloader.m in Sources */,
+				C95BF6001838565E00B1B69F /* MTZAppRecordDownloader.m in Sources */,
+				C95BF6061838778200B1B69F /* MTZStarsRatingView.m in Sources */,
+				C95BF622183897F700B1B69F /* UIColor+ColorFinder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9FBE1161836799200F1DEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9FBE1281836799200F1DEF5 /* AppStoreSearchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9FBE1201836799200F1DEF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9FBE0F51836799200F1DEF5 /* AppStoreSearch */;
+			targetProxy = C9FBE11F1836799200F1DEF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9FBE1021836799200F1DEF5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9FBE1031836799200F1DEF5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9FBE10B1836799200F1DEF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9FBE10C1836799200F1DEF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9FBE1241836799200F1DEF5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9FBE1251836799200F1DEF5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9FBE1291836799200F1DEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9FBE12A1836799200F1DEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9FBE12C1836799200F1DEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppStoreSearch/AppStoreSearch-Prefix.pch";
+				INFOPLIST_FILE = "AppStoreSearch/AppStoreSearch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9FBE12D1836799200F1DEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppStoreSearch/AppStoreSearch-Prefix.pch";
+				INFOPLIST_FILE = "AppStoreSearch/AppStoreSearch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C9FBE12F1836799200F1DEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AppStoreSearch.app/AppStoreSearch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppStoreSearch/AppStoreSearch-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AppStoreSearchTests/AppStoreSearchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C9FBE1301836799200F1DEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AppStoreSearch.app/AppStoreSearch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppStoreSearch/AppStoreSearch-Prefix.pch";
+				INFOPLIST_FILE = "AppStoreSearchTests/AppStoreSearchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9FBE0F11836799200F1DEF5 /* Build configuration list for PBXProject "AppStoreSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9FBE1291836799200F1DEF5 /* Debug */,
+				C9FBE12A1836799200F1DEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9FBE12B1836799200F1DEF5 /* Build configuration list for PBXNativeTarget "AppStoreSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9FBE12C1836799200F1DEF5 /* Debug */,
+				C9FBE12D1836799200F1DEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9FBE12E1836799200F1DEF5 /* Build configuration list for PBXNativeTarget "AppStoreSearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9FBE12F1836799200F1DEF5 /* Debug */,
+				C9FBE1301836799200F1DEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9FBE0EE1836799200F1DEF5 /* Project object */;
+}
