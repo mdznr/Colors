@@ -199,6 +199,14 @@
 	[_searchBar resignFirstResponder];
 }
 
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+	if ( _objects.count ) {
+		[_objects removeAllObjects];
+		[self.tableView reloadData];
+	}
+}
+
 
 #pragma mark - Misc.
 
