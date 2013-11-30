@@ -6,7 +6,7 @@ UIColor categories and APIs for generating colors. Bring beauty and life into yo
 ---
 
 Included is a demo application showing off what these APIs can do for you:
-![Demo application using these APIs](demo/display.jpg "Demo application using these APIs")
+![Demo application using these APIs](Screenshots/display.jpg "Demo application using these APIs")
 Key colors are grabbed from the album artwork and displayed across the rest of the UI on the currently presented view controller. The app is not fully functional and is for demonstration purposes only.
 
 The code necessary for demo part of application shown above is simple. When the song changes, it calls `refreshColors:` where _iv is the `UIImageView` containing the album art.

@@ -38,34 +38,26 @@
 	// Find out the number of bytes per row (it's just the width times the number of bytes per pixel)
 	size_t bytesPerRow = self.size.width * BYTES_PER_PIXEL;
 	// Allocate the appropriate amount of memory to hold the bitmap context
-	unsigned char* bitmapData = (unsigned char*) malloc(bytesPerRow*self.size.height);
+	unsigned char* bitmapData = (unsigned char *) malloc(bytesPerRow * self.size.height);
 	
 	// Create the bitmap context, we set the alpha to none here to tell the bitmap we don't care about alpha values
-	CGContextRef context = CGBitmapContextCreate(bitmapData,self.size.width,self.size.height,BITS_PER_COMPONENT,bytesPerRow,colourSpace,kCGImageAlphaNone);
+	CGContextRef context = CGBitmapContextCreate(bitmapData, self.size.width, self.size.height, BITS_PER_COMPONENT, bytesPerRow, colourSpace, kCGImageAlphaNone);
+	
+	// Release the bitmap data because we are done using it
+	free(bitmapData);
 	
 	// We are done with the colour space now so no point in keeping it around
 	CGColorSpaceRelease(colourSpace);
 	
 	// Create a CGRect to define the amount of pixels we want
-	CGRect rect = CGRectMake(0.0,0.0,self.size.width,self.size.height);
+	CGRect rect = CGRectMake(0.0, 0.0, self.size.width, self.size.height);
 	// Draw the bitmap context using the rectangle we just created as a bounds and the Core Graphics Image as the image source
-	CGContextDrawImage(context,rect,self.CGImage);
+	CGContextDrawImage(context, rect, self.CGImage);
 	// Obtain the pixel data from the bitmap context
-	unsigned char* pixelData = (unsigned char*)CGBitmapContextGetData(context);
+	unsigned char* pixelData = (unsigned char *) CGBitmapContextGetData(context);
 	
 	// Release the bitmap context because we are done using it
 	CGContextRelease(context);
-	
-	// Test script
-	/*
-	for(int i=0;i<self.size.height;i++)
-	{
-		for(int y=0;y<self.size.width;y++)
-		{
-			NSLog(@"0x%X",pixelData[(i*((int)self.size.width))+y]);
-		}
-	}
-	 */
 	
 	return pixelData;
 	#undef BITS_PER_PIXEL
@@ -87,38 +79,26 @@
 	// Find out the number of bytes per row (it's just the width times the number of bytes per pixel)
 	size_t bytesPerRow = self.size.width * BYTES_PER_PIXEL;
 	// Allocate the appropriate amount of memory to hold the bitmap context
-	unsigned char* bitmapData = (unsigned char*) malloc(bytesPerRow*self.size.height);
+	unsigned char *bitmapData = (unsigned char *) malloc(bytesPerRow * self.size.height);
 	
 	// Create the bitmap context, we set the alpha to none here to tell the bitmap we don't care about alpha values
-	CGContextRef context = CGBitmapContextCreate(bitmapData,self.size.width,self.size.height,BITS_PER_COMPONENT,bytesPerRow,colourSpace,kCGImageAlphaPremultipliedLast|kCGBitmapByteOrder32Big);
+	CGContextRef context = CGBitmapContextCreate(bitmapData, self.size.width, self.size.height, BITS_PER_COMPONENT, bytesPerRow, colourSpace, kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+	
+	// Release the bitmap data because we are done using it
+	free(bitmapData);
 	
 	// We are done with the colour space now so no point in keeping it around
 	CGColorSpaceRelease(colourSpace);
 	
 	// Create a CGRect to define the amount of pixels we want
-	CGRect rect = CGRectMake(0.0,0.0,self.size.width,self.size.height);
+	CGRect rect = CGRectMake(0.0, 0.0, self.size.width, self.size.height);
 	// Draw the bitmap context using the rectangle we just created as a bounds and the Core Graphics Image as the image source
-	CGContextDrawImage(context,rect,self.CGImage);
+	CGContextDrawImage(context, rect, self.CGImage);
 	// Obtain the pixel data from the bitmap context
-	unsigned char* pixelData = (unsigned char*)CGBitmapContextGetData(context);
+	unsigned char *pixelData = (unsigned char *) CGBitmapContextGetData(context);
 	
 	// Release the bitmap context because we are done using it
 	CGContextRelease(context);
-	
-	// Test script
-	/*
-	for(int i=0;i<self.size.height;i++)
-	{
-		for(int y=0;y<self.size.width;y++)
-		{
-			unsigned char r = pixelData[(i*((int)self.size.width)*4)+(y*4)];
-			unsigned char g = pixelData[(i*((int)self.size.width)*4)+(y*4)+1];
-			unsigned char b = pixelData[(i*((int)self.size.width)*4)+(y*4)+2];
-			unsigned char a = pixelData[(i*((int)self.size.width)*4)+(y*4)+3];
-			NSLog(@"r = 0x%X g = 0x%X b = 0x%X a = 0x%X",r,g,b,a);
-		}
-	}
-	 */
 	
 	return pixelData;
 	#undef BITS_PER_PIXEL

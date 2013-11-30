@@ -37,7 +37,7 @@
 - (UIImage*)scaleToSize:(CGSize)size
 {
 	return [self scaleToSize:size
-	withInterpolationQuality:kCGInterpolationDefault];
+	withInterpolationQuality:kCGInterpolationDefault];	
 }
 
 - (UIImage *)scaleToSize:(CGSize)size

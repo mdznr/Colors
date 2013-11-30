@@ -28,64 +28,64 @@
 #pragma mark - iOS 7 UI Colors
 
 /// Returns the standard system color for red.
-+ (UIColor *)neueRed;
++ (UIColor *)neueRed;		// #FF3B30
 
 /// Returns the standard system color for orange.
-+ (UIColor *)neueOrange;
++ (UIColor *)neueOrange;	// #FF9500
 
 /// Returns the standard system color for yellow.
-+ (UIColor *)neueYellow;
++ (UIColor *)neueYellow;	// #FFCC00
 
 /// Returns the standard system color for green.
-+ (UIColor *)neueGreen;
++ (UIColor *)neueGreen;		// #4CD964
 
 /// Returns the standard system color for light blue.
-+ (UIColor *)neueLightBlue;
++ (UIColor *)neueLightBlue;	// #34AADC
 
 /// Returns the standard system color for blue.
-+ (UIColor *)neueBlue;
++ (UIColor *)neueBlue;		// #007AFF
 
 /// Returns the standard system color for purple.
-+ (UIColor *)neuePurple;
++ (UIColor *)neuePurple;	// #5856D6
 
 /// Returns the standard system color for pink.
-+ (UIColor *)neuePink;
++ (UIColor *)neuePink;		// #FF2D55
 
 /// Returns the standard system color for dark gray.
-+ (UIColor *)neueGray;
++ (UIColor *)neueDarkGray;	// #8E8E93
 
 /// Returns the standard system color for light gray.
-+ (UIColor *)neueLightGray;
++ (UIColor *)neueLightGray;	// #C7C7CC
 
 
 #pragma mark - iPhone 5c Colors
 
 /// Returns the color of the Blue iPhone 5c.
-+ (UIColor *)cBlue;
++ (UIColor *)cBlue;	  // #46ABE0
 
 /// Returns the color of the Green iPhone 5c.
-+ (UIColor *)cGreen;
++ (UIColor *)cGreen;  // #A1E877
 
 /// Returns the color of the White iPhone 5c.
-+ (UIColor *)cWhite;
++ (UIColor *)cWhite;  // #F5F4F7
 
 /// Returns the color of the Yellow iPhone 5c.
-+ (UIColor *)cYellow;
++ (UIColor *)cYellow; // #FAF189
 
 /// Returns the color of the Pink iPhone 5c.
-+ (UIColor *)cPink;
++ (UIColor *)cPink;	  // #FE767A
 
 
 #pragma mark - iPhone 5s Colors
 
 /// Returns the color of the Space Gray iPhone 5s.
-+ (UIColor *)sSpaceGray;
++ (UIColor *)sSpaceGray; // #99989B
 
 /// Returns the color of the Gold iPhone 5s.
-+ (UIColor *)sGold;
++ (UIColor *)sGold;      // #D7D9D8
 
 /// Returns the color of the Silver iPhone 5s.
-+ (UIColor *)sSilver;
++ (UIColor *)sSilver;    // #D4C5B3
 
 
 @end
