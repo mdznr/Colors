@@ -303,7 +303,7 @@
 													withMinimumContrast:UIColorContrastLevelLow];
 		// Default to dark gray color for sliders
 		if ( !bg ) {
-			bg = [UIColor neueDarkGray];
+			bg = [UIColor neueGray];
 		}
 		
 		[[UIApplication sharedApplication] keyWindow].tintColor = [UIColor neueBlue];
