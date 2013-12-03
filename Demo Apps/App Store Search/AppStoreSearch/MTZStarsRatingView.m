@@ -7,7 +7,7 @@
 //
 
 #import "MTZStarsRatingView.h"
-#import "UIImage+TBTint.h"
+#import <Colors/Colors.h>
 
 static NSString *kStarImage = @"Star";
 static NSString *kEmptyStarImage = @"EmptyStar";

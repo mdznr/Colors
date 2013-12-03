@@ -15,11 +15,10 @@
 		C95BF6381838A32C00B1B69F /* UIActionSheet+DelegateFix.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6331838A32C00B1B69F /* UIActionSheet+DelegateFix.m */; };
 		C95BF6391838A32C00B1B69F /* UIAlertView+DelegateFix.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6351838A32C00B1B69F /* UIAlertView+DelegateFix.m */; };
 		C95BF63C1839387A00B1B69F /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF63B1839387A00B1B69F /* UIImage+Mask.m */; };
-		C968009D184ACE73006CD6E1 /* libColors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C968009C184ACE73006CD6E1 /* libColors.a */; };
-		C968009E184ACE73006CD6E1 /* libColors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C968009C184ACE73006CD6E1 /* libColors.a */; };
 		C9BD2C081839C4E3006BBA5C /* MTZOutlinedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */; };
 		C9BD2C0B1839DE3C006BBA5C /* ScreenshotDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */; };
 		C9BD2C111839ECCB006BBA5C /* MTZScrollingCardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C101839ECCB006BBA5C /* MTZScrollingCardsView.m */; };
+		C9F45325184D57BB00CD33E6 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F45324184D57BB00CD33E6 /* Colors.framework */; };
 		C9FBE0FA1836799200F1DEF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0F91836799200F1DEF5 /* Foundation.framework */; };
 		C9FBE0FC1836799200F1DEF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */; };
 		C9FBE0FE1836799200F1DEF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0FD1836799200F1DEF5 /* UIKit.framework */; };
@@ -65,28 +64,13 @@
 		C95BF6351838A32C00B1B69F /* UIAlertView+DelegateFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+DelegateFix.m"; sourceTree = "<group>"; };
 		C95BF63A1839387A00B1B69F /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
 		C95BF63B1839387A00B1B69F /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
-		C968009C184ACE73006CD6E1 /* libColors.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libColors.a; path = ../../libColors.a; sourceTree = "<group>"; };
-		C96800A0184ACE7A006CD6E1 /* CGRectManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectManipulation.h; sourceTree = "<group>"; };
-		C96800A1184ACE7A006CD6E1 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
-		C96800A2184ACE7A006CD6E1 /* NSNumber+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Hex.h"; sourceTree = "<group>"; };
-		C96800A3184ACE7A006CD6E1 /* UIColor+ColorFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorFinder.h"; sourceTree = "<group>"; };
-		C96800A4184ACE7A006CD6E1 /* UIColor+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Components.h"; sourceTree = "<group>"; };
-		C96800A5184ACE7A006CD6E1 /* UIColor+DeviceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DeviceColor.h"; sourceTree = "<group>"; };
-		C96800A6184ACE7A006CD6E1 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		C96800A7184ACE7A006CD6E1 /* UIColor+KeyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KeyColor.h"; sourceTree = "<group>"; };
-		C96800A8184ACE7A006CD6E1 /* UIColor+Manipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Manipulation.h"; sourceTree = "<group>"; };
-		C96800A9184ACE7A006CD6E1 /* UIColor+NeueColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NeueColors.h"; sourceTree = "<group>"; };
-		C96800AA184ACE7A006CD6E1 /* UIImage+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Colors.h"; sourceTree = "<group>"; };
-		C96800AB184ACE7A006CD6E1 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
-		C96800AC184ACE7A006CD6E1 /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
-		C96800AD184ACE7A006CD6E1 /* UIImage+Pixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Pixels.h"; sourceTree = "<group>"; };
-		C96800AE184ACE7A006CD6E1 /* UIImage+TBTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TBTint.h"; sourceTree = "<group>"; };
 		C9BD2C061839C4E3006BBA5C /* MTZOutlinedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZOutlinedButton.h; sourceTree = "<group>"; };
 		C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZOutlinedButton.m; sourceTree = "<group>"; };
 		C9BD2C091839DE3C006BBA5C /* ScreenshotDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenshotDownloader.h; sourceTree = "<group>"; };
 		C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenshotDownloader.m; sourceTree = "<group>"; };
 		C9BD2C0F1839ECCB006BBA5C /* MTZScrollingCardsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZScrollingCardsView.h; sourceTree = "<group>"; };
 		C9BD2C101839ECCB006BBA5C /* MTZScrollingCardsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZScrollingCardsView.m; sourceTree = "<group>"; };
+		C9F45324184D57BB00CD33E6 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C9FBE0F61836799200F1DEF5 /* AppStoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FBE0F91836799200F1DEF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,10 +101,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9F45325184D57BB00CD33E6 /* Colors.framework in Frameworks */,
 				C9FBE0FC1836799200F1DEF5 /* CoreGraphics.framework in Frameworks */,
 				C9FBE0FE1836799200F1DEF5 /* UIKit.framework in Frameworks */,
 				C9FBE0FA1836799200F1DEF5 /* Foundation.framework in Frameworks */,
-				C968009D184ACE73006CD6E1 /* libColors.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,36 +115,12 @@
 				C9FBE11C1836799200F1DEF5 /* XCTest.framework in Frameworks */,
 				C9FBE11E1836799200F1DEF5 /* UIKit.framework in Frameworks */,
 				C9FBE11D1836799200F1DEF5 /* Foundation.framework in Frameworks */,
-				C968009E184ACE73006CD6E1 /* libColors.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C968009F184ACE7A006CD6E1 /* Colors Headers */ = {
-			isa = PBXGroup;
-			children = (
-				C96800A0184ACE7A006CD6E1 /* CGRectManipulation.h */,
-				C96800A1184ACE7A006CD6E1 /* Colors.h */,
-				C96800A2184ACE7A006CD6E1 /* NSNumber+Hex.h */,
-				C96800A3184ACE7A006CD6E1 /* UIColor+ColorFinder.h */,
-				C96800A4184ACE7A006CD6E1 /* UIColor+Components.h */,
-				C96800A5184ACE7A006CD6E1 /* UIColor+DeviceColor.h */,
-				C96800A6184ACE7A006CD6E1 /* UIColor+Hex.h */,
-				C96800A7184ACE7A006CD6E1 /* UIColor+KeyColor.h */,
-				C96800A8184ACE7A006CD6E1 /* UIColor+Manipulation.h */,
-				C96800A9184ACE7A006CD6E1 /* UIColor+NeueColors.h */,
-				C96800AA184ACE7A006CD6E1 /* UIImage+Colors.h */,
-				C96800AB184ACE7A006CD6E1 /* UIImage+Crop.h */,
-				C96800AC184ACE7A006CD6E1 /* UIImage+Mask.h */,
-				C96800AD184ACE7A006CD6E1 /* UIImage+Pixels.h */,
-				C96800AE184ACE7A006CD6E1 /* UIImage+TBTint.h */,
-			);
-			name = "Colors Headers";
-			path = ../../Headers;
-			sourceTree = "<group>";
-		};
 		C968FFB5184AABA8006CD6E1 /* Rewritten Action and Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,8 +158,7 @@
 		C9FBE0F81836799200F1DEF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C968009C184ACE73006CD6E1 /* libColors.a */,
-				C968009F184ACE7A006CD6E1 /* Colors Headers */,
+				C9F45324184D57BB00CD33E6 /* Colors.framework */,
 				C9FBE0F91836799200F1DEF5 /* Foundation.framework */,
 				C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */,
 				C9FBE0FD1836799200F1DEF5 /* UIKit.framework */,
@@ -510,6 +469,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/matt/Dropbox/github/Colors,
+					/Users/matt/Dropbox/github/Colors/Demo,
+					Apps/App,
+					Store,
+					Search,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppStoreSearch/AppStoreSearch-Prefix.pch";
 				INFOPLIST_FILE = "AppStoreSearch/AppStoreSearch-Info.plist";
@@ -518,6 +485,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Colors-bsftsatdbvwawmcsifpcqfitxmmz/Build/Products/Debug-iphoneos",
 					/Users/matt/Dropbox/github/Colors,
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -528,6 +496,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/matt/Dropbox/github/Colors,
+					/Users/matt/Dropbox/github/Colors/Demo,
+					Apps/App,
+					Store,
+					Search,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppStoreSearch/AppStoreSearch-Prefix.pch";
 				INFOPLIST_FILE = "AppStoreSearch/AppStoreSearch-Info.plist";
@@ -536,6 +512,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Colors-bsftsatdbvwawmcsifpcqfitxmmz/Build/Products/Debug-iphoneos",
 					/Users/matt/Dropbox/github/Colors,
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

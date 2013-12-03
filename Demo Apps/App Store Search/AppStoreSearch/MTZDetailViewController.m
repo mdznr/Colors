@@ -11,10 +11,11 @@
 #import "MTZStarsRatingView.h"
 #import "MTZOutlinedButton.h"
 #import "ScreenshotDownloader.h"
+#import "UIImage+Mask.h"
 
 #import "MTZActionSheet.h"
 
-#import "Colors.h"
+#import <Colors/Colors.h>
 
 #define SCROLLVIEW_ANIMATION_DURATION 0.5f
 

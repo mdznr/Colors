@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>7E1BFFCB-94FF-42F3-8978-1A25015FDCC8</string>
+	<string>44F6B803-D30C-4CB1-92A5-B45CA7DB1E74</string>
 	<key>IDESourceControlProjectName</key>
-	<string>AppStoreSearch</string>
+	<string>Colors</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>42D415BF-5007-43CD-9303-43FADC9E4BC9</key>
 		<string>https://github.com/mdznr/Colors</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Demo Apps/App Store Search/AppStoreSearch.xcodeproj/project.xcworkspace</string>
+	<string>Framework Project/Colors.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>42D415BF-5007-43CD-9303-43FADC9E4BC9</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/mdznr/Colors</string>

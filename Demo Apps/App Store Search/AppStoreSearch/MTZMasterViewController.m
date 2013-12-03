@@ -74,7 +74,7 @@
 #import "MTZAppRecordDownloader.h"
 #import "UIImage+Mask.h"
 
-#import "Colors.h"
+#import <Colors/Colors.h>
 
 @interface MTZMasterViewController () <UISearchBarDelegate, UISearchDisplayDelegate> {
     NSMutableArray *_objects;
