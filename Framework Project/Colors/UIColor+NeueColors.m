@@ -23,7 +23,7 @@
 			                     [UIColor neueBlue],
 			                     [UIColor neuePurple],
 			                     [UIColor neuePink],
-			                     [UIColor neueDarkGray],
+			                     [UIColor neueGray],
 			                     [UIColor neueLightGray],
 			                     [UIColor cBlue],
 			                     [UIColor cGreen],
@@ -118,7 +118,7 @@
 }
 
 // #8E8E93
-+ (UIColor *)neueDarkGray
++ (UIColor *)neueGray
 {
 	return [UIColor colorWithHex:@"8E8E93"];
 }

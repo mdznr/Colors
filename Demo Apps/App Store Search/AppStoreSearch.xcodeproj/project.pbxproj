@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C914137E1858C2E20076F96A /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C914137D1858C2E20076F96A /* Colors.framework */; };
 		C95BF5FD183854C700B1B69F /* AppRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF5FC183854C700B1B69F /* AppRecord.m */; };
 		C95BF6001838565E00B1B69F /* MTZAppRecordDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF5FF1838565E00B1B69F /* MTZAppRecordDownloader.m */; };
 		C95BF6061838778200B1B69F /* MTZStarsRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6051838778200B1B69F /* MTZStarsRatingView.m */; };
@@ -18,7 +19,6 @@
 		C9BD2C081839C4E3006BBA5C /* MTZOutlinedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */; };
 		C9BD2C0B1839DE3C006BBA5C /* ScreenshotDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */; };
 		C9BD2C111839ECCB006BBA5C /* MTZScrollingCardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C101839ECCB006BBA5C /* MTZScrollingCardsView.m */; };
-		C9F45325184D57BB00CD33E6 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F45324184D57BB00CD33E6 /* Colors.framework */; };
 		C9FBE0FA1836799200F1DEF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0F91836799200F1DEF5 /* Foundation.framework */; };
 		C9FBE0FC1836799200F1DEF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */; };
 		C9FBE0FE1836799200F1DEF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FBE0FD1836799200F1DEF5 /* UIKit.framework */; };
@@ -48,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C914137D1858C2E20076F96A /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C95BF5FB183854C700B1B69F /* AppRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRecord.h; sourceTree = "<group>"; };
 		C95BF5FC183854C700B1B69F /* AppRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRecord.m; sourceTree = "<group>"; };
 		C95BF5FE1838565E00B1B69F /* MTZAppRecordDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZAppRecordDownloader.h; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenshotDownloader.m; sourceTree = "<group>"; };
 		C9BD2C0F1839ECCB006BBA5C /* MTZScrollingCardsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZScrollingCardsView.h; sourceTree = "<group>"; };
 		C9BD2C101839ECCB006BBA5C /* MTZScrollingCardsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZScrollingCardsView.m; sourceTree = "<group>"; };
-		C9F45324184D57BB00CD33E6 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C9FBE0F61836799200F1DEF5 /* AppStoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FBE0F91836799200F1DEF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,9 +101,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F45325184D57BB00CD33E6 /* Colors.framework in Frameworks */,
 				C9FBE0FC1836799200F1DEF5 /* CoreGraphics.framework in Frameworks */,
 				C9FBE0FE1836799200F1DEF5 /* UIKit.framework in Frameworks */,
+				C914137E1858C2E20076F96A /* Colors.framework in Frameworks */,
 				C9FBE0FA1836799200F1DEF5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +158,7 @@
 		C9FBE0F81836799200F1DEF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9F45324184D57BB00CD33E6 /* Colors.framework */,
+				C914137D1858C2E20076F96A /* Colors.framework */,
 				C9FBE0F91836799200F1DEF5 /* Foundation.framework */,
 				C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */,
 				C9FBE0FD1836799200F1DEF5 /* UIKit.framework */,
@@ -485,8 +485,12 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Colors-bsftsatdbvwawmcsifpcqfitxmmz/Build/Products/Debug-iphoneos",
 					/Users/matt/Dropbox/github/Colors,
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -512,8 +516,12 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Colors-bsftsatdbvwawmcsifpcqfitxmmz/Build/Products/Debug-iphoneos",
 					/Users/matt/Dropbox/github/Colors,
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -21,21 +21,9 @@
 		C926219F17D51C250095AE1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217E17D51C250095AE1C /* UIKit.framework */; };
 		C92621A717D51C250095AE1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92621A517D51C250095AE1C /* InfoPlist.strings */; };
 		C92621A917D51C250095AE1C /* ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92621A817D51C250095AE1C /* ColorsTests.m */; };
-		C92621B417D51C4F0095AE1C /* UIColor+NeueColors.m in Sources */ = {isa = PBXBuildFile; fileRef = C92621B317D51C4F0095AE1C /* UIColor+NeueColors.m */; };
-		C92621B717D522080095AE1C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C92621B617D522080095AE1C /* UIColor+Hex.m */; };
-		C92621BD17D528550095AE1C /* NSNumber+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C92621BC17D528550095AE1C /* NSNumber+Hex.m */; };
-		C97A233F17D6321C00B87FC1 /* UIColor+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = C97A233E17D6321C00B87FC1 /* UIColor+Components.m */; };
-		C98AC8751820407D00ED66F8 /* UIColor+ColorFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = C98AC8741820407D00ED66F8 /* UIColor+ColorFinder.m */; };
-		C9C182EC17F0FE21005AF9A3 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C182EB17F0FE21005AF9A3 /* UIImage+Crop.m */; };
-		C9C182F217F100B1005AF9A3 /* CGRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C182F117F100B1005AF9A3 /* CGRectManipulation.m */; };
-		C9C182F917F29489005AF9A3 /* UIImage+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C182F817F29489005AF9A3 /* UIImage+Colors.m */; };
-		C9C182FC17F295E5005AF9A3 /* UIColor+Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C182FB17F295E5005AF9A3 /* UIColor+Manipulation.m */; };
-		C9C1830217F2A89C005AF9A3 /* UIImage+Pixels.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */; };
+		C93503381858C4F600171528 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93503371858C4F600171528 /* Colors.framework */; };
 		C9C1830417F2C2CC005AF9A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */; };
 		C9C1830717F3A4AC005AF9A3 /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830617F3A4AC005AF9A3 /* MTZSlider.m */; };
-		C9C1830A17F3A9AF005AF9A3 /* UIImage+TBTint.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1830917F3A9AF005AF9A3 /* UIImage+TBTint.m */; };
-		C9EACDB51821EDB6002821A7 /* UIColor+DeviceColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EACDB41821EDB6002821A7 /* UIColor+DeviceColor.m */; };
-		C9EACDB81821F681002821A7 /* UIColor+KeyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EACDB71821F681002821A7 /* UIColor+KeyColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,35 +56,10 @@
 		C92621A417D51C250095AE1C /* ColorsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorsTests-Info.plist"; sourceTree = "<group>"; };
 		C92621A617D51C250095AE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C92621A817D51C250095AE1C /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
-		C92621B217D51C4F0095AE1C /* UIColor+NeueColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NeueColors.h"; sourceTree = "<group>"; };
-		C92621B317D51C4F0095AE1C /* UIColor+NeueColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NeueColors.m"; sourceTree = "<group>"; };
-		C92621B517D522080095AE1C /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		C92621B617D522080095AE1C /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
-		C92621BB17D528550095AE1C /* NSNumber+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Hex.h"; sourceTree = "<group>"; };
-		C92621BC17D528550095AE1C /* NSNumber+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Hex.m"; sourceTree = "<group>"; };
-		C97A233D17D6321C00B87FC1 /* UIColor+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Components.h"; sourceTree = "<group>"; };
-		C97A233E17D6321C00B87FC1 /* UIColor+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Components.m"; sourceTree = "<group>"; };
-		C98AC8731820407D00ED66F8 /* UIColor+ColorFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorFinder.h"; sourceTree = "<group>"; };
-		C98AC8741820407D00ED66F8 /* UIColor+ColorFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorFinder.m"; sourceTree = "<group>"; };
-		C9C182EA17F0FE21005AF9A3 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
-		C9C182EB17F0FE21005AF9A3 /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
-		C9C182F017F100B1005AF9A3 /* CGRectManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectManipulation.h; sourceTree = "<group>"; };
-		C9C182F117F100B1005AF9A3 /* CGRectManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectManipulation.m; sourceTree = "<group>"; };
-		C9C182F717F29489005AF9A3 /* UIImage+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Colors.h"; sourceTree = "<group>"; };
-		C9C182F817F29489005AF9A3 /* UIImage+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Colors.m"; sourceTree = "<group>"; };
-		C9C182FA17F295E5005AF9A3 /* UIColor+Manipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Manipulation.h"; sourceTree = "<group>"; };
-		C9C182FB17F295E5005AF9A3 /* UIColor+Manipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Manipulation.m"; sourceTree = "<group>"; };
-		C9C1830017F2A895005AF9A3 /* UIImage+Pixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Pixels.h"; sourceTree = "<group>"; };
-		C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Pixels.m"; sourceTree = "<group>"; };
+		C93503371858C4F600171528 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C9C1830517F3A4AC005AF9A3 /* MTZSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlider.h; sourceTree = "<group>"; };
 		C9C1830617F3A4AC005AF9A3 /* MTZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlider.m; sourceTree = "<group>"; };
-		C9C1830817F3A9AA005AF9A3 /* UIImage+TBTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TBTint.h"; sourceTree = "<group>"; };
-		C9C1830917F3A9AF005AF9A3 /* UIImage+TBTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TBTint.m"; sourceTree = "<group>"; };
-		C9EACDB31821EDB6002821A7 /* UIColor+DeviceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DeviceColor.h"; sourceTree = "<group>"; };
-		C9EACDB41821EDB6002821A7 /* UIColor+DeviceColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DeviceColor.m"; sourceTree = "<group>"; };
-		C9EACDB61821F681002821A7 /* UIColor+KeyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KeyColor.h"; sourceTree = "<group>"; };
-		C9EACDB71821F681002821A7 /* UIColor+KeyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KeyColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +69,7 @@
 			files = (
 				C9C1830417F2C2CC005AF9A3 /* MediaPlayer.framework in Frameworks */,
 				C926217D17D51C250095AE1C /* CoreGraphics.framework in Frameworks */,
+				C93503381858C4F600171528 /* Colors.framework in Frameworks */,
 				C926217F17D51C250095AE1C /* UIKit.framework in Frameworks */,
 				C926217B17D51C250095AE1C /* Foundation.framework in Frameworks */,
 			);
@@ -146,6 +110,7 @@
 		C926217917D51C250095AE1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C93503371858C4F600171528 /* Colors.framework */,
 				C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */,
 				C926217A17D51C250095AE1C /* Foundation.framework */,
 				C926217C17D51C250095AE1C /* CoreGraphics.framework */,
@@ -165,32 +130,6 @@
 				C926219317D51C250095AE1C /* MTZViewController.m */,
 				C9C1830517F3A4AC005AF9A3 /* MTZSlider.h */,
 				C9C1830617F3A4AC005AF9A3 /* MTZSlider.m */,
-				C9C182F017F100B1005AF9A3 /* CGRectManipulation.h */,
-				C9C182F117F100B1005AF9A3 /* CGRectManipulation.m */,
-				C97A233D17D6321C00B87FC1 /* UIColor+Components.h */,
-				C97A233E17D6321C00B87FC1 /* UIColor+Components.m */,
-				C98AC8731820407D00ED66F8 /* UIColor+ColorFinder.h */,
-				C98AC8741820407D00ED66F8 /* UIColor+ColorFinder.m */,
-				C9EACDB31821EDB6002821A7 /* UIColor+DeviceColor.h */,
-				C9EACDB41821EDB6002821A7 /* UIColor+DeviceColor.m */,
-				C9EACDB61821F681002821A7 /* UIColor+KeyColor.h */,
-				C9EACDB71821F681002821A7 /* UIColor+KeyColor.m */,
-				C9C182FA17F295E5005AF9A3 /* UIColor+Manipulation.h */,
-				C9C182FB17F295E5005AF9A3 /* UIColor+Manipulation.m */,
-				C92621B217D51C4F0095AE1C /* UIColor+NeueColors.h */,
-				C92621B317D51C4F0095AE1C /* UIColor+NeueColors.m */,
-				C92621B517D522080095AE1C /* UIColor+Hex.h */,
-				C92621B617D522080095AE1C /* UIColor+Hex.m */,
-				C9C182F717F29489005AF9A3 /* UIImage+Colors.h */,
-				C9C182F817F29489005AF9A3 /* UIImage+Colors.m */,
-				C9C182EA17F0FE21005AF9A3 /* UIImage+Crop.h */,
-				C9C182EB17F0FE21005AF9A3 /* UIImage+Crop.m */,
-				C9C1830017F2A895005AF9A3 /* UIImage+Pixels.h */,
-				C9C1830117F2A89C005AF9A3 /* UIImage+Pixels.m */,
-				C9C1830817F3A9AA005AF9A3 /* UIImage+TBTint.h */,
-				C9C1830917F3A9AF005AF9A3 /* UIImage+TBTint.m */,
-				C92621BB17D528550095AE1C /* NSNumber+Hex.h */,
-				C92621BC17D528550095AE1C /* NSNumber+Hex.m */,
 				C926219517D51C250095AE1C /* Images.xcassets */,
 				C926218117D51C250095AE1C /* Supporting Files */,
 			);
@@ -327,23 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9C1830217F2A89C005AF9A3 /* UIImage+Pixels.m in Sources */,
 				C926218B17D51C250095AE1C /* MTZAppDelegate.m in Sources */,
-				C9EACDB81821F681002821A7 /* UIColor+KeyColor.m in Sources */,
-				C9C1830A17F3A9AF005AF9A3 /* UIImage+TBTint.m in Sources */,
-				C9C182EC17F0FE21005AF9A3 /* UIImage+Crop.m in Sources */,
-				C92621B717D522080095AE1C /* UIColor+Hex.m in Sources */,
 				C926218717D51C250095AE1C /* main.m in Sources */,
-				C92621B417D51C4F0095AE1C /* UIColor+NeueColors.m in Sources */,
-				C9EACDB51821EDB6002821A7 /* UIColor+DeviceColor.m in Sources */,
-				C9C182F217F100B1005AF9A3 /* CGRectManipulation.m in Sources */,
 				C926219417D51C250095AE1C /* MTZViewController.m in Sources */,
 				C9C1830717F3A4AC005AF9A3 /* MTZSlider.m in Sources */,
-				C97A233F17D6321C00B87FC1 /* UIColor+Components.m in Sources */,
-				C92621BD17D528550095AE1C /* NSNumber+Hex.m in Sources */,
-				C9C182F917F29489005AF9A3 /* UIImage+Colors.m in Sources */,
-				C9C182FC17F295E5005AF9A3 /* UIColor+Manipulation.m in Sources */,
-				C98AC8751820407D00ED66F8 /* UIColor+ColorFinder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,10 +395,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/matt/Dropbox/github/Colors,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colors/Colors-Prefix.pch";
 				INFOPLIST_FILE = "Colors/Colors-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -485,10 +419,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/matt/Dropbox/github/Colors,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colors/Colors-Prefix.pch";
 				INFOPLIST_FILE = "Colors/Colors-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

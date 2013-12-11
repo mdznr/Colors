@@ -7,7 +7,8 @@
 //
 
 #import "MTZSlider.h"
-#import "UIImage+TBTint.h"
+
+#import <Colors/Colors.h>
 
 @implementation MTZSlider
 

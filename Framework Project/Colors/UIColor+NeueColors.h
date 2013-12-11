@@ -51,8 +51,8 @@
 /// Returns the standard system color for pink.
 + (UIColor *)neuePink;		// #FF2D55
 
-/// Returns the standard system color for dark gray.
-+ (UIColor *)neueDarkGray;	// #8E8E93
+/// Returns the standard system color for gray.
++ (UIColor *)neueGray;		// #8E8E93
 
 /// Returns the standard system color for light gray.
 + (UIColor *)neueLightGray;	// #C7C7CC

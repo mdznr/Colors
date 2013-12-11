@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6678C938-A5DC-49AC-AA9D-FE9A8CE0A6FD</string>
+	<string>715D61C2-AED3-413E-A5D6-66A5002DAF50</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Colors</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>707B7BCD-0754-46CF-AA89-9706213273BA</key>
+		<key>42D415BF-5007-43CD-9303-43FADC9E4BC9</key>
 		<string>https://github.com/mdznr/Colors</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Colors.xcodeproj/project.xcworkspace</string>
+	<string>Demo Apps/Music Player/Colors.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>707B7BCD-0754-46CF-AA89-9706213273BA</key>
-		<string>../..</string>
+		<key>42D415BF-5007-43CD-9303-43FADC9E4BC9</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/mdznr/Colors</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>707B7BCD-0754-46CF-AA89-9706213273BA</string>
+	<string>42D415BF-5007-43CD-9303-43FADC9E4BC9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>707B7BCD-0754-46CF-AA89-9706213273BA</string>
+			<string>42D415BF-5007-43CD-9303-43FADC9E4BC9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Colors</string>
 		</dict>

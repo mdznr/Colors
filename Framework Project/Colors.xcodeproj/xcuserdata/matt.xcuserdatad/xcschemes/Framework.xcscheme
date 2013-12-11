@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C98259C01858BC9900BBEF49"
-               BuildableName = "libColors.a"
-               BlueprintName = "Colors"
+               BlueprintIdentifier = "C9825A291858C09400BBEF49"
+               BuildableName = "Framework"
+               BlueprintName = "Framework"
                ReferencedContainer = "container:Colors.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C98259D01858BC9900BBEF49"
-               BuildableName = "ColorsTests.xctest"
-               BlueprintName = "ColorsTests"
-               ReferencedContainer = "container:Colors.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

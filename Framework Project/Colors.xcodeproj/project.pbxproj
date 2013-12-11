@@ -6,212 +6,243 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		C9825A291858C09400BBEF49 /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C9825A2A1858C09400BBEF49 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				C9825A2F1858C0EE00BBEF49 /* Build Framework */,
+			);
+			dependencies = (
+				C9825A2E1858C09D00BBEF49 /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		C9F452C7184D570900CD33E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9F452C5184D570900CD33E6 /* InfoPlist.strings */; };
-		C9F452CB184D570900CD33E6 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452CA184D570900CD33E6 /* Colors.m */; };
-		C9F452D3184D570900CD33E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F452D2184D570900CD33E6 /* XCTest.framework */; };
-		C9F452D5184D570900CD33E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F452D4184D570900CD33E6 /* Foundation.framework */; };
-		C9F452D7184D570900CD33E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F452D6184D570900CD33E6 /* UIKit.framework */; };
-		C9F452DA184D570900CD33E6 /* Colors.framework in Resources */ = {isa = PBXBuildFile; fileRef = C9F452C0184D570900CD33E6 /* Colors.framework */; };
-		C9F452E0184D570900CD33E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9F452DE184D570900CD33E6 /* InfoPlist.strings */; };
-		C9F452E2184D570900CD33E6 /* ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452E1184D570900CD33E6 /* ColorsTests.m */; };
-		C9F452EB184D572300CD33E6 /* Colors.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F452C9184D570900CD33E6 /* Colors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F452EE184D574B00CD33E6 /* CGRectManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F452EC184D574B00CD33E6 /* CGRectManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F452EF184D574B00CD33E6 /* CGRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452ED184D574B00CD33E6 /* CGRectManipulation.m */; };
-		C9F4530A184D576000CD33E6 /* NSNumber+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F452F0184D576000CD33E6 /* NSNumber+Hex.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F4530B184D576000CD33E6 /* NSNumber+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452F1184D576000CD33E6 /* NSNumber+Hex.m */; };
-		C9F4530C184D576000CD33E6 /* UIColor+ColorFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F452F2184D576000CD33E6 /* UIColor+ColorFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F4530D184D576000CD33E6 /* UIColor+ColorFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452F3184D576000CD33E6 /* UIColor+ColorFinder.m */; };
-		C9F4530E184D576000CD33E6 /* UIColor+Components.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F452F4184D576000CD33E6 /* UIColor+Components.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F4530F184D576000CD33E6 /* UIColor+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452F5184D576000CD33E6 /* UIColor+Components.m */; };
-		C9F45310184D576000CD33E6 /* UIColor+DeviceColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F452F6184D576000CD33E6 /* UIColor+DeviceColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F45311184D576000CD33E6 /* UIColor+DeviceColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452F7184D576000CD33E6 /* UIColor+DeviceColor.m */; };
-		C9F45312184D576000CD33E6 /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F452F8184D576000CD33E6 /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F45313184D576000CD33E6 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452F9184D576000CD33E6 /* UIColor+Hex.m */; };
-		C9F45314184D576000CD33E6 /* UIColor+KeyColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F452FA184D576000CD33E6 /* UIColor+KeyColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F45315184D576000CD33E6 /* UIColor+KeyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452FB184D576000CD33E6 /* UIColor+KeyColor.m */; };
-		C9F45316184D576000CD33E6 /* UIColor+Manipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F452FC184D576000CD33E6 /* UIColor+Manipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F45317184D576000CD33E6 /* UIColor+Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452FD184D576000CD33E6 /* UIColor+Manipulation.m */; };
-		C9F45318184D576000CD33E6 /* UIColor+NeueColors.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F452FE184D576000CD33E6 /* UIColor+NeueColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F45319184D576000CD33E6 /* UIColor+NeueColors.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F452FF184D576000CD33E6 /* UIColor+NeueColors.m */; };
-		C9F4531A184D576000CD33E6 /* UIImage+Colors.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F45300184D576000CD33E6 /* UIImage+Colors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F4531B184D576000CD33E6 /* UIImage+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F45301184D576000CD33E6 /* UIImage+Colors.m */; };
-		C9F4531C184D576000CD33E6 /* UIImage+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F45302184D576000CD33E6 /* UIImage+Crop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F4531D184D576000CD33E6 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F45303184D576000CD33E6 /* UIImage+Crop.m */; };
-		C9F4531E184D576000CD33E6 /* UIImage+Mask.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F45304184D576000CD33E6 /* UIImage+Mask.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F4531F184D576000CD33E6 /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F45305184D576000CD33E6 /* UIImage+Mask.m */; };
-		C9F45320184D576000CD33E6 /* UIImage+Pixels.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F45306184D576000CD33E6 /* UIImage+Pixels.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F45321184D576000CD33E6 /* UIImage+Pixels.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F45307184D576000CD33E6 /* UIImage+Pixels.m */; };
-		C9F45322184D576000CD33E6 /* UIImage+TBTint.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F45308184D576000CD33E6 /* UIImage+TBTint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9F45323184D576000CD33E6 /* UIImage+TBTint.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F45309184D576000CD33E6 /* UIImage+TBTint.m */; };
+		C98259C51858BC9900BBEF49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98259C41858BC9900BBEF49 /* Foundation.framework */; };
+		C98259CA1858BC9900BBEF49 /* Colors.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C98259C91858BC9900BBEF49 /* Colors.h */; };
+		C98259D31858BC9900BBEF49 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98259D21858BC9900BBEF49 /* XCTest.framework */; };
+		C98259D41858BC9900BBEF49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98259C41858BC9900BBEF49 /* Foundation.framework */; };
+		C98259D91858BC9900BBEF49 /* libColors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98259C11858BC9900BBEF49 /* libColors.a */; };
+		C98259DF1858BC9900BBEF49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C98259DD1858BC9900BBEF49 /* InfoPlist.strings */; };
+		C98259E11858BC9900BBEF49 /* ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259E01858BC9900BBEF49 /* ColorsTests.m */; };
+		C9825A061858BCD100BBEF49 /* CGRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259EB1858BCD100BBEF49 /* CGRectManipulation.m */; };
+		C9825A071858BCD100BBEF49 /* NSNumber+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259ED1858BCD100BBEF49 /* NSNumber+Hex.m */; };
+		C9825A081858BCD100BBEF49 /* UIColor+ColorFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259EF1858BCD100BBEF49 /* UIColor+ColorFinder.m */; };
+		C9825A091858BCD100BBEF49 /* UIColor+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F11858BCD100BBEF49 /* UIColor+Components.m */; };
+		C9825A0A1858BCD100BBEF49 /* UIColor+DeviceColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F31858BCD100BBEF49 /* UIColor+DeviceColor.m */; };
+		C9825A0B1858BCD100BBEF49 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F51858BCD100BBEF49 /* UIColor+Hex.m */; };
+		C9825A0C1858BCD100BBEF49 /* UIColor+KeyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F71858BCD100BBEF49 /* UIColor+KeyColor.m */; };
+		C9825A0D1858BCD100BBEF49 /* UIColor+Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F91858BCD100BBEF49 /* UIColor+Manipulation.m */; };
+		C9825A0E1858BCD100BBEF49 /* UIColor+NeueColors.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259FB1858BCD100BBEF49 /* UIColor+NeueColors.m */; };
+		C9825A0F1858BCD100BBEF49 /* UIImage+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259FD1858BCD100BBEF49 /* UIImage+Colors.m */; };
+		C9825A101858BCD100BBEF49 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259FF1858BCD100BBEF49 /* UIImage+Crop.m */; };
+		C9825A111858BCD100BBEF49 /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = C9825A011858BCD100BBEF49 /* UIImage+Mask.m */; };
+		C9825A121858BCD100BBEF49 /* UIImage+Pixels.m in Sources */ = {isa = PBXBuildFile; fileRef = C9825A031858BCD100BBEF49 /* UIImage+Pixels.m */; };
+		C9825A131858BCD100BBEF49 /* UIImage+TBTint.m in Sources */ = {isa = PBXBuildFile; fileRef = C9825A051858BCD100BBEF49 /* UIImage+TBTint.m */; };
+		C9825A151858BDCF00BBEF49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9825A141858BDCF00BBEF49 /* UIKit.framework */; };
+		C9825A171858BE3000BBEF49 /* Colors.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259C91858BC9900BBEF49 /* Colors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A181858BE4D00BBEF49 /* CGRectManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259EA1858BCD100BBEF49 /* CGRectManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A191858BE5500BBEF49 /* NSNumber+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259EC1858BCD100BBEF49 /* NSNumber+Hex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A1A1858BE6700BBEF49 /* UIColor+ColorFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259EE1858BCD100BBEF49 /* UIColor+ColorFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A1B1858BE6700BBEF49 /* UIColor+Components.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F01858BCD100BBEF49 /* UIColor+Components.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A1C1858BE6700BBEF49 /* UIColor+DeviceColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F21858BCD100BBEF49 /* UIColor+DeviceColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A1D1858BE6700BBEF49 /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F41858BCD100BBEF49 /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A1E1858BE6700BBEF49 /* UIColor+KeyColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F61858BCD100BBEF49 /* UIColor+KeyColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A1F1858BE6700BBEF49 /* UIColor+Manipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F81858BCD100BBEF49 /* UIColor+Manipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A201858BE6700BBEF49 /* UIColor+NeueColors.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259FA1858BCD100BBEF49 /* UIColor+NeueColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A211858BE6700BBEF49 /* UIImage+Colors.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259FC1858BCD100BBEF49 /* UIImage+Colors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A221858BE6700BBEF49 /* UIImage+Crop.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259FE1858BCD100BBEF49 /* UIImage+Crop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A231858BE6700BBEF49 /* UIImage+Mask.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825A001858BCD100BBEF49 /* UIImage+Mask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A241858BE6700BBEF49 /* UIImage+Pixels.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825A021858BCD100BBEF49 /* UIImage+Pixels.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A251858BE6700BBEF49 /* UIImage+TBTint.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825A041858BCD100BBEF49 /* UIImage+TBTint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C9F452D8184D570900CD33E6 /* PBXContainerItemProxy */ = {
+		C98259D71858BC9900BBEF49 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C9F452B6184D570900CD33E6 /* Project object */;
+			containerPortal = C98259B91858BC9900BBEF49 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C9F452BF184D570900CD33E6;
+			remoteGlobalIDString = C98259C01858BC9900BBEF49;
+			remoteInfo = Colors;
+		};
+		C9825A2D1858C09D00BBEF49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C98259B91858BC9900BBEF49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C98259C01858BC9900BBEF49;
 			remoteInfo = Colors;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXFileReference section */
-		C9F452C0184D570900CD33E6 /* Colors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Colors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9F452C4184D570900CD33E6 /* Colors-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colors-Info.plist"; sourceTree = "<group>"; };
-		C9F452C6184D570900CD33E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C9F452C8184D570900CD33E6 /* Colors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Colors-Prefix.pch"; sourceTree = "<group>"; };
-		C9F452C9184D570900CD33E6 /* Colors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
-		C9F452CA184D570900CD33E6 /* Colors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
-		C9F452D0184D570900CD33E6 /* ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9F452D2184D570900CD33E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		C9F452D4184D570900CD33E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C9F452D6184D570900CD33E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C9F452DD184D570900CD33E6 /* ColorsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorsTests-Info.plist"; sourceTree = "<group>"; };
-		C9F452DF184D570900CD33E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C9F452E1184D570900CD33E6 /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
-		C9F452EC184D574B00CD33E6 /* CGRectManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectManipulation.h; sourceTree = "<group>"; };
-		C9F452ED184D574B00CD33E6 /* CGRectManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectManipulation.m; sourceTree = "<group>"; };
-		C9F452F0184D576000CD33E6 /* NSNumber+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Hex.h"; sourceTree = "<group>"; };
-		C9F452F1184D576000CD33E6 /* NSNumber+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Hex.m"; sourceTree = "<group>"; };
-		C9F452F2184D576000CD33E6 /* UIColor+ColorFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorFinder.h"; sourceTree = "<group>"; };
-		C9F452F3184D576000CD33E6 /* UIColor+ColorFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorFinder.m"; sourceTree = "<group>"; };
-		C9F452F4184D576000CD33E6 /* UIColor+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Components.h"; sourceTree = "<group>"; };
-		C9F452F5184D576000CD33E6 /* UIColor+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Components.m"; sourceTree = "<group>"; };
-		C9F452F6184D576000CD33E6 /* UIColor+DeviceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DeviceColor.h"; sourceTree = "<group>"; };
-		C9F452F7184D576000CD33E6 /* UIColor+DeviceColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DeviceColor.m"; sourceTree = "<group>"; };
-		C9F452F8184D576000CD33E6 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		C9F452F9184D576000CD33E6 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
-		C9F452FA184D576000CD33E6 /* UIColor+KeyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KeyColor.h"; sourceTree = "<group>"; };
-		C9F452FB184D576000CD33E6 /* UIColor+KeyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KeyColor.m"; sourceTree = "<group>"; };
-		C9F452FC184D576000CD33E6 /* UIColor+Manipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Manipulation.h"; sourceTree = "<group>"; };
-		C9F452FD184D576000CD33E6 /* UIColor+Manipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Manipulation.m"; sourceTree = "<group>"; };
-		C9F452FE184D576000CD33E6 /* UIColor+NeueColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NeueColors.h"; sourceTree = "<group>"; };
-		C9F452FF184D576000CD33E6 /* UIColor+NeueColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NeueColors.m"; sourceTree = "<group>"; };
-		C9F45300184D576000CD33E6 /* UIImage+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Colors.h"; sourceTree = "<group>"; };
-		C9F45301184D576000CD33E6 /* UIImage+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Colors.m"; sourceTree = "<group>"; };
-		C9F45302184D576000CD33E6 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
-		C9F45303184D576000CD33E6 /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
-		C9F45304184D576000CD33E6 /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
-		C9F45305184D576000CD33E6 /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
-		C9F45306184D576000CD33E6 /* UIImage+Pixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Pixels.h"; sourceTree = "<group>"; };
-		C9F45307184D576000CD33E6 /* UIImage+Pixels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Pixels.m"; sourceTree = "<group>"; };
-		C9F45308184D576000CD33E6 /* UIImage+TBTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TBTint.h"; sourceTree = "<group>"; };
-		C9F45309184D576000CD33E6 /* UIImage+TBTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TBTint.m"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		C9F452BB184D570900CD33E6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
+/* Begin PBXCopyFilesBuildPhase section */
+		C98259BF1858BC9900BBEF49 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
 			files = (
+				C98259CA1858BC9900BBEF49 /* Colors.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9F452CD184D570900CD33E6 /* Frameworks */ = {
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C98259C11858BC9900BBEF49 /* libColors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libColors.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98259C41858BC9900BBEF49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C98259C81858BC9900BBEF49 /* Colors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Colors-Prefix.pch"; sourceTree = "<group>"; };
+		C98259C91858BC9900BBEF49 /* Colors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
+		C98259D11858BC9900BBEF49 /* ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98259D21858BC9900BBEF49 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C98259DC1858BC9900BBEF49 /* ColorsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorsTests-Info.plist"; sourceTree = "<group>"; };
+		C98259DE1858BC9900BBEF49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C98259E01858BC9900BBEF49 /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
+		C98259EA1858BCD100BBEF49 /* CGRectManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectManipulation.h; sourceTree = "<group>"; };
+		C98259EB1858BCD100BBEF49 /* CGRectManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectManipulation.m; sourceTree = "<group>"; };
+		C98259EC1858BCD100BBEF49 /* NSNumber+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Hex.h"; sourceTree = "<group>"; };
+		C98259ED1858BCD100BBEF49 /* NSNumber+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Hex.m"; sourceTree = "<group>"; };
+		C98259EE1858BCD100BBEF49 /* UIColor+ColorFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorFinder.h"; sourceTree = "<group>"; };
+		C98259EF1858BCD100BBEF49 /* UIColor+ColorFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorFinder.m"; sourceTree = "<group>"; };
+		C98259F01858BCD100BBEF49 /* UIColor+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Components.h"; sourceTree = "<group>"; };
+		C98259F11858BCD100BBEF49 /* UIColor+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Components.m"; sourceTree = "<group>"; };
+		C98259F21858BCD100BBEF49 /* UIColor+DeviceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DeviceColor.h"; sourceTree = "<group>"; };
+		C98259F31858BCD100BBEF49 /* UIColor+DeviceColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DeviceColor.m"; sourceTree = "<group>"; };
+		C98259F41858BCD100BBEF49 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		C98259F51858BCD100BBEF49 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		C98259F61858BCD100BBEF49 /* UIColor+KeyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KeyColor.h"; sourceTree = "<group>"; };
+		C98259F71858BCD100BBEF49 /* UIColor+KeyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KeyColor.m"; sourceTree = "<group>"; };
+		C98259F81858BCD100BBEF49 /* UIColor+Manipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Manipulation.h"; sourceTree = "<group>"; };
+		C98259F91858BCD100BBEF49 /* UIColor+Manipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Manipulation.m"; sourceTree = "<group>"; };
+		C98259FA1858BCD100BBEF49 /* UIColor+NeueColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NeueColors.h"; sourceTree = "<group>"; };
+		C98259FB1858BCD100BBEF49 /* UIColor+NeueColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NeueColors.m"; sourceTree = "<group>"; };
+		C98259FC1858BCD100BBEF49 /* UIImage+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Colors.h"; sourceTree = "<group>"; };
+		C98259FD1858BCD100BBEF49 /* UIImage+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Colors.m"; sourceTree = "<group>"; };
+		C98259FE1858BCD100BBEF49 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		C98259FF1858BCD100BBEF49 /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
+		C9825A001858BCD100BBEF49 /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
+		C9825A011858BCD100BBEF49 /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
+		C9825A021858BCD100BBEF49 /* UIImage+Pixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Pixels.h"; sourceTree = "<group>"; };
+		C9825A031858BCD100BBEF49 /* UIImage+Pixels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Pixels.m"; sourceTree = "<group>"; };
+		C9825A041858BCD100BBEF49 /* UIImage+TBTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TBTint.h"; sourceTree = "<group>"; };
+		C9825A051858BCD100BBEF49 /* UIImage+TBTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TBTint.m"; sourceTree = "<group>"; };
+		C9825A141858BDCF00BBEF49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C98259BE1858BC9900BBEF49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F452D3184D570900CD33E6 /* XCTest.framework in Frameworks */,
-				C9F452D7184D570900CD33E6 /* UIKit.framework in Frameworks */,
-				C9F452D5184D570900CD33E6 /* Foundation.framework in Frameworks */,
+				C9825A151858BDCF00BBEF49 /* UIKit.framework in Frameworks */,
+				C98259C51858BC9900BBEF49 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98259CE1858BC9900BBEF49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98259D31858BC9900BBEF49 /* XCTest.framework in Frameworks */,
+				C98259D41858BC9900BBEF49 /* Foundation.framework in Frameworks */,
+				C98259D91858BC9900BBEF49 /* libColors.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C9F452B5184D570900CD33E6 = {
+		C98259B81858BC9900BBEF49 = {
 			isa = PBXGroup;
 			children = (
-				C9F452C2184D570900CD33E6 /* Colors */,
-				C9F452DB184D570900CD33E6 /* ColorsTests */,
-				C9F452D1184D570900CD33E6 /* Frameworks */,
-				C9F452C1184D570900CD33E6 /* Products */,
+				C98259C61858BC9900BBEF49 /* Colors */,
+				C98259DA1858BC9900BBEF49 /* ColorsTests */,
+				C98259C31858BC9900BBEF49 /* Frameworks */,
+				C98259C21858BC9900BBEF49 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C9F452C1184D570900CD33E6 /* Products */ = {
+		C98259C21858BC9900BBEF49 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C9F452C0184D570900CD33E6 /* Colors.framework */,
-				C9F452D0184D570900CD33E6 /* ColorsTests.xctest */,
+				C98259C11858BC9900BBEF49 /* libColors.a */,
+				C98259D11858BC9900BBEF49 /* ColorsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C9F452C2184D570900CD33E6 /* Colors */ = {
+		C98259C31858BC9900BBEF49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9F452C9184D570900CD33E6 /* Colors.h */,
-				C9F452CA184D570900CD33E6 /* Colors.m */,
-				C9F452EC184D574B00CD33E6 /* CGRectManipulation.h */,
-				C9F452ED184D574B00CD33E6 /* CGRectManipulation.m */,
-				C9F452F0184D576000CD33E6 /* NSNumber+Hex.h */,
-				C9F452F1184D576000CD33E6 /* NSNumber+Hex.m */,
-				C9F452F2184D576000CD33E6 /* UIColor+ColorFinder.h */,
-				C9F452F3184D576000CD33E6 /* UIColor+ColorFinder.m */,
-				C9F452F4184D576000CD33E6 /* UIColor+Components.h */,
-				C9F452F5184D576000CD33E6 /* UIColor+Components.m */,
-				C9F452F6184D576000CD33E6 /* UIColor+DeviceColor.h */,
-				C9F452F7184D576000CD33E6 /* UIColor+DeviceColor.m */,
-				C9F452F8184D576000CD33E6 /* UIColor+Hex.h */,
-				C9F452F9184D576000CD33E6 /* UIColor+Hex.m */,
-				C9F452FA184D576000CD33E6 /* UIColor+KeyColor.h */,
-				C9F452FB184D576000CD33E6 /* UIColor+KeyColor.m */,
-				C9F452FC184D576000CD33E6 /* UIColor+Manipulation.h */,
-				C9F452FD184D576000CD33E6 /* UIColor+Manipulation.m */,
-				C9F452FE184D576000CD33E6 /* UIColor+NeueColors.h */,
-				C9F452FF184D576000CD33E6 /* UIColor+NeueColors.m */,
-				C9F45300184D576000CD33E6 /* UIImage+Colors.h */,
-				C9F45301184D576000CD33E6 /* UIImage+Colors.m */,
-				C9F45302184D576000CD33E6 /* UIImage+Crop.h */,
-				C9F45303184D576000CD33E6 /* UIImage+Crop.m */,
-				C9F45304184D576000CD33E6 /* UIImage+Mask.h */,
-				C9F45305184D576000CD33E6 /* UIImage+Mask.m */,
-				C9F45306184D576000CD33E6 /* UIImage+Pixels.h */,
-				C9F45307184D576000CD33E6 /* UIImage+Pixels.m */,
-				C9F45308184D576000CD33E6 /* UIImage+TBTint.h */,
-				C9F45309184D576000CD33E6 /* UIImage+TBTint.m */,
-				C9F452C3184D570900CD33E6 /* Supporting Files */,
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
-		C9F452C3184D570900CD33E6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C9F452C4184D570900CD33E6 /* Colors-Info.plist */,
-				C9F452C5184D570900CD33E6 /* InfoPlist.strings */,
-				C9F452C8184D570900CD33E6 /* Colors-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C9F452D1184D570900CD33E6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C9F452D2184D570900CD33E6 /* XCTest.framework */,
-				C9F452D4184D570900CD33E6 /* Foundation.framework */,
-				C9F452D6184D570900CD33E6 /* UIKit.framework */,
+				C9825A141858BDCF00BBEF49 /* UIKit.framework */,
+				C98259C41858BC9900BBEF49 /* Foundation.framework */,
+				C98259D21858BC9900BBEF49 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C9F452DB184D570900CD33E6 /* ColorsTests */ = {
+		C98259C61858BC9900BBEF49 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				C9F452E1184D570900CD33E6 /* ColorsTests.m */,
-				C9F452DC184D570900CD33E6 /* Supporting Files */,
+				C98259C91858BC9900BBEF49 /* Colors.h */,
+				C98259EA1858BCD100BBEF49 /* CGRectManipulation.h */,
+				C98259EB1858BCD100BBEF49 /* CGRectManipulation.m */,
+				C98259EC1858BCD100BBEF49 /* NSNumber+Hex.h */,
+				C98259ED1858BCD100BBEF49 /* NSNumber+Hex.m */,
+				C98259EE1858BCD100BBEF49 /* UIColor+ColorFinder.h */,
+				C98259EF1858BCD100BBEF49 /* UIColor+ColorFinder.m */,
+				C98259F01858BCD100BBEF49 /* UIColor+Components.h */,
+				C98259F11858BCD100BBEF49 /* UIColor+Components.m */,
+				C98259F21858BCD100BBEF49 /* UIColor+DeviceColor.h */,
+				C98259F31858BCD100BBEF49 /* UIColor+DeviceColor.m */,
+				C98259F41858BCD100BBEF49 /* UIColor+Hex.h */,
+				C98259F51858BCD100BBEF49 /* UIColor+Hex.m */,
+				C98259F61858BCD100BBEF49 /* UIColor+KeyColor.h */,
+				C98259F71858BCD100BBEF49 /* UIColor+KeyColor.m */,
+				C98259F81858BCD100BBEF49 /* UIColor+Manipulation.h */,
+				C98259F91858BCD100BBEF49 /* UIColor+Manipulation.m */,
+				C98259FA1858BCD100BBEF49 /* UIColor+NeueColors.h */,
+				C98259FB1858BCD100BBEF49 /* UIColor+NeueColors.m */,
+				C98259FC1858BCD100BBEF49 /* UIImage+Colors.h */,
+				C98259FD1858BCD100BBEF49 /* UIImage+Colors.m */,
+				C98259FE1858BCD100BBEF49 /* UIImage+Crop.h */,
+				C98259FF1858BCD100BBEF49 /* UIImage+Crop.m */,
+				C9825A001858BCD100BBEF49 /* UIImage+Mask.h */,
+				C9825A011858BCD100BBEF49 /* UIImage+Mask.m */,
+				C9825A021858BCD100BBEF49 /* UIImage+Pixels.h */,
+				C9825A031858BCD100BBEF49 /* UIImage+Pixels.m */,
+				C9825A041858BCD100BBEF49 /* UIImage+TBTint.h */,
+				C9825A051858BCD100BBEF49 /* UIImage+TBTint.m */,
+				C98259C71858BC9900BBEF49 /* Supporting Files */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		C98259C71858BC9900BBEF49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C98259C81858BC9900BBEF49 /* Colors-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C98259DA1858BC9900BBEF49 /* ColorsTests */ = {
+			isa = PBXGroup;
+			children = (
+				C98259E01858BC9900BBEF49 /* ColorsTests.m */,
+				C98259DB1858BC9900BBEF49 /* Supporting Files */,
 			);
 			path = ColorsTests;
 			sourceTree = "<group>";
 		};
-		C9F452DC184D570900CD33E6 /* Supporting Files */ = {
+		C98259DB1858BC9900BBEF49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C9F452DD184D570900CD33E6 /* ColorsTests-Info.plist */,
-				C9F452DE184D570900CD33E6 /* InfoPlist.strings */,
+				C98259DC1858BC9900BBEF49 /* ColorsTests-Info.plist */,
+				C98259DD1858BC9900BBEF49 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,40 +250,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C9F452BC184D570900CD33E6 /* Headers */ = {
+		C9825A161858BE2800BBEF49 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F45322184D576000CD33E6 /* UIImage+TBTint.h in Headers */,
-				C9F45316184D576000CD33E6 /* UIColor+Manipulation.h in Headers */,
-				C9F4531E184D576000CD33E6 /* UIImage+Mask.h in Headers */,
-				C9F45314184D576000CD33E6 /* UIColor+KeyColor.h in Headers */,
-				C9F4530A184D576000CD33E6 /* NSNumber+Hex.h in Headers */,
-				C9F4530E184D576000CD33E6 /* UIColor+Components.h in Headers */,
-				C9F4531A184D576000CD33E6 /* UIImage+Colors.h in Headers */,
-				C9F45310184D576000CD33E6 /* UIColor+DeviceColor.h in Headers */,
-				C9F45318184D576000CD33E6 /* UIColor+NeueColors.h in Headers */,
-				C9F45312184D576000CD33E6 /* UIColor+Hex.h in Headers */,
-				C9F4531C184D576000CD33E6 /* UIImage+Crop.h in Headers */,
-				C9F452EB184D572300CD33E6 /* Colors.h in Headers */,
-				C9F45320184D576000CD33E6 /* UIImage+Pixels.h in Headers */,
-				C9F4530C184D576000CD33E6 /* UIColor+ColorFinder.h in Headers */,
-				C9F452EE184D574B00CD33E6 /* CGRectManipulation.h in Headers */,
+				C9825A251858BE6700BBEF49 /* UIImage+TBTint.h in Headers */,
+				C9825A1F1858BE6700BBEF49 /* UIColor+Manipulation.h in Headers */,
+				C9825A231858BE6700BBEF49 /* UIImage+Mask.h in Headers */,
+				C9825A1E1858BE6700BBEF49 /* UIColor+KeyColor.h in Headers */,
+				C9825A191858BE5500BBEF49 /* NSNumber+Hex.h in Headers */,
+				C9825A1B1858BE6700BBEF49 /* UIColor+Components.h in Headers */,
+				C9825A211858BE6700BBEF49 /* UIImage+Colors.h in Headers */,
+				C9825A1C1858BE6700BBEF49 /* UIColor+DeviceColor.h in Headers */,
+				C9825A201858BE6700BBEF49 /* UIColor+NeueColors.h in Headers */,
+				C9825A1D1858BE6700BBEF49 /* UIColor+Hex.h in Headers */,
+				C9825A221858BE6700BBEF49 /* UIImage+Crop.h in Headers */,
+				C9825A171858BE3000BBEF49 /* Colors.h in Headers */,
+				C9825A241858BE6700BBEF49 /* UIImage+Pixels.h in Headers */,
+				C9825A1A1858BE6700BBEF49 /* UIColor+ColorFinder.h in Headers */,
+				C9825A181858BE4D00BBEF49 /* CGRectManipulation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C9F452BF184D570900CD33E6 /* Colors */ = {
+		C98259C01858BC9900BBEF49 /* Colors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9F452E5184D570900CD33E6 /* Build configuration list for PBXNativeTarget "Colors" */;
+			buildConfigurationList = C98259E41858BC9900BBEF49 /* Build configuration list for PBXNativeTarget "Colors" */;
 			buildPhases = (
-				C9F452BA184D570900CD33E6 /* Sources */,
-				C9F452BB184D570900CD33E6 /* Frameworks */,
-				C9F452BC184D570900CD33E6 /* Headers */,
-				C9F452BD184D570900CD33E6 /* Resources */,
-				C9F452BE184D570900CD33E6 /* ShellScript */,
+				C98259BD1858BC9900BBEF49 /* Sources */,
+				C98259BE1858BC9900BBEF49 /* Frameworks */,
+				C98259BF1858BC9900BBEF49 /* CopyFiles */,
+				C9825A161858BE2800BBEF49 /* Headers */,
+				C9825A261858BF0200BBEF49 /* Prepare Framework */,
 			);
 			buildRules = (
 			);
@@ -260,150 +291,147 @@
 			);
 			name = Colors;
 			productName = Colors;
-			productReference = C9F452C0184D570900CD33E6 /* Colors.framework */;
-			productType = "com.apple.product-type.bundle";
+			productReference = C98259C11858BC9900BBEF49 /* libColors.a */;
+			productType = "com.apple.product-type.library.static";
 		};
-		C9F452CF184D570900CD33E6 /* ColorsTests */ = {
+		C98259D01858BC9900BBEF49 /* ColorsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9F452E8184D570900CD33E6 /* Build configuration list for PBXNativeTarget "ColorsTests" */;
+			buildConfigurationList = C98259E71858BC9900BBEF49 /* Build configuration list for PBXNativeTarget "ColorsTests" */;
 			buildPhases = (
-				C9F452CC184D570900CD33E6 /* Sources */,
-				C9F452CD184D570900CD33E6 /* Frameworks */,
-				C9F452CE184D570900CD33E6 /* Resources */,
+				C98259CD1858BC9900BBEF49 /* Sources */,
+				C98259CE1858BC9900BBEF49 /* Frameworks */,
+				C98259CF1858BC9900BBEF49 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C9F452D9184D570900CD33E6 /* PBXTargetDependency */,
+				C98259D81858BC9900BBEF49 /* PBXTargetDependency */,
 			);
 			name = ColorsTests;
 			productName = ColorsTests;
-			productReference = C9F452D0184D570900CD33E6 /* ColorsTests.xctest */;
+			productReference = C98259D11858BC9900BBEF49 /* ColorsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C9F452B6184D570900CD33E6 /* Project object */ = {
+		C98259B91858BC9900BBEF49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Matt Zanchelli";
-				TargetAttributes = {
-					C9F452CF184D570900CD33E6 = {
-						TestTargetID = C9F452BF184D570900CD33E6;
-					};
-				};
 			};
-			buildConfigurationList = C9F452B9184D570900CD33E6 /* Build configuration list for PBXProject "Colors" */;
+			buildConfigurationList = C98259BC1858BC9900BBEF49 /* Build configuration list for PBXProject "Colors" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = C9F452B5184D570900CD33E6;
-			productRefGroup = C9F452C1184D570900CD33E6 /* Products */;
+			mainGroup = C98259B81858BC9900BBEF49;
+			productRefGroup = C98259C21858BC9900BBEF49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C9F452BF184D570900CD33E6 /* Colors */,
-				C9F452CF184D570900CD33E6 /* ColorsTests */,
+				C98259C01858BC9900BBEF49 /* Colors */,
+				C98259D01858BC9900BBEF49 /* ColorsTests */,
+				C9825A291858C09400BBEF49 /* Framework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C9F452BD184D570900CD33E6 /* Resources */ = {
+		C98259CF1858BC9900BBEF49 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F452C7184D570900CD33E6 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9F452CE184D570900CD33E6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9F452DA184D570900CD33E6 /* Colors.framework in Resources */,
-				C9F452E0184D570900CD33E6 /* InfoPlist.strings in Resources */,
+				C98259DF1858BC9900BBEF49 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C9F452BE184D570900CD33E6 /* ShellScript */ = {
+		C9825A261858BF0200BBEF49 /* Prepare Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Prepare Framework";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /usr/bin/python;
-			shellScript = "# TAG: BUILD SCRIPT (do not remove this comment)\n# Build script generated using https://github.com/kstenerud/iOS-Universal-Framework Mk 8 (beta 2012-06-16)\nimport logging\n\n\n##############################################################################\n#\n# Configuration\n#\n##############################################################################\n\n# Select which kind of framework to build.\n#\n# Note: Due to issues with Xcode's build process, if you select\n#       'embeddedframework', it will still show the regular framework\n#       (as a symlink) along side of the embedded framework. Be sure to\n#       instruct your users to copy/move the embedded framework in this case!\n#\n# If your framework contains resources such as images, nibs, momds, plists,\n# zipfiles and such, choose 'embeddedframework'.\n#\n# If your framework contains no resources, choose 'framework'.\n#\nconfig_framework_type = 'framework'\n#config_framework_type = 'embeddedframework'\n\n# Open the build directory in Finder when the universal framework is\n# successfully built.\n#\n# This value can be overridden by setting the UFW_OPEN_BUILD_DIR env variable\n# to True or False.\n#\n# Recommended setting: True\n#\nconfig_open_build_dir = True\n\n# If true, ensures that all public headers are stored in the framework under\n# the same directory hierarchy as they were in the source tree.\n#\n# Xcode by default places all headers at the same top level, but every other\n# build tool in the known universe preserves directory structure. For simple\n# libraries it doesn't really matter much, but for ports of existing software\n# packages or for bigger libraries, it makes sense to have more structure.\n#\n# The default is set to \"False\" since that's what most Xcode users are used to.\n#\n# Recommended setting: True for deep hierarchy projects, False otherwise.\n#\nconfig_deep_header_hierarchy = False\n\n# Specify where the top of the public header hierarchy is. This path is\n# relative to the project's dir (PROJECT_DIR). You can reference environment\n# variables using templating syntax (e.g. \"${TARGET_NAME}/Some/Subdir\")\n#\n# NOTE: Only used if config_deep_header_hierarchy is True.\n#\n# If this is set to None, the script will attempt to figure out for itself\n# where the top of the header hierarchy is by looking for common path prefixes\n# in the public header files. This process can fail if:\n# - You only have one public header file.\n# - Your source header files don't all have a common root.\n#\n# A common approach is to use \"${TARGET_NAME}\", working under the assumption\n# that all of your header files share the common root of a directory under\n# your project with the same name as your target (which is the Xcode default).\n#\n# Recommended setting: \"${TARGET_NAME}\"\n#\nconfig_deep_header_top = \"${TARGET_NAME}\"\n\n# Warn when \"DerivedData\" is detected in any of the header, library, or\n# framework search paths. In almost all cases, references to directories under\n# DerivedData are added as a result of an Xcode bug and must be manually\n# removed.\n#\n# Recommended setting: True\n#\nconfig_warn_derived_data = True\n\n# Warn if no headers were marked public in this framework.\n#\n# Recommended setting: True\n#\nconfig_warn_no_public_headers = True\n\n# Cause the build to fail if any warnings are issued.\n#\n# Recommended setting: True\n#\nconfig_fail_on_warnings = True\n\n# Minimum log level\n#\n# Recommended setting: logging.INFO\n#\nconfig_log_level = logging.INFO\n\n\n##############################################################################\n#\n# Don't touch anything below here unless you know what you're doing.\n#\n##############################################################################\n\nimport collections\nimport json\nimport os\nimport re\nimport shlex\nimport shutil\nimport string\nimport subprocess\nimport sys\nimport time\nimport traceback\n\n\n##############################################################################\n#\n# Globals\n#\n##############################################################################\n\nlog = logging.getLogger('UFW')\n\nissued_warnings = False\n\n\n##############################################################################\n#\n# Classes\n#\n##############################################################################\n\n# Allows the slave build to communicate with the master build.\n#\nclass BuildState:\n\n    def __init__(self):\n        self.reload()\n\n    def reset(self):\n        self.slave_platform = None\n        self.slave_architectures = []\n        self.slave_linked_archive_paths = []\n        self.slave_built_fw_path = None\n        self.slave_built_embedded_fw_path = None\n\n    def set_slave_properties(self, architectures,\n                             linked_archive_paths,\n                             built_fw_path,\n                             built_embedded_fw_path):\n        self.slave_platform = os.environ['PLATFORM_NAME']\n        self.slave_architectures = architectures\n        self.slave_linked_archive_paths = linked_archive_paths\n        self.slave_built_fw_path = built_fw_path\n        self.slave_built_embedded_fw_path = built_embedded_fw_path\n\n    def get_save_path(self):\n        return os.path.join(os.environ['PROJECT_TEMP_DIR'], \"ufw_build_state.json\")\n\n    def persist(self):\n        filename = self.get_save_path()\n        parent = os.path.dirname(filename)\n        if not os.path.isdir(parent):\n            os.makedirs(parent)\n        with open(filename, \"w\") as f:\n            f.write(json.dumps(self.__dict__))\n\n    def reload(self):\n        self.reset()\n        filename = self.get_save_path()\n        if os.path.exists(filename):\n            with open(filename, \"r\") as f:\n                new_dict = json.loads(f.read())\n                if new_dict is not None:\n                    self.__dict__ = dict(self.__dict__.items() + new_dict.items())\n\n\n# Holds information about the current project and build environment.\n#\nclass Project:\n\n    def __init__(self, filename):\n        sourcecode_types = ['sourcecode.c.c',\n                            'sourcecode.c.objc',\n                            'sourcecode.cpp.cpp',\n                            'sourcecode.cpp.objcpp',\n                            'sourcecode.asm.asm',\n                            'sourcecode.asm.llvm',\n                            'sourcecode.nasm']\n\n        self.build_state = BuildState()\n        self.project_data = self.load_from_file(filename)\n        self.target = filter(lambda x: x['name'] == os.environ['TARGET_NAME'], self.project_data['targets'])[0]\n        self.public_headers = self.get_build_phase_files('PBXHeadersBuildPhase', lambda x: x.get('settings', False) and x['settings'].get('ATTRIBUTES', False) and 'Public' in x['settings']['ATTRIBUTES'])\n        self.static_libraries = self.get_build_phase_files('PBXFrameworksBuildPhase', lambda x: x['fileRef']['fileType'] == 'archive.ar' and x['fileRef']['sourceTree'] not in ['DEVELOPER_DIR', 'SDKROOT'])\n        self.static_frameworks = self.get_build_phase_files('PBXFrameworksBuildPhase', lambda x: x['fileRef']['fileType'] == 'wrapper.framework' and x['fileRef']['sourceTree'] not in ['DEVELOPER_DIR', 'SDKROOT'])\n        self.compilable_sources = self.get_build_phase_files('PBXSourcesBuildPhase', lambda x: x['fileRef']['fileType'] in sourcecode_types)\n        self.header_paths = [os.path.join(*x['pathComponents']) for x in self.public_headers]\n\n        self.headers_dir = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['CONTENTS_FOLDER_PATH'], 'Headers')\n        self.libtool_path = os.path.join(os.environ['DT_TOOLCHAIN_DIR'], 'usr', 'bin', 'libtool')\n        self.project_filename = os.path.join(os.environ['PROJECT_FILE_PATH'], \"project.pbxproj\")\n        self.local_exe_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])\n        self.local_architectures = os.environ['ARCHS'].split(' ')\n        self.local_built_fw_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['WRAPPER_NAME'])\n        self.local_built_embedded_fw_path = os.path.splitext(self.local_built_fw_path)[0] + \".embeddedframework\"\n        self.local_linked_archive_paths = [self.get_linked_ufw_archive_path(arch) for arch in self.local_architectures]\n        self.local_platform = os.environ['PLATFORM_NAME']\n        other_platforms = os.environ['SUPPORTED_PLATFORMS'].split(' ')\n        other_platforms.remove(self.local_platform)\n        self.other_platform = other_platforms[0]\n\n        sdk_name = os.environ['SDK_NAME']\n        if not sdk_name.startswith(self.local_platform):\n            raise Exception(\"%s didn't start with %s\" % (sdk_name, self.local_platform))\n        self.sdk_version = sdk_name[len(self.local_platform):]\n\n    # Load an Xcode project file.\n    #\n    def load_from_file(self, filename):\n        project_file = json.loads(subprocess.check_output([\"plutil\", \"-convert\", \"json\", \"-o\", \"-\", filename]))\n        all_objects = project_file['objects']\n        del project_file['objects']\n        for obj in all_objects.values():\n            self.fix_keys(obj)\n        self.unpack_objects(self.build_dereference_list(all_objects, None, None, project_file))\n        self.unpack_objects(self.build_dereference_list(all_objects, None, None, all_objects.values()))\n        project_data = project_file['rootObject']\n        self.build_full_paths(project_data, splitpath(os.environ['SOURCE_ROOT']))\n        return project_data\n\n    def is_key(self, obj):        \n        return isinstance(obj, basestring) and len(obj) == 24 and re.search('^[0-9a-fA-F]+$', obj) is not None\n    \n    def build_dereference_list(self, all_objects, parent, key, obj):\n        deref_list = []\n        if self.is_key(obj):\n            dereferenced = all_objects.get(obj, obj)\n            if dereferenced is not obj:\n                deref_list.append((parent, key, obj, dereferenced))\n        elif isinstance(obj, collections.Mapping):\n            for k, v in obj.iteritems():\n                deref_list += self.build_dereference_list(all_objects, obj, k, v)\n        elif isinstance(obj, collections.Iterable) and not isinstance(obj, basestring):\n            for item in obj:\n                deref_list += self.build_dereference_list(all_objects, obj, None, item)\n        return deref_list\n    \n    def unpack_objects(self, deref_list):\n        for parent, key, orig, obj in deref_list:\n            if key is None:\n                parent.remove(orig)\n                parent.append(obj)\n            else:\n                parent[key] = obj\n\n    # Store the full path, separated into components, to a node inside the node\n    # as \"pathComponents\". Also recurse into that node if it's a group.\n    #\n    def build_full_paths(self, node, base_path):\n        # Some nodes are relative to a different source tree, specified as an\n        # env variable.\n        if node.get('sourceTree', '<group>') != '<group>':\n            new_base_path = os.environ.get(node['sourceTree'], None)\n            if new_base_path:\n                base_path = splitpath(new_base_path)\n        # Add the current node's path, if any.\n        if node.get('path', False):\n            base_path = base_path + splitpath(node['path'])\n        node['pathComponents'] = base_path\n        # Recurse if this is a group.\n        if node['isa'] == 'PBXGroup':\n            for child in node['children']:\n                self.build_full_paths(child, base_path)\n        elif node['isa'] == 'PBXProject':\n            self.build_full_paths(node['mainGroup'], base_path)\n            self.build_full_paths(node['productRefGroup'], base_path)\n            for child in node['targets']:\n                self.build_full_paths(child, base_path)\n            projectRefs = node.get('projectReferences', None)\n            if projectRefs is not None:\n                for child in projectRefs[0].values():\n                    self.build_full_paths(child, base_path)\n\n    # Fix up any inconvenient keys.\n    #\n    def fix_keys(self, obj):\n        key_remappings = {'lastKnownFileType': 'fileType', 'explicitFileType': 'fileType'}\n        for key in list(set(key_remappings.keys()) & set(obj.keys())):\n            obj[key_remappings[key]] = obj[key]\n            del obj[key]\n\n    # Get the files from a build phase.\n    #\n    def get_build_phase_files(self, build_phase_name, filter_func):\n        build_phase = filter(lambda x: x['isa'] == build_phase_name, self.target['buildPhases'])[0]\n        build_files = filter(filter_func, build_phase['files'])\n        return [x['fileRef'] for x in build_files]\n\n    # Get the truncated paths of all headers that start with the specified\n    # relative path. Paths are read and returned as fully separated lists.\n    # e.g. ['Some', 'Path', 'To', 'A', 'Header'] with relative_path of\n    # ['Some', 'Path'] gets truncated to ['To', 'A', 'Header']\n    #\n    def movable_headers_relative_to(self, relative_path):\n        rel_path_length = len(relative_path)\n        result = filter(lambda path: len(path) >= rel_path_length and\n                                     path[:rel_path_length] == relative_path, self.header_paths)\n        return [path[rel_path_length:] for path in result]\n\n    # Get the full path to where a linkable archive (library or framework)\n    # is supposed to be.\n    #\n    def get_linked_archive_path(self, architecture):\n        return os.path.join(os.environ['OBJECT_FILE_DIR_%s' % os.environ['CURRENT_VARIANT']],\n                            architecture,\n                            os.environ['EXECUTABLE_NAME'])\n\n    # Get the full path to our custom linked archive of the project.\n    #\n    def get_linked_ufw_archive_path(self, architecture):\n        return self.get_linked_archive_path(architecture) + \".ufwbuild\"\n\n    # Get the full path to the executable of an archive.\n    #\n    def get_exe_path(self, node):\n        path = os.path.join(*node['pathComponents'])\n        if node['fileType'] == 'wrapper.framework':\n            # Frameworks are directories, so go one deeper\n            path = os.path.join(path, os.path.splitext(node['pathComponents'][-1])[0])\n        return path\n\n    # Get the path to the directory containing the archive.\n    #\n    def get_containing_path(self, node):\n        return os.path.join(*node['pathComponents'])\n    \n    def get_archive_search_paths(self):\n        log.info(\"Search paths = %s\" % set([self.get_containing_path(fw) for fw in self.static_frameworks] + [self.get_containing_path(fw) for fw in self.static_libraries]))\n        return set([self.get_containing_path(fw) for fw in self.static_frameworks] + [self.get_containing_path(fw) for fw in self.static_libraries])\n\n    # Command to link all objects of a single architecture.\n    #\n    def get_single_arch_link_command(self, architecture):\n        cmd = [self.libtool_path,\n               \"-static\",\n               \"-arch_only\", architecture,\n               \"-syslibroot\", os.environ['SDKROOT'],\n               \"-L%s\" % os.environ['TARGET_BUILD_DIR'],\n               \"-filelist\", os.environ['LINK_FILE_LIST_%s_%s' % (os.environ['CURRENT_VARIANT'], architecture)]]\n        if os.environ.get('OTHER_LDFLAGS', False):\n            cmd += [os.environ['OTHER_LDFLAGS']]\n        if os.environ.get('WARNING_LDFLAGS', False):\n            cmd += [os.environ['WARNING_LDFLAGS']]\n#        cmd += [\"-L%s\" % libpath for libpath in self.get_archive_search_paths()]\n        cmd += [self.get_exe_path(fw) for fw in self.static_frameworks]\n        cmd += [self.get_exe_path(lib) for lib in self.static_libraries]\n        cmd += [\"-o\", self.get_linked_ufw_archive_path(architecture)]\n        return cmd\n\n    # Command to link all local architectures for the current configuration\n    # into an archive. This reads all libraries + the UFW-built archives and\n    # overwrites the final product.\n    #\n    def get_local_archs_link_command(self):\n        cmd = [self.libtool_path,\n               \"-static\"]\n        cmd += self.local_linked_archive_paths\n        cmd += [self.get_exe_path(fw) for fw in self.static_frameworks]\n        cmd += [self.get_exe_path(lib) for lib in self.static_libraries]\n        cmd += [\"-o\", os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])]\n        return cmd\n\n    # Command to link all architectures into a universal archive.\n    # This reads all UFW-built archives and overwrites the final product.\n    #\n    def get_all_archs_link_command(self):\n        cmd = [self.libtool_path,\n               \"-static\"]\n        cmd += self.local_linked_archive_paths + self.build_state.slave_linked_archive_paths\n        cmd += [\"-o\", os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])]\n        return cmd\n\n    # Build up an environment for the slave process. This uses BUILD_ROOT\n    # and TEMP_ROOT to convert all environment variables to values suitable\n    # for the slave build environment so that xcodebuild doesn't try to build\n    # in the project directory under \"build\".\n    #\n    def get_slave_environment(self):\n        ignored = ['LD_MAP_FILE_PATH',\n        'HEADER_SEARCH_PATHS',\n        'LIBRARY_SEARCH_PATHS',\n        'FRAMEWORK_SEARCH_PATHS']\n        build_root = os.environ['BUILD_ROOT']\n        temp_root = os.environ['TEMP_ROOT']\n        newenv = {}\n        for key, value in os.environ.items():\n            if key not in ignored and not key.startswith('LINK_FILE_LIST_') and not key.startswith('LD_DEPENDENCY_'):\n                if build_root in value or temp_root in value:\n                    newenv[key] = value.replace(self.local_platform, self.other_platform)\n        return newenv\n\n    # Command to invoke xcodebuild on the slave platform.\n    #\n    def get_slave_project_build_command(self):\n        cmd = [\"xcodebuild\",\n               \"-project\",\n               os.environ['PROJECT_FILE_PATH'],\n               \"-target\",\n               os.environ['TARGET_NAME'],\n               \"-configuration\",\n               os.environ['CONFIGURATION'],\n               \"-sdk\",\n               self.other_platform + self.sdk_version]\n        cmd += [\"%s=%s\" % (key, value) for key, value in self.get_slave_environment().items()]\n        cmd += [\"UFW_MASTER_PLATFORM=\" + os.environ['PLATFORM_NAME']]\n        cmd += [os.environ['ACTION']]\n        return cmd\n\n\n\n##############################################################################\n#\n# Utility Functions\n#\n##############################################################################\n\n# Split a path into a list of path components.\n#\ndef splitpath(path, maxdepth=20):\n     (head, tail) = os.path.split(path)\n     return splitpath(head, maxdepth - 1) + [tail] if maxdepth and head and head != path else [ head or tail ]\n\n# Remove all subdirectories under a path.\n#\ndef remove_subdirs(path, ignore_files):\n    if os.path.exists(path):\n        for filename in filter(lambda x: x not in ignore_files, os.listdir(path)):\n            fullpath = os.path.join(path, filename)\n            if os.path.isdir(fullpath):\n                log.info(\"Remove %s\" % fullpath)\n                shutil.rmtree(fullpath)\n\n# Make whatever parent paths are necessary for a path to exist.\n#\ndef ensure_path_exists(path):\n    if not os.path.isdir(path):\n        os.makedirs(path)\n\n# Make whatever parent paths are necessary for a path's parent to exist.\n#\ndef ensure_parent_exists(path):\n    parent = os.path.dirname(path)\n    if not os.path.isdir(parent):\n        os.makedirs(parent)\n\n# Remove a file or dir if it exists.\n#\ndef remove_path(path):\n    if os.path.exists(path):\n        if os.path.isdir(path):\n            shutil.rmtree(path)\n        else:\n            os.remove(path)\n\n# Move a file or dir, replacing the destination if it exists.\n#\ndef move_file(src, dst):\n    if src == dst or not os.path.isfile(src):\n        return\n    log.info(\"Move %s to %s\" % (src, dst))\n    ensure_parent_exists(dst)\n    remove_path(dst)\n    shutil.move(src, dst)\n\n# Copy a file or dir, replacing the destination if it exists already.\n#\ndef copy_overwrite(src, dst):\n    if src != dst:\n        remove_path(dst)\n        ensure_parent_exists(dst)\n        shutil.copytree(src, dst, symlinks=True)\n\n# Attempt to symlink link_path -> link_to.\n# link_to must be a path relative to link_path's parent and must exist.\n# If link_path already exists, do nothing.\n#\ndef attempt_symlink(link_path, link_to):\n    # Only allow linking to an existing file\n    os.stat(os.path.abspath(os.path.join(link_path, \"..\", link_to)))\n\n    # Only make the link if it hasn't already been made\n    if not os.path.exists(link_path):\n        log.info(\"Symlink %s -> %s\" % (link_path, link_to))\n        os.symlink(link_to, link_path)\n\n# Takes the last entry in an array-based path and returns a normal path\n# relative to base_path.\n#\ndef top_level_file_path(base_path, path_list):\n    return os.path.join(base_path, os.path.split(path_list[-1])[-1])\n\n# Takes all entries in an array-based path and returns a normal path\n# relative to base_path.\n#\ndef full_file_path(base_path, path_list):\n    return os.path.join(*([base_path] + path_list))\n\n# Print a command before executing it.\n# Also print out all output from the command to STDOUT.\n#\ndef print_and_call(cmd):\n    log.info(\"Cmd \" + \" \".join(cmd))\n    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)\n    result = p.communicate()[0]\n    if len(result) > 0:\n        log.info(result)\n    if p.returncode != 0:\n        raise subprocess.CalledProcessError(p.returncode, cmd)\n\n# Special print-and-call command for the slave build that strips out\n# xcodebuild's spammy list of environment variables.\n#\ndef print_and_call_slave_build(cmd, other_platform):\n    separator = '=== BUILD NATIVE TARGET '\n    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)\n    result = p.communicate()[0].split(separator)\n    if len(result) == 1:\n        result = result[0]\n    else:\n        result = separator + result[1]\n    log.info(\"Cmd \" + \" \".join(cmd) + \"\\n\" + result)\n    if p.returncode != 0:\n        raise subprocess.CalledProcessError(p.returncode, cmd)\n\n# Issue a warning and record that a warning has been issued.\n#\ndef issue_warning(msg, *args, **kwargs):\n    global issued_warnings\n    issued_warnings = True\n    log.warn(msg, *args, **kwargs)\n\n\n\n##############################################################################\n#\n# Main Application\n#\n##############################################################################\n\n# Check if we are running as master.\n#\ndef is_master():\n    return os.environ.get('UFW_MASTER_PLATFORM', os.environ['PLATFORM_NAME']) == os.environ['PLATFORM_NAME']\n\n# DerivedData should almost never appear in any framework, library, or header\n# search paths. However, Xcode will sometimes add them in, so we check to make\n# sure.\n#\ndef check_for_derived_data_in_search_paths(project):\n    search_path_keys = [\"FRAMEWORK_SEARCH_PATHS\", \"LIBRARY_SEARCH_PATHS\", \"HEADER_SEARCH_PATHS\"]\n    build_configs = project.target['buildConfigurationList']['buildConfigurations']\n    build_settings = filter(lambda x: x['name'] == os.environ['CONFIGURATION'], build_configs)[0]['buildSettings']\n    \n    found_something = False\n    for path_key in filter(lambda x: x in build_settings, search_path_keys):\n        path = build_settings[path_key]\n        if \"DerivedData\" in path:\n            found_something = True\n            log.warn(\"Derived data in %s\" % path)\n            issue_warning(\"'%s' contains reference to 'DerivedData'.\" % path_key)\n    if found_something:\n        log.warn(\"Check your build settings and remove any entries that contain paths inside the DerivedData folder.\")\n        log.warn(\"Otherwise you can disable this warning by changing 'config_warn_derived_data' in this script.\")\n\n# Link local architectures into their respective archives.\n#\ndef link_local_archs(project):\n    for arch in project.local_architectures:\n        print_and_call(project.get_single_arch_link_command(arch))\n\n# Link only the local architectures into the final product, not the slave\n# architectures. For iphoneos, this will be armv6, armv7. For simulator, this\n# will be i386.\n#\ndef link_combine_local_archs(project):\n    print_and_call(project.get_local_archs_link_command())\n\n# Link all architectures into the final product.\n#\ndef link_combine_all_archs(project):\n    print_and_call(project.get_all_archs_link_command())\n\n# Check if we should open the build directory after a successful build.\n#\ndef should_open_build_dir():\n    env_setting = os.environ.get('UFW_OPEN_BUILD_DIR', None)\n    if env_setting is not None:\n        return env_setting\n\n    return config_open_build_dir\n\n# Open the build dir in Finder.\n#\ndef open_build_dir():\n    print_and_call(['open', os.environ['TARGET_BUILD_DIR']])\n\n# Check if the build was started by selecting \"Archive\" under \"Product\" in\n# Xcode.\n#\ndef is_archive_build():\n    # ACTION is always 'build', but perhaps Apple will fix this someday?\n    archive_build = os.environ['ACTION'] == 'archive'\n\n    if not archive_build:\n        # This can be passed in as an env variable when building from command line.\n        archive_build = os.environ.get('UFW_ACTION', None) == 'archive'\n\n    build_dir = splitpath(os.environ['BUILD_DIR'])\n    if not archive_build:\n        # This partial path is used when you select \"archive\" from within Xcode.\n        archive_build = 'ArchiveIntermediates' in build_dir\n\n    # It only counts as a full archive build if this target is being built into\n    # its own build dir (not being built as a dependency of another target)\n    if archive_build:\n        archive_build = os.environ['TARGET_NAME'] in build_dir\n    \n    return archive_build\n\n# Xcode by default throws all public headers into the top level directory.\n# This function moves them to their expected deep hierarchy.\n#\ndef build_deep_header_hierarchy(project):\n    header_path_top = config_deep_header_top\n    if not header_path_top:\n        header_path_top = os.path.commonprefix(project.header_paths)\n    else:\n        header_path_top = splitpath(header_path_top)\n\n    built_headers_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['PUBLIC_HEADERS_FOLDER_PATH'])\n    movable_headers = project.movable_headers_relative_to(header_path_top)\n\n    # Remove subdirs if they only contain files that have been rebuilt\n    ignore_headers = filter(lambda x: not os.path.isfile(top_level_file_path(built_headers_path, x)), movable_headers)\n    remove_subdirs(built_headers_path, [file[0] for file in ignore_headers])\n\n    # Move rebuilt headers into their proper subdirs\n    for header in movable_headers:\n        move_file(top_level_file_path(built_headers_path, header), full_file_path(built_headers_path, header))\n\n# Add all symlinks needed to make a full framework structure:\n#\n# MyFramework.framework\n# |-- MyFramework -> Versions/Current/MyFramework\n# |-- Headers -> Versions/Current/Headers\n# |-- Resources -> Versions/Current/Resources\n# `-- Versions\n#     |-- A\n#     |   |-- MyFramework\n#     |   |-- Headers\n#     |   |   `-- MyFramework.h\n#     |   `-- Resources\n#     |       |-- Info.plist\n#     |       |-- MyViewController.nib\n#     |       `-- en.lproj\n#     |           `-- InfoPlist.strings\n#     `-- Current -> A\n#\ndef add_symlinks_to_framework(project):\n    base_dir = project.local_built_fw_path\n    attempt_symlink(os.path.join(base_dir, \"Versions\", \"Current\"), os.environ['FRAMEWORK_VERSION'])\n    if os.path.isdir(os.path.join(base_dir, \"Versions\", \"Current\", \"Headers\")):\n        attempt_symlink(os.path.join(base_dir, \"Headers\"), os.path.join(\"Versions\", \"Current\", \"Headers\"))\n    if os.path.isdir(os.path.join(base_dir, \"Versions\", \"Current\", \"Resources\")):\n        attempt_symlink(os.path.join(base_dir, \"Resources\"), os.path.join(\"Versions\", \"Current\", \"Resources\"))\n    attempt_symlink(os.path.join(base_dir, os.environ['EXECUTABLE_NAME']), os.path.join(\"Versions\", \"Current\", os.environ['EXECUTABLE_NAME']))\n\n# Build an embedded framework structure.\n# An embedded framework contains the actual framework, plus a \"Resources\"\n# directory containing symlinks to all resources found in the actual framework,\n# with the exception of \"Info.plist\" and anything ending in \".lproj\":\n#\n# MyFramework.embeddedframework\n# |-- MyFramework.framework\n# |   |-- MyFramework -> Versions/Current/MyFramework\n# |   |-- Headers -> Versions/Current/Headers\n# |   |-- Resources -> Versions/Current/Resources\n# |   `-- Versions\n# |       |-- A\n# |       |   |-- MyFramework\n# |       |   |-- Headers\n# |       |   |   `-- MyFramework.h\n# |       |   `-- Resources\n# |       |       |-- Info.plist\n# |       |       |-- MyViewController.nib\n# |       |       `-- en.lproj\n# |       |           `-- InfoPlist.strings\n# |       `-- Current -> A\n# `-- Resources\n#     `-- MyViewController.nib -> ../MyFramework.framework/Resources/MyViewController.nib\n#\ndef build_embedded_framework(project):\n    fw_path = project.local_built_fw_path\n    embedded_path = project.local_built_embedded_fw_path\n    fw_name = os.environ['WRAPPER_NAME']\n    remove_path(embedded_path)\n    ensure_path_exists(embedded_path)\n    copy_overwrite(fw_path, os.path.join(embedded_path, fw_name))\n    ensure_path_exists(os.path.join(embedded_path, \"Resources\"))\n    symlink_source = os.path.join(\"..\", fw_name, \"Resources\")\n    symlink_path = os.path.join(embedded_path, \"Resources\")\n    if os.path.isdir(os.path.join(fw_path, \"Resources\")):\n        for file in filter(lambda x: x != \"Info.plist\" and not x.endswith(\".lproj\"), os.listdir(os.path.join(fw_path, \"Resources\"))):\n            attempt_symlink(os.path.join(symlink_path, file), os.path.join(symlink_source, file))\n\n    # Remove the normal framework and replace it with a symlink to the copy\n    # in the embedded framework. This is needed because Xcode runs its strip\n    # phase AFTER the script runs.\n    embed_fw_wrapper = os.path.splitext(os.environ['WRAPPER_NAME'])[0] + \".embeddedframework\"\n    remove_path(fw_path)\n    attempt_symlink(fw_path, os.path.join(embed_fw_wrapper, os.environ['WRAPPER_NAME']))\n\n\n# Run the build process in slave mode to build the other configuration\n# (device/simulator).\n#\ndef run_slave_build(project):\n    print_and_call_slave_build(project.get_slave_project_build_command(), project.other_platform)\n\n# Run the build process.\n#\ndef run_build():\n    project = Project(os.path.join(os.environ['PROJECT_FILE_PATH'], \"project.pbxproj\"))\n\n    # Issue warnings only if we're master.\n    if is_master():\n        if len(project.compilable_sources) == 0:\n            raise Exception(\"No compilable sources found. Please add at least one source file to build target %s.\" % os.environ['TARGET_NAME'])\n\n        if config_warn_derived_data:\n            check_for_derived_data_in_search_paths(project)\n        if config_warn_no_public_headers and len(project.public_headers) == 0:\n            issue_warning('No headers in build target %s were marked public. Please move at least one header to \"Public\" in the \"Copy Headers\" build phase.' % os.environ['TARGET_NAME'])\n\n    # Only build slave if this is an archive build.\n    if is_archive_build():\n        if is_master():\n            log.debug(\"Building as MASTER\")\n            # The slave-side linker tries to include this (nonexistent) path as\n            # a library path.\n            ensure_path_exists(project.get_slave_environment()['BUILT_PRODUCTS_DIR'])\n            project.build_state.persist()\n            run_slave_build(project)\n            project.build_state.reload()\n        else:\n            log.debug(\"Building as SLAVE\")\n            project.build_state.reload()\n            project.build_state.set_slave_properties(project.local_architectures,\n                                                     project.local_linked_archive_paths,\n                                                     project.local_built_fw_path,\n                                                     project.local_built_embedded_fw_path)\n            project.build_state.persist()\n\n    link_local_archs(project)\n    \n    # Only do a universal binary when building an archive.\n    if is_archive_build() and is_master():\n        link_combine_all_archs(project)\n    else:\n        link_combine_local_archs(project)\n\n    if config_deep_header_hierarchy:\n        build_deep_header_hierarchy(project)\n\n    add_symlinks_to_framework(project)\n    \n    if is_master():\n        if config_framework_type == 'embeddedframework':\n            build_embedded_framework(project)\n        elif config_framework_type != 'framework':\n            raise Exception(\"%s: Unknown framework type for config_framework_type\" % config_framework_type)\n\n\nif __name__ == \"__main__\":\n    log_handler = logging.StreamHandler()\n    log_handler.setFormatter(logging.Formatter(\"%(name)s (\" + os.environ['PLATFORM_NAME'] + \"): %(levelname)s: %(message)s\"))\n    log.addHandler(log_handler)\n    log.setLevel(config_log_level)\n\n    error_code = 0\n    prefix = \"M\" if is_master() else \"S\"\n    log_handler.setFormatter(logging.Formatter(\"%(name)s (\" + prefix + \" \" + os.environ['PLATFORM_NAME'] + \"): %(levelname)s: %(message)s\"))\n\n    log.debug(\"Begin build process\")\n\n    if config_deep_header_top:\n        config_deep_header_top = string.Template(config_deep_header_top).substitute(os.environ)\n\n    try:\n        run_build()\n        if issued_warnings:\n            if config_fail_on_warnings:\n                error_code = 1\n            log.warn(\"Build completed with warnings\")\n        else:\n            log.info(\"Build completed\")\n        if not is_archive_build():\n            log.info(\"Note: This is *NOT* a universal framework build. To build as a universal framework, do an archive build.\")\n            log.info(\"To do an archive build from command line, use \\\"xcodebuild -configuration Release UFW_ACTION=archive clean build\\\"\")\n    except Exception:\n        traceback.print_exc(file=sys.stdout)\n        error_code = 1\n        log.error(\"Build failed\")\n    finally:\n        if error_code == 0 and is_archive_build() and is_master():\n            log.info(\"Built framework is in \" + os.environ['TARGET_BUILD_DIR'])\n            if should_open_build_dir():\n                open_build_dir()\n        sys.exit(error_code)\n";
-			showEnvVarsInLog = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\nln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
+		};
+		C9825A2F1858C0EE00BBEF49 /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C9F452BA184D570900CD33E6 /* Sources */ = {
+		C98259BD1858BC9900BBEF49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F4531F184D576000CD33E6 /* UIImage+Mask.m in Sources */,
-				C9F45319184D576000CD33E6 /* UIColor+NeueColors.m in Sources */,
-				C9F452EF184D574B00CD33E6 /* CGRectManipulation.m in Sources */,
-				C9F4530F184D576000CD33E6 /* UIColor+Components.m in Sources */,
-				C9F4530B184D576000CD33E6 /* NSNumber+Hex.m in Sources */,
-				C9F452CB184D570900CD33E6 /* Colors.m in Sources */,
-				C9F45317184D576000CD33E6 /* UIColor+Manipulation.m in Sources */,
-				C9F45313184D576000CD33E6 /* UIColor+Hex.m in Sources */,
-				C9F45315184D576000CD33E6 /* UIColor+KeyColor.m in Sources */,
-				C9F4530D184D576000CD33E6 /* UIColor+ColorFinder.m in Sources */,
-				C9F45323184D576000CD33E6 /* UIImage+TBTint.m in Sources */,
-				C9F4531D184D576000CD33E6 /* UIImage+Crop.m in Sources */,
-				C9F45311184D576000CD33E6 /* UIColor+DeviceColor.m in Sources */,
-				C9F45321184D576000CD33E6 /* UIImage+Pixels.m in Sources */,
-				C9F4531B184D576000CD33E6 /* UIImage+Colors.m in Sources */,
+				C9825A111858BCD100BBEF49 /* UIImage+Mask.m in Sources */,
+				C9825A0E1858BCD100BBEF49 /* UIColor+NeueColors.m in Sources */,
+				C9825A061858BCD100BBEF49 /* CGRectManipulation.m in Sources */,
+				C9825A091858BCD100BBEF49 /* UIColor+Components.m in Sources */,
+				C9825A071858BCD100BBEF49 /* NSNumber+Hex.m in Sources */,
+				C9825A0D1858BCD100BBEF49 /* UIColor+Manipulation.m in Sources */,
+				C9825A0B1858BCD100BBEF49 /* UIColor+Hex.m in Sources */,
+				C9825A0C1858BCD100BBEF49 /* UIColor+KeyColor.m in Sources */,
+				C9825A081858BCD100BBEF49 /* UIColor+ColorFinder.m in Sources */,
+				C9825A131858BCD100BBEF49 /* UIImage+TBTint.m in Sources */,
+				C9825A101858BCD100BBEF49 /* UIImage+Crop.m in Sources */,
+				C9825A0A1858BCD100BBEF49 /* UIColor+DeviceColor.m in Sources */,
+				C9825A121858BCD100BBEF49 /* UIImage+Pixels.m in Sources */,
+				C9825A0F1858BCD100BBEF49 /* UIImage+Colors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9F452CC184D570900CD33E6 /* Sources */ = {
+		C98259CD1858BC9900BBEF49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F452E2184D570900CD33E6 /* ColorsTests.m in Sources */,
+				C98259E11858BC9900BBEF49 /* ColorsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C9F452D9184D570900CD33E6 /* PBXTargetDependency */ = {
+		C98259D81858BC9900BBEF49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C9F452BF184D570900CD33E6 /* Colors */;
-			targetProxy = C9F452D8184D570900CD33E6 /* PBXContainerItemProxy */;
+			target = C98259C01858BC9900BBEF49 /* Colors */;
+			targetProxy = C98259D71858BC9900BBEF49 /* PBXContainerItemProxy */;
+		};
+		C9825A2E1858C09D00BBEF49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C98259C01858BC9900BBEF49 /* Colors */;
+			targetProxy = C9825A2D1858C09D00BBEF49 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C9F452C5184D570900CD33E6 /* InfoPlist.strings */ = {
+		C98259DD1858BC9900BBEF49 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C9F452C6184D570900CD33E6 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C9F452DE184D570900CD33E6 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9F452DF184D570900CD33E6 /* en */,
+				C98259DE1858BC9900BBEF49 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -411,7 +439,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C9F452E3184D570900CD33E6 /* Debug */ = {
+		C98259E21858BC9900BBEF49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -449,7 +477,7 @@
 			};
 			name = Debug;
 		};
-		C9F452E4184D570900CD33E6 /* Release */ = {
+		C98259E31858BC9900BBEF49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -481,63 +509,41 @@
 			};
 			name = Release;
 		};
-		C9F452E6184D570900CD33E6 /* Debug */ = {
+		C98259E51858BC9900BBEF49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
-				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				DEAD_CODE_STRIPPING = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
+				DSTROOT = /tmp/Colors.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colors/Colors-Prefix.pch";
-				INFOPLIST_FILE = "Colors/Colors-Info.plist";
-				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
-				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
-				WRAPPER_EXTENSION = framework;
+				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
 		};
-		C9F452E7184D570900CD33E6 /* Release */ = {
+		C98259E61858BC9900BBEF49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
-				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
+				DSTROOT = /tmp/Colors.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colors/Colors-Prefix.pch";
-				INFOPLIST_FILE = "Colors/Colors-Info.plist";
-				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
-				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
-				WRAPPER_EXTENSION = framework;
+				STRIP_STYLE = "non-global";
 			};
 			name = Release;
 		};
-		C9F452E9184D570900CD33E6 /* Debug */ = {
+		C98259E81858BC9900BBEF49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Colors.framework/Versions/A/Colors";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -550,24 +556,15 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "ColorsTests/ColorsTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					"$(UFW_FAKE_FRAMEWORK_NAME)",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				UFW_FAKE_FRAMEWORK_NAME = Colors;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		C9F452EA184D570900CD33E6 /* Release */ = {
+		C98259E91858BC9900BBEF49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Colors.framework/Versions/A/Colors";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -576,50 +573,65 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colors/Colors-Prefix.pch";
 				INFOPLIST_FILE = "ColorsTests/ColorsTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					"$(UFW_FAKE_FRAMEWORK_NAME)",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				UFW_FAKE_FRAMEWORK_NAME = Colors;
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		C9825A2B1858C09400BBEF49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C9825A2C1858C09400BBEF49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C9F452B9184D570900CD33E6 /* Build configuration list for PBXProject "Colors" */ = {
+		C98259BC1858BC9900BBEF49 /* Build configuration list for PBXProject "Colors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C9F452E3184D570900CD33E6 /* Debug */,
-				C9F452E4184D570900CD33E6 /* Release */,
+				C98259E21858BC9900BBEF49 /* Debug */,
+				C98259E31858BC9900BBEF49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9F452E5184D570900CD33E6 /* Build configuration list for PBXNativeTarget "Colors" */ = {
+		C98259E41858BC9900BBEF49 /* Build configuration list for PBXNativeTarget "Colors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C9F452E6184D570900CD33E6 /* Debug */,
-				C9F452E7184D570900CD33E6 /* Release */,
+				C98259E51858BC9900BBEF49 /* Debug */,
+				C98259E61858BC9900BBEF49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9F452E8184D570900CD33E6 /* Build configuration list for PBXNativeTarget "ColorsTests" */ = {
+		C98259E71858BC9900BBEF49 /* Build configuration list for PBXNativeTarget "ColorsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C9F452E9184D570900CD33E6 /* Debug */,
-				C9F452EA184D570900CD33E6 /* Release */,
+				C98259E81858BC9900BBEF49 /* Debug */,
+				C98259E91858BC9900BBEF49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9825A2A1858C09400BBEF49 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9825A2B1858C09400BBEF49 /* Debug */,
+				C9825A2C1858C09400BBEF49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C9F452B6184D570900CD33E6 /* Project object */;
+	rootObject = C98259B91858BC9900BBEF49 /* Project object */;
 }
