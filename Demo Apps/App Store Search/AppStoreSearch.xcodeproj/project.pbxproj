@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C914137E1858C2E20076F96A /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C914137D1858C2E20076F96A /* Colors.framework */; };
+		C95100F7185A494A0059E76C /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95100F6185A494A0059E76C /* Colors.framework */; };
 		C95BF5FD183854C700B1B69F /* AppRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF5FC183854C700B1B69F /* AppRecord.m */; };
 		C95BF6001838565E00B1B69F /* MTZAppRecordDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF5FF1838565E00B1B69F /* MTZAppRecordDownloader.m */; };
 		C95BF6061838778200B1B69F /* MTZStarsRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6051838778200B1B69F /* MTZStarsRatingView.m */; };
@@ -48,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C914137D1858C2E20076F96A /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
+		C95100F6185A494A0059E76C /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C95BF5FB183854C700B1B69F /* AppRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRecord.h; sourceTree = "<group>"; };
 		C95BF5FC183854C700B1B69F /* AppRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRecord.m; sourceTree = "<group>"; };
 		C95BF5FE1838565E00B1B69F /* MTZAppRecordDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZAppRecordDownloader.h; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			files = (
 				C9FBE0FC1836799200F1DEF5 /* CoreGraphics.framework in Frameworks */,
 				C9FBE0FE1836799200F1DEF5 /* UIKit.framework in Frameworks */,
-				C914137E1858C2E20076F96A /* Colors.framework in Frameworks */,
+				C95100F7185A494A0059E76C /* Colors.framework in Frameworks */,
 				C9FBE0FA1836799200F1DEF5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +158,7 @@
 		C9FBE0F81836799200F1DEF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C914137D1858C2E20076F96A /* Colors.framework */,
+				C95100F6185A494A0059E76C /* Colors.framework */,
 				C9FBE0F91836799200F1DEF5 /* Foundation.framework */,
 				C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */,
 				C9FBE0FD1836799200F1DEF5 /* UIKit.framework */,
