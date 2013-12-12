@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C926217617D51C250095AE1C"
                BuildableName = "Colors.app"
-               BlueprintName = "Colors"
-               ReferencedContainer = "container:Colors.xcodeproj">
+               BlueprintName = "Music"
+               ReferencedContainer = "container:Music.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C926219A17D51C250095AE1C"
                BuildableName = "ColorsTests.xctest"
-               BlueprintName = "ColorsTests"
-               ReferencedContainer = "container:Colors.xcodeproj">
+               BlueprintName = "MusicTests"
+               ReferencedContainer = "container:Music.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C926217617D51C250095AE1C"
             BuildableName = "Colors.app"
-            BlueprintName = "Colors"
-            ReferencedContainer = "container:Colors.xcodeproj">
+            BlueprintName = "Music"
+            ReferencedContainer = "container:Music.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C926217617D51C250095AE1C"
             BuildableName = "Colors.app"
-            BlueprintName = "Colors"
-            ReferencedContainer = "container:Colors.xcodeproj">
+            BlueprintName = "Music"
+            ReferencedContainer = "container:Music.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C926217617D51C250095AE1C"
             BuildableName = "Colors.app"
-            BlueprintName = "Colors"
-            ReferencedContainer = "container:Colors.xcodeproj">
+            BlueprintName = "Music"
+            ReferencedContainer = "container:Music.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
