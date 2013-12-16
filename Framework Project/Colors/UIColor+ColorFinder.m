@@ -14,7 +14,7 @@
 - (UIColor *)mostSimilarColorInSet:(NSSet *)colors
 {
 	UIColor *closestColor = nil;
-	CGFloat closestDifference = DBL_MAX;
+	CGFloat closestDifference = CGFLOAT_MAX;
 	for ( UIColor *color in colors ) {
 		CGFloat difference = [UIColor differenceBetweenColor:self andColor:color];
 		if ( difference < closestDifference ) {

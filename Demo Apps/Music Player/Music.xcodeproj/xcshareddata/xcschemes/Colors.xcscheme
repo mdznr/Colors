@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C926217617D51C250095AE1C"
-               BuildableName = "Colors.app"
+               BuildableName = "Music.app"
                BlueprintName = "Music"
                ReferencedContainer = "container:Music.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C926219A17D51C250095AE1C"
-               BuildableName = "ColorsTests.xctest"
+               BuildableName = "MusicTests.xctest"
                BlueprintName = "MusicTests"
                ReferencedContainer = "container:Music.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C926217617D51C250095AE1C"
-            BuildableName = "Colors.app"
+            BuildableName = "Music.app"
             BlueprintName = "Music"
             ReferencedContainer = "container:Music.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C926217617D51C250095AE1C"
-            BuildableName = "Colors.app"
+            BuildableName = "Music.app"
             BlueprintName = "Music"
             ReferencedContainer = "container:Music.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C926217617D51C250095AE1C"
-            BuildableName = "Colors.app"
+            BuildableName = "Music.app"
             BlueprintName = "Music"
             ReferencedContainer = "container:Music.xcodeproj">
          </BuildableReference>

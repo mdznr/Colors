@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9F13485C-92B9-48E6-8C8C-F6D3C9B30FB3</string>
+	<string>13BDDC9F-3F4D-47D8-B12D-583D8DFBE635</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AppStoreSearch</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>42D415BF-5007-43CD-9303-43FADC9E4BC9</key>
+		<key>A7A16B1B-9264-4F25-A46D-6F4C42A073CB</key>
 		<string>https://github.com/mdznr/Colors</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Demo Apps/App Store Search/AppStoreSearch.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>42D415BF-5007-43CD-9303-43FADC9E4BC9</key>
+		<key>A7A16B1B-9264-4F25-A46D-6F4C42A073CB</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>42D415BF-5007-43CD-9303-43FADC9E4BC9</string>
+	<string>A7A16B1B-9264-4F25-A46D-6F4C42A073CB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>42D415BF-5007-43CD-9303-43FADC9E4BC9</string>
+			<string>A7A16B1B-9264-4F25-A46D-6F4C42A073CB</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Colors</string>
 		</dict>

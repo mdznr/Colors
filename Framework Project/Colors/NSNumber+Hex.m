@@ -88,7 +88,7 @@ unichar hexCharacterForInteger(NSInteger integer)
 		runningTotal *= (i*16);
 		runningTotal += integerFromHexCharacter(hexCharacter);
 	}
-	return [NSNumber numberWithInt:runningTotal];
+	return [NSNumber numberWithLong:runningTotal];
 }
 
 
