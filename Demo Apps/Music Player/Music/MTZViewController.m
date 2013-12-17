@@ -372,8 +372,10 @@
 
 - (void)refreshColorsForIdiomPad
 {
+#warning position album art vertically to maximize contrast of text against that part of image?
+#warning use cropped image (only part that appears on screen)?
 	UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor]]
-												withMinimumContrast:UIColorContrastLevelLow];
+												withMinimumContrast:UIColorContrastLevelMedium];
 	// Default to black otherwise
 	bg = (bg) ? bg : UIColor.blackColor;
 	_overlayView.backgroundColor = [bg colorWithAlphaComponent:0.8f];
