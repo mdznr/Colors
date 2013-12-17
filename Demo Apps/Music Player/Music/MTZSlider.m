@@ -41,9 +41,11 @@
 
 - (void)setup
 {
+	self.inset = 0;
+	
 	[self setThumbImage:[UIImage imageNamed:@"Thumb"] forState:UIControlStateNormal];
 	
-	[self setMaximumTrackImage:[_trackImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
+	[self setMaximumTrackImage:[_trackImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, _inset, 0, _inset)]
 					  forState:UIControlStateNormal];
 	
 	[self updateFillImage];
@@ -52,7 +54,7 @@
 - (void)setTrackImage:(UIImage *)trackImage
 {
 	_trackImage = trackImage;
-	[self setMaximumTrackImage:[_trackImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
+	[self setMaximumTrackImage:[_trackImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, _inset, 0, _inset)]
 					  forState:UIControlStateNormal];
 }
 
@@ -66,7 +68,7 @@
 {
 #warning set unfilled slider to translucent version of bg color?
 	UIImage *fill = [_fillImage tintedImageWithColor:self.tintColor];
-    [self setMinimumTrackImage:[fill resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)]
+    [self setMinimumTrackImage:[fill resizableImageWithCapInsets:UIEdgeInsetsMake(0, _inset, 0, _inset)]
 					  forState:UIControlStateNormal];
 }
 

@@ -20,4 +20,7 @@
 ///	The image to cover the unfilled area of the slider (the right side)
 @property (strong, nonatomic) UIImage *trackImage;
 
+/// The size of the inset of the image
+@property (nonatomic) CGFloat inset;
+
 @end

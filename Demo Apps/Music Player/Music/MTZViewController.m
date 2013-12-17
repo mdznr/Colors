@@ -60,7 +60,7 @@
 	UIUserInterfaceIdiom idiom = UIDevice.currentDevice.userInterfaceIdiom;
 	switch ( idiom ) {
 		case UIUserInterfaceIdiomPad: {
-			
+			_trackSlider.inset = 0;
 #if IPAD_MOTION_FX
 			// Album art has motion effects
 			CGFloat motion = 40;
@@ -81,6 +81,7 @@
 		default: {
 			// Track Slider has special features for iPhone/iPod touch
 			_trackSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,1,216,34}];
+			_trackSlider.inset = 3;
 			[_trackSlider addTarget:self
 							 action:@selector(trackSliderChangedValue:)
 				   forControlEvents:UIControlEventValueChanged];
@@ -100,6 +101,7 @@
 					forControlEvents:UIControlEventValueChanged];
 			_volumeSlider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 			_volumeSlider.value = _player.volume;
+			_volumeSlider.inset = 3;
 			_volumeSlider.fillImage = [UIImage imageNamed:@"VolumeFill"];
 			_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
 			[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
