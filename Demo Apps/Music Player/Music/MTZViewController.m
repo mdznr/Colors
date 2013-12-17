@@ -380,6 +380,21 @@
 	_trackSlider.tintColor = color;
 }
 
+- (IBAction)didSwipe:(UISwipeGestureRecognizer *)sender
+{
+	switch ( sender.direction ) {
+		case UISwipeGestureRecognizerDirectionRight: {
+			[self previous:sender];
+		} break;
+		case UISwipeGestureRecognizerDirectionLeft: {
+			[self skip:sender];
+		} break;
+		default:
+			break;
+	}
+}
+
+
 - (IBAction)playPause:(id)sender
 {
 	if ( _player.playbackState == MPMusicPlaybackStatePlaying ) {
@@ -396,7 +411,7 @@
 
 - (IBAction)fastForward:(UILongPressGestureRecognizer *)sender
 {
-#warning this should behave differently if paused
+#warning this should behave differently if paused (do not show change in play/pause)
 	switch (sender.state) {
 		case UIGestureRecognizerStateBegan:
 			[_player beginSeekingForward];
@@ -411,13 +426,12 @@
 
 - (IBAction)previous:(id)sender
 {
-#warning go to previous item if in the first few seconds of playback else, go to beginning of song
 	[_player skipToPreviousItem];
 }
 
 - (IBAction)rewind:(UILongPressGestureRecognizer *)sender
 {
-#warning this should behave differently if paused
+#warning this should behave differently if paused (do not show change in play/pause)
 	switch (sender.state) {
 		case UIGestureRecognizerStateBegan:
 			[_player beginSeekingBackward];

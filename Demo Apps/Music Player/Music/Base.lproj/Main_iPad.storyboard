@@ -159,9 +159,14 @@
                                     <constraint firstItem="Q6i-7L-26s" firstAttribute="trailing" secondItem="3zm-Nf-T3O" secondAttribute="trailing" id="yvu-6j-ys2"/>
                                     <constraint firstItem="XiP-uv-aj6" firstAttribute="leading" secondItem="jW1-o7-AOV" secondAttribute="trailing" constant="22" id="zkc-lA-bxk"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vM3-Ai-uEa" appends="YES" id="T93-lL-Pjv"/>
+                                    <outletCollection property="gestureRecognizers" destination="Xpk-eA-Hvy" appends="YES" id="zul-uL-Qrw"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Mz1-LV-Psu" firstAttribute="top" secondItem="6HQ-ql-rs8" secondAttribute="top" id="0V0-ms-LD7"/>
                             <constraint firstItem="Mz1-LV-Psu" firstAttribute="leading" secondItem="6HQ-ql-rs8" secondAttribute="leading" id="0Wu-DP-C7P"/>
@@ -197,6 +202,16 @@
                         <action selector="rewind:" destination="w5r-tw-22r" id="12t-AN-yg0"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Xpk-eA-Hvy">
+                    <connections>
+                        <action selector="didSwipe:" destination="w5r-tw-22r" id="nnu-WH-qqq"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="vM3-Ai-uEa">
+                    <connections>
+                        <action selector="didSwipe:" destination="w5r-tw-22r" id="HX3-NH-Jiu"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="252" y="46"/>
         </scene>
