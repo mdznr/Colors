@@ -125,6 +125,19 @@
 	[self updatePlaybackTime];
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+	UIUserInterfaceIdiom idiom = UIDevice.currentDevice.userInterfaceIdiom;
+	
+	switch ( idiom ) {
+		case UIUserInterfaceIdiomPad:
+			return YES;
+		case UIUserInterfaceIdiomPhone:
+		default:
+			return NO;
+	}
+}
+
 - (void)checkPlaybackStatus
 {
 	if ( _player.playbackState == MPMusicPlaybackStatePlaying ) {

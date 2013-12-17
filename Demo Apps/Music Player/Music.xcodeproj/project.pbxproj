@@ -13,12 +13,12 @@
 		C926219D17D51C250095AE1C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926219C17D51C250095AE1C /* XCTest.framework */; };
 		C926219E17D51C250095AE1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217A17D51C250095AE1C /* Foundation.framework */; };
 		C926219F17D51C250095AE1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217E17D51C250095AE1C /* UIKit.framework */; };
+		C94F4D201860BABE007D7744 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A50468185FCD6F00EF9BB5 /* Main_iPhone.storyboard */; };
+		C94F4D211860BAC0007D7744 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C983E4421860B0C100EF8AE2 /* Main_iPad.storyboard */; };
 		C9A5045F185FCD4600EF9BB5 /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5045E185FCD4600EF9BB5 /* MTZAppDelegate.m */; };
 		C9A50462185FCD4F00EF9BB5 /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A50461185FCD4F00EF9BB5 /* MTZViewController.m */; };
 		C9A50465185FCD5800EF9BB5 /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A50464185FCD5800EF9BB5 /* MTZSlider.m */; };
 		C9A50467185FCD5D00EF9BB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9A50466185FCD5D00EF9BB5 /* Images.xcassets */; };
-		C9A5046A185FCD6F00EF9BB5 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A50468185FCD6F00EF9BB5 /* Main_iPhone.storyboard */; };
-		C9A5046C185FCD7D00EF9BB5 /* Music-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A5046B185FCD7D00EF9BB5 /* Music-Info.plist */; };
 		C9A5046F185FCD8500EF9BB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5046E185FCD8500EF9BB5 /* main.m */; };
 		C9A50472185FCD9E00EF9BB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A50470185FCD9E00EF9BB5 /* InfoPlist.strings */; };
 		C9A50476185FCE7700EF9BB5 /* MusicTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A50475185FCE7700EF9BB5 /* MusicTests-Info.plist */; };
@@ -45,6 +45,7 @@
 		C926217E17D51C250095AE1C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C926219B17D51C250095AE1C /* MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C926219C17D51C250095AE1C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C983E4431860B0C100EF8AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Music/Base.lproj/Main_iPad.storyboard; sourceTree = SOURCE_ROOT; };
 		C9A5045D185FCD4600EF9BB5 /* MTZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZAppDelegate.h; path = Music/MTZAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		C9A5045E185FCD4600EF9BB5 /* MTZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTZAppDelegate.m; path = Music/MTZAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		C9A50460185FCD4F00EF9BB5 /* MTZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZViewController.h; path = Music/MTZViewController.h; sourceTree = SOURCE_ROOT; };
@@ -128,6 +129,7 @@
 				C9A5045D185FCD4600EF9BB5 /* MTZAppDelegate.h */,
 				C9A5045E185FCD4600EF9BB5 /* MTZAppDelegate.m */,
 				C9A50468185FCD6F00EF9BB5 /* Main_iPhone.storyboard */,
+				C983E4421860B0C100EF8AE2 /* Main_iPad.storyboard */,
 				C9A50460185FCD4F00EF9BB5 /* MTZViewController.h */,
 				C9A50461185FCD4F00EF9BB5 /* MTZViewController.m */,
 				C9A50463185FCD5800EF9BB5 /* MTZSlider.h */,
@@ -249,11 +251,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9A5046C185FCD7D00EF9BB5 /* Music-Info.plist in Resources */,
 				C9F6A726185FCE8C00B749D9 /* InfoPlist.strings in Resources */,
 				C9A50472185FCD9E00EF9BB5 /* InfoPlist.strings in Resources */,
 				C9A50476185FCE7700EF9BB5 /* MusicTests-Info.plist in Resources */,
-				C9A5046A185FCD6F00EF9BB5 /* Main_iPhone.storyboard in Resources */,
+				C94F4D201860BABE007D7744 /* Main_iPhone.storyboard in Resources */,
+				C94F4D211860BAC0007D7744 /* Main_iPad.storyboard in Resources */,
 				C9A50467185FCD5D00EF9BB5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +300,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C983E4421860B0C100EF8AE2 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C983E4431860B0C100EF8AE2 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
 		C9A50468185FCD6F00EF9BB5 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -420,7 +430,7 @@
 				INFOPLIST_FILE = "Music/Music-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Music;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -440,7 +450,7 @@
 				INFOPLIST_FILE = "Music/Music-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Music;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
