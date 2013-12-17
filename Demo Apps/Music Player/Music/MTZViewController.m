@@ -59,47 +59,64 @@
 	MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:CGRectMake(-1280.0, -1280.0, 0.0f, 0.0f)];
 	[self.view addSubview:volumeView];
 	
-	_trackSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,1,216,34}];
-	[_trackSlider addTarget:self
-					 action:@selector(trackSliderChangedValue:)
-		   forControlEvents:UIControlEventValueChanged];
-	[_trackSlider addTarget:self
-					 action:@selector(trackSliderDidBegin:)
-		   forControlEvents:UIControlEventTouchDown];
-	[_trackSlider addTarget:self
-					 action:@selector(trackSliderDidEnd:)
-		   forControlEvents:UIControlEventTouchUpInside|UIControlEventTouchUpOutside|UIControlEventTouchDragExit|UIControlEventTouchCancel];
-	_trackSlider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	UIUserInterfaceIdiom idiom = UIDevice.currentDevice.userInterfaceIdiom;
+	switch ( idiom ) {
+		case UIUserInterfaceIdiomPad:
+			break;
+		case UIUserInterfaceIdiomPhone:
+		default:
+			// Track Slider has special features for iPhone/iPod touch
+			_trackSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,1,216,34}];
+			[_trackSlider addTarget:self
+							 action:@selector(trackSliderChangedValue:)
+				   forControlEvents:UIControlEventValueChanged];
+			[_trackSlider addTarget:self
+							 action:@selector(trackSliderDidBegin:)
+				   forControlEvents:UIControlEventTouchDown];
+			[_trackSlider addTarget:self
+							 action:@selector(trackSliderDidEnd:)
+				   forControlEvents:UIControlEventTouchUpInside|UIControlEventTouchUpOutside|UIControlEventTouchDragExit|UIControlEventTouchCancel];
+			_trackSlider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+			[_controlsView addSubview:_trackSlider];
+			
+			// Volume slider only present on iPhone/iPod touch
+			_volumeSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,121,216,34}];
+			[_volumeSlider addTarget:self
+							  action:@selector(volumeChanged:)
+					forControlEvents:UIControlEventValueChanged];
+			_volumeSlider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+			_volumeSlider.value = _player.volume;
+			_volumeSlider.fillImage = [UIImage imageNamed:@"VolumeFill"];
+			_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
+			[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
+								forState:UIControlStateNormal];
+			[_controlsView addSubview:_volumeSlider];
+			
+			
+			// Top and bottom shadows have very subtle motion effects
+			UIInterpolatingMotionEffect *verticalMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+			verticalMotion.minimumRelativeValue = @2;
+			verticalMotion.maximumRelativeValue = @-2;
+			_topShadow.motionEffects = @[verticalMotion];
+			_bottomShadow.motionEffects = @[verticalMotion];
+			
+			
+			// Show track numbers in title
+			_trackNumbersLabel = [[UILabel alloc] initWithFrame:(CGRect){0,0,160,32}];
+			_trackNumbersLabel.textAlignment = NSTextAlignmentCenter;
+			_trackNumbersLabel.text = @"Now Playing";
+			
+			self.navigationBar.topItem.titleView = _trackNumbersLabel;
+			[self.navigationBar.topItem setHidesBackButton:NO animated:NO];
+			
+			break;
+	}
+	
+	// Set the track, fill, and thumb images for the slider
 	_trackSlider.fillImage = [UIImage imageNamed:@"ProgressFill"];
 	_trackSlider.trackImage = [UIImage imageNamed:@"ProgressTrack"];
 	[_trackSlider setThumbImage:[UIImage imageNamed:@"ProgressThumb"]
 					   forState:UIControlStateNormal];
-	[_controlsView addSubview:_trackSlider];
-	
-	_volumeSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,121,216,34}];
-	[_volumeSlider addTarget:self
-					  action:@selector(volumeChanged:)
-			forControlEvents:UIControlEventValueChanged];
-	_volumeSlider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-	_volumeSlider.value = _player.volume;
-	_volumeSlider.fillImage = [UIImage imageNamed:@"VolumeFill"];
-	_volumeSlider.trackImage = [UIImage imageNamed:@"VolumeTrack"];
-	[_volumeSlider setThumbImage:[UIImage imageNamed:@"VolumeThumb"]
-						forState:UIControlStateNormal];
-	[_controlsView addSubview:_volumeSlider];
-	
-	UIInterpolatingMotionEffect *verticalMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
-	verticalMotion.minimumRelativeValue = @2;
-	verticalMotion.maximumRelativeValue = @-2;
-	_topShadow.motionEffects = @[verticalMotion];
-	_bottomShadow.motionEffects = @[verticalMotion];
-	
-	_trackNumbersLabel = [[UILabel alloc] initWithFrame:(CGRect){0,0,160,32}];
-	_trackNumbersLabel.textAlignment = NSTextAlignmentCenter;
-	_trackNumbersLabel.text = @"Now Playing";
-	
-	self.navigationBar.topItem.titleView = _trackNumbersLabel;
-	[self.navigationBar.topItem setHidesBackButton:NO animated:NO];
 	
 	_mediaPicker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeMusic];
     _mediaPicker.delegate = self;
