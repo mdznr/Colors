@@ -10,6 +10,10 @@
 
 @interface UIColor (NeueColors)
 
+/*
+ Includes the standard system colors used in Apple's default apps as well as the colors of device hardware.
+ */
+
 #pragma mark - Color Sets
 
 /// A set of all the neue colors

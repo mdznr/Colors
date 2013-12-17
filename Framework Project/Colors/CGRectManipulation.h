@@ -7,6 +7,10 @@
 
 @import UIKit;
 
+/*
+ Advanced manipulation of CGRect structs
+ */
+
 /// Returns a rectangle with an origin that is offset from that of the source rectangle.
 /// @param rect The source rectangle.
 /// @param scale The scale value to multiply the origin and dimensions of the rect.
