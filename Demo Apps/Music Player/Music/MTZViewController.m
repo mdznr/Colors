@@ -20,6 +20,8 @@
 @property (strong, nonatomic) MPMusicPlayerController *player;
 @property (strong, nonatomic) IBOutlet UIImageView *iv;
 
+@property (weak, nonatomic) IBOutlet UIView *overlayView;
+
 @property (strong, nonatomic) IBOutlet MTZSlider *trackSlider;
 @property (strong, nonatomic) IBOutlet MTZSlider *volumeSlider;
 
@@ -370,14 +372,20 @@
 
 - (void)refreshColorsForIdiomPad
 {
-	UIColor *color = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor blackColor]]
+	UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor]]
+												withMinimumContrast:UIColorContrastLevelLow];
+	// Default to black otherwise
+	bg = (bg) ? bg : UIColor.blackColor;
+	_overlayView.backgroundColor = [bg colorWithAlphaComponent:0.8f];
+	
+	UIColor *keyColor = [_iv.image backgroundColorToContrastAgainstColors:@[bg, [UIColor blackColor]]
 												   withMinimumContrast:UIColorContrastLevelMedium];
 	
 	// Default to white otherwise
-	color = (color) ? color : UIColor.whiteColor;
+	keyColor = (keyColor) ? keyColor : UIColor.whiteColor;
 	
-	[[UIApplication sharedApplication] keyWindow].tintColor = color;
-	_trackSlider.tintColor = color;
+	[[UIApplication sharedApplication] keyWindow].tintColor = keyColor;
+	_trackSlider.tintColor = keyColor;
 }
 
 - (IBAction)didSwipe:(UISwipeGestureRecognizer *)sender
