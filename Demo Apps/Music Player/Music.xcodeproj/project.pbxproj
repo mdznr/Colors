@@ -13,8 +13,6 @@
 		C926219D17D51C250095AE1C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926219C17D51C250095AE1C /* XCTest.framework */; };
 		C926219E17D51C250095AE1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217A17D51C250095AE1C /* Foundation.framework */; };
 		C926219F17D51C250095AE1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C926217E17D51C250095AE1C /* UIKit.framework */; };
-		C92621A717D51C250095AE1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92621A517D51C250095AE1C /* InfoPlist.strings */; };
-		C92621A917D51C250095AE1C /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92621A817D51C250095AE1C /* MusicTests.m */; };
 		C93503381858C4F600171528 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93503371858C4F600171528 /* Colors.framework */; };
 		C9A5045F185FCD4600EF9BB5 /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5045E185FCD4600EF9BB5 /* MTZAppDelegate.m */; };
 		C9A50462185FCD4F00EF9BB5 /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A50461185FCD4F00EF9BB5 /* MTZViewController.m */; };
@@ -24,7 +22,10 @@
 		C9A5046C185FCD7D00EF9BB5 /* Music-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A5046B185FCD7D00EF9BB5 /* Music-Info.plist */; };
 		C9A5046F185FCD8500EF9BB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A5046E185FCD8500EF9BB5 /* main.m */; };
 		C9A50472185FCD9E00EF9BB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A50470185FCD9E00EF9BB5 /* InfoPlist.strings */; };
+		C9A50476185FCE7700EF9BB5 /* MusicTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A50475185FCE7700EF9BB5 /* MusicTests-Info.plist */; };
 		C9C1830417F2C2CC005AF9A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */; };
+		C9F6A726185FCE8C00B749D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9F6A724185FCE8C00B749D9 /* InfoPlist.strings */; };
+		C9F6A727185FCEA700B749D9 /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A50473185FCE7000EF9BB5 /* MusicTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,9 +45,6 @@
 		C926217E17D51C250095AE1C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C926219B17D51C250095AE1C /* MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C926219C17D51C250095AE1C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		C92621A417D51C250095AE1C /* MusicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicTests-Info.plist"; sourceTree = "<group>"; };
-		C92621A617D51C250095AE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C92621A817D51C250095AE1C /* MusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicTests.m; sourceTree = "<group>"; };
 		C93503371858C4F600171528 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C9A5045D185FCD4600EF9BB5 /* MTZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZAppDelegate.h; path = Music/MTZAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		C9A5045E185FCD4600EF9BB5 /* MTZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTZAppDelegate.m; path = Music/MTZAppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -60,7 +58,10 @@
 		C9A5046D185FCD8100EF9BB5 /* Music-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Music-Prefix.pch"; path = "Music/Music-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		C9A5046E185FCD8500EF9BB5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Music/main.m; sourceTree = SOURCE_ROOT; };
 		C9A50471185FCD9E00EF9BB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Music/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		C9A50473185FCE7000EF9BB5 /* MusicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicTests.m; path = MusicTests/MusicTests.m; sourceTree = SOURCE_ROOT; };
+		C9A50475185FCE7700EF9BB5 /* MusicTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MusicTests-Info.plist"; path = "MusicTests/MusicTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C9F6A725185FCE8C00B749D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = MusicTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +153,7 @@
 		C92621A217D51C250095AE1C /* MusicTests */ = {
 			isa = PBXGroup;
 			children = (
-				C92621A817D51C250095AE1C /* MusicTests.m */,
+				C9A50473185FCE7000EF9BB5 /* MusicTests.m */,
 				C92621A317D51C250095AE1C /* Supporting Files */,
 			);
 			name = MusicTests;
@@ -162,8 +163,8 @@
 		C92621A317D51C250095AE1C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C92621A417D51C250095AE1C /* MusicTests-Info.plist */,
-				C92621A517D51C250095AE1C /* InfoPlist.strings */,
+				C9A50475185FCE7700EF9BB5 /* MusicTests-Info.plist */,
+				C9F6A724185FCE8C00B749D9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -249,7 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A5046C185FCD7D00EF9BB5 /* Music-Info.plist in Resources */,
+				C9F6A726185FCE8C00B749D9 /* InfoPlist.strings in Resources */,
 				C9A50472185FCD9E00EF9BB5 /* InfoPlist.strings in Resources */,
+				C9A50476185FCE7700EF9BB5 /* MusicTests-Info.plist in Resources */,
 				C9A5046A185FCD6F00EF9BB5 /* Main_iPhone.storyboard in Resources */,
 				C9A50467185FCD5D00EF9BB5 /* Images.xcassets in Resources */,
 			);
@@ -259,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C92621A717D51C250095AE1C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C92621A917D51C250095AE1C /* MusicTests.m in Sources */,
+				C9F6A727185FCEA700B749D9 /* MusicTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +298,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C92621A517D51C250095AE1C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C92621A617D51C250095AE1C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		C9A50468185FCD6F00EF9BB5 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -316,6 +310,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				C9A50471185FCD9E00EF9BB5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9F6A724185FCE8C00B749D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9F6A725185FCE8C00B749D9 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

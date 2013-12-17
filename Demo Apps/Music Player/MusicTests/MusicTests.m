@@ -1,6 +1,6 @@
 //
-//  ColorsTests.m
-//  ColorsTests
+//  MusicTests.m
+//  MusicTests
 //
 //  Created by Matt on 9/2/13.
 //  Copyright (c) 2013 Matt Zanchelli. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface ColorsTests : XCTestCase
+@interface MusicTests : XCTestCase
 
 @end
 
-@implementation ColorsTests
+@implementation MusicTests
 
 - (void)setUp
 {
