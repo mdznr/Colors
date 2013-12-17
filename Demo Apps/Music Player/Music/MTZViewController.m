@@ -9,6 +9,8 @@
 #import "MTZViewController.h"
 #import "MTZSlider.h"
 
+#define IPAD_MOTION_FX 0
+
 @import MediaPlayer;
 
 #import <Colors/Colors.h>
@@ -55,16 +57,28 @@
 	
 	_player = [MPMusicPlayerController iPodMusicPlayer];
 	
-	// Add volume view to hide volume HUD when changing volume
-	MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:CGRectMake(-1280.0, -1280.0, 0.0f, 0.0f)];
-	[self.view addSubview:volumeView];
-	
 	UIUserInterfaceIdiom idiom = UIDevice.currentDevice.userInterfaceIdiom;
 	switch ( idiom ) {
-		case UIUserInterfaceIdiomPad:
-			break;
+		case UIUserInterfaceIdiomPad: {
+			
+#if IPAD_MOTION_FX
+			// Album art has motion effects
+			CGFloat motion = 40;
+			
+			UIInterpolatingMotionEffect *verticalMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+			verticalMotion.minimumRelativeValue = @(motion);
+			verticalMotion.maximumRelativeValue = @(motion * -1);
+			
+			UIInterpolatingMotionEffect *horizontalMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+			horizontalMotion.minimumRelativeValue = @(motion);
+			horizontalMotion.maximumRelativeValue = @(motion * -1);
+			
+			_iv.motionEffects = @[verticalMotion, horizontalMotion];
+#endif
+			
+		} break;
 		case UIUserInterfaceIdiomPhone:
-		default:
+		default: {
 			// Track Slider has special features for iPhone/iPod touch
 			_trackSlider = [[MTZSlider alloc] initWithFrame:(CGRect){52,1,216,34}];
 			[_trackSlider addTarget:self
@@ -109,7 +123,11 @@
 			self.navigationBar.topItem.titleView = _trackNumbersLabel;
 			[self.navigationBar.topItem setHidesBackButton:NO animated:NO];
 			
-			break;
+			// Add volume view to hide volume HUD when changing volume
+			MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:CGRectMake(-1280.0, -1280.0, 0.0f, 0.0f)];
+			[self.view addSubview:volumeView];
+			
+		} break;
 	}
 	
 	// Set the track, fill, and thumb images for the slider
@@ -309,6 +327,21 @@
 
 - (void)refreshColors
 {
+	UIUserInterfaceIdiom idiom = UIDevice.currentDevice.userInterfaceIdiom;
+	
+	switch ( idiom ) {
+		case UIUserInterfaceIdiomPad: {
+			[self refreshColorsForIdiomPad];
+		} break;
+		case UIUserInterfaceIdiomPhone:
+		default: {
+			[self refreshColorsForIdiomPhone];
+		} break;
+	}
+}
+
+- (void)refreshColorsForIdiomPhone
+{
 #warning animate this change? Animate the change of album art (if it changes), too?
 	UIColor *keyColor = [_iv.image keyColorToContrastAgainstColors:@[[UIColor whiteColor]]
 											   withMinimumContrast:UIColorContrastLevelLow];
@@ -331,6 +364,18 @@
 		_trackSlider.tintColor = bg;
 		_volumeSlider.tintColor = bg;
 	}
+}
+
+- (void)refreshColorsForIdiomPad
+{
+	UIColor *color = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor blackColor]]
+												   withMinimumContrast:UIColorContrastLevelMedium];
+	
+	// Default to white otherwise
+	color = (color) ? color : UIColor.whiteColor;
+	
+	[[UIApplication sharedApplication] keyWindow].tintColor = color;
+	_trackSlider.tintColor = color;
 }
 
 - (IBAction)playPause:(id)sender

@@ -38,7 +38,7 @@
                                             <action selector="didTapRightBarButtonItem:" destination="w5r-tw-22r" eventType="touchUpInside" id="o1W-ea-V65"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QIQ-6T-tJh" userLabel="Main">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIQ-6T-tJh" userLabel="Main">
                                         <rect key="frame" x="64" y="145" width="896" height="478"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -119,7 +119,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gok-zF-SLt" userLabel="Time Remaining">
-                                        <rect key="frame" x="688" y="594" width="64" height="29"/>
+                                        <rect key="frame" x="688" y="594" width="68" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="64" id="G0f-S3-Xye"/>
@@ -132,22 +132,29 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Q6i-7L-26s" firstAttribute="leading" secondItem="6HQ-ql-rs8" secondAttribute="leading" constant="64" id="2in-oj-7dB"/>
+                                    <constraint firstItem="33D-rP-WSE" firstAttribute="baseline" secondItem="Gok-zF-SLt" secondAttribute="baseline" id="5Xy-Mz-2JH"/>
                                     <constraint firstItem="jBv-IE-7oQ" firstAttribute="top" secondItem="nY0-xp-H2p" secondAttribute="top" id="BTY-ev-ukh"/>
                                     <constraint firstItem="jBv-IE-7oQ" firstAttribute="leading" secondItem="6HQ-ql-rs8" secondAttribute="leading" id="EgI-5N-iGP"/>
+                                    <constraint firstItem="QIQ-6T-tJh" firstAttribute="bottom" secondItem="Gok-zF-SLt" secondAttribute="bottom" id="GY4-BH-CUK"/>
                                     <constraint firstItem="3zm-Nf-T3O" firstAttribute="top" secondItem="Q6i-7L-26s" secondAttribute="bottom" constant="11" id="Hgo-hb-39m"/>
                                     <constraint firstItem="eVg-ef-86N" firstAttribute="top" secondItem="jW1-o7-AOV" secondAttribute="top" id="IWA-4Z-083"/>
+                                    <constraint firstItem="QIQ-6T-tJh" firstAttribute="leading" secondItem="Q6i-7L-26s" secondAttribute="leading" id="NPy-At-wzz"/>
                                     <constraint firstItem="Q6i-7L-26s" firstAttribute="centerX" secondItem="jW1-o7-AOV" secondAttribute="centerX" id="R1E-5B-UdW"/>
+                                    <constraint firstItem="QIQ-6T-tJh" firstAttribute="top" secondItem="nY0-xp-H2p" secondAttribute="bottom" constant="47" id="UtC-nH-VVq"/>
                                     <constraint firstItem="Q6i-7L-26s" firstAttribute="centerX" secondItem="6HQ-ql-rs8" secondAttribute="centerX" id="Zr7-mB-42O"/>
                                     <constraint firstItem="9tQ-mv-BQn" firstAttribute="top" secondItem="XiP-uv-aj6" secondAttribute="bottom" constant="40" id="a9I-RU-JfG"/>
                                     <constraint firstAttribute="trailing" secondItem="nY0-xp-H2p" secondAttribute="trailing" id="aET-JQ-Nre"/>
+                                    <constraint firstItem="QIQ-6T-tJh" firstAttribute="centerX" secondItem="9tQ-mv-BQn" secondAttribute="centerX" id="avY-us-etp"/>
                                     <constraint firstItem="eVg-ef-86N" firstAttribute="top" secondItem="XiP-uv-aj6" secondAttribute="top" id="bqA-xE-cjj"/>
                                     <constraint firstItem="9tQ-mv-BQn" firstAttribute="leading" secondItem="33D-rP-WSE" secondAttribute="trailing" constant="16" id="cmJ-4l-6kl"/>
                                     <constraint firstAttribute="centerX" secondItem="jW1-o7-AOV" secondAttribute="centerX" id="eOZ-7n-Ihf"/>
+                                    <constraint firstItem="33D-rP-WSE" firstAttribute="centerY" secondItem="9tQ-mv-BQn" secondAttribute="centerY" id="ev6-QB-Sof"/>
                                     <constraint firstItem="9tQ-mv-BQn" firstAttribute="centerX" secondItem="jW1-o7-AOV" secondAttribute="centerX" id="frO-Rm-Qg1"/>
+                                    <constraint firstItem="QIQ-6T-tJh" firstAttribute="centerY" secondItem="6HQ-ql-rs8" secondAttribute="centerY" id="gCC-CF-2sy"/>
                                     <constraint firstItem="jW1-o7-AOV" firstAttribute="leading" secondItem="eVg-ef-86N" secondAttribute="trailing" constant="22" id="kKD-VP-ihT"/>
                                     <constraint firstItem="jBv-IE-7oQ" firstAttribute="top" secondItem="6HQ-ql-rs8" secondAttribute="top" id="qFA-lS-ckV"/>
                                     <constraint firstItem="eVg-ef-86N" firstAttribute="top" secondItem="3zm-Nf-T3O" secondAttribute="bottom" constant="30" id="s0J-FM-0eW"/>
-                                    <constraint firstItem="Gok-zF-SLt" firstAttribute="leading" secondItem="9tQ-mv-BQn" secondAttribute="trailing" constant="16" id="uY5-jD-Ton"/>
+                                    <constraint firstItem="Gok-zF-SLt" firstAttribute="leading" secondItem="9tQ-mv-BQn" secondAttribute="trailing" constant="12" id="uY5-jD-Ton"/>
                                     <constraint firstItem="Q6i-7L-26s" firstAttribute="leading" secondItem="3zm-Nf-T3O" secondAttribute="leading" id="vwB-2i-Up0"/>
                                     <constraint firstItem="Q6i-7L-26s" firstAttribute="trailing" secondItem="3zm-Nf-T3O" secondAttribute="trailing" id="yvu-6j-ys2"/>
                                     <constraint firstItem="XiP-uv-aj6" firstAttribute="leading" secondItem="jW1-o7-AOV" secondAttribute="trailing" constant="22" id="zkc-lA-bxk"/>
@@ -192,24 +199,6 @@
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="252" y="46"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="f6Y-pe-qxF">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dbl-lK-XtF" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hUx-Yl-Ipl"/>
-                        <viewControllerLayoutGuide type="bottom" id="3Fh-Eg-CN8"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yK3-qa-4ZZ">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R4I-pJ-Kht" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
