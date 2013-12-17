@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C99B9363186002D300084ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B9362186002D300084ACC /* Foundation.framework */; };
+		C99B9365186002D300084ACC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B9364186002D300084ACC /* CoreGraphics.framework */; };
+		C99B9367186002D300084ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B9366186002D300084ACC /* UIKit.framework */; };
+		C99B936D186002D300084ACC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C99B936B186002D300084ACC /* InfoPlist.strings */; };
+		C99B936F186002D300084ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C99B936E186002D300084ACC /* main.m */; };
+		C99B9373186002D300084ACC /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99B9372186002D300084ACC /* MTZAppDelegate.m */; };
+		C99B9376186002D300084ACC /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99B9374186002D300084ACC /* Main_iPhone.storyboard */; };
+		C99B9379186002D300084ACC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99B9377186002D300084ACC /* Main_iPad.storyboard */; };
+		C99B937C186002D300084ACC /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99B937B186002D300084ACC /* MTZViewController.m */; };
+		C99B937E186002D300084ACC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99B937D186002D300084ACC /* Images.xcassets */; };
+		C99B9385186002D300084ACC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B9384186002D300084ACC /* XCTest.framework */; };
+		C99B9386186002D300084ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B9362186002D300084ACC /* Foundation.framework */; };
+		C99B9387186002D300084ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B9366186002D300084ACC /* UIKit.framework */; };
+		C99B938F186002D300084ACC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C99B938D186002D300084ACC /* InfoPlist.strings */; };
+		C99B9391186002D300084ACC /* ContrastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C99B9390186002D300084ACC /* ContrastTests.m */; };
+		C99B939B1860032900084ACC /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B939A1860032900084ACC /* Colors.framework */; };
+		C99B93A1186003F600084ACC /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C99B93A0186003F600084ACC /* MTZSlider.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C99B9388186002D300084ACC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C99B9357186002D300084ACC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C99B935E186002D300084ACC;
+			remoteInfo = Contrast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C99B935F186002D300084ACC /* Contrast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contrast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C99B9362186002D300084ACC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C99B9364186002D300084ACC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C99B9366186002D300084ACC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C99B936A186002D300084ACC /* Contrast-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Contrast-Info.plist"; sourceTree = "<group>"; };
+		C99B936C186002D300084ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C99B936E186002D300084ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C99B9370186002D300084ACC /* Contrast-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contrast-Prefix.pch"; sourceTree = "<group>"; };
+		C99B9371186002D300084ACC /* MTZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZAppDelegate.h; sourceTree = "<group>"; };
+		C99B9372186002D300084ACC /* MTZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZAppDelegate.m; sourceTree = "<group>"; };
+		C99B9375186002D300084ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		C99B9378186002D300084ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		C99B937A186002D300084ACC /* MTZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZViewController.h; sourceTree = "<group>"; };
+		C99B937B186002D300084ACC /* MTZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZViewController.m; sourceTree = "<group>"; };
+		C99B937D186002D300084ACC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C99B9383186002D300084ACC /* ContrastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContrastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C99B9384186002D300084ACC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C99B938C186002D300084ACC /* ContrastTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContrastTests-Info.plist"; sourceTree = "<group>"; };
+		C99B938E186002D300084ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C99B9390186002D300084ACC /* ContrastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContrastTests.m; sourceTree = "<group>"; };
+		C99B939A1860032900084ACC /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
+		C99B939F186003F600084ACC /* MTZSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlider.h; sourceTree = "<group>"; };
+		C99B93A0186003F600084ACC /* MTZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlider.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C99B935C186002D300084ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99B9365186002D300084ACC /* CoreGraphics.framework in Frameworks */,
+				C99B9367186002D300084ACC /* UIKit.framework in Frameworks */,
+				C99B939B1860032900084ACC /* Colors.framework in Frameworks */,
+				C99B9363186002D300084ACC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99B9380186002D300084ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99B9385186002D300084ACC /* XCTest.framework in Frameworks */,
+				C99B9387186002D300084ACC /* UIKit.framework in Frameworks */,
+				C99B9386186002D300084ACC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C99B9356186002D300084ACC = {
+			isa = PBXGroup;
+			children = (
+				C99B9368186002D300084ACC /* Contrast */,
+				C99B938A186002D300084ACC /* ContrastTests */,
+				C99B9361186002D300084ACC /* Frameworks */,
+				C99B9360186002D300084ACC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C99B9360186002D300084ACC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C99B935F186002D300084ACC /* Contrast.app */,
+				C99B9383186002D300084ACC /* ContrastTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C99B9361186002D300084ACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C99B939A1860032900084ACC /* Colors.framework */,
+				C99B9362186002D300084ACC /* Foundation.framework */,
+				C99B9364186002D300084ACC /* CoreGraphics.framework */,
+				C99B9366186002D300084ACC /* UIKit.framework */,
+				C99B9384186002D300084ACC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C99B9368186002D300084ACC /* Contrast */ = {
+			isa = PBXGroup;
+			children = (
+				C99B9371186002D300084ACC /* MTZAppDelegate.h */,
+				C99B9372186002D300084ACC /* MTZAppDelegate.m */,
+				C99B9374186002D300084ACC /* Main_iPhone.storyboard */,
+				C99B9377186002D300084ACC /* Main_iPad.storyboard */,
+				C99B937A186002D300084ACC /* MTZViewController.h */,
+				C99B937B186002D300084ACC /* MTZViewController.m */,
+				C99B939F186003F600084ACC /* MTZSlider.h */,
+				C99B93A0186003F600084ACC /* MTZSlider.m */,
+				C99B937D186002D300084ACC /* Images.xcassets */,
+				C99B9369186002D300084ACC /* Supporting Files */,
+			);
+			path = Contrast;
+			sourceTree = "<group>";
+		};
+		C99B9369186002D300084ACC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C99B936A186002D300084ACC /* Contrast-Info.plist */,
+				C99B936B186002D300084ACC /* InfoPlist.strings */,
+				C99B936E186002D300084ACC /* main.m */,
+				C99B9370186002D300084ACC /* Contrast-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C99B938A186002D300084ACC /* ContrastTests */ = {
+			isa = PBXGroup;
+			children = (
+				C99B9390186002D300084ACC /* ContrastTests.m */,
+				C99B938B186002D300084ACC /* Supporting Files */,
+			);
+			path = ContrastTests;
+			sourceTree = "<group>";
+		};
+		C99B938B186002D300084ACC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C99B938C186002D300084ACC /* ContrastTests-Info.plist */,
+				C99B938D186002D300084ACC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C99B935E186002D300084ACC /* Contrast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C99B9394186002D300084ACC /* Build configuration list for PBXNativeTarget "Contrast" */;
+			buildPhases = (
+				C99B935B186002D300084ACC /* Sources */,
+				C99B935C186002D300084ACC /* Frameworks */,
+				C99B935D186002D300084ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Contrast;
+			productName = Contrast;
+			productReference = C99B935F186002D300084ACC /* Contrast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C99B9382186002D300084ACC /* ContrastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C99B9397186002D300084ACC /* Build configuration list for PBXNativeTarget "ContrastTests" */;
+			buildPhases = (
+				C99B937F186002D300084ACC /* Sources */,
+				C99B9380186002D300084ACC /* Frameworks */,
+				C99B9381186002D300084ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C99B9389186002D300084ACC /* PBXTargetDependency */,
+			);
+			name = ContrastTests;
+			productName = ContrastTests;
+			productReference = C99B9383186002D300084ACC /* ContrastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C99B9357186002D300084ACC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MTZ;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Matt Zanchelli";
+				TargetAttributes = {
+					C99B9382186002D300084ACC = {
+						TestTargetID = C99B935E186002D300084ACC;
+					};
+				};
+			};
+			buildConfigurationList = C99B935A186002D300084ACC /* Build configuration list for PBXProject "Contrast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C99B9356186002D300084ACC;
+			productRefGroup = C99B9360186002D300084ACC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C99B935E186002D300084ACC /* Contrast */,
+				C99B9382186002D300084ACC /* ContrastTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C99B935D186002D300084ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99B9379186002D300084ACC /* Main_iPad.storyboard in Resources */,
+				C99B937E186002D300084ACC /* Images.xcassets in Resources */,
+				C99B9376186002D300084ACC /* Main_iPhone.storyboard in Resources */,
+				C99B936D186002D300084ACC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99B9381186002D300084ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99B938F186002D300084ACC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C99B935B186002D300084ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99B93A1186003F600084ACC /* MTZSlider.m in Sources */,
+				C99B9373186002D300084ACC /* MTZAppDelegate.m in Sources */,
+				C99B936F186002D300084ACC /* main.m in Sources */,
+				C99B937C186002D300084ACC /* MTZViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99B937F186002D300084ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99B9391186002D300084ACC /* ContrastTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C99B9389186002D300084ACC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C99B935E186002D300084ACC /* Contrast */;
+			targetProxy = C99B9388186002D300084ACC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C99B936B186002D300084ACC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C99B936C186002D300084ACC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C99B9374186002D300084ACC /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C99B9375186002D300084ACC /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C99B9377186002D300084ACC /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C99B9378186002D300084ACC /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C99B938D186002D300084ACC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C99B938E186002D300084ACC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C99B9392186002D300084ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C99B9393186002D300084ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C99B9395186002D300084ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/matt/Dropbox/github/Colors,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Contrast/Contrast-Prefix.pch";
+				INFOPLIST_FILE = "Contrast/Contrast-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C99B9396186002D300084ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/matt/Dropbox/github/Colors,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Contrast/Contrast-Prefix.pch";
+				INFOPLIST_FILE = "Contrast/Contrast-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C99B9398186002D300084ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Contrast.app/Contrast";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Contrast/Contrast-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ContrastTests/ContrastTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C99B9399186002D300084ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Contrast.app/Contrast";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Contrast/Contrast-Prefix.pch";
+				INFOPLIST_FILE = "ContrastTests/ContrastTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C99B935A186002D300084ACC /* Build configuration list for PBXProject "Contrast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99B9392186002D300084ACC /* Debug */,
+				C99B9393186002D300084ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C99B9394186002D300084ACC /* Build configuration list for PBXNativeTarget "Contrast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99B9395186002D300084ACC /* Debug */,
+				C99B9396186002D300084ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C99B9397186002D300084ACC /* Build configuration list for PBXNativeTarget "ContrastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99B9398186002D300084ACC /* Debug */,
+				C99B9399186002D300084ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C99B9357186002D300084ACC /* Project object */;
+}
