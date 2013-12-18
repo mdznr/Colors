@@ -10,6 +10,10 @@
 
 @interface UIColor (Manipulation)
 
+/*
+ Find the perceived difference in two colors. It uses the CIEDE2000 Color-Difference Formula.
+ */
+
 /// The perceived difference between two colors.
 /// Calculated using the CIEDE2000 Color-Difference Formula.
 /// @param color1 The first of the two colors to compare.

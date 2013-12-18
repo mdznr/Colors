@@ -10,6 +10,10 @@
 
 @interface UIColor (DeviceColor)
 
+/*
+ Get color information about the device, case, app icon, user wallpaper, and more.
+ */
+
 /// Returns the dominant color on the app's icon.
 /// @return A newly instantiated color object representing the dominant color of the app's icon.
 + (UIColor *)appIconColor;

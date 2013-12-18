@@ -10,6 +10,10 @@
 
 @interface NSNumber (Hex)
 
+/*
+ Create and manage NSNumber objects using HEX values.
+ */
+
 /// Create a number from a string of hexadecimal characters
 /// @param hexString A string containing hexadecimal characters
 /// @return A newly instantiated @c NSNumber object from the hexadecimal string

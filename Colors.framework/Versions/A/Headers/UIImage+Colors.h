@@ -25,6 +25,10 @@ typedef NS_ENUM(NSInteger, UIColorContrast) {
 
 @interface UIImage (Colors)
 
+/*
+ Includes methods for getting colors from images. You can specify that you want a general-purpose color or a color to be used as a key color. You can specify if you want to guarantee a specified minimum contrast against another color, which is useful when displaying another color (in button text, for example) against a background color.
+ */
+
 #pragma mark - Background Color
 
 /// The color that appears to dominate the background of the receiving image.

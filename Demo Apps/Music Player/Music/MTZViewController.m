@@ -10,6 +10,7 @@
 #import "MTZSlider.h"
 
 #define IPAD_MOTION_FX 0
+#define IPAD_MOTION_FX_DIST 50
 
 @import MediaPlayer;
 
@@ -65,7 +66,7 @@
 			_trackSlider.inset = 0;
 #if IPAD_MOTION_FX
 			// Album art has motion effects
-			CGFloat motion = 40;
+			CGFloat motion = IPAD_MOTION_FX_DIST;
 			
 			UIInterpolatingMotionEffect *verticalMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
 			verticalMotion.minimumRelativeValue = @(motion);

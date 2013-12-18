@@ -10,6 +10,10 @@
 
 @interface UIColor (Components)
 
+/*
+ Contains methods to get different component values for different colorspaces including RGB, CMYK, HSB, YUV, and CIE-LAB.
+ */
+
 #pragma mark - RGB
 
 /// Returns the receiver’s red component (RGB).

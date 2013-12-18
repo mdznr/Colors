@@ -74,7 +74,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 {
 #warning determine a good size to get good color data (multiple of size?)
 	// Scale down image to make computation less intensive
-	CGSize size = (CGSize){16,16};
+	CGSize size = (CGSize){16, 16};
 	UIImage *smallImage = [self scaleToSize:size
 				   withInterpolationQuality:kCGInterpolationLow];
 	

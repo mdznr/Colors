@@ -23,6 +23,7 @@
 		C9A50472185FCD9E00EF9BB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A50470185FCD9E00EF9BB5 /* InfoPlist.strings */; };
 		C9A50476185FCE7700EF9BB5 /* MusicTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A50475185FCE7700EF9BB5 /* MusicTests-Info.plist */; };
 		C9C1830417F2C2CC005AF9A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */; };
+		C9DC876918625B250012D26C /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC876818625B250012D26C /* MarqueeLabel.m */; };
 		C9F6A726185FCE8C00B749D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9F6A724185FCE8C00B749D9 /* InfoPlist.strings */; };
 		C9F6A727185FCEA700B749D9 /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A50473185FCE7000EF9BB5 /* MusicTests.m */; };
 		C9F6A72B185FE85200B749D9 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F6A72A185FE85200B749D9 /* Colors.framework */; };
@@ -61,6 +62,8 @@
 		C9A50473185FCE7000EF9BB5 /* MusicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicTests.m; path = MusicTests/MusicTests.m; sourceTree = SOURCE_ROOT; };
 		C9A50475185FCE7700EF9BB5 /* MusicTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MusicTests-Info.plist"; path = "MusicTests/MusicTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C9DC876718625B240012D26C /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarqueeLabel.h; path = Music/MarqueeLabel.h; sourceTree = SOURCE_ROOT; };
+		C9DC876818625B250012D26C /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarqueeLabel.m; path = Music/MarqueeLabel.m; sourceTree = SOURCE_ROOT; };
 		C9F6A725185FCE8C00B749D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = MusicTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		C9F6A72A185FE85200B749D9 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +137,8 @@
 				C9A50461185FCD4F00EF9BB5 /* MTZViewController.m */,
 				C9A50463185FCD5800EF9BB5 /* MTZSlider.h */,
 				C9A50464185FCD5800EF9BB5 /* MTZSlider.m */,
+				C9DC876718625B240012D26C /* MarqueeLabel.h */,
+				C9DC876818625B250012D26C /* MarqueeLabel.m */,
 				C9A50466185FCD5D00EF9BB5 /* Images.xcassets */,
 				C926218117D51C250095AE1C /* Supporting Files */,
 			);
@@ -274,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DC876918625B250012D26C /* MarqueeLabel.m in Sources */,
 				C9A5046F185FCD8500EF9BB5 /* main.m in Sources */,
 				C9A50465185FCD5800EF9BB5 /* MTZSlider.m in Sources */,
 				C9A5045F185FCD4600EF9BB5 /* MTZAppDelegate.m in Sources */,

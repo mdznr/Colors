@@ -10,6 +10,10 @@
 
 @interface UIImage (Crop)
 
+/*
+ Methods for cropping and scaling images
+ */
+
 #pragma mark Crop
 
 /// Create a cropped version of the receiving image object.

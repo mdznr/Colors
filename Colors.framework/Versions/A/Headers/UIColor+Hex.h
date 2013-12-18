@@ -10,6 +10,10 @@
 
 @interface UIColor (Hex)
 
+/*
+ Methods for creating and managing colors using HEX values.
+ */
+
 /// Creates a color object using the specified HEX string.
 /// @param hexString A 6-digit hexadecimal string representing the string.
 /// @discussion hexString Does not necessarily need the '#' prefix.
