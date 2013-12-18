@@ -59,8 +59,8 @@ typedef void (^animationCompletionBlock)(void);
 - (void)restartLabel;
 - (void)setupLabel;
 - (void)observedViewControllerChange:(NSNotification *)notification;
-- (void)applyGradientMaskForFadeLength:(CGFloat)fadeLength;
-- (void)applyGradientMaskForFadeLength:(CGFloat)fadeLength animated:(BOOL)animated;
+- (void)applyGradientMaskForpaddingLength:(CGFloat)paddingLength;
+- (void)applyGradientMaskForpaddingLength:(CGFloat)paddingLength animated:(BOOL)animated;
 - (NSArray *)allSubLabels;
 
 // Support
@@ -125,33 +125,33 @@ typedef void (^animationCompletionBlock)(void);
 
 - (id)initWithFrame:(CGRect)frame
 {
-	return [self initWithFrame:frame rate:48.0f andFadeLength:0.0f];
+	return [self initWithFrame:frame rate:48.0f andPaddingLength:0.0f];
 }
 
 - (id)initWithFrame:(CGRect)frame
 		   duration:(NSTimeInterval)aLengthOfScroll
-	  andFadeLength:(CGFloat)aFadeLength
+	  andPaddingLength:(CGFloat)apaddingLength
 {
     self = [super initWithFrame:frame];
     if ( self ) {
         [self setupLabel];
         
         _lengthOfScroll = aLengthOfScroll;
-        self.fadeLength = MIN(aFadeLength, frame.size.width/2);
+        self.paddingLength = MIN(apaddingLength, frame.size.width/2);
     }
     return self;
 }
 
 - (id)initWithFrame:(CGRect)frame
 			   rate:(CGFloat)pixelsPerSec
-	  andFadeLength:(CGFloat)aFadeLength
+	  andPaddingLength:(CGFloat)apaddingLength
 {
     self = [super initWithFrame:frame];
     if (self) {
         [self setupLabel];
         
         _rate = pixelsPerSec;
-        self.fadeLength = MIN(aFadeLength, frame.size.width/2);
+        self.paddingLength = MIN(apaddingLength, frame.size.width/2);
     }
     return self;
 }
@@ -223,8 +223,9 @@ typedef void (^animationCompletionBlock)(void);
     _holdScrolling = NO;
     _tapToScroll = NO;
     _isPaused = NO;
-    _fadeLength = 0.0f;
-    _animationDelay = 2.0f;
+    _paddingLength = 0.0f;
+	_fade = NO;
+    _animationDelay = 3.5f;
     _animationDuration = 0.0f;
     _continuousMarqueeExtraBuffer = 0.0f;
     
@@ -301,7 +302,7 @@ typedef void (^animationCompletionBlock)(void);
         CGSize minimumLabelSize = [self subLabelSize];
         
         // Adjust for fade length
-        CGSize minimumSize = CGSizeMake(minimumLabelSize.width + (self.fadeLength * 2), minimumLabelSize.height);
+        CGSize minimumSize = CGSizeMake(minimumLabelSize.width + (self.paddingLength * 2), minimumLabelSize.height);
         
         // Apply to frame
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, minimumSize.width, (adjustHeight ? minimumSize.height : self.frame.size.height));
@@ -343,7 +344,7 @@ typedef void (^animationCompletionBlock)(void);
         [self.subLabel setTextAlignment:[super textAlignment]];
         [self.subLabel setLineBreakMode:[super lineBreakMode]];
         
-        CGRect labelFrame = CGRectIntegral(CGRectMake(self.fadeLength, 0.0f, self.bounds.size.width - self.fadeLength * 2.0f, expectedLabelSize.height));
+        CGRect labelFrame = CGRectIntegral(CGRectMake(self.paddingLength, 0.0f, self.bounds.size.width - self.paddingLength * 2.0f, expectedLabelSize.height));
         
         self.homeLabelFrame = labelFrame;
         self.awayLabelFrame = labelFrame;
@@ -367,13 +368,13 @@ typedef void (^animationCompletionBlock)(void);
     switch ( self.marqueeType ) {
         case MLContinuous:
 		{
-            self.homeLabelFrame = CGRectIntegral(CGRectMake(self.fadeLength, 0.0f, expectedLabelSize.width, expectedLabelSize.height));
-            CGFloat awayLabelOffset = -(self.homeLabelFrame.size.width + 2 * self.fadeLength + self.continuousMarqueeExtraBuffer);
+            self.homeLabelFrame = CGRectIntegral(CGRectMake(self.paddingLength, 0.0f, expectedLabelSize.width, expectedLabelSize.height));
+            CGFloat awayLabelOffset = -(self.homeLabelFrame.size.width + 2 * self.paddingLength + self.continuousMarqueeExtraBuffer);
             self.awayLabelFrame = CGRectOffset(self.homeLabelFrame, awayLabelOffset, 0.0f);
             
             NSArray *labels = [self allSubLabels];
             if ( labels.count < 2 ) {
-                UILabel *secondSubLabel = [[UILabel alloc] initWithFrame:CGRectOffset(self.homeLabelFrame, self.homeLabelFrame.size.width + self.fadeLength + self.continuousMarqueeExtraBuffer, 0.0f)];
+                UILabel *secondSubLabel = [[UILabel alloc] initWithFrame:CGRectOffset(self.homeLabelFrame, self.homeLabelFrame.size.width + self.paddingLength + self.continuousMarqueeExtraBuffer, 0.0f)];
                 secondSubLabel.tag = 701;
                 secondSubLabel.numberOfLines = 1;
                 
@@ -393,13 +394,13 @@ typedef void (^animationCompletionBlock)(void);
             
         case MLContinuousReverse:
 		{
-            self.homeLabelFrame = CGRectIntegral(CGRectMake(self.bounds.size.width - (expectedLabelSize.width + self.fadeLength), 0.0f, expectedLabelSize.width, expectedLabelSize.height));
-            CGFloat awayLabelOffset = (self.homeLabelFrame.size.width + 2 * self.fadeLength + self.continuousMarqueeExtraBuffer);
+            self.homeLabelFrame = CGRectIntegral(CGRectMake(self.bounds.size.width - (expectedLabelSize.width + self.paddingLength), 0.0f, expectedLabelSize.width, expectedLabelSize.height));
+            CGFloat awayLabelOffset = (self.homeLabelFrame.size.width + 2 * self.paddingLength + self.continuousMarqueeExtraBuffer);
             self.awayLabelFrame = CGRectOffset(self.homeLabelFrame, awayLabelOffset, 0.0f);
             
             NSArray *labels = [self allSubLabels];
             if ( labels.count < 2 ) {
-                UILabel *secondSubLabel = [[UILabel alloc] initWithFrame:CGRectOffset(self.homeLabelFrame, -(self.homeLabelFrame.size.width + self.fadeLength + self.continuousMarqueeExtraBuffer), 0.0f)];
+                UILabel *secondSubLabel = [[UILabel alloc] initWithFrame:CGRectOffset(self.homeLabelFrame, -(self.homeLabelFrame.size.width + self.paddingLength + self.continuousMarqueeExtraBuffer), 0.0f)];
                 secondSubLabel.numberOfLines = 1;
                 secondSubLabel.tag = 701;
                 
@@ -419,8 +420,8 @@ typedef void (^animationCompletionBlock)(void);
             
         case MLRightLeft:
         {
-            self.homeLabelFrame = CGRectIntegral(CGRectMake(self.bounds.size.width - (expectedLabelSize.width + self.fadeLength), 0.0f, expectedLabelSize.width, expectedLabelSize.height));
-            self.awayLabelFrame = CGRectIntegral(CGRectMake(self.fadeLength, 0.0f, expectedLabelSize.width, expectedLabelSize.height));
+            self.homeLabelFrame = CGRectIntegral(CGRectMake(self.bounds.size.width - (expectedLabelSize.width + self.paddingLength), 0.0f, expectedLabelSize.width, expectedLabelSize.height));
+            self.awayLabelFrame = CGRectIntegral(CGRectMake(self.paddingLength, 0.0f, expectedLabelSize.width, expectedLabelSize.height));
             
             // Calculate animation duration
             self.animationDuration = (self.rate != 0) ? ((NSTimeInterval)fabs(self.awayLabelFrame.origin.x - self.homeLabelFrame.origin.x) / self.rate) : (self.lengthOfScroll);
@@ -437,8 +438,8 @@ typedef void (^animationCompletionBlock)(void);
         //Fallback to LeftRight marqueeType
         default:
         {
-            self.homeLabelFrame = CGRectIntegral(CGRectMake(self.fadeLength, 0.0f, expectedLabelSize.width, expectedLabelSize.height));
-            self.awayLabelFrame = CGRectIntegral(CGRectOffset(self.homeLabelFrame, -expectedLabelSize.width + (self.bounds.size.width - self.fadeLength * 2), 0.0));
+            self.homeLabelFrame = CGRectIntegral(CGRectMake(self.paddingLength, 0.0f, expectedLabelSize.width, expectedLabelSize.height));
+            self.awayLabelFrame = CGRectIntegral(CGRectOffset(self.homeLabelFrame, -expectedLabelSize.width + (self.bounds.size.width - self.paddingLength * 2), 0.0));
             
             // Calculate animation duration
             self.animationDuration = (self.rate != 0) ? ((NSTimeInterval)fabs(self.awayLabelFrame.origin.x - self.homeLabelFrame.origin.x) / self.rate) : (self.lengthOfScroll);
@@ -458,19 +459,19 @@ typedef void (^animationCompletionBlock)(void);
     
 }
 
-- (void)applyGradientMaskForFadeLength:(CGFloat)fadeLength
+- (void)applyGradientMaskForpaddingLength:(CGFloat)paddingLength
 {
-    [self applyGradientMaskForFadeLength:fadeLength animated:YES];
+    [self applyGradientMaskForpaddingLength:paddingLength animated:YES];
 }
 
-- (void)applyGradientMaskForFadeLength:(CGFloat)fadeLength animated:(BOOL)animated
+- (void)applyGradientMaskForpaddingLength:(CGFloat)paddingLength animated:(BOOL)animated
 {
     if ( animated ) {
         [self returnLabelToOriginImmediately];
     }
     
     CAGradientLayer *gradientMask = nil;
-    if (fadeLength != 0.0f) {
+    if (paddingLength != 0.0f) {
         // Recreate gradient mask with new fade length
         gradientMask = [CAGradientLayer layer];
         
@@ -482,7 +483,7 @@ typedef void (^animationCompletionBlock)(void);
         
         gradientMask.startPoint = CGPointMake(0.0, CGRectGetMidY(self.frame));
         gradientMask.endPoint = CGPointMake(1.0, CGRectGetMidY(self.frame));
-        CGFloat fadePoint = (CGFloat)self.fadeLength/self.frame.size.width;
+        CGFloat fadePoint = (CGFloat)self.paddingLength/self.frame.size.width;
         [gradientMask setColors:self.gradientColors];
         [gradientMask setLocations: [NSArray arrayWithObjects:
                                      [NSNumber numberWithDouble: 0.0],
@@ -532,7 +533,7 @@ typedef void (^animationCompletionBlock)(void);
 - (CGSize)sizeThatFits:(CGSize)size
 {
     CGSize fitSize = [self.subLabel sizeThatFits:size];
-    fitSize.width += 2.0f * self.fadeLength;
+    fitSize.width += 2.0f * self.paddingLength;
     return fitSize;
 }
 
@@ -545,7 +546,7 @@ typedef void (^animationCompletionBlock)(void);
         return NO;
     }
     
-    BOOL labelWidth = (self.bounds.size.width < [self subLabelSize].width + (self.marqueeType == MLContinuous ? 2 * self.fadeLength : self.fadeLength));
+    BOOL labelWidth = (self.bounds.size.width < [self subLabelSize].width + (self.marqueeType == MLContinuous ? 2 * self.paddingLength : self.paddingLength));
     return (!self.labelize && labelWidth);
 }
 
@@ -680,7 +681,7 @@ typedef void (^animationCompletionBlock)(void);
                              sl.frame = CGRectOffset(self.awayLabelFrame, offset, 0.0f);
                              
                              // Increment offset
-                             offset += (self.marqueeType == MLContinuousReverse ? -1 : 1) * (self.homeLabelFrame.size.width + 2 * self.fadeLength + self.continuousMarqueeExtraBuffer);
+                             offset += (self.marqueeType == MLContinuousReverse ? -1 : 1) * (self.homeLabelFrame.size.width + 2 * self.paddingLength + self.continuousMarqueeExtraBuffer);
                          }
                      }
                      completion:^(BOOL finished) {
@@ -698,7 +699,7 @@ typedef void (^animationCompletionBlock)(void);
     for ( UILabel *sl in labels ) {
         [sl.layer removeAllAnimations];
         sl.frame = CGRectOffset(self.homeLabelFrame, offset, 0.0f);
-        offset += (self.marqueeType == MLContinuousReverse ? -1 : 1) * (self.homeLabelFrame.size.width + self.fadeLength + self.continuousMarqueeExtraBuffer);
+        offset += (self.marqueeType == MLContinuousReverse ? -1 : 1) * (self.homeLabelFrame.size.width + self.paddingLength + self.continuousMarqueeExtraBuffer);
     }
     
     if (self.subLabel.frame.origin.x == self.homeLabelFrame.origin.x) {
@@ -778,7 +779,7 @@ typedef void (^animationCompletionBlock)(void);
         return;
     }
     
-    [self applyGradientMaskForFadeLength:self.fadeLength animated:!self.orientationWillChange];
+    [self applyGradientMaskForpaddingLength:self.paddingLength animated:!self.orientationWillChange];
     [self updateSublabelAndLocationsAndBeginScroll:!self.orientationWillChange];
 }
 
@@ -1000,15 +1001,32 @@ typedef void (^animationCompletionBlock)(void);
     [self updateSublabelAndLocations];
 }
 
-- (void)setFadeLength:(CGFloat)fadeLength
+- (void)setPaddingLength:(CGFloat)paddingLength
 {
-    if ( _fadeLength == fadeLength ) {
-        return;
-    }
-    
-    _fadeLength = fadeLength;
-    [self applyGradientMaskForFadeLength:_fadeLength];
-    [self updateSublabelAndLocations];
+	if ( _paddingLength == paddingLength ) {
+		return;
+	}
+	
+	_paddingLength = paddingLength;
+	
+	if ( _fade ) {
+		[self applyGradientMaskForpaddingLength:_paddingLength];
+	}
+	
+	[self updateSublabelAndLocations];
+}
+
+- (void)setFade:(BOOL)fade
+{
+	if ( _fade == fade ) {
+		return;
+	}
+	
+	_fade = fade;
+	
+	if ( fade ) {
+		[self applyGradientMaskForpaddingLength:_paddingLength];
+	}
 }
 
 - (void)setTapToScroll:(BOOL)tapToScroll
@@ -1060,7 +1078,7 @@ typedef void (^animationCompletionBlock)(void);
         // Calculate label size
         CGSize expectedLabelSize = [self subLabelSize];
         // Create home label frame
-        _awayLabelFrame = CGRectOffset(self.homeLabelFrame, -expectedLabelSize.width + (self.bounds.size.width - self.fadeLength * 2), 0.0);
+        _awayLabelFrame = CGRectOffset(self.homeLabelFrame, -expectedLabelSize.width + (self.bounds.size.width - self.paddingLength * 2), 0.0);
     }
     
     return _awayLabelFrame;
@@ -1072,7 +1090,7 @@ typedef void (^animationCompletionBlock)(void);
         // Calculate label size
         CGSize expectedLabelSize = [self subLabelSize];
         // Create home label frame
-        _homeLabelFrame = CGRectMake(self.fadeLength, 0, (expectedLabelSize.width + self.fadeLength), self.bounds.size.height);
+        _homeLabelFrame = CGRectMake(self.paddingLength, 0, (expectedLabelSize.width + self.paddingLength), self.bounds.size.height);
     }
     
     return _homeLabelFrame;

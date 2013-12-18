@@ -78,7 +78,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="continuousMarqueeExtraBuffer">
                                                 <integer key="value" value="48"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLength">
                                                 <integer key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -93,7 +93,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="continuousMarqueeExtraBuffer">
                                                 <integer key="value" value="48"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLength">
                                                 <integer key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>

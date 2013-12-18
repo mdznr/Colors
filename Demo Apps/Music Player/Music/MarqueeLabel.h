@@ -104,11 +104,17 @@ typedef enum {
 @property (nonatomic, assign) CGFloat continuousMarqueeExtraBuffer;
 
 
-/* fadeLength:
- * Sets the length of fade (from alpha 1.0 to alpha 0.0) at the edges of the
- * MarqueeLabel. Cannot be larger than 1/2 of the frame width (will be santized).
+/* paddingLength:
+ * Sets the length of the padding at the end of the MarqueeLabel.
+ * Cannot be larger than 1/2 of the frame width (will be sanitized).
  */
-@property (nonatomic, assign) CGFloat fadeLength;
+@property (nonatomic, assign) CGFloat paddingLength;
+
+
+/* fade:
+ * Sets whether or not the padded areas are faded (from alpha 1.0 to alpha 0.0).
+ */
+@property (nonatomic, assign) BOOL fade;
 
 
 /* animationDelay:
@@ -135,8 +141,8 @@ typedef enum {
 + (void)controllerLabelsShouldAnimate:(UIViewController *)controller;
 
 // Methods
-- (id)initWithFrame:(CGRect)frame rate:(CGFloat)pixelsPerSec andFadeLength:(CGFloat)fadeLength;
-- (id)initWithFrame:(CGRect)frame duration:(NSTimeInterval)lengthOfScroll andFadeLength:(CGFloat)fadeLength;
+- (id)initWithFrame:(CGRect)frame rate:(CGFloat)pixelsPerSec andPaddingLength:(CGFloat)fadeLength;
+- (id)initWithFrame:(CGRect)frame duration:(NSTimeInterval)lengthOfScroll andPaddingLength:(CGFloat)fadeLength;
 
 /* Use this method to resize a MarqueeLabel to the minimum possible size, accounting
  * for fade length, for the current text while constrained to the maxSize provided. Use
