@@ -22,7 +22,7 @@ If you're using this in your project, I'd love to hear about it! [Email me](mail
 
 Included in the repo are demo applications (located in "Demo Apps" folder in the repo's root directory) showing off what this framework can do for your application. **Note**: All apps are not fully functional and are for demonstration purposes only.
 
-![Demo application using these APIs](Screenshots/display.jpg "Demo application using Colors Framework")
+![Demo application using these APIs](Screenshots/Demo_Apps_Music_iPhone_Display.jpg "Demo application using Colors Framework")
 
 In this demo music application, key colors are grabbed from the album artwork and displayed across the rest of the UI on the currently presented view controller.
 
@@ -86,11 +86,11 @@ Be sure you have the docset selected in the organizer to see results for Colors.
 #####Option 1 (Use framework as-is):
 If you just wish to add the framework at it's current state to your project, simply drag and drop Colors.framework (located in the repo's root directory) to the Project Navigator in Xcode.
 
-![Adding Framework to Project](Screenshots/READMEAddingFrameworkToProject.png)
+![Adding Framework to Project](Screenshots/README_Images/AddingFrameworkToProject.png)
 
 Then, just add `-ObjC` and `-all_load` to Other Linker Flags in your Xcode Project. (This makes sure that the categories in the framework attach to the classes in other frameworks
 
-![Adding Other Linker Flags](Screenshots/READMEOtherLinkerFlags.png)
+![Adding Other Linker Flags](Screenshots/README_Images/OtherLinkerFlags.png)
 
 Any future updates to the framework require the framework file to be manually replaced.
 
