@@ -4,12 +4,12 @@
 
 Contents:
 
-* Introduction
-* Demo
-* Contributing
-* Documentation
-* Adding the Colors framework to your project
-* Using the Colors Framework in your project
+* [Introduction](#introduction)
+* [Demo](#demo)
+* [Contributing](#contributing)
+* [Documentation](#documentation)
+* [Adding the Colors framework to your project](#adding-the-colors-framework-to-your-project)
+* [Using the Colors Framework in your project](#using-the-colors-framework-in-your-project)
 
 
 ###Introduction
