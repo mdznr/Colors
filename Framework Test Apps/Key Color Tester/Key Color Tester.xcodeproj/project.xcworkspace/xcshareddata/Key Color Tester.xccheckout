@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FF21D5A3-A767-460B-8254-C1FDAFCB7EC6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Key Color Tester</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8917E443-7D34-46AF-802B-2075AE241080</key>
+		<string>https://github.com/mdznr/Colors</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Framework Test Apps/Key Color Tester/Key Color Tester.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8917E443-7D34-46AF-802B-2075AE241080</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mdznr/Colors</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8917E443-7D34-46AF-802B-2075AE241080</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8917E443-7D34-46AF-802B-2075AE241080</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Colors</string>
+		</dict>
+	</array>
+</dict>
+</plist>

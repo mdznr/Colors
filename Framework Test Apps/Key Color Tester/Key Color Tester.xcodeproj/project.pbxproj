@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9CAC8E81863EAFF00291CD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAC8E71863EAFF00291CD2 /* Foundation.framework */; };
+		C9CAC8EA1863EAFF00291CD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAC8E91863EAFF00291CD2 /* CoreGraphics.framework */; };
+		C9CAC8EC1863EAFF00291CD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAC8EB1863EAFF00291CD2 /* UIKit.framework */; };
+		C9CAC8F21863EAFF00291CD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9CAC8F01863EAFF00291CD2 /* InfoPlist.strings */; };
+		C9CAC8F41863EAFF00291CD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAC8F31863EAFF00291CD2 /* main.m */; };
+		C9CAC8F81863EAFF00291CD2 /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAC8F71863EAFF00291CD2 /* MTZAppDelegate.m */; };
+		C9CAC8FB1863EAFF00291CD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CAC8F91863EAFF00291CD2 /* Main.storyboard */; };
+		C9CAC8FE1863EAFF00291CD2 /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAC8FD1863EAFF00291CD2 /* MTZViewController.m */; };
+		C9CAC9001863EAFF00291CD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CAC8FF1863EAFF00291CD2 /* Images.xcassets */; };
+		C9CAC9071863EAFF00291CD2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAC9061863EAFF00291CD2 /* XCTest.framework */; };
+		C9CAC9081863EAFF00291CD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAC8E71863EAFF00291CD2 /* Foundation.framework */; };
+		C9CAC9091863EAFF00291CD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAC8EB1863EAFF00291CD2 /* UIKit.framework */; };
+		C9CAC9111863EAFF00291CD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9CAC90F1863EAFF00291CD2 /* InfoPlist.strings */; };
+		C9CAC9131863EAFF00291CD2 /* Key_Color_TesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAC9121863EAFF00291CD2 /* Key_Color_TesterTests.m */; };
+		C9CAC91D1863EB4F00291CD2 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAC91C1863EB4F00291CD2 /* Colors.framework */; };
+		C9CAC9221863EB6900291CD2 /* MTZColorSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAC91F1863EB6900291CD2 /* MTZColorSpaceView.m */; };
+		C9CAC9231863EB6900291CD2 /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAC9211863EB6900291CD2 /* MTZSlider.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9CAC90A1863EAFF00291CD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9CAC8DC1863EAFF00291CD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9CAC8E31863EAFF00291CD2;
+			remoteInfo = "Key Color Tester";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9CAC8E41863EAFF00291CD2 /* Key Color Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Key Color Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9CAC8E71863EAFF00291CD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9CAC8E91863EAFF00291CD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9CAC8EB1863EAFF00291CD2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C9CAC8EF1863EAFF00291CD2 /* Key Color Tester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Key Color Tester-Info.plist"; sourceTree = "<group>"; };
+		C9CAC8F11863EAFF00291CD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9CAC8F31863EAFF00291CD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9CAC8F51863EAFF00291CD2 /* Key Color Tester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Key Color Tester-Prefix.pch"; sourceTree = "<group>"; };
+		C9CAC8F61863EAFF00291CD2 /* MTZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZAppDelegate.h; sourceTree = "<group>"; };
+		C9CAC8F71863EAFF00291CD2 /* MTZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZAppDelegate.m; sourceTree = "<group>"; };
+		C9CAC8FA1863EAFF00291CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9CAC8FC1863EAFF00291CD2 /* MTZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZViewController.h; sourceTree = "<group>"; };
+		C9CAC8FD1863EAFF00291CD2 /* MTZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZViewController.m; sourceTree = "<group>"; };
+		C9CAC8FF1863EAFF00291CD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C9CAC9051863EAFF00291CD2 /* Key Color TesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Key Color TesterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9CAC9061863EAFF00291CD2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C9CAC90E1863EAFF00291CD2 /* Key Color TesterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Key Color TesterTests-Info.plist"; sourceTree = "<group>"; };
+		C9CAC9101863EAFF00291CD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9CAC9121863EAFF00291CD2 /* Key_Color_TesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Key_Color_TesterTests.m; sourceTree = "<group>"; };
+		C9CAC91C1863EB4F00291CD2 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
+		C9CAC91E1863EB6900291CD2 /* MTZColorSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZColorSpaceView.h; sourceTree = "<group>"; };
+		C9CAC91F1863EB6900291CD2 /* MTZColorSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZColorSpaceView.m; sourceTree = "<group>"; };
+		C9CAC9201863EB6900291CD2 /* MTZSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlider.h; sourceTree = "<group>"; };
+		C9CAC9211863EB6900291CD2 /* MTZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlider.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9CAC8E11863EAFF00291CD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9CAC8EA1863EAFF00291CD2 /* CoreGraphics.framework in Frameworks */,
+				C9CAC8EC1863EAFF00291CD2 /* UIKit.framework in Frameworks */,
+				C9CAC91D1863EB4F00291CD2 /* Colors.framework in Frameworks */,
+				C9CAC8E81863EAFF00291CD2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9CAC9021863EAFF00291CD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9CAC9071863EAFF00291CD2 /* XCTest.framework in Frameworks */,
+				C9CAC9091863EAFF00291CD2 /* UIKit.framework in Frameworks */,
+				C9CAC9081863EAFF00291CD2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9CAC8DB1863EAFF00291CD2 = {
+			isa = PBXGroup;
+			children = (
+				C9CAC8ED1863EAFF00291CD2 /* Key Color Tester */,
+				C9CAC90C1863EAFF00291CD2 /* Key Color TesterTests */,
+				C9CAC8E61863EAFF00291CD2 /* Frameworks */,
+				C9CAC8E51863EAFF00291CD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9CAC8E51863EAFF00291CD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9CAC8E41863EAFF00291CD2 /* Key Color Tester.app */,
+				C9CAC9051863EAFF00291CD2 /* Key Color TesterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9CAC8E61863EAFF00291CD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9CAC91C1863EB4F00291CD2 /* Colors.framework */,
+				C9CAC8E71863EAFF00291CD2 /* Foundation.framework */,
+				C9CAC8E91863EAFF00291CD2 /* CoreGraphics.framework */,
+				C9CAC8EB1863EAFF00291CD2 /* UIKit.framework */,
+				C9CAC9061863EAFF00291CD2 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9CAC8ED1863EAFF00291CD2 /* Key Color Tester */ = {
+			isa = PBXGroup;
+			children = (
+				C9CAC8F61863EAFF00291CD2 /* MTZAppDelegate.h */,
+				C9CAC8F71863EAFF00291CD2 /* MTZAppDelegate.m */,
+				C9CAC8F91863EAFF00291CD2 /* Main.storyboard */,
+				C9CAC8FC1863EAFF00291CD2 /* MTZViewController.h */,
+				C9CAC8FD1863EAFF00291CD2 /* MTZViewController.m */,
+				C9CAC91E1863EB6900291CD2 /* MTZColorSpaceView.h */,
+				C9CAC91F1863EB6900291CD2 /* MTZColorSpaceView.m */,
+				C9CAC9201863EB6900291CD2 /* MTZSlider.h */,
+				C9CAC9211863EB6900291CD2 /* MTZSlider.m */,
+				C9CAC8FF1863EAFF00291CD2 /* Images.xcassets */,
+				C9CAC8EE1863EAFF00291CD2 /* Supporting Files */,
+			);
+			path = "Key Color Tester";
+			sourceTree = "<group>";
+		};
+		C9CAC8EE1863EAFF00291CD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9CAC8EF1863EAFF00291CD2 /* Key Color Tester-Info.plist */,
+				C9CAC8F01863EAFF00291CD2 /* InfoPlist.strings */,
+				C9CAC8F31863EAFF00291CD2 /* main.m */,
+				C9CAC8F51863EAFF00291CD2 /* Key Color Tester-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9CAC90C1863EAFF00291CD2 /* Key Color TesterTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9CAC9121863EAFF00291CD2 /* Key_Color_TesterTests.m */,
+				C9CAC90D1863EAFF00291CD2 /* Supporting Files */,
+			);
+			path = "Key Color TesterTests";
+			sourceTree = "<group>";
+		};
+		C9CAC90D1863EAFF00291CD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9CAC90E1863EAFF00291CD2 /* Key Color TesterTests-Info.plist */,
+				C9CAC90F1863EAFF00291CD2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9CAC8E31863EAFF00291CD2 /* Key Color Tester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9CAC9161863EAFF00291CD2 /* Build configuration list for PBXNativeTarget "Key Color Tester" */;
+			buildPhases = (
+				C9CAC8E01863EAFF00291CD2 /* Sources */,
+				C9CAC8E11863EAFF00291CD2 /* Frameworks */,
+				C9CAC8E21863EAFF00291CD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Key Color Tester";
+			productName = "Key Color Tester";
+			productReference = C9CAC8E41863EAFF00291CD2 /* Key Color Tester.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9CAC9041863EAFF00291CD2 /* Key Color TesterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9CAC9191863EAFF00291CD2 /* Build configuration list for PBXNativeTarget "Key Color TesterTests" */;
+			buildPhases = (
+				C9CAC9011863EAFF00291CD2 /* Sources */,
+				C9CAC9021863EAFF00291CD2 /* Frameworks */,
+				C9CAC9031863EAFF00291CD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9CAC90B1863EAFF00291CD2 /* PBXTargetDependency */,
+			);
+			name = "Key Color TesterTests";
+			productName = "Key Color TesterTests";
+			productReference = C9CAC9051863EAFF00291CD2 /* Key Color TesterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9CAC8DC1863EAFF00291CD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MTZ;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Matt Zanchelli";
+				TargetAttributes = {
+					C9CAC9041863EAFF00291CD2 = {
+						TestTargetID = C9CAC8E31863EAFF00291CD2;
+					};
+				};
+			};
+			buildConfigurationList = C9CAC8DF1863EAFF00291CD2 /* Build configuration list for PBXProject "Key Color Tester" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9CAC8DB1863EAFF00291CD2;
+			productRefGroup = C9CAC8E51863EAFF00291CD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9CAC8E31863EAFF00291CD2 /* Key Color Tester */,
+				C9CAC9041863EAFF00291CD2 /* Key Color TesterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9CAC8E21863EAFF00291CD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9CAC9001863EAFF00291CD2 /* Images.xcassets in Resources */,
+				C9CAC8F21863EAFF00291CD2 /* InfoPlist.strings in Resources */,
+				C9CAC8FB1863EAFF00291CD2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9CAC9031863EAFF00291CD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9CAC9111863EAFF00291CD2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9CAC8E01863EAFF00291CD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9CAC8F81863EAFF00291CD2 /* MTZAppDelegate.m in Sources */,
+				C9CAC8F41863EAFF00291CD2 /* main.m in Sources */,
+				C9CAC9231863EB6900291CD2 /* MTZSlider.m in Sources */,
+				C9CAC8FE1863EAFF00291CD2 /* MTZViewController.m in Sources */,
+				C9CAC9221863EB6900291CD2 /* MTZColorSpaceView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9CAC9011863EAFF00291CD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9CAC9131863EAFF00291CD2 /* Key_Color_TesterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9CAC90B1863EAFF00291CD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9CAC8E31863EAFF00291CD2 /* Key Color Tester */;
+			targetProxy = C9CAC90A1863EAFF00291CD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9CAC8F01863EAFF00291CD2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9CAC8F11863EAFF00291CD2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9CAC8F91863EAFF00291CD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9CAC8FA1863EAFF00291CD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9CAC90F1863EAFF00291CD2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9CAC9101863EAFF00291CD2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9CAC9141863EAFF00291CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9CAC9151863EAFF00291CD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9CAC9171863EAFF00291CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/matt/Dropbox/github/Colors,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Key Color Tester/Key Color Tester-Prefix.pch";
+				INFOPLIST_FILE = "Key Color Tester/Key Color Tester-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9CAC9181863EAFF00291CD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/matt/Dropbox/github/Colors,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Key Color Tester/Key Color Tester-Prefix.pch";
+				INFOPLIST_FILE = "Key Color Tester/Key Color Tester-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C9CAC91A1863EAFF00291CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Key Color Tester.app/Key Color Tester";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Key Color Tester/Key Color Tester-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Key Color TesterTests/Key Color TesterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C9CAC91B1863EAFF00291CD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Key Color Tester.app/Key Color Tester";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Key Color Tester/Key Color Tester-Prefix.pch";
+				INFOPLIST_FILE = "Key Color TesterTests/Key Color TesterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9CAC8DF1863EAFF00291CD2 /* Build configuration list for PBXProject "Key Color Tester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9CAC9141863EAFF00291CD2 /* Debug */,
+				C9CAC9151863EAFF00291CD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9CAC9161863EAFF00291CD2 /* Build configuration list for PBXNativeTarget "Key Color Tester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9CAC9171863EAFF00291CD2 /* Debug */,
+				C9CAC9181863EAFF00291CD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9CAC9191863EAFF00291CD2 /* Build configuration list for PBXNativeTarget "Key Color TesterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9CAC91A1863EAFF00291CD2 /* Debug */,
+				C9CAC91B1863EAFF00291CD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9CAC8DC1863EAFF00291CD2 /* Project object */;
+}
