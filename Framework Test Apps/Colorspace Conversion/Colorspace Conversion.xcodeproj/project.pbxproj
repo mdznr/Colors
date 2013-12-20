@@ -501,6 +501,7 @@
 				C99B93E41860072B00084ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C99B93E51860072B00084ACC /* Build configuration list for PBXNativeTarget "Colorspace ConversionTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +510,7 @@
 				C99B93E71860072B00084ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

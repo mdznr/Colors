@@ -493,6 +493,7 @@
 				C9CAC9181863EAFF00291CD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9CAC9191863EAFF00291CD2 /* Build configuration list for PBXNativeTarget "Key Color TesterTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +502,7 @@
 				C9CAC91B1863EAFF00291CD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FF21D5A3-A767-460B-8254-C1FDAFCB7EC6</string>
+	<string>F756C1C8-253E-41AE-8A0D-B288CA293DEA</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Key Color Tester</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8917E443-7D34-46AF-802B-2075AE241080</key>
+		<key>0FE10C88-ED9F-4FEE-BE51-53F573B5665D</key>
 		<string>https://github.com/mdznr/Colors</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Framework Test Apps/Key Color Tester/Key Color Tester.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8917E443-7D34-46AF-802B-2075AE241080</key>
+		<key>0FE10C88-ED9F-4FEE-BE51-53F573B5665D</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8917E443-7D34-46AF-802B-2075AE241080</string>
+	<string>0FE10C88-ED9F-4FEE-BE51-53F573B5665D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8917E443-7D34-46AF-802B-2075AE241080</string>
+			<string>0FE10C88-ED9F-4FEE-BE51-53F573B5665D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Colors</string>
 		</dict>

@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C98A5F2D1864EEC6004EDC76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98A5F2C1864EEC6004EDC76 /* Foundation.framework */; };
+		C98A5F2F1864EEC6004EDC76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98A5F2E1864EEC6004EDC76 /* CoreGraphics.framework */; };
+		C98A5F311864EEC6004EDC76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98A5F301864EEC6004EDC76 /* UIKit.framework */; };
+		C98A5F371864EEC6004EDC76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C98A5F351864EEC6004EDC76 /* InfoPlist.strings */; };
+		C98A5F391864EEC6004EDC76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F381864EEC6004EDC76 /* main.m */; };
+		C98A5F3D1864EEC6004EDC76 /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F3C1864EEC6004EDC76 /* MTZAppDelegate.m */; };
+		C98A5F401864EEC6004EDC76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98A5F3E1864EEC6004EDC76 /* Main.storyboard */; };
+		C98A5F431864EEC6004EDC76 /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F421864EEC6004EDC76 /* MTZViewController.m */; };
+		C98A5F451864EEC6004EDC76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98A5F441864EEC6004EDC76 /* Images.xcassets */; };
+		C98A5F4C1864EEC6004EDC76 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98A5F4B1864EEC6004EDC76 /* XCTest.framework */; };
+		C98A5F4D1864EEC6004EDC76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98A5F2C1864EEC6004EDC76 /* Foundation.framework */; };
+		C98A5F4E1864EEC6004EDC76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98A5F301864EEC6004EDC76 /* UIKit.framework */; };
+		C98A5F561864EEC6004EDC76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C98A5F541864EEC6004EDC76 /* InfoPlist.strings */; };
+		C98A5F581864EEC6004EDC76 /* Key_Color_Acceptable_TesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F571864EEC6004EDC76 /* Key_Color_Acceptable_TesterTests.m */; };
+		C98A5F621864EF5F004EDC76 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98A5F611864EF5F004EDC76 /* Colors.framework */; };
+		C98A5F691864EF6D004EDC76 /* MTZColorSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F641864EF6D004EDC76 /* MTZColorSpaceView.m */; };
+		C98A5F6A1864EF6D004EDC76 /* MTZKeyColorSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F661864EF6D004EDC76 /* MTZKeyColorSpaceView.m */; };
+		C98A5F6B1864EF6D004EDC76 /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F681864EF6D004EDC76 /* MTZSlider.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C98A5F4F1864EEC6004EDC76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C98A5F211864EEC5004EDC76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C98A5F281864EEC5004EDC76;
+			remoteInfo = "Key Color Acceptable Tester";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C98A5F291864EEC5004EDC76 /* Key Color Acceptable Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Key Color Acceptable Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98A5F2C1864EEC6004EDC76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C98A5F2E1864EEC6004EDC76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C98A5F301864EEC6004EDC76 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C98A5F341864EEC6004EDC76 /* Key Color Acceptable Tester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Key Color Acceptable Tester-Info.plist"; sourceTree = "<group>"; };
+		C98A5F361864EEC6004EDC76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C98A5F381864EEC6004EDC76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C98A5F3A1864EEC6004EDC76 /* Key Color Acceptable Tester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Key Color Acceptable Tester-Prefix.pch"; sourceTree = "<group>"; };
+		C98A5F3B1864EEC6004EDC76 /* MTZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZAppDelegate.h; sourceTree = "<group>"; };
+		C98A5F3C1864EEC6004EDC76 /* MTZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZAppDelegate.m; sourceTree = "<group>"; };
+		C98A5F3F1864EEC6004EDC76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C98A5F411864EEC6004EDC76 /* MTZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZViewController.h; sourceTree = "<group>"; };
+		C98A5F421864EEC6004EDC76 /* MTZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZViewController.m; sourceTree = "<group>"; };
+		C98A5F441864EEC6004EDC76 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C98A5F4A1864EEC6004EDC76 /* Key Color Acceptable TesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Key Color Acceptable TesterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98A5F4B1864EEC6004EDC76 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C98A5F531864EEC6004EDC76 /* Key Color Acceptable TesterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Key Color Acceptable TesterTests-Info.plist"; sourceTree = "<group>"; };
+		C98A5F551864EEC6004EDC76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C98A5F571864EEC6004EDC76 /* Key_Color_Acceptable_TesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Key_Color_Acceptable_TesterTests.m; sourceTree = "<group>"; };
+		C98A5F611864EF5F004EDC76 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
+		C98A5F631864EF6D004EDC76 /* MTZColorSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZColorSpaceView.h; sourceTree = "<group>"; };
+		C98A5F641864EF6D004EDC76 /* MTZColorSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZColorSpaceView.m; sourceTree = "<group>"; };
+		C98A5F651864EF6D004EDC76 /* MTZKeyColorSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZKeyColorSpaceView.h; sourceTree = "<group>"; };
+		C98A5F661864EF6D004EDC76 /* MTZKeyColorSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZKeyColorSpaceView.m; sourceTree = "<group>"; };
+		C98A5F671864EF6D004EDC76 /* MTZSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlider.h; sourceTree = "<group>"; };
+		C98A5F681864EF6D004EDC76 /* MTZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlider.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C98A5F261864EEC5004EDC76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98A5F2F1864EEC6004EDC76 /* CoreGraphics.framework in Frameworks */,
+				C98A5F311864EEC6004EDC76 /* UIKit.framework in Frameworks */,
+				C98A5F621864EF5F004EDC76 /* Colors.framework in Frameworks */,
+				C98A5F2D1864EEC6004EDC76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98A5F471864EEC6004EDC76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98A5F4C1864EEC6004EDC76 /* XCTest.framework in Frameworks */,
+				C98A5F4E1864EEC6004EDC76 /* UIKit.framework in Frameworks */,
+				C98A5F4D1864EEC6004EDC76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C98A5F201864EEC5004EDC76 = {
+			isa = PBXGroup;
+			children = (
+				C98A5F321864EEC6004EDC76 /* Key Color Acceptable Tester */,
+				C98A5F511864EEC6004EDC76 /* Key Color Acceptable TesterTests */,
+				C98A5F2B1864EEC5004EDC76 /* Frameworks */,
+				C98A5F2A1864EEC5004EDC76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C98A5F2A1864EEC5004EDC76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C98A5F291864EEC5004EDC76 /* Key Color Acceptable Tester.app */,
+				C98A5F4A1864EEC6004EDC76 /* Key Color Acceptable TesterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C98A5F2B1864EEC5004EDC76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C98A5F611864EF5F004EDC76 /* Colors.framework */,
+				C98A5F2C1864EEC6004EDC76 /* Foundation.framework */,
+				C98A5F2E1864EEC6004EDC76 /* CoreGraphics.framework */,
+				C98A5F301864EEC6004EDC76 /* UIKit.framework */,
+				C98A5F4B1864EEC6004EDC76 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C98A5F321864EEC6004EDC76 /* Key Color Acceptable Tester */ = {
+			isa = PBXGroup;
+			children = (
+				C98A5F3B1864EEC6004EDC76 /* MTZAppDelegate.h */,
+				C98A5F3C1864EEC6004EDC76 /* MTZAppDelegate.m */,
+				C98A5F3E1864EEC6004EDC76 /* Main.storyboard */,
+				C98A5F411864EEC6004EDC76 /* MTZViewController.h */,
+				C98A5F421864EEC6004EDC76 /* MTZViewController.m */,
+				C98A5F631864EF6D004EDC76 /* MTZColorSpaceView.h */,
+				C98A5F641864EF6D004EDC76 /* MTZColorSpaceView.m */,
+				C98A5F651864EF6D004EDC76 /* MTZKeyColorSpaceView.h */,
+				C98A5F661864EF6D004EDC76 /* MTZKeyColorSpaceView.m */,
+				C98A5F671864EF6D004EDC76 /* MTZSlider.h */,
+				C98A5F681864EF6D004EDC76 /* MTZSlider.m */,
+				C98A5F441864EEC6004EDC76 /* Images.xcassets */,
+				C98A5F331864EEC6004EDC76 /* Supporting Files */,
+			);
+			path = "Key Color Acceptable Tester";
+			sourceTree = "<group>";
+		};
+		C98A5F331864EEC6004EDC76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C98A5F341864EEC6004EDC76 /* Key Color Acceptable Tester-Info.plist */,
+				C98A5F351864EEC6004EDC76 /* InfoPlist.strings */,
+				C98A5F381864EEC6004EDC76 /* main.m */,
+				C98A5F3A1864EEC6004EDC76 /* Key Color Acceptable Tester-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C98A5F511864EEC6004EDC76 /* Key Color Acceptable TesterTests */ = {
+			isa = PBXGroup;
+			children = (
+				C98A5F571864EEC6004EDC76 /* Key_Color_Acceptable_TesterTests.m */,
+				C98A5F521864EEC6004EDC76 /* Supporting Files */,
+			);
+			path = "Key Color Acceptable TesterTests";
+			sourceTree = "<group>";
+		};
+		C98A5F521864EEC6004EDC76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C98A5F531864EEC6004EDC76 /* Key Color Acceptable TesterTests-Info.plist */,
+				C98A5F541864EEC6004EDC76 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C98A5F281864EEC5004EDC76 /* Key Color Acceptable Tester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98A5F5B1864EEC6004EDC76 /* Build configuration list for PBXNativeTarget "Key Color Acceptable Tester" */;
+			buildPhases = (
+				C98A5F251864EEC5004EDC76 /* Sources */,
+				C98A5F261864EEC5004EDC76 /* Frameworks */,
+				C98A5F271864EEC5004EDC76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Key Color Acceptable Tester";
+			productName = "Key Color Acceptable Tester";
+			productReference = C98A5F291864EEC5004EDC76 /* Key Color Acceptable Tester.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C98A5F491864EEC6004EDC76 /* Key Color Acceptable TesterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98A5F5E1864EEC6004EDC76 /* Build configuration list for PBXNativeTarget "Key Color Acceptable TesterTests" */;
+			buildPhases = (
+				C98A5F461864EEC6004EDC76 /* Sources */,
+				C98A5F471864EEC6004EDC76 /* Frameworks */,
+				C98A5F481864EEC6004EDC76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C98A5F501864EEC6004EDC76 /* PBXTargetDependency */,
+			);
+			name = "Key Color Acceptable TesterTests";
+			productName = "Key Color Acceptable TesterTests";
+			productReference = C98A5F4A1864EEC6004EDC76 /* Key Color Acceptable TesterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C98A5F211864EEC5004EDC76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MTZ;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Matt Zanchelli";
+				TargetAttributes = {
+					C98A5F491864EEC6004EDC76 = {
+						TestTargetID = C98A5F281864EEC5004EDC76;
+					};
+				};
+			};
+			buildConfigurationList = C98A5F241864EEC5004EDC76 /* Build configuration list for PBXProject "Key Color Acceptable Tester" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C98A5F201864EEC5004EDC76;
+			productRefGroup = C98A5F2A1864EEC5004EDC76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C98A5F281864EEC5004EDC76 /* Key Color Acceptable Tester */,
+				C98A5F491864EEC6004EDC76 /* Key Color Acceptable TesterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C98A5F271864EEC5004EDC76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98A5F451864EEC6004EDC76 /* Images.xcassets in Resources */,
+				C98A5F371864EEC6004EDC76 /* InfoPlist.strings in Resources */,
+				C98A5F401864EEC6004EDC76 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98A5F481864EEC6004EDC76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98A5F561864EEC6004EDC76 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C98A5F251864EEC5004EDC76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98A5F3D1864EEC6004EDC76 /* MTZAppDelegate.m in Sources */,
+				C98A5F391864EEC6004EDC76 /* main.m in Sources */,
+				C98A5F6B1864EF6D004EDC76 /* MTZSlider.m in Sources */,
+				C98A5F431864EEC6004EDC76 /* MTZViewController.m in Sources */,
+				C98A5F6A1864EF6D004EDC76 /* MTZKeyColorSpaceView.m in Sources */,
+				C98A5F691864EF6D004EDC76 /* MTZColorSpaceView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98A5F461864EEC6004EDC76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98A5F581864EEC6004EDC76 /* Key_Color_Acceptable_TesterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C98A5F501864EEC6004EDC76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C98A5F281864EEC5004EDC76 /* Key Color Acceptable Tester */;
+			targetProxy = C98A5F4F1864EEC6004EDC76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C98A5F351864EEC6004EDC76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C98A5F361864EEC6004EDC76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C98A5F3E1864EEC6004EDC76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C98A5F3F1864EEC6004EDC76 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C98A5F541864EEC6004EDC76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C98A5F551864EEC6004EDC76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C98A5F591864EEC6004EDC76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C98A5F5A1864EEC6004EDC76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C98A5F5C1864EEC6004EDC76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/matt/Dropbox/github/Colors,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Key Color Acceptable Tester/Key Color Acceptable Tester-Prefix.pch";
+				INFOPLIST_FILE = "Key Color Acceptable Tester/Key Color Acceptable Tester-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C98A5F5D1864EEC6004EDC76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/matt/Dropbox/github/Colors,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Key Color Acceptable Tester/Key Color Acceptable Tester-Prefix.pch";
+				INFOPLIST_FILE = "Key Color Acceptable Tester/Key Color Acceptable Tester-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C98A5F5F1864EEC6004EDC76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Key Color Acceptable Tester.app/Key Color Acceptable Tester";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Key Color Acceptable Tester/Key Color Acceptable Tester-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Key Color Acceptable TesterTests/Key Color Acceptable TesterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C98A5F601864EEC6004EDC76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Key Color Acceptable Tester.app/Key Color Acceptable Tester";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Key Color Acceptable Tester/Key Color Acceptable Tester-Prefix.pch";
+				INFOPLIST_FILE = "Key Color Acceptable TesterTests/Key Color Acceptable TesterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C98A5F241864EEC5004EDC76 /* Build configuration list for PBXProject "Key Color Acceptable Tester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98A5F591864EEC6004EDC76 /* Debug */,
+				C98A5F5A1864EEC6004EDC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C98A5F5B1864EEC6004EDC76 /* Build configuration list for PBXNativeTarget "Key Color Acceptable Tester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98A5F5C1864EEC6004EDC76 /* Debug */,
+				C98A5F5D1864EEC6004EDC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C98A5F5E1864EEC6004EDC76 /* Build configuration list for PBXNativeTarget "Key Color Acceptable TesterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98A5F5F1864EEC6004EDC76 /* Debug */,
+				C98A5F601864EEC6004EDC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C98A5F211864EEC5004EDC76 /* Project object */;
+}
