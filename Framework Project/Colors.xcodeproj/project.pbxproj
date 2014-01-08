@@ -43,7 +43,7 @@
 		C9825A071858BCD100BBEF49 /* NSNumber+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259ED1858BCD100BBEF49 /* NSNumber+Hex.m */; };
 		C9825A081858BCD100BBEF49 /* UIColor+ColorFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259EF1858BCD100BBEF49 /* UIColor+ColorFinder.m */; };
 		C9825A091858BCD100BBEF49 /* UIColor+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F11858BCD100BBEF49 /* UIColor+Components.m */; };
-		C9825A0A1858BCD100BBEF49 /* UIColor+DeviceColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F31858BCD100BBEF49 /* UIColor+DeviceColor.m */; };
+		C9825A0A1858BCD100BBEF49 /* ThemeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F31858BCD100BBEF49 /* ThemeColor.m */; };
 		C9825A0B1858BCD100BBEF49 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F51858BCD100BBEF49 /* UIColor+Hex.m */; };
 		C9825A0C1858BCD100BBEF49 /* UIColor+KeyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F71858BCD100BBEF49 /* UIColor+KeyColor.m */; };
 		C9825A0D1858BCD100BBEF49 /* UIColor+Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C98259F91858BCD100BBEF49 /* UIColor+Manipulation.m */; };
@@ -59,7 +59,7 @@
 		C9825A191858BE5500BBEF49 /* NSNumber+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259EC1858BCD100BBEF49 /* NSNumber+Hex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9825A1A1858BE6700BBEF49 /* UIColor+ColorFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259EE1858BCD100BBEF49 /* UIColor+ColorFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9825A1B1858BE6700BBEF49 /* UIColor+Components.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F01858BCD100BBEF49 /* UIColor+Components.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9825A1C1858BE6700BBEF49 /* UIColor+DeviceColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F21858BCD100BBEF49 /* UIColor+DeviceColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9825A1C1858BE6700BBEF49 /* ThemeColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F21858BCD100BBEF49 /* ThemeColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9825A1D1858BE6700BBEF49 /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F41858BCD100BBEF49 /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9825A1E1858BE6700BBEF49 /* UIColor+KeyColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F61858BCD100BBEF49 /* UIColor+KeyColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9825A1F1858BE6700BBEF49 /* UIColor+Manipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = C98259F81858BCD100BBEF49 /* UIColor+Manipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,8 +106,8 @@
 		C98259EF1858BCD100BBEF49 /* UIColor+ColorFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorFinder.m"; sourceTree = "<group>"; };
 		C98259F01858BCD100BBEF49 /* UIColor+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Components.h"; sourceTree = "<group>"; };
 		C98259F11858BCD100BBEF49 /* UIColor+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Components.m"; sourceTree = "<group>"; };
-		C98259F21858BCD100BBEF49 /* UIColor+DeviceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DeviceColor.h"; sourceTree = "<group>"; };
-		C98259F31858BCD100BBEF49 /* UIColor+DeviceColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DeviceColor.m"; sourceTree = "<group>"; };
+		C98259F21858BCD100BBEF49 /* ThemeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeColor.h; sourceTree = "<group>"; };
+		C98259F31858BCD100BBEF49 /* ThemeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeColor.m; sourceTree = "<group>"; };
 		C98259F41858BCD100BBEF49 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		C98259F51858BCD100BBEF49 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		C98259F61858BCD100BBEF49 /* UIColor+KeyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KeyColor.h"; sourceTree = "<group>"; };
@@ -189,12 +189,12 @@
 				C98259EB1858BCD100BBEF49 /* CGRectManipulation.m */,
 				C98259EC1858BCD100BBEF49 /* NSNumber+Hex.h */,
 				C98259ED1858BCD100BBEF49 /* NSNumber+Hex.m */,
+				C98259F21858BCD100BBEF49 /* ThemeColor.h */,
+				C98259F31858BCD100BBEF49 /* ThemeColor.m */,
 				C98259EE1858BCD100BBEF49 /* UIColor+ColorFinder.h */,
 				C98259EF1858BCD100BBEF49 /* UIColor+ColorFinder.m */,
 				C98259F01858BCD100BBEF49 /* UIColor+Components.h */,
 				C98259F11858BCD100BBEF49 /* UIColor+Components.m */,
-				C98259F21858BCD100BBEF49 /* UIColor+DeviceColor.h */,
-				C98259F31858BCD100BBEF49 /* UIColor+DeviceColor.m */,
 				C98259F41858BCD100BBEF49 /* UIColor+Hex.h */,
 				C98259F51858BCD100BBEF49 /* UIColor+Hex.m */,
 				C98259F61858BCD100BBEF49 /* UIColor+KeyColor.h */,
@@ -258,7 +258,7 @@
 				C9825A191858BE5500BBEF49 /* NSNumber+Hex.h in Headers */,
 				C9825A1B1858BE6700BBEF49 /* UIColor+Components.h in Headers */,
 				C9825A211858BE6700BBEF49 /* UIImage+Colors.h in Headers */,
-				C9825A1C1858BE6700BBEF49 /* UIColor+DeviceColor.h in Headers */,
+				C9825A1C1858BE6700BBEF49 /* ThemeColor.h in Headers */,
 				C9825A201858BE6700BBEF49 /* UIColor+NeueColors.h in Headers */,
 				C9825A1D1858BE6700BBEF49 /* UIColor+Hex.h in Headers */,
 				C9825A221858BE6700BBEF49 /* UIImage+Crop.h in Headers */,
@@ -408,7 +408,7 @@
 				C9825A081858BCD100BBEF49 /* UIColor+ColorFinder.m in Sources */,
 				C9825A131858BCD100BBEF49 /* UIImage+TBTint.m in Sources */,
 				C9825A101858BCD100BBEF49 /* UIImage+Crop.m in Sources */,
-				C9825A0A1858BCD100BBEF49 /* UIColor+DeviceColor.m in Sources */,
+				C9825A0A1858BCD100BBEF49 /* ThemeColor.m in Sources */,
 				C9825A121858BCD100BBEF49 /* UIImage+Pixels.m in Sources */,
 				C9825A0F1858BCD100BBEF49 /* UIImage+Colors.m in Sources */,
 			);

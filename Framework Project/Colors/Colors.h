@@ -11,9 +11,9 @@
 
 #import <Colors/CGRectManipulation.h>
 #import <Colors/NSNumber+Hex.h>
+#import <Colors/ThemeColor.h>
 #import <Colors/UIColor+ColorFinder.h>
 #import <Colors/UIColor+Components.h>
-#import <Colors/UIColor+DeviceColor.h>
 #import <Colors/UIColor+Hex.h>
 #import <Colors/UIColor+KeyColor.h>
 #import <Colors/UIColor+Manipulation.h>
