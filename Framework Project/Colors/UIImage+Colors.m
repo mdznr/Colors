@@ -32,7 +32,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 
 - (UIColor *)backgroundColor
 {
-#warning Use system preference for color contrast level
+	// TODO: Use system preference for color contrast level
 	return [self backgroundColorToContrastAgainstColors:nil
 									withMinimumContrast:0.0f];
 }
@@ -51,7 +51,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 
 - (UIColor *)keyColor
 {
-#warning Use system preference for color contrast level
+	// TODO: Use system preference for color contrast level
 	return [self keyColorToContrastAgainstColors:nil
 							 withMinimumContrast:0.0f];
 }
@@ -72,7 +72,8 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 					  withMinimumContrast:(CGFloat)requiredMinimumContrast
 						 forUseAsKeyColor:(BOOL)keyColor
 {
-#warning determine a good size to get good color data (multiple of size?)
+	// TODO: Determine a good size to get good color data (multiple of size?)
+	
 	// Scale down image to make computation less intensive
 	CGSize size = (CGSize){16, 16};
 	UIImage *smallImage = [self scaleToSize:size

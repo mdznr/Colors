@@ -54,7 +54,7 @@ CGFloat radians(CGFloat x) {
 	 */
 	
 	// Default values
-#warning should these be configurable?
+	// TODO: Should these be configurable?
 	CGFloat Kl = 1.0f;
 	CGFloat Kc = 1.0f;
 	CGFloat Kh = 1.0f;

@@ -40,8 +40,9 @@
 /// @return The distance (perceived difference) from the receiver to the set of acceptable key colors
 - (CGFloat)keyColorValue
 {
-#warning TODO: Implement. Find the shortest distance to the nearest key color appropriate color.
-#warning What's the value if it is already key color appropriate?
+	// TODO: Implement.
+	// TODO: Find the shortest distance to the nearest key color appropriate color.
+	// TODO: What's the value if it is already an appropriate key color?
 	if ( [self isKeyColorAppropriate] ) {
 		// Find smallest distance to a center of the key colors
 	} else {
@@ -53,8 +54,8 @@
 /// Find the most appropriate color in the set to be used as a key color.
 /// @param colors A set of colors of possible colors.
 /// @return The color in the array that is most key color appropriate. Returns nil if no color is key color appropriate.
-#warning Decision: Should this be a set or an array (like the other method)? A set is more appropriate, but may be unexpected
-#warning Decision: Should this even be a method?
+// TODO: Decision: Should this be a set or an array (like the other method)? A set is more appropriate, but may be unexpected
+// TODO: Decision: Should this even be a method?
 + (UIColor *)mostKeyColorAppropriate:(NSSet *)colors
 {
 	UIColor *mostKeyColorColor = nil;
