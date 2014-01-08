@@ -8,8 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
-#warning this typedef probably shouldn't be defined here. It should come from MTZAction?
-typedef void (^Block)();
+/// A block to performed as the result of an action
+typedef void (^ActionBlock)();
+
+
+/*
+ Keys for various possible text input fields in an alert view for use @c inputFieldValues.
+ */
+
+/// The string constant for the key to get the value of text in an alert view of style @c UIAlertViewStylePlainTextInput.
+UIKIT_EXTERN NSString * const kMTZAlertViewPlainTextInput;
+
+/// The string constant for the key to get the value of text in an alert view of style @c UIAlertViewStyleSecureTextInput.
+UIKIT_EXTERN NSString * const kMTZAlertViewSecureTextInput;
+
+/// The string constant for the key to get the value of text of the login field in an alert view of style @c UIAlertViewStyleLoginAndPasswordInput.
+UIKIT_EXTERN NSString * const kMTZAlertViewLoginInput;
+
+/// The string constant for the key to get the value of text of the password field in an alert view of style @c UIAlertViewStyleLoginAndPasswordInput.
+UIKIT_EXTERN NSString * const kMTZAlertViewPasswordInput;
+
 
 @protocol MTZAlertViewDelegate;
 
@@ -19,7 +37,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface MTZAlertView : NSObject
 
 #pragma mark Creating Alert Views
 
-#warning TODO: what kinds of quick initalization methods should be presented?
 /// Convenience method for initializing an alert view with a particular title.
 /// @param title The string that appears in the receiver’s title bar.
 /// @return Newly initialized alert view.
@@ -53,7 +70,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface MTZAlertView : NSObject
 /// Descriptive text that provides more details than the title.
 @property (strong, nonatomic) NSString *message;
 
-#warning should setting visibility show and hide the alert? This behaviour works for UIWindow
 /// A Boolean value that indicates whether the receiver is displayed. (read-only)
 @property (nonatomic, readonly, getter = isVisible) BOOL visible;
 
@@ -65,23 +81,25 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface MTZAlertView : NSObject
 /// Does not include @c cancelButtonTitle.
 - (NSArray *)otherButtonTitles;
 
+/*
 #warning do we even need this API?
 /// The total number of buttons on the alert view.
 /// Includes the cancel button, if set.
 - (NSUInteger)numberOfButtons;
+*/
 
+/*
 #warning do we even need this API?
 /// The number of buttons on the alert view.
 /// Does not include the cancel button.
 - (NSUInteger)numberOfOtherButtons;
+ */
 
-#warning should have unique methods for each kind of style?
-#warning or should return NSDictionary with field type (e.g. "password") as key
 /// The text value for the input fields (only available in some styles)
 /// @discussion @c UIAlertViewStyleDefault will have no input fields and will always return nil
-/// @discussion @c UIAlertViewStylePlainTextInput will have one input field
-/// @discussion @c UIAlertViewStyleSecureTextInput will have one input field
-/// @discussion @c UIAlertViewStyleLoginAndPasswordInput will have two input fields.
+/// @discussion @c UIAlertViewStylePlainTextInput will have one input field. Use @c kMTZAlertViewPlainTextInput to get the text in the plain text input field.
+/// @discussion @c UIAlertViewStyleSecureTextInput will have one input field. Use @c kMTZAlertViewPlainTextInput to get the text in the secure input field.
+/// @discussion @c UIAlertViewStyleLoginAndPasswordInput will have two input fields. Use @c kMTZAlertViewLoginInput to get the text in the login input field. Use @c kMTZAlertViewPasswordInput to get the text in the password input field.
 - (NSDictionary *)inputFieldValues NS_AVAILABLE_IOS(5_0);
 
 
@@ -99,7 +117,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface MTZAlertView : NSObject
 /// Append a button to the alert and, when tapped, perform the corresponding block
 /// @param title The label that appears on the button
 /// @param selector The block to be performed when the button is tapped
-- (void)addButtonWithTitle:(NSString *)title andBlock:(Block)block;
+- (void)addButtonWithTitle:(NSString *)title andBlock:(ActionBlock)block;
 
 
 #pragma mark Presenting the Alert View
@@ -150,10 +168,8 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface MTZAlertView : NSObject
 /// @discussion Sent to the delegate after an alert view is presented to the user.
 - (void)didPresentAlertView:(MTZAlertView *)alertView;
 
-#warning rework the way this works
 // Called after edits in any of the default fields added by the style
 //- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView;
-#warning should be more like this? (Called for each (non-cancel?) button
 
 /// @param alertView The alert view that is being configured.
 /// @param buttonTitle The title of the button that should or shouldn't be enabled.
@@ -163,7 +179,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface MTZAlertView : NSObject
 
 #pragma mark Canceling
 
-#warning @discussion is incorrect. Did cancel and will cancel?
 /// Sent to the delegate when an alert view has been canceled.
 /// @param alertView The alert view that did get canceled.
 /// @discussion This is sent to the delegate when an alert is canceled (e.g. the user clicks the Home button). This is not called when the user clicks the cancel button. If the alert view’s delegate does not implement this method, clicking the cancel button is simulated and the alert view is dismissed. Implement this method if some actions need to be performed before an alert view is canceled. An alert view can be canceled at any time by the system—for example, when the user taps the Home button. The @c alertView:willDismissWithButtonIndex: and @c alertView:didDismissWithButtonIndex: methods are invoked after this method.

@@ -9,14 +9,19 @@
 #import "MTZAlertView.h"
 #import "UIAlertView+DelegateFix.h"
 
+NSString * const kMTZAlertViewPlainTextInput = @"MTZAlertViewPlainTextInput";
+NSString * const kMTZAlertViewSecureTextInput = @"MTZAlertViewSecureTextInput";
+NSString * const kMTZAlertViewLoginInput = @"MTZAlertViewLoginInput";
+NSString * const kMTZAlertViewPasswordInput = @"MTZAlertViewPasswordInput";
+
 @protocol UIAlertViewDelegate;
 
 @interface MTZAlertView () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIAlertView *alertView;
 
-@property (strong, nonatomic) NSMutableArray *buttonTitles;
-@property (strong, nonatomic) NSMutableDictionary *actionsForButtonTitles;
+@property (strong, nonatomic) NSMutableArray *_buttonTitles;
+@property (strong, nonatomic) NSMutableDictionary *_actionsForButtonTitles;
 
 @property (nonatomic) BOOL cancelButtonOnBottom;
 
@@ -65,8 +70,8 @@
 
 - (void)setup
 {
-	_buttonTitles = [[NSMutableArray alloc] initWithCapacity:4];
-	_actionsForButtonTitles = [[NSMutableDictionary alloc] initWithCapacity:4];
+	__buttonTitles = [[NSMutableArray alloc] initWithCapacity:4];
+	__actionsForButtonTitles = [[NSMutableDictionary alloc] initWithCapacity:4];
 }
 
 
@@ -79,7 +84,7 @@
 
 - (NSArray *)buttonTitles
 {
-	NSMutableArray *titles = [NSMutableArray arrayWithArray:_buttonTitles];
+	NSMutableArray *titles = [NSMutableArray arrayWithArray:__buttonTitles];
 	if ( _cancelButtonTitle ) {
 		[titles addObject:_cancelButtonTitle];
 	}
@@ -88,19 +93,19 @@
 
 - (NSArray *)otherButtonTitles
 {
-	return _buttonTitles;
+	return __buttonTitles;
 }
 
 - (NSUInteger)numberOfButtons
 {
-	NSUInteger count = _buttonTitles.count;
+	NSUInteger count = __buttonTitles.count;
 	if ( _cancelButtonTitle ) count++;
 	return count;
 }
 
 - (NSUInteger)numberOfOtherButtons
 {
-	return _buttonTitles.count;
+	return __buttonTitles.count;
 }
 
 - (BOOL)isVisible
@@ -108,35 +113,19 @@
 	return [_alertView isVisible];
 }
 
-typedef enum {
-	PlainTextInput,
-	SecureTextInput,
-	LoginInput,
-	PasswordInput
-} MTZAlertViewInputField;
-
 - (NSDictionary *)inputFieldValues
 {
-#warning should PlainText and SecureText have different keys?
 	switch ( _style ) {
 		case UIAlertViewStylePlainTextInput:
-			// One Field
-			return @{@"PlainTextInput":	[_alertView textFieldAtIndex:0].text};
-			break;
+			return @{kMTZAlertViewPlainTextInput: [_alertView textFieldAtIndex:0].text};
 		case UIAlertViewStyleSecureTextInput:
-			// One field
-			return @{@"SecureTextInput": [_alertView textFieldAtIndex:0].text};
-			break;
+			return @{kMTZAlertViewSecureTextInput: [_alertView textFieldAtIndex:0].text};
 		case UIAlertViewStyleLoginAndPasswordInput:
-			// Two fields
-			return @{@"LoginInput": [_alertView textFieldAtIndex:0].text,
-					 @"PasswordInput": [_alertView textFieldAtIndex:1].text};
-			break;
+			return @{kMTZAlertViewLoginInput:    [_alertView textFieldAtIndex:0].text,
+					 kMTZAlertViewPasswordInput: [_alertView textFieldAtIndex:1].text};
 		case UIAlertViewStyleDefault:
 		default:
-			// No fields
 			return nil;
-			break;
 	}
 }
 
@@ -145,21 +134,20 @@ typedef enum {
 
 - (void)addButtonWithTitle:(NSString *)title andSelector:(SEL)selector
 {
-	if ( title == nil ) {
-		NSLog(@"Button title must be non-nil");
-		return;
-	}
-	
-	// If the title already exists, change it's position and update it's selector
-	if ( [_actionsForButtonTitles objectForKey:title] ) {
-		[_buttonTitles removeObjectIdenticalTo:title];
-	}
-	
-	[_buttonTitles addObject:title];
-	[_actionsForButtonTitles setObject:NSStringFromSelector(selector) forKey:title];
+	[self addButtonWithTitle:title];
+	[__actionsForButtonTitles setObject:NSStringFromSelector(selector) forKey:title];
 }
-#warning combine the shared code in these methods
-- (void)addButtonWithTitle:(NSString *)title andBlock:(Block)block
+
+- (void)addButtonWithTitle:(NSString *)title andBlock:(ActionBlock)block
+{
+	[self addButtonWithTitle:title];
+	[__actionsForButtonTitles setObject:block forKey:title];
+}
+
+// Add a button with the specified title to the alert view.
+// This method is not responsible for adding the block or selector to __actionsForButtonTitles.
+// Warning: Caller must add block or selector to __actionsForButtonTitles itself.
+- (void)addButtonWithTitle:(NSString *)title
 {
 	if ( title == nil ) {
 		NSLog(@"Button title must be non-nil");
@@ -167,12 +155,11 @@ typedef enum {
 	}
 	
 	// If the title already exists, change it's position and upate it's block
-	if ( [_actionsForButtonTitles objectForKey:title] ) {
-		[_buttonTitles removeObjectIdenticalTo:title];
+	if ( [__actionsForButtonTitles objectForKey:title] ) {
+		[__buttonTitles removeObjectIdenticalTo:title];
 	}
 	
-	[_buttonTitles addObject:title];
-	[_actionsForButtonTitles setObject:block forKey:title];
+	[__buttonTitles addObject:title];
 }
 
 
@@ -190,10 +177,10 @@ typedef enum {
 	_alertView.alertViewStyle = _style;
 	_alertView.retainedDelegate = self;
 	
-	if ( _buttonTitles.count > 1 ) {
+	if ( __buttonTitles.count > 1 ) {
 		_cancelButtonOnBottom = YES;
 		// Add all the other buttons
-		for ( NSString *buttonTitle in _buttonTitles ) {
+		for ( NSString *buttonTitle in __buttonTitles ) {
 			[_alertView addButtonWithTitle:buttonTitle];
 		}
 		// Make sure Cancel is on the bottom when more than two buttons
@@ -209,7 +196,7 @@ typedef enum {
 			_alertView.cancelButtonIndex = 0;
 		}
 		// Add the other button
-		[_alertView addButtonWithTitle:_buttonTitles[0]];
+		[_alertView addButtonWithTitle:__buttonTitles[0]];
 	}
 	
 	return _alertView;
@@ -232,7 +219,7 @@ typedef enum {
 	
 	NSInteger cancelButtonIndex = self.cancelButtonIndex;
 	if ( cancelButtonIndex == -1 ) {
-#warning would be nice if UIAlertView did have a API for cancelling
+		// FUTURE: Call cancel if UIAlertView had API for cancelling
 		NSLog(@"Cannot cancel this alert view because it doesn't have a cancel button");
 		return;
 	}
@@ -271,12 +258,12 @@ typedef enum {
 
 #pragma mark UIAlertViewDelegate
 
+// TODO: Enhance to not use "first other button"
+//- (BOOL)alertView:(MTZAlertView *)alertView shouldEnableButtonWithTitle:(NSString *)buttonTitle;
 - (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
 {
 	NSLog(@"alertViewShouldEnableFirstOtherButton:");
-#warning should be more like this? (Called for each (non-cancel?) button
-//- (BOOL)alertView:(MTZAlertView *)alertView shouldEnableButtonWithTitle:(NSString *)buttonTitle;
-	for ( NSString *buttonTitle in _buttonTitles ) {
+	for ( NSString *buttonTitle in __buttonTitles ) {
 		return [_delegate alertView:(MTZAlertView *)alertView shouldEnableButtonWithTitle:buttonTitle];
 	}
 	
@@ -325,7 +312,7 @@ typedef enum {
 	
 	NSString *buttonTitle = self.otherButtonTitles[otherButtonIndex];
 	
-	id action = _actionsForButtonTitles[buttonTitle];
+	id action = __actionsForButtonTitles[buttonTitle];
 	// Selector
 	if ( [(NSObject *)action isKindOfClass:NSString.class]  ) {
 		if ( !_delegate ) {
@@ -343,7 +330,7 @@ typedef enum {
 	}
 	// Block
 	else {
-		((Block)action)();
+		((ActionBlock)action)();
 	}
 }
 

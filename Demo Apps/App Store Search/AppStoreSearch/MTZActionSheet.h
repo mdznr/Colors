@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#warning this typedef probably shouldn't be defined here. It should come from MTZAction?
-typedef void (^Block)();
+/// A block to performed as the result of an action
+typedef void (^ActionBlock)();
 
 @protocol MTZActionSheetDelegate;
 
@@ -19,7 +19,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface MTZActionSheet : NSObject
 
 #pragma mark Creating Action Sheets
 
-#warning TODO: what kinds of quick initalization methods should be presented?
 /// Convenience method for initializing an alert view with a particular title.
 /// @return Newly initialized action sheet.
 - (id)init;
@@ -44,27 +43,30 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface MTZActionSheet : NSObject
 /// The string that appears in the receiver’s title bar.
 @property (strong, nonatomic) NSString *title;
 
-#warning should setting visibility show and hide the action sheet? This behaviour works for UIWindow
 /// A Boolean value that indicates whether the receiver is displayed. (read-only)
 @property (nonatomic, readonly, getter=isVisible) BOOL visible;
 
 /// An ordered (top to bottom) array of the button titles.
 /// Includes @c cancelButtonTitle and @c destructiveButtonTitle, if set.
-- (NSArray *)buttonTitles;
+@property (nonatomic, readonly) NSArray *buttonTitles;
 
 /// An ordered array of the button titles.
 /// Does not include @c cancelButtonTitle and @c destructiveButtonTitle.
-- (NSArray *)otherButtonTitles;
+@property (nonatomic, readonly) NSArray *otherButtonTitles;
 
-#warning do we even need this API?
-/// The total number of buttons on the action sheet.
-/// Includes cancel and destructive buttons, if set.
-- (NSUInteger)numberOfButtons;
+/*
+ #warning do we even need this API?
+ /// The total number of buttons on the action sheet.
+ /// Includes cancel and destructive buttons, if set.
+ - (NSUInteger)numberOfButtons;
+ */
 
-#warning do we even need this API?
-/// The number of buttons on the action sheet.
-/// Does not include cancel and destructive buttons.
-- (NSUInteger)numberOfOtherButtons;
+/*
+ #warning do we even need this API?
+ /// The number of buttons on the action sheet.
+ /// Does not include cancel and destructive buttons.
+ - (NSUInteger)numberOfOtherButtons;
+ */
 
 
 #pragma mark Configuring Buttons
@@ -85,7 +87,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface MTZActionSheet : NSObject
 /// Append a button to the action sheet and, when tapped, perform the corresponding block
 /// @param title The label that appears on the button
 /// @param selector The block to be performed when the button is tapped
-- (void)addButtonWithTitle:(NSString *)title andBlock:(Block)block;
+- (void)addButtonWithTitle:(NSString *)title andBlock:(ActionBlock)block;
 
 
 #pragma mark Presenting the Action Sheet
