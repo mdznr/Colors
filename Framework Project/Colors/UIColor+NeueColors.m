@@ -72,61 +72,61 @@
 // #FF3B30
 + (UIColor *)neueRed
 {
-	return [UIColor colorWithHex:@"FF3B30"];
+	return [UIColor colorWithHexString:@"FF3B30"];
 }
 
 // #FF9500
 + (UIColor *)neueOrange
 {
-	return [UIColor colorWithHex:@"FF9500"];
+	return [UIColor colorWithHexString:@"FF9500"];
 }
 
 // #FFCC00
 + (UIColor *)neueYellow
 {
-	return [UIColor colorWithHex:@"FFCC00"];
+	return [UIColor colorWithHexString:@"FFCC00"];
 }
 
 // #4CD964
 + (UIColor *)neueGreen
 {
-	return [UIColor colorWithHex:@"4CD964"];
+	return [UIColor colorWithHexString:@"4CD964"];
 }
 
 // #34AADC
 + (UIColor *)neueLightBlue
 {
-	return [UIColor colorWithHex:@"34AADC"];
+	return [UIColor colorWithHexString:@"34AADC"];
 }
 
 // #007AFF
 + (UIColor *)neueBlue
 {
-	return [UIColor colorWithHex:@"007AFF"];
+	return [UIColor colorWithHexString:@"007AFF"];
 }
 
 // #5856D6
 + (UIColor *)neuePurple
 {
-	return [UIColor colorWithHex:@"5856D6"];
+	return [UIColor colorWithHexString:@"5856D6"];
 }
 
 // #FF2D55
 + (UIColor *)neuePink
 {
-	return [UIColor colorWithHex:@"FF2D55"];
+	return [UIColor colorWithHexString:@"FF2D55"];
 }
 
 // #8E8E93
 + (UIColor *)neueGray
 {
-	return [UIColor colorWithHex:@"8E8E93"];
+	return [UIColor colorWithHexString:@"8E8E93"];
 }
 
 // #C7C7CC
 + (UIColor *)neueLightGray
 {
-	return [UIColor colorWithHex:@"C7C7CC"];
+	return [UIColor colorWithHexString:@"C7C7CC"];
 }
 
 
@@ -135,31 +135,31 @@
 // #46ABE0
 + (UIColor *)cBlue
 {
-	return [UIColor colorWithHex:@"46ABE0"];
+	return [UIColor colorWithHexString:@"46ABE0"];
 }
 
 // #A1E877
 + (UIColor *)cGreen
 {
-	return [UIColor colorWithHex:@"A1E877"];
+	return [UIColor colorWithHexString:@"A1E877"];
 }
 
 // #F5F4F7
 + (UIColor *)cWhite
 {
-	return [UIColor colorWithHex:@"F5F4F7"];
+	return [UIColor colorWithHexString:@"F5F4F7"];
 }
 
 // #FAF189
 + (UIColor *)cYellow
 {
-	return [UIColor colorWithHex:@"FAF189"];
+	return [UIColor colorWithHexString:@"FAF189"];
 }
 
 // #FE767A
 + (UIColor *)cPink
 {
-	return [UIColor colorWithHex:@"FE767A"];
+	return [UIColor colorWithHexString:@"FE767A"];
 }
 
 
@@ -168,19 +168,19 @@
 // #99989B
 + (UIColor *)sSpaceGray
 {
-	return [UIColor colorWithHex:@"99989B"];
+	return [UIColor colorWithHexString:@"99989B"];
 }
 
 // #D7D9D8
 + (UIColor *)sGold
 {
-	return [UIColor colorWithHex:@"D7D9D8"];
+	return [UIColor colorWithHexString:@"D7D9D8"];
 }
 
 // #D4C5B3
 + (UIColor *)sSilver
 {
-	return [UIColor colorWithHex:@"D4C5B3"];
+	return [UIColor colorWithHexString:@"D4C5B3"];
 }
 
 @end

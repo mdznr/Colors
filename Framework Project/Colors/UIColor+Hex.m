@@ -10,45 +10,46 @@
 #import "UIColor+Components.h"
 #import "NSNumber+Hex.h"
 
+// Part of FCUtilities by Marco Arment.
+// FCUtilities License:
+/*
+ The MIT License (MIT)
+ 
+ Copyright (c) 2014 marcoarment
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the "Software"), to deal in
+ the Software without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ the Software, and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+#define fc_UIColorFromHexInt(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @implementation UIColor (Hex)
 
 // Creates and returns a UIColor from a hexidemical color string
 // Hex strings must contain values
-+ (UIColor *)colorWithHex:(NSString *)hexString
++ (UIColor *)colorWithHexString:(NSString *)hexString
 {
-	NSString *hexRegex = @"^#?[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]$";
-	
-	NSError *error = NULL;
-	NSRegularExpression *hexColorRegex =
-		[NSRegularExpression regularExpressionWithPattern:hexRegex
-												  options:NSRegularExpressionCaseInsensitive
-													error:&error];
-	
-	if ( error ) {
-		NSLog(@"Error: There was an error creating regular expression for hex colors");
+// Part of FCUtilities by Marco Arment.
+	unsigned hexNum;
+	if ( ![[NSScanner scannerWithString:hexString] scanHexInt:&hexNum] ) {
 		return nil;
 	}
-
-	NSUInteger numberOfMatches = [hexColorRegex numberOfMatchesInString:hexString
-																options:NSMatchingReportCompletion
-																  range:NSMakeRange(0, hexString.length)];
-	
-	if ( numberOfMatches != 1 ) {
-		NSLog(@"Error: '%@' is not a valid hexadecimal color string", hexString);
-		return nil;
-	}
-	
-	if ( hexString.length == 7 ) {
-		hexString = [hexString substringWithRange:NSMakeRange(1, 6)];
-	}
-	NSNumber *red   = [NSNumber numberWithHex:[hexString substringWithRange:NSMakeRange(0, 2)]];
-	NSNumber *green = [NSNumber numberWithHex:[hexString substringWithRange:NSMakeRange(2, 2)]];
-	NSNumber *blue  = [NSNumber numberWithHex:[hexString substringWithRange:NSMakeRange(4, 2)]];
-	return [UIColor colorWithRed:  red.floatValue/255.0f
-						   green:green.floatValue/255.0f
-							blue: blue.floatValue/255.0f
-						   alpha:1.0f];
+	return fc_UIColorFromHexInt(hexNum);
 }
+
 
 - (NSString *)hexString
 {

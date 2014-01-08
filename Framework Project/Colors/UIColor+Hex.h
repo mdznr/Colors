@@ -18,7 +18,7 @@
 /// @param hexString A 6-digit hexadecimal string representing the string.
 /// @discussion hexString Does not necessarily need the '#' prefix.
 /// @return A Core Image color object that represents an RGB color in the color space specified by the Quartz 2D constant kCGColorSpaceGenericRGB.
-+ (UIColor *)colorWithHex:(NSString *)hexString;
++ (UIColor *)colorWithHexString:(NSString *)hexString;
 
 /// Returns a string containing 6 hexadecimal characters representing the receiver.
 /// @discussion Example: [UIColor whiteColor] returns "#FFFFFF".
