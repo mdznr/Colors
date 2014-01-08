@@ -104,14 +104,10 @@
 			UIColor *color = [self.appRecord.appIcon keyColor];
 			
 			if ( color ) {
-//				self.view.tintColor = color;
 				[[UIApplication sharedApplication] keyWindow].tintColor = color;
 			} else {
-				self.view.tintColor = [UIColor neueBlue];
-				self.starsRatingView.tintColor = [UIColor neueOrange];
-				self.segmentedControl.tintColor = [self.appRecord.appIcon backgroundColor];
+				[[UIApplication sharedApplication] keyWindow].tintColor = [UIColor neueBlue];
 			}
-			
 		} else {
 			self.appIconImageView.image = [UIImage imageNamed:@"IconPlaceholder"];
 		}
