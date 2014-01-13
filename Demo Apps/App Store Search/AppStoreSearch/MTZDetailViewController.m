@@ -101,13 +101,9 @@
 	if ( self.appRecord ) {
 		if ( self.appRecord.appIcon ) {
 			self.appIconImageView.image = [self.appRecord.appIcon appIconShape];
-			UIColor *color = [self.appRecord.appIcon keyColor];
-			
-			if ( color ) {
-				[[UIApplication sharedApplication] keyWindow].tintColor = color;
-			} else {
-				[[UIApplication sharedApplication] keyWindow].tintColor = [UIColor neueBlue];
-			}
+			// Get keyColor or default to blue
+			UIColor *color = [self.appRecord.appIcon keyColor] ?: [UIColor neueBlue];
+			[[UIApplication sharedApplication] keyWindow].tintColor = color;
 		} else {
 			self.appIconImageView.image = [UIImage imageNamed:@"IconPlaceholder"];
 		}
