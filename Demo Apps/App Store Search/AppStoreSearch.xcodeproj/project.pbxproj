@@ -16,6 +16,7 @@
 		C95BF6381838A32C00B1B69F /* UIActionSheet+DelegateFix.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6331838A32C00B1B69F /* UIActionSheet+DelegateFix.m */; };
 		C95BF6391838A32C00B1B69F /* UIAlertView+DelegateFix.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6351838A32C00B1B69F /* UIAlertView+DelegateFix.m */; };
 		C95BF63C1839387A00B1B69F /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF63B1839387A00B1B69F /* UIImage+Mask.m */; };
+		C98E0B8818849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C98E0B8718849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.m */; };
 		C9BD2C081839C4E3006BBA5C /* MTZOutlinedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */; };
 		C9BD2C0B1839DE3C006BBA5C /* ScreenshotDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */; };
 		C9BD2C111839ECCB006BBA5C /* MTZScrollingCardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C101839ECCB006BBA5C /* MTZScrollingCardsView.m */; };
@@ -65,6 +66,8 @@
 		C95BF6351838A32C00B1B69F /* UIAlertView+DelegateFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+DelegateFix.m"; sourceTree = "<group>"; };
 		C95BF63A1839387A00B1B69F /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
 		C95BF63B1839387A00B1B69F /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
+		C98E0B8618849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NetworkActivityIndicator.h"; sourceTree = "<group>"; };
+		C98E0B8718849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NetworkActivityIndicator.m"; sourceTree = "<group>"; };
 		C9BD2C061839C4E3006BBA5C /* MTZOutlinedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZOutlinedButton.h; sourceTree = "<group>"; };
 		C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZOutlinedButton.m; sourceTree = "<group>"; };
 		C9BD2C091839DE3C006BBA5C /* ScreenshotDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenshotDownloader.h; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 				C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */,
 				C9BD2C0F1839ECCB006BBA5C /* MTZScrollingCardsView.h */,
 				C9BD2C101839ECCB006BBA5C /* MTZScrollingCardsView.m */,
+				C98E0B8618849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.h */,
+				C98E0B8718849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.m */,
 				C9FBE1141836799200F1DEF5 /* Images.xcassets */,
 				C968FFB5184AABA8006CD6E1 /* Rewritten Action and Alert */,
 				C9FBE1001836799200F1DEF5 /* Supporting Files */,
@@ -328,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9BD2C111839ECCB006BBA5C /* MTZScrollingCardsView.m in Sources */,
+				C98E0B8818849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.m in Sources */,
 				C95BF6381838A32C00B1B69F /* UIActionSheet+DelegateFix.m in Sources */,
 				C9BD2C0B1839DE3C006BBA5C /* ScreenshotDownloader.m in Sources */,
 				C95BF5FD183854C700B1B69F /* AppRecord.m in Sources */,
