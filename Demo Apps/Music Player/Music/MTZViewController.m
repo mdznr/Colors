@@ -9,7 +9,7 @@
 #import "MTZViewController.h"
 #import "MTZSlider.h"
 
-#define IPAD_MOTION_FX 0
+#define IPAD_MOTION_FX 1
 #define IPAD_MOTION_FX_DIST 50
 
 @import MediaPlayer;
@@ -379,7 +379,7 @@
 												withMinimumContrast:UIColorContrastLevelMedium];
 	// Default to black otherwise
 	bg = (bg) ? bg : UIColor.blackColor;
-	_overlayView.backgroundColor = [bg colorWithAlphaComponent:0.8f];
+	_overlayView.backgroundColor = bg;
 	
 	UIColor *keyColor = [_iv.image backgroundColorToContrastAgainstColors:@[bg, [UIColor blackColor]]
 												   withMinimumContrast:UIColorContrastLevelMedium];
