@@ -201,12 +201,14 @@
 
 - (UIImageView *)imageViewForIndex:(NSUInteger)index
 {
-	if      ( index == 0 ) return _ss1;
-	else if ( index == 1 ) return _ss2;
-	else if ( index == 2 ) return _ss3;
-	else if ( index == 3 ) return _ss4;
-	else if ( index == 4 ) return _ss5;
-	return nil;
+	switch ( index ) {
+		case 0: return _ss1;
+		case 1: return _ss2;
+		case 2: return _ss3;
+		case 3: return _ss4;
+		case 4: return _ss5;
+		default: return nil;
+	}
 }
 
 - (void)shareApp:(id)sender
@@ -222,7 +224,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
 	if ( scrollView == self.screenshotsView.scrollView ) {
-		// If the screenshots view scrolled, make sure it's visible
+		// If the screenshots view scrolled, make sure it's visible.
 		[UIView animateWithDuration:SCROLLVIEW_ANIMATION_DURATION
 							  delay:0.0f
 			 usingSpringWithDamping:1.0f
