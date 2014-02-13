@@ -79,8 +79,8 @@
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.appRecord.screenshotURLs[_index]]];
     
-    // alloc+init and start an NSURLConnection; release on completion/failure
-    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+	// alloc+init and start an NSURLConnection; release on completion/failure
+	NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
     self.imageConnection = conn;
 }
@@ -101,49 +101,48 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-	// Clear the activeDownload property to allow later attempts
+	// Clear the activeDownload property to allow later attempts.
     self.activeDownload = nil;
     
-    // Release the connection now that it's finished
+    // Release the connection now that it's finished.
     self.imageConnection = nil;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    // Set appIcon and clear temporary data/image
+    // Set appIcon and clear temporary data/image.
     UIImage *image = [[UIImage alloc] initWithData:self.activeDownload];
     
+	// Correct orientation.
 	if ( image.size.width > image.size.height ) {
 		image = [[UIImage alloc] initWithCGImage:image.CGImage
 										   scale:UIScreen.mainScreen.scale
 									 orientation:UIImageOrientationLeft];
 	}
+	
+	// Scale to appropriate size.
 	if ( image.size.width != kScreenshotWidth || image.size.height != kScreenshotHeight ) {
 		CGSize itemSize = CGSizeMake(kScreenshotWidth, kScreenshotHeight);
 		UIGraphicsBeginImageContextWithOptions(itemSize, NO, 0.0f);
 		CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
 		[image drawInRect:imageRect];
-		// Create empty dictionary
-		if ( !self.appRecord.screenshots ) {
-			self.appRecord.screenshots = [NSMutableDictionary dictionaryWithCapacity:self.appRecord.screenshotURLs.count];
-		}
-		// Add screenshot
-		[self.appRecord.screenshots setObject:UIGraphicsGetImageFromCurrentImageContext() forKey:@(_index)];
+		image = UIGraphicsGetImageFromCurrentImageContext();
 		UIGraphicsEndImageContext();
-    } else {
-		// Create empty dictionary
-		if ( !self.appRecord.screenshots ) {
-			self.appRecord.screenshots = [NSMutableDictionary dictionaryWithCapacity:self.appRecord.screenshotURLs.count];
-		}
-		[self.appRecord.screenshots setObject:image forKey:@(_index)];
     }
+	
+	// Create empty dictionary, if necessary.
+	if ( !self.appRecord.screenshots ) {
+		self.appRecord.screenshots = [NSMutableDictionary dictionaryWithCapacity:self.appRecord.screenshotURLs.count];
+	}
+	
+	// Add screenshot.
+	[self.appRecord.screenshots setObject:image forKey:@(_index)];
     
+    // Release the download and connection now that it's finished.
     self.activeDownload = nil;
-    
-    // Release the connection now that it's finished
     self.imageConnection = nil;
 	
-    // call our delegate and tell it that our icon is ready for display
+    // Call our delegate and tell it that our icon is ready for display.
     if ( self.completionHandler ) {
         self.completionHandler();
 	}

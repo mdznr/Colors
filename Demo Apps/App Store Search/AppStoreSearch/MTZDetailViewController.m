@@ -122,11 +122,11 @@
 		 */
 		
 		CGSize size = (CGSize){196 + 16, 336};
-		self.screenshotsView.scrollView.contentSize = (CGSize){(size.width * self.appRecord.screenshotURLs.count), size.height};
+		self.screenshotsView.scrollView.contentSize = CGSizeMake((size.width * self.appRecord.screenshotURLs.count), size.height);
 		
 		self.descriptionLabel.text = self.appRecord.descriptionText;
 		[self.descriptionLabel sizeToFit];
-		self.scrollView.contentSize = (CGSize){self.scrollView.frame.size.width, self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.size.height + 16};
+		self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.size.height + 16);
 	}
 }
 
@@ -183,10 +183,8 @@
 			ssDownloader.appRecord = _appRecord;
 			ssDownloader.index = index;
 			[ssDownloader setCompletionHandler:^{
-				
-				UIImageView *iv = [self imageViewForIndex:index];
-				
 				// Display the newly loaded image
+				UIImageView *iv = [self imageViewForIndex:index];
 				iv.image = [_appRecord.screenshots objectForKey:@(index)];
 				
 				// Remove the ScreenshotDownloader from the in progress list.
