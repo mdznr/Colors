@@ -72,7 +72,6 @@ withInterpolationQuality:(CGInterpolationQuality)interpolationQuality
 	UIGraphicsBeginImageContext(size);
 	
     CGContextRef context = UIGraphicsGetCurrentContext();
-	NSLog(@"%@, %@", context, NSStringFromCGSize(size));
     CGContextTranslateCTM(context, 0.0, size.height);
     CGContextScaleCTM(context, 1.0, -1.0);
 	

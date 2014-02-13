@@ -20,15 +20,26 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
+	const int numberOfImages = 10;
+	NSMutableArray *times = [NSMutableArray arrayWithCapacity:numberOfImages];
+	
 	// These are all being done on the main thread.
 	// The methods being tested are intended to be done on the main thread.
 	// However, so many done sequentially in one thread is not intended, but is done for testing.
-	NSDate *begin = [NSDate date];
-	UIImage *image = [UIImage imageNamed:@"1"];
-	UIColor *color = [image keyColorToContrastAgainstColors:@[[UIColor whiteColor]]
-										withMinimumContrast:UIColorContrastLevelLow];
-	NSDate *end = [NSDate date];
-	NSLog(@"%f", [end timeIntervalSinceDate:begin]);
+	for ( int i=0; i<numberOfImages; ++i ) {
+		NSDate *begin = [NSDate date];
+		
+		NSString *imageName = [NSString stringWithFormat:@"%d", i];
+		UIImage *image = [UIImage imageNamed:imageName];
+		UIColor *color = [image keyColorToContrastAgainstColors:@[[UIColor whiteColor]]
+											withMinimumContrast:UIColorContrastLevelLow];
+		
+		NSTimeInterval time = [[NSDate date] timeIntervalSinceDate:begin];
+		[times addObject:[NSNumber numberWithDouble:time]];
+	}
+	
+	// Log all of the times.
+	NSLog(@"%@", times);
 }
 
 - (void)didReceiveMemoryWarning
