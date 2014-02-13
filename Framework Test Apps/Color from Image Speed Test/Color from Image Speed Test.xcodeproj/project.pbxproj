@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C97FB62D18AC724400800FA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FB62C18AC724400800FA9 /* Foundation.framework */; };
+		C97FB62F18AC724400800FA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FB62E18AC724400800FA9 /* CoreGraphics.framework */; };
+		C97FB63118AC724400800FA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FB63018AC724400800FA9 /* UIKit.framework */; };
+		C97FB63718AC724400800FA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C97FB63518AC724400800FA9 /* InfoPlist.strings */; };
+		C97FB63918AC724400800FA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97FB63818AC724400800FA9 /* main.m */; };
+		C97FB63D18AC724400800FA9 /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97FB63C18AC724400800FA9 /* MTZAppDelegate.m */; };
+		C97FB64018AC724400800FA9 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97FB63E18AC724400800FA9 /* Main_iPhone.storyboard */; };
+		C97FB64318AC724400800FA9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97FB64118AC724400800FA9 /* Main_iPad.storyboard */; };
+		C97FB64618AC724400800FA9 /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97FB64518AC724400800FA9 /* MTZViewController.m */; };
+		C97FB64818AC724400800FA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97FB64718AC724400800FA9 /* Images.xcassets */; };
+		C97FB64F18AC724400800FA9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FB64E18AC724400800FA9 /* XCTest.framework */; };
+		C97FB65018AC724400800FA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FB62C18AC724400800FA9 /* Foundation.framework */; };
+		C97FB65118AC724400800FA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FB63018AC724400800FA9 /* UIKit.framework */; };
+		C97FB65918AC724400800FA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C97FB65718AC724400800FA9 /* InfoPlist.strings */; };
+		C97FB65B18AC724400800FA9 /* Color_from_Image_Speed_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C97FB65A18AC724400800FA9 /* Color_from_Image_Speed_TestTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C97FB65218AC724400800FA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C97FB62118AC724400800FA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C97FB62818AC724400800FA9;
+			remoteInfo = "Color from Image Speed Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C97FB62918AC724400800FA9 /* Color from Image Speed Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color from Image Speed Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97FB62C18AC724400800FA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C97FB62E18AC724400800FA9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C97FB63018AC724400800FA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C97FB63418AC724400800FA9 /* Color from Image Speed Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Color from Image Speed Test-Info.plist"; sourceTree = "<group>"; };
+		C97FB63618AC724400800FA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C97FB63818AC724400800FA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C97FB63A18AC724400800FA9 /* Color from Image Speed Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Color from Image Speed Test-Prefix.pch"; sourceTree = "<group>"; };
+		C97FB63B18AC724400800FA9 /* MTZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZAppDelegate.h; sourceTree = "<group>"; };
+		C97FB63C18AC724400800FA9 /* MTZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZAppDelegate.m; sourceTree = "<group>"; };
+		C97FB63F18AC724400800FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		C97FB64218AC724400800FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		C97FB64418AC724400800FA9 /* MTZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZViewController.h; sourceTree = "<group>"; };
+		C97FB64518AC724400800FA9 /* MTZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZViewController.m; sourceTree = "<group>"; };
+		C97FB64718AC724400800FA9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C97FB64D18AC724400800FA9 /* Color from Image Speed TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Color from Image Speed TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97FB64E18AC724400800FA9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C97FB65618AC724400800FA9 /* Color from Image Speed TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Color from Image Speed TestTests-Info.plist"; sourceTree = "<group>"; };
+		C97FB65818AC724400800FA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C97FB65A18AC724400800FA9 /* Color_from_Image_Speed_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Color_from_Image_Speed_TestTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C97FB62618AC724400800FA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C97FB62F18AC724400800FA9 /* CoreGraphics.framework in Frameworks */,
+				C97FB63118AC724400800FA9 /* UIKit.framework in Frameworks */,
+				C97FB62D18AC724400800FA9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97FB64A18AC724400800FA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C97FB64F18AC724400800FA9 /* XCTest.framework in Frameworks */,
+				C97FB65118AC724400800FA9 /* UIKit.framework in Frameworks */,
+				C97FB65018AC724400800FA9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C97FB62018AC724400800FA9 = {
+			isa = PBXGroup;
+			children = (
+				C97FB63218AC724400800FA9 /* Color from Image Speed Test */,
+				C97FB65418AC724400800FA9 /* Color from Image Speed TestTests */,
+				C97FB62B18AC724400800FA9 /* Frameworks */,
+				C97FB62A18AC724400800FA9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C97FB62A18AC724400800FA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C97FB62918AC724400800FA9 /* Color from Image Speed Test.app */,
+				C97FB64D18AC724400800FA9 /* Color from Image Speed TestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C97FB62B18AC724400800FA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C97FB62C18AC724400800FA9 /* Foundation.framework */,
+				C97FB62E18AC724400800FA9 /* CoreGraphics.framework */,
+				C97FB63018AC724400800FA9 /* UIKit.framework */,
+				C97FB64E18AC724400800FA9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C97FB63218AC724400800FA9 /* Color from Image Speed Test */ = {
+			isa = PBXGroup;
+			children = (
+				C97FB63B18AC724400800FA9 /* MTZAppDelegate.h */,
+				C97FB63C18AC724400800FA9 /* MTZAppDelegate.m */,
+				C97FB63E18AC724400800FA9 /* Main_iPhone.storyboard */,
+				C97FB64118AC724400800FA9 /* Main_iPad.storyboard */,
+				C97FB64418AC724400800FA9 /* MTZViewController.h */,
+				C97FB64518AC724400800FA9 /* MTZViewController.m */,
+				C97FB64718AC724400800FA9 /* Images.xcassets */,
+				C97FB63318AC724400800FA9 /* Supporting Files */,
+			);
+			path = "Color from Image Speed Test";
+			sourceTree = "<group>";
+		};
+		C97FB63318AC724400800FA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C97FB63418AC724400800FA9 /* Color from Image Speed Test-Info.plist */,
+				C97FB63518AC724400800FA9 /* InfoPlist.strings */,
+				C97FB63818AC724400800FA9 /* main.m */,
+				C97FB63A18AC724400800FA9 /* Color from Image Speed Test-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C97FB65418AC724400800FA9 /* Color from Image Speed TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				C97FB65A18AC724400800FA9 /* Color_from_Image_Speed_TestTests.m */,
+				C97FB65518AC724400800FA9 /* Supporting Files */,
+			);
+			path = "Color from Image Speed TestTests";
+			sourceTree = "<group>";
+		};
+		C97FB65518AC724400800FA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C97FB65618AC724400800FA9 /* Color from Image Speed TestTests-Info.plist */,
+				C97FB65718AC724400800FA9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C97FB62818AC724400800FA9 /* Color from Image Speed Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C97FB65E18AC724400800FA9 /* Build configuration list for PBXNativeTarget "Color from Image Speed Test" */;
+			buildPhases = (
+				C97FB62518AC724400800FA9 /* Sources */,
+				C97FB62618AC724400800FA9 /* Frameworks */,
+				C97FB62718AC724400800FA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Color from Image Speed Test";
+			productName = "Color from Image Speed Test";
+			productReference = C97FB62918AC724400800FA9 /* Color from Image Speed Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C97FB64C18AC724400800FA9 /* Color from Image Speed TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C97FB66118AC724400800FA9 /* Build configuration list for PBXNativeTarget "Color from Image Speed TestTests" */;
+			buildPhases = (
+				C97FB64918AC724400800FA9 /* Sources */,
+				C97FB64A18AC724400800FA9 /* Frameworks */,
+				C97FB64B18AC724400800FA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C97FB65318AC724400800FA9 /* PBXTargetDependency */,
+			);
+			name = "Color from Image Speed TestTests";
+			productName = "Color from Image Speed TestTests";
+			productReference = C97FB64D18AC724400800FA9 /* Color from Image Speed TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C97FB62118AC724400800FA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MTZ;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Matt Zanchelli";
+				TargetAttributes = {
+					C97FB64C18AC724400800FA9 = {
+						TestTargetID = C97FB62818AC724400800FA9;
+					};
+				};
+			};
+			buildConfigurationList = C97FB62418AC724400800FA9 /* Build configuration list for PBXProject "Color from Image Speed Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C97FB62018AC724400800FA9;
+			productRefGroup = C97FB62A18AC724400800FA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C97FB62818AC724400800FA9 /* Color from Image Speed Test */,
+				C97FB64C18AC724400800FA9 /* Color from Image Speed TestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C97FB62718AC724400800FA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C97FB64318AC724400800FA9 /* Main_iPad.storyboard in Resources */,
+				C97FB64818AC724400800FA9 /* Images.xcassets in Resources */,
+				C97FB64018AC724400800FA9 /* Main_iPhone.storyboard in Resources */,
+				C97FB63718AC724400800FA9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97FB64B18AC724400800FA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C97FB65918AC724400800FA9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C97FB62518AC724400800FA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C97FB63D18AC724400800FA9 /* MTZAppDelegate.m in Sources */,
+				C97FB63918AC724400800FA9 /* main.m in Sources */,
+				C97FB64618AC724400800FA9 /* MTZViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97FB64918AC724400800FA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C97FB65B18AC724400800FA9 /* Color_from_Image_Speed_TestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C97FB65318AC724400800FA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C97FB62818AC724400800FA9 /* Color from Image Speed Test */;
+			targetProxy = C97FB65218AC724400800FA9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C97FB63518AC724400800FA9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C97FB63618AC724400800FA9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C97FB63E18AC724400800FA9 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C97FB63F18AC724400800FA9 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C97FB64118AC724400800FA9 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C97FB64218AC724400800FA9 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C97FB65718AC724400800FA9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C97FB65818AC724400800FA9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C97FB65C18AC724400800FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C97FB65D18AC724400800FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C97FB65F18AC724400800FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Color from Image Speed Test/Color from Image Speed Test-Prefix.pch";
+				INFOPLIST_FILE = "Color from Image Speed Test/Color from Image Speed Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C97FB66018AC724400800FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Color from Image Speed Test/Color from Image Speed Test-Prefix.pch";
+				INFOPLIST_FILE = "Color from Image Speed Test/Color from Image Speed Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C97FB66218AC724400800FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Color from Image Speed Test.app/Color from Image Speed Test";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Color from Image Speed Test/Color from Image Speed Test-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Color from Image Speed TestTests/Color from Image Speed TestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C97FB66318AC724400800FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Color from Image Speed Test.app/Color from Image Speed Test";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Color from Image Speed Test/Color from Image Speed Test-Prefix.pch";
+				INFOPLIST_FILE = "Color from Image Speed TestTests/Color from Image Speed TestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C97FB62418AC724400800FA9 /* Build configuration list for PBXProject "Color from Image Speed Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C97FB65C18AC724400800FA9 /* Debug */,
+				C97FB65D18AC724400800FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C97FB65E18AC724400800FA9 /* Build configuration list for PBXNativeTarget "Color from Image Speed Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C97FB65F18AC724400800FA9 /* Debug */,
+				C97FB66018AC724400800FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C97FB66118AC724400800FA9 /* Build configuration list for PBXNativeTarget "Color from Image Speed TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C97FB66218AC724400800FA9 /* Debug */,
+				C97FB66318AC724400800FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C97FB62118AC724400800FA9 /* Project object */;
+}
