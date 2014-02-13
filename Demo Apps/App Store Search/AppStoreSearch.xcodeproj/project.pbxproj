@@ -15,7 +15,6 @@
 		C95BF6371838A32C00B1B69F /* MTZAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6311838A32C00B1B69F /* MTZAlertView.m */; };
 		C95BF6381838A32C00B1B69F /* UIActionSheet+DelegateFix.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6331838A32C00B1B69F /* UIActionSheet+DelegateFix.m */; };
 		C95BF6391838A32C00B1B69F /* UIAlertView+DelegateFix.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6351838A32C00B1B69F /* UIAlertView+DelegateFix.m */; };
-		C95BF63C1839387A00B1B69F /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF63B1839387A00B1B69F /* UIImage+Mask.m */; };
 		C98E0B8818849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C98E0B8718849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.m */; };
 		C9BD2C081839C4E3006BBA5C /* MTZOutlinedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */; };
 		C9BD2C0B1839DE3C006BBA5C /* ScreenshotDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */; };
@@ -64,8 +63,6 @@
 		C95BF6331838A32C00B1B69F /* UIActionSheet+DelegateFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+DelegateFix.m"; sourceTree = "<group>"; };
 		C95BF6341838A32C00B1B69F /* UIAlertView+DelegateFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+DelegateFix.h"; sourceTree = "<group>"; };
 		C95BF6351838A32C00B1B69F /* UIAlertView+DelegateFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+DelegateFix.m"; sourceTree = "<group>"; };
-		C95BF63A1839387A00B1B69F /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
-		C95BF63B1839387A00B1B69F /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
 		C98E0B8618849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NetworkActivityIndicator.h"; sourceTree = "<group>"; };
 		C98E0B8718849B3F001DA3D3 /* UIApplication+NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NetworkActivityIndicator.m"; sourceTree = "<group>"; };
 		C9BD2C061839C4E3006BBA5C /* MTZOutlinedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZOutlinedButton.h; sourceTree = "<group>"; };
@@ -190,8 +187,6 @@
 				C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */,
 				C95BF6041838778200B1B69F /* MTZStarsRatingView.h */,
 				C95BF6051838778200B1B69F /* MTZStarsRatingView.m */,
-				C95BF63A1839387A00B1B69F /* UIImage+Mask.h */,
-				C95BF63B1839387A00B1B69F /* UIImage+Mask.m */,
 				C9BD2C061839C4E3006BBA5C /* MTZOutlinedButton.h */,
 				C9BD2C071839C4E3006BBA5C /* MTZOutlinedButton.m */,
 				C9BD2C0F1839ECCB006BBA5C /* MTZScrollingCardsView.h */,
@@ -279,7 +274,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MTZ;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Matt Zanchelli";
 				TargetAttributes = {
 					C9FBE1191836799200F1DEF5 = {
@@ -340,7 +335,6 @@
 				C9FBE10A1836799200F1DEF5 /* MTZAppDelegate.m in Sources */,
 				C9FBE1131836799200F1DEF5 /* MTZDetailViewController.m in Sources */,
 				C95BF6371838A32C00B1B69F /* MTZAlertView.m in Sources */,
-				C95BF63C1839387A00B1B69F /* UIImage+Mask.m in Sources */,
 				C95BF6391838A32C00B1B69F /* UIAlertView+DelegateFix.m in Sources */,
 				C9FBE1101836799200F1DEF5 /* MTZMasterViewController.m in Sources */,
 				C95BF6361838A32C00B1B69F /* MTZActionSheet.m in Sources */,
@@ -402,7 +396,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -441,7 +434,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -535,7 +527,6 @@
 		C9FBE12F1836799200F1DEF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AppStoreSearch.app/AppStoreSearch";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -563,7 +554,6 @@
 		C9FBE1301836799200F1DEF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AppStoreSearch.app/AppStoreSearch";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

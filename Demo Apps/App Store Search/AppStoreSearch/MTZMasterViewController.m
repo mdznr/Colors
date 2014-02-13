@@ -72,7 +72,8 @@
 #import "AppRecord.h"
 #import "IconDownloader.h"
 #import "MTZAppRecordDownloader.h"
-#import "UIImage+Mask.h"
+
+#import <Colors/UIImage+Mask.h>
 
 #import <Colors/Colors.h>
 

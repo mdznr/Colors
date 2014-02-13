@@ -11,7 +11,8 @@
 #import "MTZStarsRatingView.h"
 #import "MTZOutlinedButton.h"
 #import "ScreenshotDownloader.h"
-#import "UIImage+Mask.h"
+
+#import <Colors/UIImage+Mask.h>
 
 #import "MTZActionSheet.h"
 
