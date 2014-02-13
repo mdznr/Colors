@@ -231,7 +231,7 @@
 			  initialSpringVelocity:1.0f
 							options:UIViewAnimationOptionBeginFromCurrentState
 						 animations:^{
-							 [self.scrollView setContentOffset:(CGPoint){0, self.segmentedControl.frame.origin.y - 8 - self.scrollView.contentInset.top}];
+							 self.scrollView.contentOffset = CGPointMake(0, self.segmentedControl.frame.origin.y - 8 - self.scrollView.contentInset.top);
 						 }
 						 completion:^(BOOL finished) {}];
 	}
