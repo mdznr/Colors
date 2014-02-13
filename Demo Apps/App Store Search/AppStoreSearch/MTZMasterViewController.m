@@ -221,11 +221,12 @@
         iconDownloader = [[IconDownloader alloc] init];
         iconDownloader.appRecord = appRecord;
         [iconDownloader setCompletionHandler:^{
-            
+            [[UIApplication sharedApplication] endedNetworkActivity];
             UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
             
 			// Display the newly loaded image
-			UIImage *appIcon = [appRecord.appIcon scaleToSize:(CGSize){cell.imageView.bounds.size.width, cell.imageView.bounds.size.height} keepingAspectRatio:YES];
+			CGSize iconSize = cell.imageView.bounds.size;
+			UIImage *appIcon = [appRecord.appIcon scaleToSize:iconSize keepingAspectRatio:YES];
 			UIBezierPath *iconShape = [UIBezierPath bezierPathWithRoundedRect:cell.imageView.bounds
 																 cornerRadius:cell.imageView.bounds.size.width/5];
 			cell.imageView.image = [appIcon maskedImageWithBezierPath:iconShape];
@@ -237,6 +238,7 @@
         }];
         [self.imageDownloadsInProgress setObject:iconDownloader forKey:indexPath];
         [iconDownloader startDownload];
+		[[UIApplication sharedApplication] beganNetworkActivity];
     }
 }
 

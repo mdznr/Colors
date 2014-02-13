@@ -56,10 +56,10 @@ withInterpolationQuality:(CGInterpolationQuality)interpolationQuality
     if ( keepAspectRatio ) {
         if ( self.size.width < self.size.height ) {
             // Tall image
-            newSize = (CGSize){size.height * (self.size.width/self.size.height), size.height};
+			newSize = CGSizeMake(size.height * (self.size.width/self.size.height), size.height);
         } else {
             // Not-tall image
-            newSize = (CGSize){size.width, size.width * (self.size.width/self.size.height)};
+            newSize = CGSizeMake(size.width, size.width * (self.size.width/self.size.height));
         }
     }
     return [self scaleToSize:newSize withInterpolationQuality:interpolationQuality];

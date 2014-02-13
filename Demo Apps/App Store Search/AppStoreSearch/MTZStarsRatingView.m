@@ -53,15 +53,17 @@ static NSString *kEmptyStarImage = @"EmptyStar";
 - (void)setup
 {
 	// Hollow Stars
-	_emptyStarsImageView = [[UIImageView alloc] initWithFrame:(CGRect){0,0,60,12}];
-	_emptyStarsImageView.image = [[UIImage imageNamed:kEmptyStarImage] resizableImageWithCapInsets:UIEdgeInsetsZero
-																					  resizingMode:UIImageResizingModeTile];
+	_emptyStarsImageView = [[UIImageView alloc] initWithFrame:(CGRect){0, 0, 60, 12}];
+	UIImage *emptyStarImage = [[UIImage imageNamed:kEmptyStarImage] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+	_emptyStarsImageView.image = [emptyStarImage resizableImageWithCapInsets:UIEdgeInsetsZero
+																resizingMode:UIImageResizingModeTile];
 	[self addSubview:_emptyStarsImageView];
 	
 	// Filled Stars
-	_starsImageView = [[UIImageView alloc] initWithFrame:(CGRect){0,0,12,12}];
-	_starsImageView.image = [[UIImage imageNamed:kStarImage] resizableImageWithCapInsets:UIEdgeInsetsZero
-																			resizingMode:UIImageResizingModeTile];
+	_starsImageView = [[UIImageView alloc] initWithFrame:(CGRect){0, 0, 12, 12}];
+	UIImage *starImage = [[UIImage imageNamed:kStarImage] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+	_starsImageView.image = [starImage resizableImageWithCapInsets:UIEdgeInsetsZero
+													  resizingMode:UIImageResizingModeTile];
 	[self addSubview:_starsImageView];
 	
 	// Number Formatter
@@ -90,20 +92,5 @@ static NSString *kEmptyStarImage = @"EmptyStar";
 	NSString *formattedNumber = [_numFormatter stringFromNumber:_numberOfRatings];
 	_numberOfRatingsLabel.text = [NSString stringWithFormat:@"(%@)", formattedNumber];
 }
-
-- (void)tintColorDidChange
-{
-	_starsImageView.image = [[[UIImage imageNamed:kStarImage] tintedImageWithColor:self.tintColor] resizableImageWithCapInsets:(UIEdgeInsets){0,0} resizingMode:UIImageResizingModeTile];
-	_emptyStarsImageView.image = [[[UIImage imageNamed:kEmptyStarImage] tintedImageWithColor:self.tintColor] resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeTile];
-}
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end
