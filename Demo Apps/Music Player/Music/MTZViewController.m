@@ -202,7 +202,7 @@
 	if ( !artist ) artist = @"Artist";
 	NSString *album = [currentItem valueForProperty:MPMediaItemPropertyAlbumTitle];
 	if ( !album ) album = @"Album";
-	_artistAndAlbumTitles.text = [NSString stringWithFormat:@"%@ - %@", artist, album];
+	_artistAndAlbumTitles.text = [NSString stringWithFormat:@"%@ — %@", artist, album];
 	
 	
 	NSNumber *trackNo = [currentItem valueForProperty:MPMediaItemPropertyAlbumTrackNumber];
