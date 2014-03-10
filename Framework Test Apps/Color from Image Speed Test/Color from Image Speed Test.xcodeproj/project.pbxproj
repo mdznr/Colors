@@ -32,6 +32,7 @@
 		C97FB69E18AC7DFD00800FA9 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = C97FB69518AC7DFD00800FA9 /* 7.png */; };
 		C97FB69F18AC7DFD00800FA9 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = C97FB69618AC7DFD00800FA9 /* 8.png */; };
 		C97FB6A018AC7DFD00800FA9 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = C97FB69718AC7DFD00800FA9 /* 9.png */; };
+		C97FB6A218ACCA6F00800FA9 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = C97FB6A118ACCA6F00800FA9 /* 0.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		C97FB69518AC7DFD00800FA9 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		C97FB69618AC7DFD00800FA9 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		C97FB69718AC7DFD00800FA9 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		C97FB6A118ACCA6F00800FA9 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 		C97FB67C18AC7C7D00800FA9 /* Test Images */ = {
 			isa = PBXGroup;
 			children = (
+				C97FB6A118ACCA6F00800FA9 /* 0.png */,
 				C97FB68F18AC7DFD00800FA9 /* 1.png */,
 				C97FB69018AC7DFD00800FA9 /* 2.png */,
 				C97FB69118AC7DFD00800FA9 /* 3.png */,
@@ -281,6 +284,7 @@
 				C97FB69D18AC7DFD00800FA9 /* 6.png in Resources */,
 				C97FB69B18AC7DFD00800FA9 /* 4.png in Resources */,
 				C97FB63718AC724400800FA9 /* InfoPlist.strings in Resources */,
+				C97FB6A218ACCA6F00800FA9 /* 0.png in Resources */,
 				C97FB69C18AC7DFD00800FA9 /* 5.png in Resources */,
 				C97FB69A18AC7DFD00800FA9 /* 3.png in Resources */,
 				C97FB69818AC7DFD00800FA9 /* 1.png in Resources */,
@@ -537,6 +541,7 @@
 				C97FB66018AC724400800FA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C97FB66118AC724400800FA9 /* Build configuration list for PBXNativeTarget "Color from Image Speed TestTests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +550,7 @@
 				C97FB66318AC724400800FA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

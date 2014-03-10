@@ -81,7 +81,9 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 	
 	// Create an array for all the colors
 	NSUInteger cap = size.height * size.width;
-	NSMutableArray *imgColors = [[NSMutableArray alloc] initWithCapacity:cap];
+	
+	// Groups of colors
+	NSMutableArray *groups = [[NSMutableArray alloc] initWithCapacity:4];
 	
 	// Filter possible colors
 	unsigned char *pixelData = [smallImage rgbaPixels];
@@ -91,6 +93,14 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 			unsigned char g = pixelData[(x*((int)size.width)*4)+(y*4)+1];
 			unsigned char b = pixelData[(x*((int)size.width)*4)+(y*4)+2];
 			unsigned char a = pixelData[(x*((int)size.width)*4)+(y*4)+3];
+			
+			// TODO: Use struct or minimal class?
+			// po (size_t) class_getInstanceSize ([UIImage class]);
+			// 72
+			// po po (size_t) 3 * sizeof(CGFloat)
+			// 24
+			// Potential struct is 1/3 the memory.
+			
 			UIColor *newColor = [UIColor colorWithRed:[[NSNumber numberWithUnsignedChar:r] floatValue]/255.0f
 												green:[[NSNumber numberWithUnsignedChar:g] floatValue]/255.0f
 												 blue:[[NSNumber numberWithUnsignedChar:b] floatValue]/255.0f
@@ -113,37 +123,30 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 				}
 			}
 			
+			// Assign color to a group.
 			if ( !failsTest ) {
-				[imgColors addObject:newColor];
+				NSMutableArray *bestFitGroup = nil;
+				CGFloat smallestDistance = CGFLOAT_MAX;
+				// Check every group and see if it fits in
+				for ( NSMutableArray *group in groups ) {
+					UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
+					CGFloat distance = [UIColor differenceBetweenColor:newColor
+															  andColor:groupColor];
+					if ( distance < smallestDistance ) {
+						smallestDistance = distance;
+						bestFitGroup = group;
+					}
+				}
+				
+				if ( smallestDistance < requiredMinimumContrast ) {
+					// Add to group that had highest match
+					[bestFitGroup addObject:newColor];
+				} else {
+					// Or create a new group if not within tolerance
+					NSMutableArray *newGroup = [[NSMutableArray alloc] initWithObjects:newColor, nil];
+					[groups addObject:newGroup];
+				}
 			}
-		}
-	}
-	
-	// Groups of colors
-	NSMutableArray *groups = [[NSMutableArray alloc] initWithCapacity:4];
-	
-	// Iterate over every color and add it to a group
-	for ( UIColor *eachColor in imgColors ) {
-		NSMutableArray *bestFitGroup = nil;
-		CGFloat smallestDistance = FLT_MAX;
-		// Check every group and see if it fits in
-		for ( NSMutableArray *group in groups ) {
-			UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
-			CGFloat distance = [UIColor differenceBetweenColor:eachColor
-													  andColor:groupColor];
-			if ( distance < smallestDistance ) {
-				smallestDistance = distance;
-				bestFitGroup = group;
-			}
-		}
-		
-		if ( smallestDistance < requiredMinimumContrast ) {
-			// Add to group that had highest match
-			[bestFitGroup addObject:eachColor];
-		} else {
-			// Or create a new group if not within tolerance
-			NSMutableArray *newGroup = [[NSMutableArray alloc] initWithObjects:eachColor, nil];
-			[groups addObject:newGroup];
 		}
 	}
 	

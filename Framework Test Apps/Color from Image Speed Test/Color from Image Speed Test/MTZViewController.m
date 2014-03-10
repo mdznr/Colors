@@ -27,13 +27,12 @@
 	// The methods being tested are intended to be done on the main thread.
 	// However, so many done sequentially in one thread is not intended, but is done for testing.
 	for ( int i=0; i<numberOfImages; ++i ) {
-		NSDate *begin = [NSDate date];
-		
 		NSString *imageName = [NSString stringWithFormat:@"%d", i];
 		UIImage *image = [UIImage imageNamed:imageName];
+		
+		NSDate *begin = [NSDate date];
 		UIColor *color = [image keyColorToContrastAgainstColors:@[[UIColor whiteColor]]
 											withMinimumContrast:UIColorContrastLevelLow];
-		
 		NSTimeInterval time = [[NSDate date] timeIntervalSinceDate:begin];
 		[times addObject:[NSNumber numberWithDouble:time]];
 	}

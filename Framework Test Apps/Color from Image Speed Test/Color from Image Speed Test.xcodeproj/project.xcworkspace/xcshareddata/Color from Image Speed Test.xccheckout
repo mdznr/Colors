@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>940DD039-0264-468A-95F6-3FB0FF331B53</string>
+	<string>57D23715-2B8C-465B-8C6C-DBDFE6C0AE87</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Color from Image Speed Test</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/mdznr/Colors</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Framework Test Apps/Color from Image Speed Test/Color from Image Speed Test.xcodeproj/project.xcworkspace</string>
+	<string>Color from Image Speed Test.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A7A16B1B-9264-4F25-A46D-6F4C42A073CB</key>
-		<string>../../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/mdznr/Colors</string>
@@ -28,6 +28,14 @@
 	<string>A7A16B1B-9264-4F25-A46D-6F4C42A073CB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A7A16B1B-9264-4F25-A46D-6F4C42A073CB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Color from Image Speed Test</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

@@ -78,7 +78,7 @@ withInterpolationQuality:(CGInterpolationQuality)interpolationQuality
 	CGContextSetInterpolationQuality(context, interpolationQuality);
     CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, size.width, size.height), self.CGImage);
 	
-    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
 	
     UIGraphicsEndImageContext();
 	
