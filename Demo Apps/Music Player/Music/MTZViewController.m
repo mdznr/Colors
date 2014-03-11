@@ -16,14 +16,14 @@
 
 #import <Colors/Colors.h>
 
-typedef NS_ENUM(NSUInteger, MTZMusicPlayerSongChangeDirection) {
+typedef NS_ENUM(NSInteger, MTZMusicPlayerSongChangeDirection) {
 	/// If the direction of song change in the playlist is unknown.
 	/// @discussion This will occur when first starting to play an item.
 	MTZMusicPlayerSongChangeUnknown = 0,
 	/// If the direction of song change in the playlist is forwards (i.e. the player is advancing).
-	MTZMusicPlayerSongChangeAdvance,
+	MTZMusicPlayerSongChangeAdvance = 1,
 	/// If the direction of song change in the playlist is backwards (i.e. the player is retreating).
-	MTZMusicPlayerSongChangeRetreat,
+	MTZMusicPlayerSongChangeRetreat = -1,
 };
 
 MTZMusicPlayerSongChangeDirection MTZMusicPlayerSongChangeDirectionFromIndexToIndex(NSUInteger fromIndex, NSUInteger toIndex)
@@ -272,13 +272,9 @@ MTZMusicPlayerSongChangeDirection MTZMusicPlayerSongChangeDirectionFromIndexToIn
 	NSUInteger prev = self.indexOfNowPlayingItem;
 	// Update the value.
 	self.indexOfNowPlayingItem = [_player indexOfNowPlayingItem];
-	if ( prev < self.indexOfNowPlayingItem ) {
-		// Forwards
-		NSLog(@"F");
-	} else {
-		// Backwards
-		NSLog(@"B");
-	}
+	
+	// Find the direction of track changes and use this to flip animation.
+	MTZMusicPlayerSongChangeDirection direction = MTZMusicPlayerSongChangeDirectionFromIndexToIndex(prev, self.indexOfNowPlayingItem);
 	
 	CGRect mainArtFrame = _iv.frame;
 	
@@ -286,7 +282,7 @@ MTZMusicPlayerSongChangeDirection MTZMusicPlayerSongChangeDirectionFromIndexToIn
 	albumArtworkOut.image = _iv.image;
 	[self.view addSubview:albumArtworkOut];
 	
-	UIImageView *albumArtworkIn = [[UIImageView alloc] initWithFrame:CGRectOffset(mainArtFrame, mainArtFrame.size.width, 0)];
+	UIImageView *albumArtworkIn = [[UIImageView alloc] initWithFrame:CGRectOffset(mainArtFrame, direction * mainArtFrame.size.width, 0)];
 	albumArtworkIn.image = albumArtwork;
 	[self.view addSubview:albumArtworkIn];
 	
@@ -296,7 +292,7 @@ MTZMusicPlayerSongChangeDirection MTZMusicPlayerSongChangeDirectionFromIndexToIn
 		  initialSpringVelocity:1.0f
 						options:UIViewAnimationOptionBeginFromCurrentState
 					 animations:^{
-						 albumArtworkOut.frame = CGRectOffset(mainArtFrame, -mainArtFrame.size.width, 0);
+						 albumArtworkOut.frame = CGRectOffset(mainArtFrame, direction * -mainArtFrame.size.width, 0);
 						 albumArtworkIn.frame = mainArtFrame;
 					 }
 					 completion:^(BOOL finished) {
