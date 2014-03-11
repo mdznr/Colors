@@ -17,7 +17,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <view opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" id="6HQ-ql-rs8" userLabel="Overlay View">
+                            <view opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" id="6HQ-ql-rs8" userLabel="Overlay View">
                                 <rect key="frame" x="-512" y="-384" width="2048" height="1536"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
