@@ -16,9 +16,38 @@
 
 #import <Colors/Colors.h>
 
+typedef NS_ENUM(NSUInteger, MTZMusicPlayerSongChangeDirection) {
+	/// If the direction of song change in the playlist is unknown.
+	/// @discussion This will occur when first starting to play an item.
+	MTZMusicPlayerSongChangeUnknown = 0,
+	/// If the direction of song change in the playlist is forwards (i.e. the player is advancing).
+	MTZMusicPlayerSongChangeAdvance,
+	/// If the direction of song change in the playlist is backwards (i.e. the player is retreating).
+	MTZMusicPlayerSongChangeRetreat,
+};
+
+MTZMusicPlayerSongChangeDirection MTZMusicPlayerSongChangeDirectionFromIndexToIndex(NSUInteger fromIndex, NSUInteger toIndex)
+{
+	if ( fromIndex == NSNotFound || fromIndex == toIndex ) {
+		return MTZMusicPlayerSongChangeUnknown;
+	}
+	
+	if ( toIndex > fromIndex ) {
+		return MTZMusicPlayerSongChangeAdvance;
+	} else {
+		return MTZMusicPlayerSongChangeRetreat;
+	}
+}
+
 @interface MTZViewController () <MPMediaPickerControllerDelegate>
 
 @property (strong, nonatomic) MPMusicPlayerController *player;
+
+/// The index of the currently playing item.
+/// @dicussion
+@property (nonatomic) NSUInteger indexOfNowPlayingItem;
+
+/// The primary image view for showing album artwork.
 @property (strong, nonatomic) IBOutlet UIImageView *iv;
 
 @property (weak, nonatomic) IBOutlet UIView *overlayView;
@@ -59,6 +88,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	
 	_player = [MPMusicPlayerController iPodMusicPlayer];
+	_indexOfNowPlayingItem = [_player indexOfNowPlayingItem];
 	
 	UIUserInterfaceIdiom idiom = UIDevice.currentDevice.userInterfaceIdiom;
 	switch ( idiom ) {
@@ -189,12 +219,9 @@
 
 - (void)songChanged:(id)sender
 {
-	MPMediaItem *currentItem = [_player nowPlayingItem];
-    MPMediaItemArtwork *artwork = [currentItem valueForProperty:MPMediaItemPropertyArtwork];
-	UIImage *albumArtwork = [artwork imageWithSize:CGSizeMake(320, 320)];
-    _iv.image = albumArtwork;
-	[self refreshColors];
+	[self updateAlbumArtworkAndTheme];
 	
+	MPMediaItem *currentItem = [_player nowPlayingItem];
 	NSString *trackTitle = [currentItem valueForProperty:MPMediaItemPropertyTitle];
 	if ( !trackTitle ) trackTitle = @"Song";
 	_trackTitle.text = trackTitle;
@@ -230,6 +257,66 @@
 	_trackSlider.maximumValue = playbackDuration.floatValue;
 	
 	[self updatePlaybackTime];
+}
+
+- (void)updateAlbumArtworkAndTheme
+{
+	// Get the current media item.
+	MPMediaItem *currentItem = [_player nowPlayingItem];
+	
+	// Get the artwork
+    MPMediaItemArtwork *artwork = [currentItem valueForProperty:MPMediaItemPropertyArtwork];
+	UIImage *albumArtwork = [artwork imageWithSize:CGSizeMake(320, 320)];
+	
+	// The previous value of the index.
+	NSUInteger prev = self.indexOfNowPlayingItem;
+	// Update the value.
+	self.indexOfNowPlayingItem = [_player indexOfNowPlayingItem];
+	if ( prev < self.indexOfNowPlayingItem ) {
+		// Forwards
+		NSLog(@"F");
+	} else {
+		// Backwards
+		NSLog(@"B");
+	}
+	
+	CGRect mainArtFrame = _iv.frame;
+	
+	UIImageView *albumArtworkOut = [[UIImageView alloc] initWithFrame:mainArtFrame];
+	albumArtworkOut.image = _iv.image;
+	[self.view addSubview:albumArtworkOut];
+	
+	UIImageView *albumArtworkIn = [[UIImageView alloc] initWithFrame:CGRectOffset(mainArtFrame, mainArtFrame.size.width, 0)];
+	albumArtworkIn.image = albumArtwork;
+	[self.view addSubview:albumArtworkIn];
+	
+	[UIView animateWithDuration:0.7f
+						  delay:0.0f
+		 usingSpringWithDamping:1.0f
+		  initialSpringVelocity:1.0f
+						options:UIViewAnimationOptionBeginFromCurrentState
+					 animations:^{
+						 albumArtworkOut.frame = CGRectOffset(mainArtFrame, -mainArtFrame.size.width, 0);
+						 albumArtworkIn.frame = mainArtFrame;
+					 }
+					 completion:^(BOOL finished) {
+						 [albumArtworkOut removeFromSuperview];
+						 [albumArtworkIn removeFromSuperview];
+					 }];
+	
+	_iv.image = albumArtwork;
+	
+	return;
+	
+	[UIView animateWithDuration:0.3f
+						  delay:0.0f
+						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
+					 animations:^{
+#warning does not animate changes to volume slider (iPhone)
+						 [self refreshColors];
+					 }
+					 completion:^(BOOL finished) {
+					 }];
 }
 
 - (void)updatePlaybackTime
