@@ -302,8 +302,6 @@ MTZMusicPlayerSongChangeDirection MTZMusicPlayerSongChangeDirectionFromIndexToIn
 	
 	_iv.image = albumArtwork;
 	
-	return;
-	
 	[UIView animateWithDuration:0.3f
 						  delay:0.0f
 						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
