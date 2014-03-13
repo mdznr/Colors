@@ -280,11 +280,11 @@ MTZMusicPlayerSongChangeDirection MTZMusicPlayerSongChangeDirectionFromIndexToIn
 	
 	UIImageView *albumArtworkOut = [[UIImageView alloc] initWithFrame:mainArtFrame];
 	albumArtworkOut.image = _iv.image;
-	[self.view addSubview:albumArtworkOut];
+	[self.view insertSubview:albumArtworkOut aboveSubview:_iv];
 	
 	UIImageView *albumArtworkIn = [[UIImageView alloc] initWithFrame:CGRectOffset(mainArtFrame, direction * mainArtFrame.size.width, 0)];
 	albumArtworkIn.image = albumArtwork;
-	[self.view addSubview:albumArtworkIn];
+	[self.view insertSubview:albumArtworkIn aboveSubview:_iv];
 	
 	[UIView animateWithDuration:0.7f
 						  delay:0.0f
@@ -306,7 +306,7 @@ MTZMusicPlayerSongChangeDirection MTZMusicPlayerSongChangeDirectionFromIndexToIn
 						  delay:0.0f
 						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
 					 animations:^{
-#warning does not animate changes to volume slider (iPhone)
+#warning does not *animate* tint color changes to volume slider (iPhone)
 						 [self refreshColors];
 					 }
 					 completion:^(BOOL finished) {
