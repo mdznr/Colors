@@ -174,13 +174,13 @@
 // #D7D9D8
 + (UIColor *)sGold
 {
-	return [UIColor colorWithHexString:@"D7D9D8"];
+	return [UIColor colorWithHexString:@"D4C5B3"];
 }
 
 // #D4C5B3
 + (UIColor *)sSilver
 {
-	return [UIColor colorWithHexString:@"D4C5B3"];
+	return [UIColor colorWithHexString:@"D7D9D8"];
 }
 
 @end
