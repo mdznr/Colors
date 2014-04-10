@@ -28,22 +28,24 @@ In this demo music application, key colors are grabbed from the album artwork an
 
 The code necessary for the color part of application shown above is simple. When the song changes, it calls `refreshColors:` on the now playing view controller (`_iv` is the `UIImageView` containing the album art).
 
-	- (void)refreshColors
-	{
-		UIColor *keyColor = [_iv.image keyColorToContrastAgainstColors:@[[UIColor whiteColor]]
-		                                           withMinimumContrast:UIColorContrastLevelLow];
-		if ( keyColor ) {
-			[[UIApplication sharedApplication] keyWindow].tintColor = keyColor;
-		} else {
-			UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
-			                                                                  [UIColor lightGrayColor]]
-			                                            withMinimumContrast:UIColorContrastLevelLow];
-			if ( !bg ) bg = [UIColor blackColor];
-			[[UIApplication sharedApplication] keyWindow].tintColor = [UIColor neueBlue];
-			_trackSlider.tintColor = bg;
-			_volumeSlider.tintColor = bg;
-		}
+```objc
+- (void)refreshColors
+{
+	UIColor *keyColor = [_iv.image keyColorToContrastAgainstColors:@[[UIColor whiteColor]]
+	                                           withMinimumContrast:UIColorContrastLevelLow];
+	if ( keyColor ) {
+		[[UIApplication sharedApplication] keyWindow].tintColor = keyColor;
+	} else {
+		UIColor *bg = [_iv.image backgroundColorToContrastAgainstColors:@[[UIColor whiteColor],
+		                                                                  [UIColor lightGrayColor]]
+		                                            withMinimumContrast:UIColorContrastLevelLow];
+		if ( !bg ) bg = [UIColor blackColor];
+		[[UIApplication sharedApplication] keyWindow].tintColor = [UIColor neueBlue];
+		_trackSlider.tintColor = bg;
+		_volumeSlider.tintColor = bg;
 	}
+}
+```
 
 This method will search the image for a key-color appropriate color for use on a white background. If a sufficient color is not found, it returns nil. The case where the return value is `nil` is handled by doing a search for a general background-color to contrast against the white background and be different than the light gray color of the maximum slider component (right-side of sliders). The background defaults to black in the rare case no color data is found from image. The background color can be applied to the sliders because there are no key-color requirements. The buttons must have a key color appropriate tint color, so a default blue is used in that situation.
 
@@ -109,11 +111,13 @@ If you wish to modify the framework, or are doing development on the framework i
 
 To use the Colors framework, simply add the following line to your source file:
 
-		<!-- Objective-C -->
-		#import <Colors/Colors.h>
+```objc
+#import <Colors/Colors.h>
+```
 
 You can also import individual files instead of the whole framework (for faster compile times) by doing something like:
 
-		<!-- Objective-C -->
-		#import <Colors/UIColor+NeueColors.h>
+```objc
+#import <Colors/UIColor+NeueColors.h>
+```
 
