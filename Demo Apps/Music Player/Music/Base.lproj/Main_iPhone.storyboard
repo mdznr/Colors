@@ -44,7 +44,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dac-FF-WhX" userLabel="Back Button">
-                                <rect key="frame" x="8" y="31" width="14" height="22"/>
+                                <rect key="frame" x="7" y="32" width="14" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Back"/>
                             </button>
