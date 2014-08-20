@@ -9,35 +9,15 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Documentation.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Framework.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C98259C01858BC9900BBEF49</key>
+		<key>C9E6619219A5453E00B9CDAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C98259D01858BC9900BBEF49</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C9825A291858C09400BBEF49</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C99B934F185FF02A00084ACC</key>
+		<key>C9E6619D19A5453E00B9CDAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

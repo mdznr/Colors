@@ -21,10 +21,10 @@
 		C98A5F4E1864EEC6004EDC76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98A5F301864EEC6004EDC76 /* UIKit.framework */; };
 		C98A5F561864EEC6004EDC76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C98A5F541864EEC6004EDC76 /* InfoPlist.strings */; };
 		C98A5F581864EEC6004EDC76 /* Key_Color_Acceptable_TesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F571864EEC6004EDC76 /* Key_Color_Acceptable_TesterTests.m */; };
-		C98A5F621864EF5F004EDC76 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98A5F611864EF5F004EDC76 /* Colors.framework */; };
 		C98A5F691864EF6D004EDC76 /* MTZColorSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F641864EF6D004EDC76 /* MTZColorSpaceView.m */; };
 		C98A5F6A1864EF6D004EDC76 /* MTZKeyColorSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F661864EF6D004EDC76 /* MTZKeyColorSpaceView.m */; };
 		C98A5F6B1864EF6D004EDC76 /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A5F681864EF6D004EDC76 /* MTZSlider.m */; };
+		C9E6625A19A54F0A00B9CDAF /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E6625519A54EF700B9CDAF /* Colors.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = C98A5F281864EEC5004EDC76;
 			remoteInfo = "Key Color Acceptable Tester";
+		};
+		C9E6625419A54EF700B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6624F19A54EF600B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619319A5453E00B9CDAF;
+			remoteInfo = Colors;
+		};
+		C9E6625619A54EF700B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6624F19A54EF600B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619E19A5453E00B9CDAF;
+			remoteInfo = ColorsTests;
+		};
+		C9E6625819A54F0600B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6624F19A54EF600B9CDAF /* Colors.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C9E6619219A5453E00B9CDAF;
+			remoteInfo = Colors;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -57,13 +78,13 @@
 		C98A5F531864EEC6004EDC76 /* Key Color Acceptable TesterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Key Color Acceptable TesterTests-Info.plist"; sourceTree = "<group>"; };
 		C98A5F551864EEC6004EDC76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C98A5F571864EEC6004EDC76 /* Key_Color_Acceptable_TesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Key_Color_Acceptable_TesterTests.m; sourceTree = "<group>"; };
-		C98A5F611864EF5F004EDC76 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C98A5F631864EF6D004EDC76 /* MTZColorSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZColorSpaceView.h; sourceTree = "<group>"; };
 		C98A5F641864EF6D004EDC76 /* MTZColorSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZColorSpaceView.m; sourceTree = "<group>"; };
 		C98A5F651864EF6D004EDC76 /* MTZKeyColorSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZKeyColorSpaceView.h; sourceTree = "<group>"; };
 		C98A5F661864EF6D004EDC76 /* MTZKeyColorSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZKeyColorSpaceView.m; sourceTree = "<group>"; };
 		C98A5F671864EF6D004EDC76 /* MTZSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlider.h; sourceTree = "<group>"; };
 		C98A5F681864EF6D004EDC76 /* MTZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlider.m; sourceTree = "<group>"; };
+		C9E6624F19A54EF600B9CDAF /* Colors.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Colors.xcodeproj; path = "../../Framework Project/Colors.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E6625A19A54F0A00B9CDAF /* Colors.framework in Frameworks */,
 				C98A5F2F1864EEC6004EDC76 /* CoreGraphics.framework in Frameworks */,
 				C98A5F311864EEC6004EDC76 /* UIKit.framework in Frameworks */,
-				C98A5F621864EF5F004EDC76 /* Colors.framework in Frameworks */,
 				C98A5F2D1864EEC6004EDC76 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +115,7 @@
 		C98A5F201864EEC5004EDC76 = {
 			isa = PBXGroup;
 			children = (
+				C9E6624F19A54EF600B9CDAF /* Colors.xcodeproj */,
 				C98A5F321864EEC6004EDC76 /* Key Color Acceptable Tester */,
 				C98A5F511864EEC6004EDC76 /* Key Color Acceptable TesterTests */,
 				C98A5F2B1864EEC5004EDC76 /* Frameworks */,
@@ -113,7 +135,6 @@
 		C98A5F2B1864EEC5004EDC76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C98A5F611864EF5F004EDC76 /* Colors.framework */,
 				C98A5F2C1864EEC6004EDC76 /* Foundation.framework */,
 				C98A5F2E1864EEC6004EDC76 /* CoreGraphics.framework */,
 				C98A5F301864EEC6004EDC76 /* UIKit.framework */,
@@ -171,6 +192,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C9E6625019A54EF600B9CDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6625519A54EF700B9CDAF /* Colors.framework */,
+				C9E6625719A54EF700B9CDAF /* ColorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,6 +215,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C9E6625919A54F0600B9CDAF /* PBXTargetDependency */,
 			);
 			name = "Key Color Acceptable Tester";
 			productName = "Key Color Acceptable Tester";
@@ -235,6 +266,12 @@
 			mainGroup = C98A5F201864EEC5004EDC76;
 			productRefGroup = C98A5F2A1864EEC5004EDC76 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C9E6625019A54EF600B9CDAF /* Products */;
+					ProjectRef = C9E6624F19A54EF600B9CDAF /* Colors.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C98A5F281864EEC5004EDC76 /* Key Color Acceptable Tester */,
@@ -242,6 +279,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C9E6625519A54EF700B9CDAF /* Colors.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Colors.framework;
+			remoteRef = C9E6625419A54EF700B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9E6625719A54EF700B9CDAF /* ColorsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ColorsTests.xctest;
+			remoteRef = C9E6625619A54EF700B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C98A5F271864EEC5004EDC76 /* Resources */ = {
@@ -293,6 +347,11 @@
 			isa = PBXTargetDependency;
 			target = C98A5F281864EEC5004EDC76 /* Key Color Acceptable Tester */;
 			targetProxy = C98A5F4F1864EEC6004EDC76 /* PBXContainerItemProxy */;
+		};
+		C9E6625919A54F0600B9CDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Colors;
+			targetProxy = C9E6625819A54F0600B9CDAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -499,6 +558,7 @@
 				C98A5F5D1864EEC6004EDC76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C98A5F5E1864EEC6004EDC76 /* Build configuration list for PBXNativeTarget "Key Color Acceptable TesterTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +567,7 @@
 				C98A5F601864EEC6004EDC76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

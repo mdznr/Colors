@@ -22,7 +22,6 @@
 		C97FB65118AC724400800FA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FB63018AC724400800FA9 /* UIKit.framework */; };
 		C97FB65918AC724400800FA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C97FB65718AC724400800FA9 /* InfoPlist.strings */; };
 		C97FB65B18AC724400800FA9 /* Color_from_Image_Speed_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C97FB65A18AC724400800FA9 /* Color_from_Image_Speed_TestTests.m */; };
-		C97FB66518AC738300800FA9 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FB66418AC738300800FA9 /* Colors.framework */; };
 		C97FB69818AC7DFD00800FA9 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C97FB68F18AC7DFD00800FA9 /* 1.png */; };
 		C97FB69918AC7DFD00800FA9 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C97FB69018AC7DFD00800FA9 /* 2.png */; };
 		C97FB69A18AC7DFD00800FA9 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = C97FB69118AC7DFD00800FA9 /* 3.png */; };
@@ -33,6 +32,7 @@
 		C97FB69F18AC7DFD00800FA9 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = C97FB69618AC7DFD00800FA9 /* 8.png */; };
 		C97FB6A018AC7DFD00800FA9 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = C97FB69718AC7DFD00800FA9 /* 9.png */; };
 		C97FB6A218ACCA6F00800FA9 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = C97FB6A118ACCA6F00800FA9 /* 0.png */; };
+		C9E6622E19A54E4900B9CDAF /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E6622B19A54E2B00B9CDAF /* Colors.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = C97FB62818AC724400800FA9;
 			remoteInfo = "Color from Image Speed Test";
+		};
+		C9E6622A19A54E2B00B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6622519A54E2A00B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619319A5453E00B9CDAF;
+			remoteInfo = Colors;
+		};
+		C9E6622C19A54E2B00B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6622519A54E2A00B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619E19A5453E00B9CDAF;
+			remoteInfo = ColorsTests;
+		};
+		C9E6622F19A54E4E00B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6622519A54E2A00B9CDAF /* Colors.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C9E6619219A5453E00B9CDAF;
+			remoteInfo = Colors;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -66,7 +87,6 @@
 		C97FB65618AC724400800FA9 /* Color from Image Speed TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Color from Image Speed TestTests-Info.plist"; sourceTree = "<group>"; };
 		C97FB65818AC724400800FA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C97FB65A18AC724400800FA9 /* Color_from_Image_Speed_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Color_from_Image_Speed_TestTests.m; sourceTree = "<group>"; };
-		C97FB66418AC738300800FA9 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Colors-eivpwhqdjueizohfinevpkzbuqmu/Build/Products/Debug-iphoneos/Colors.framework"; sourceTree = "<group>"; };
 		C97FB68F18AC7DFD00800FA9 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		C97FB69018AC7DFD00800FA9 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		C97FB69118AC7DFD00800FA9 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
@@ -77,6 +97,7 @@
 		C97FB69618AC7DFD00800FA9 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		C97FB69718AC7DFD00800FA9 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		C97FB6A118ACCA6F00800FA9 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		C9E6622519A54E2A00B9CDAF /* Colors.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Colors.xcodeproj; path = "../../Framework Project/Colors.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +105,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E6622E19A54E4900B9CDAF /* Colors.framework in Frameworks */,
 				C97FB62F18AC724400800FA9 /* CoreGraphics.framework in Frameworks */,
 				C97FB63118AC724400800FA9 /* UIKit.framework in Frameworks */,
-				C97FB66518AC738300800FA9 /* Colors.framework in Frameworks */,
 				C97FB62D18AC724400800FA9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +128,7 @@
 		C97FB62018AC724400800FA9 = {
 			isa = PBXGroup;
 			children = (
+				C9E6622519A54E2A00B9CDAF /* Colors.xcodeproj */,
 				C97FB63218AC724400800FA9 /* Color from Image Speed Test */,
 				C97FB65418AC724400800FA9 /* Color from Image Speed TestTests */,
 				C97FB62B18AC724400800FA9 /* Frameworks */,
@@ -126,7 +148,6 @@
 		C97FB62B18AC724400800FA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C97FB66418AC738300800FA9 /* Colors.framework */,
 				C97FB62C18AC724400800FA9 /* Foundation.framework */,
 				C97FB62E18AC724400800FA9 /* CoreGraphics.framework */,
 				C97FB63018AC724400800FA9 /* UIKit.framework */,
@@ -197,6 +218,15 @@
 			path = "Test Images";
 			sourceTree = SOURCE_ROOT;
 		};
+		C9E6622619A54E2A00B9CDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6622B19A54E2B00B9CDAF /* Colors.framework */,
+				C9E6622D19A54E2B00B9CDAF /* ColorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +241,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C9E6623019A54E4E00B9CDAF /* PBXTargetDependency */,
 			);
 			name = "Color from Image Speed Test";
 			productName = "Color from Image Speed Test";
@@ -261,6 +292,12 @@
 			mainGroup = C97FB62018AC724400800FA9;
 			productRefGroup = C97FB62A18AC724400800FA9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C9E6622619A54E2A00B9CDAF /* Products */;
+					ProjectRef = C9E6622519A54E2A00B9CDAF /* Colors.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C97FB62818AC724400800FA9 /* Color from Image Speed Test */,
@@ -268,6 +305,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C9E6622B19A54E2B00B9CDAF /* Colors.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Colors.framework;
+			remoteRef = C9E6622A19A54E2B00B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9E6622D19A54E2B00B9CDAF /* ColorsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ColorsTests.xctest;
+			remoteRef = C9E6622C19A54E2B00B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C97FB62718AC724400800FA9 /* Resources */ = {
@@ -327,6 +381,11 @@
 			isa = PBXTargetDependency;
 			target = C97FB62818AC724400800FA9 /* Color from Image Speed Test */;
 			targetProxy = C97FB65218AC724400800FA9 /* PBXContainerItemProxy */;
+		};
+		C9E6623019A54E4E00B9CDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Colors;
+			targetProxy = C9E6622F19A54E4E00B9CDAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

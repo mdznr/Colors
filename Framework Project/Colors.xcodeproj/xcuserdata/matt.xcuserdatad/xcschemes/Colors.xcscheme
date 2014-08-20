@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C98259C01858BC9900BBEF49"
-               BuildableName = "libColors.a"
+               BlueprintIdentifier = "C9E6619219A5453E00B9CDAF"
+               BuildableName = "Colors.framework"
                BlueprintName = "Colors"
                ReferencedContainer = "container:Colors.xcodeproj">
             </BuildableReference>
@@ -32,13 +32,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C98259D01858BC9900BBEF49"
+               BlueprintIdentifier = "C9E6619D19A5453E00B9CDAF"
                BuildableName = "ColorsTests.xctest"
                BlueprintName = "ColorsTests"
                ReferencedContainer = "container:Colors.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C9E6619219A5453E00B9CDAF"
+            BuildableName = "Colors.framework"
+            BlueprintName = "Colors"
+            ReferencedContainer = "container:Colors.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -49,6 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C9E6619219A5453E00B9CDAF"
+            BuildableName = "Colors.framework"
+            BlueprintName = "Colors"
+            ReferencedContainer = "container:Colors.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -58,6 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C9E6619219A5453E00B9CDAF"
+            BuildableName = "Colors.framework"
+            BlueprintName = "Colors"
+            ReferencedContainer = "container:Colors.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

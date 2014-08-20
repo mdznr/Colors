@@ -24,9 +24,9 @@
 		C9A50476185FCE7700EF9BB5 /* MusicTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A50475185FCE7700EF9BB5 /* MusicTests-Info.plist */; };
 		C9C1830417F2C2CC005AF9A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */; };
 		C9DC876918625B250012D26C /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC876818625B250012D26C /* MarqueeLabel.m */; };
+		C9E6623619A54E6700B9CDAF /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E6621F19A54DF200B9CDAF /* Colors.framework */; };
 		C9F6A726185FCE8C00B749D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9F6A724185FCE8C00B749D9 /* InfoPlist.strings */; };
 		C9F6A727185FCEA700B749D9 /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A50473185FCE7000EF9BB5 /* MusicTests.m */; };
-		C9F6A72B185FE85200B749D9 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F6A72A185FE85200B749D9 /* Colors.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,27 @@
 			containerPortal = C926216F17D51C250095AE1C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C926217617D51C250095AE1C;
+			remoteInfo = Colors;
+		};
+		C9E6621E19A54DF200B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6620719A54D7B00B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619319A5453E00B9CDAF;
+			remoteInfo = Colors;
+		};
+		C9E6622019A54DF200B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6620719A54D7B00B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619E19A5453E00B9CDAF;
+			remoteInfo = ColorsTests;
+		};
+		C9E6623219A54E6400B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6620719A54D7B00B9CDAF /* Colors.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C9E6619219A5453E00B9CDAF;
 			remoteInfo = Colors;
 		};
 /* End PBXContainerItemProxy section */
@@ -64,8 +85,8 @@
 		C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C9DC876718625B240012D26C /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarqueeLabel.h; path = Music/MarqueeLabel.h; sourceTree = SOURCE_ROOT; };
 		C9DC876818625B250012D26C /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarqueeLabel.m; path = Music/MarqueeLabel.m; sourceTree = SOURCE_ROOT; };
+		C9E6620719A54D7B00B9CDAF /* Colors.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Colors.xcodeproj; path = "../../Framework Project/Colors.xcodeproj"; sourceTree = "<group>"; };
 		C9F6A725185FCE8C00B749D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = MusicTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		C9F6A72A185FE85200B749D9 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +94,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E6623619A54E6700B9CDAF /* Colors.framework in Frameworks */,
 				C9C1830417F2C2CC005AF9A3 /* MediaPlayer.framework in Frameworks */,
 				C926217D17D51C250095AE1C /* CoreGraphics.framework in Frameworks */,
-				C9F6A72B185FE85200B749D9 /* Colors.framework in Frameworks */,
 				C926217F17D51C250095AE1C /* UIKit.framework in Frameworks */,
 				C926217B17D51C250095AE1C /* Foundation.framework in Frameworks */,
 			);
@@ -97,6 +118,7 @@
 		C926216E17D51C250095AE1C = {
 			isa = PBXGroup;
 			children = (
+				C9E6620719A54D7B00B9CDAF /* Colors.xcodeproj */,
 				C926218017D51C250095AE1C /* Music */,
 				C92621A217D51C250095AE1C /* MusicTests */,
 				C926217917D51C250095AE1C /* Frameworks */,
@@ -116,7 +138,6 @@
 		C926217917D51C250095AE1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9F6A72A185FE85200B749D9 /* Colors.framework */,
 				C9C1830317F2C2CC005AF9A3 /* MediaPlayer.framework */,
 				C926217A17D51C250095AE1C /* Foundation.framework */,
 				C926217C17D51C250095AE1C /* CoreGraphics.framework */,
@@ -176,6 +197,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C9E6621A19A54DF200B9CDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6621F19A54DF200B9CDAF /* Colors.framework */,
+				C9E6622119A54DF200B9CDAF /* ColorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,6 +220,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C9E6623319A54E6400B9CDAF /* PBXTargetDependency */,
 			);
 			name = Music;
 			productName = Colors;
@@ -248,6 +279,12 @@
 			mainGroup = C926216E17D51C250095AE1C;
 			productRefGroup = C926217817D51C250095AE1C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C9E6621A19A54DF200B9CDAF /* Products */;
+					ProjectRef = C9E6620719A54D7B00B9CDAF /* Colors.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C926217617D51C250095AE1C /* Music */,
@@ -255,6 +292,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C9E6621F19A54DF200B9CDAF /* Colors.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Colors.framework;
+			remoteRef = C9E6621E19A54DF200B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9E6622119A54DF200B9CDAF /* ColorsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ColorsTests.xctest;
+			remoteRef = C9E6622019A54DF200B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C926217517D51C250095AE1C /* Resources */ = {
@@ -307,6 +361,11 @@
 			isa = PBXTargetDependency;
 			target = C926217617D51C250095AE1C /* Music */;
 			targetProxy = C92621A017D51C250095AE1C /* PBXContainerItemProxy */;
+		};
+		C9E6623319A54E6400B9CDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Colors;
+			targetProxy = C9E6623219A54E6400B9CDAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

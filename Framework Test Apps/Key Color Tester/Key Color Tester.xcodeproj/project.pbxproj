@@ -21,9 +21,9 @@
 		C9CAC9091863EAFF00291CD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAC8EB1863EAFF00291CD2 /* UIKit.framework */; };
 		C9CAC9111863EAFF00291CD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9CAC90F1863EAFF00291CD2 /* InfoPlist.strings */; };
 		C9CAC9131863EAFF00291CD2 /* Key_Color_TesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAC9121863EAFF00291CD2 /* Key_Color_TesterTests.m */; };
-		C9CAC91D1863EB4F00291CD2 /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAC91C1863EB4F00291CD2 /* Colors.framework */; };
 		C9CAC9221863EB6900291CD2 /* MTZColorSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAC91F1863EB6900291CD2 /* MTZColorSpaceView.m */; };
 		C9CAC9231863EB6900291CD2 /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAC9211863EB6900291CD2 /* MTZSlider.m */; };
+		C9E6626619A54F4400B9CDAF /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E6626119A54F3C00B9CDAF /* Colors.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = C9CAC8E31863EAFF00291CD2;
 			remoteInfo = "Key Color Tester";
+		};
+		C9E6626019A54F3C00B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6625B19A54F3C00B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619319A5453E00B9CDAF;
+			remoteInfo = Colors;
+		};
+		C9E6626219A54F3C00B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6625B19A54F3C00B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619E19A5453E00B9CDAF;
+			remoteInfo = ColorsTests;
+		};
+		C9E6626419A54F4100B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6625B19A54F3C00B9CDAF /* Colors.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C9E6619219A5453E00B9CDAF;
+			remoteInfo = Colors;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -56,11 +77,11 @@
 		C9CAC90E1863EAFF00291CD2 /* Key Color TesterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Key Color TesterTests-Info.plist"; sourceTree = "<group>"; };
 		C9CAC9101863EAFF00291CD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9CAC9121863EAFF00291CD2 /* Key_Color_TesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Key_Color_TesterTests.m; sourceTree = "<group>"; };
-		C9CAC91C1863EB4F00291CD2 /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C9CAC91E1863EB6900291CD2 /* MTZColorSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZColorSpaceView.h; sourceTree = "<group>"; };
 		C9CAC91F1863EB6900291CD2 /* MTZColorSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZColorSpaceView.m; sourceTree = "<group>"; };
 		C9CAC9201863EB6900291CD2 /* MTZSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlider.h; sourceTree = "<group>"; };
 		C9CAC9211863EB6900291CD2 /* MTZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlider.m; sourceTree = "<group>"; };
+		C9E6625B19A54F3C00B9CDAF /* Colors.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Colors.xcodeproj; path = "../../Framework Project/Colors.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +89,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E6626619A54F4400B9CDAF /* Colors.framework in Frameworks */,
 				C9CAC8EA1863EAFF00291CD2 /* CoreGraphics.framework in Frameworks */,
 				C9CAC8EC1863EAFF00291CD2 /* UIKit.framework in Frameworks */,
-				C9CAC91D1863EB4F00291CD2 /* Colors.framework in Frameworks */,
 				C9CAC8E81863EAFF00291CD2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +112,7 @@
 		C9CAC8DB1863EAFF00291CD2 = {
 			isa = PBXGroup;
 			children = (
+				C9E6625B19A54F3C00B9CDAF /* Colors.xcodeproj */,
 				C9CAC8ED1863EAFF00291CD2 /* Key Color Tester */,
 				C9CAC90C1863EAFF00291CD2 /* Key Color TesterTests */,
 				C9CAC8E61863EAFF00291CD2 /* Frameworks */,
@@ -110,7 +132,6 @@
 		C9CAC8E61863EAFF00291CD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9CAC91C1863EB4F00291CD2 /* Colors.framework */,
 				C9CAC8E71863EAFF00291CD2 /* Foundation.framework */,
 				C9CAC8E91863EAFF00291CD2 /* CoreGraphics.framework */,
 				C9CAC8EB1863EAFF00291CD2 /* UIKit.framework */,
@@ -166,6 +187,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C9E6625C19A54F3C00B9CDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6626119A54F3C00B9CDAF /* Colors.framework */,
+				C9E6626319A54F3C00B9CDAF /* ColorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,6 +210,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C9E6626519A54F4100B9CDAF /* PBXTargetDependency */,
 			);
 			name = "Key Color Tester";
 			productName = "Key Color Tester";
@@ -230,6 +261,12 @@
 			mainGroup = C9CAC8DB1863EAFF00291CD2;
 			productRefGroup = C9CAC8E51863EAFF00291CD2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C9E6625C19A54F3C00B9CDAF /* Products */;
+					ProjectRef = C9E6625B19A54F3C00B9CDAF /* Colors.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C9CAC8E31863EAFF00291CD2 /* Key Color Tester */,
@@ -237,6 +274,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C9E6626119A54F3C00B9CDAF /* Colors.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Colors.framework;
+			remoteRef = C9E6626019A54F3C00B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9E6626319A54F3C00B9CDAF /* ColorsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ColorsTests.xctest;
+			remoteRef = C9E6626219A54F3C00B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C9CAC8E21863EAFF00291CD2 /* Resources */ = {
@@ -287,6 +341,11 @@
 			isa = PBXTargetDependency;
 			target = C9CAC8E31863EAFF00291CD2 /* Key Color Tester */;
 			targetProxy = C9CAC90A1863EAFF00291CD2 /* PBXContainerItemProxy */;
+		};
+		C9E6626519A54F4100B9CDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Colors;
+			targetProxy = C9E6626419A54F4100B9CDAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C95100F7185A494A0059E76C /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95100F6185A494A0059E76C /* Colors.framework */; };
 		C95BF5FD183854C700B1B69F /* AppRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF5FC183854C700B1B69F /* AppRecord.m */; };
 		C95BF6001838565E00B1B69F /* MTZAppRecordDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF5FF1838565E00B1B69F /* MTZAppRecordDownloader.m */; };
 		C95BF6061838778200B1B69F /* MTZStarsRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C95BF6051838778200B1B69F /* MTZStarsRatingView.m */; };
@@ -38,6 +37,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C9E6621519A54DD000B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E661FB19A5483800B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619319A5453E00B9CDAF;
+			remoteInfo = Colors;
+		};
+		C9E6621719A54DD000B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E661FB19A5483800B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619E19A5453E00B9CDAF;
+			remoteInfo = ColorsTests;
+		};
 		C9FBE11F1836799200F1DEF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9FBE0EE1836799200F1DEF5 /* Project object */;
@@ -48,7 +61,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C95100F6185A494A0059E76C /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C95BF5FB183854C700B1B69F /* AppRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRecord.h; sourceTree = "<group>"; };
 		C95BF5FC183854C700B1B69F /* AppRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRecord.m; sourceTree = "<group>"; };
 		C95BF5FE1838565E00B1B69F /* MTZAppRecordDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZAppRecordDownloader.h; sourceTree = "<group>"; };
@@ -71,6 +83,7 @@
 		C9BD2C0A1839DE3C006BBA5C /* ScreenshotDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenshotDownloader.m; sourceTree = "<group>"; };
 		C9BD2C0F1839ECCB006BBA5C /* MTZScrollingCardsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZScrollingCardsView.h; sourceTree = "<group>"; };
 		C9BD2C101839ECCB006BBA5C /* MTZScrollingCardsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZScrollingCardsView.m; sourceTree = "<group>"; };
+		C9E661FB19A5483800B9CDAF /* Colors.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Colors.xcodeproj; path = "../../Framework Project/Colors.xcodeproj"; sourceTree = "<group>"; };
 		C9FBE0F61836799200F1DEF5 /* AppStoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FBE0F91836799200F1DEF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,7 +116,6 @@
 			files = (
 				C9FBE0FC1836799200F1DEF5 /* CoreGraphics.framework in Frameworks */,
 				C9FBE0FE1836799200F1DEF5 /* UIKit.framework in Frameworks */,
-				C95100F7185A494A0059E76C /* Colors.framework in Frameworks */,
 				C9FBE0FA1836799200F1DEF5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,9 +148,19 @@
 			name = "Rewritten Action and Alert";
 			sourceTree = "<group>";
 		};
+		C9E6621119A54DD000B9CDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6621619A54DD000B9CDAF /* Colors.framework */,
+				C9E6621819A54DD000B9CDAF /* ColorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C9FBE0ED1836799200F1DEF5 = {
 			isa = PBXGroup;
 			children = (
+				C9E661FB19A5483800B9CDAF /* Colors.xcodeproj */,
 				C9FBE0FF1836799200F1DEF5 /* AppStoreSearch */,
 				C9FBE1211836799200F1DEF5 /* AppStoreSearchTests */,
 				C9FBE0F81836799200F1DEF5 /* Frameworks */,
@@ -158,7 +180,6 @@
 		C9FBE0F81836799200F1DEF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C95100F6185A494A0059E76C /* Colors.framework */,
 				C9FBE0F91836799200F1DEF5 /* Foundation.framework */,
 				C9FBE0FB1836799200F1DEF5 /* CoreGraphics.framework */,
 				C9FBE0FD1836799200F1DEF5 /* UIKit.framework */,
@@ -277,6 +298,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Matt Zanchelli";
 				TargetAttributes = {
+					C9FBE0F51836799200F1DEF5 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
 					C9FBE1191836799200F1DEF5 = {
 						TestTargetID = C9FBE0F51836799200F1DEF5;
 					};
@@ -293,6 +321,12 @@
 			mainGroup = C9FBE0ED1836799200F1DEF5;
 			productRefGroup = C9FBE0F71836799200F1DEF5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C9E6621119A54DD000B9CDAF /* Products */;
+					ProjectRef = C9E661FB19A5483800B9CDAF /* Colors.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C9FBE0F51836799200F1DEF5 /* AppStoreSearch */,
@@ -300,6 +334,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C9E6621619A54DD000B9CDAF /* Colors.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Colors.framework;
+			remoteRef = C9E6621519A54DD000B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9E6621819A54DD000B9CDAF /* ColorsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ColorsTests.xctest;
+			remoteRef = C9E6621719A54DD000B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C9FBE0F41836799200F1DEF5 /* Resources */ = {
@@ -467,6 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/matt/Dropbox/github/Colors,
@@ -498,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/matt/Dropbox/github/Colors,

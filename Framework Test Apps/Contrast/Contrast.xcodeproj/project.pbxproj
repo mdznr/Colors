@@ -22,8 +22,8 @@
 		C99B9387186002D300084ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B9366186002D300084ACC /* UIKit.framework */; };
 		C99B938F186002D300084ACC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C99B938D186002D300084ACC /* InfoPlist.strings */; };
 		C99B9391186002D300084ACC /* ContrastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C99B9390186002D300084ACC /* ContrastTests.m */; };
-		C99B939B1860032900084ACC /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B939A1860032900084ACC /* Colors.framework */; };
 		C99B93A1186003F600084ACC /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C99B93A0186003F600084ACC /* MTZSlider.m */; };
+		C9E6624E19A54EBA00B9CDAF /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E6624919A54EB100B9CDAF /* Colors.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = C99B935E186002D300084ACC;
 			remoteInfo = Contrast;
+		};
+		C9E6624819A54EB100B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6624319A54EB100B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619319A5453E00B9CDAF;
+			remoteInfo = Colors;
+		};
+		C9E6624A19A54EB100B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6624319A54EB100B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619E19A5453E00B9CDAF;
+			remoteInfo = ColorsTests;
+		};
+		C9E6624C19A54EB700B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6624319A54EB100B9CDAF /* Colors.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C9E6619219A5453E00B9CDAF;
+			remoteInfo = Colors;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -57,9 +78,9 @@
 		C99B938C186002D300084ACC /* ContrastTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContrastTests-Info.plist"; sourceTree = "<group>"; };
 		C99B938E186002D300084ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C99B9390186002D300084ACC /* ContrastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContrastTests.m; sourceTree = "<group>"; };
-		C99B939A1860032900084ACC /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C99B939F186003F600084ACC /* MTZSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlider.h; sourceTree = "<group>"; };
 		C99B93A0186003F600084ACC /* MTZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlider.m; sourceTree = "<group>"; };
+		C9E6624319A54EB100B9CDAF /* Colors.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Colors.xcodeproj; path = "../../Framework Project/Colors.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E6624E19A54EBA00B9CDAF /* Colors.framework in Frameworks */,
 				C99B9365186002D300084ACC /* CoreGraphics.framework in Frameworks */,
 				C99B9367186002D300084ACC /* UIKit.framework in Frameworks */,
-				C99B939B1860032900084ACC /* Colors.framework in Frameworks */,
 				C99B9363186002D300084ACC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +111,7 @@
 		C99B9356186002D300084ACC = {
 			isa = PBXGroup;
 			children = (
+				C9E6624319A54EB100B9CDAF /* Colors.xcodeproj */,
 				C99B9368186002D300084ACC /* Contrast */,
 				C99B938A186002D300084ACC /* ContrastTests */,
 				C99B9361186002D300084ACC /* Frameworks */,
@@ -109,7 +131,6 @@
 		C99B9361186002D300084ACC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C99B939A1860032900084ACC /* Colors.framework */,
 				C99B9362186002D300084ACC /* Foundation.framework */,
 				C99B9364186002D300084ACC /* CoreGraphics.framework */,
 				C99B9366186002D300084ACC /* UIKit.framework */,
@@ -164,6 +185,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C9E6624419A54EB100B9CDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6624919A54EB100B9CDAF /* Colors.framework */,
+				C9E6624B19A54EB100B9CDAF /* ColorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,6 +208,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C9E6624D19A54EB700B9CDAF /* PBXTargetDependency */,
 			);
 			name = Contrast;
 			productName = Contrast;
@@ -228,6 +259,12 @@
 			mainGroup = C99B9356186002D300084ACC;
 			productRefGroup = C99B9360186002D300084ACC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C9E6624419A54EB100B9CDAF /* Products */;
+					ProjectRef = C9E6624319A54EB100B9CDAF /* Colors.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C99B935E186002D300084ACC /* Contrast */,
@@ -235,6 +272,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C9E6624919A54EB100B9CDAF /* Colors.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Colors.framework;
+			remoteRef = C9E6624819A54EB100B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9E6624B19A54EB100B9CDAF /* ColorsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ColorsTests.xctest;
+			remoteRef = C9E6624A19A54EB100B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C99B935D186002D300084ACC /* Resources */ = {
@@ -285,6 +339,11 @@
 			isa = PBXTargetDependency;
 			target = C99B935E186002D300084ACC /* Contrast */;
 			targetProxy = C99B9388186002D300084ACC /* PBXContainerItemProxy */;
+		};
+		C9E6624D19A54EB700B9CDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Colors;
+			targetProxy = C9E6624C19A54EB700B9CDAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

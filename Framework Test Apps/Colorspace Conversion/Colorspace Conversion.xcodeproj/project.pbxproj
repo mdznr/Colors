@@ -22,8 +22,8 @@
 		C99B93D51860072B00084ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B93B41860072B00084ACC /* UIKit.framework */; };
 		C99B93DD1860072B00084ACC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C99B93DB1860072B00084ACC /* InfoPlist.strings */; };
 		C99B93DF1860072B00084ACC /* Colorspace_ConversionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C99B93DE1860072B00084ACC /* Colorspace_ConversionTests.m */; };
-		C99B93E91860075800084ACC /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99B93E81860075800084ACC /* Colors.framework */; };
 		C99B93EC1860079600084ACC /* MTZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C99B93EB1860079600084ACC /* MTZSlider.m */; };
+		C9E6624219A54E9800B9CDAF /* Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E6623D19A54E9100B9CDAF /* Colors.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = C99B93AC1860072B00084ACC;
 			remoteInfo = "Colorspace Conversion";
+		};
+		C9E6623C19A54E9100B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6623719A54E9100B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619319A5453E00B9CDAF;
+			remoteInfo = Colors;
+		};
+		C9E6623E19A54E9100B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6623719A54E9100B9CDAF /* Colors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E6619E19A5453E00B9CDAF;
+			remoteInfo = ColorsTests;
+		};
+		C9E6624019A54E9600B9CDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E6623719A54E9100B9CDAF /* Colors.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C9E6619219A5453E00B9CDAF;
+			remoteInfo = Colors;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -57,9 +78,9 @@
 		C99B93DA1860072B00084ACC /* Colorspace ConversionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colorspace ConversionTests-Info.plist"; sourceTree = "<group>"; };
 		C99B93DC1860072B00084ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C99B93DE1860072B00084ACC /* Colorspace_ConversionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Colorspace_ConversionTests.m; sourceTree = "<group>"; };
-		C99B93E81860075800084ACC /* Colors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Colors.framework; path = ../../Colors.framework; sourceTree = "<group>"; };
 		C99B93EA1860079600084ACC /* MTZSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZSlider.h; sourceTree = "<group>"; };
 		C99B93EB1860079600084ACC /* MTZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZSlider.m; sourceTree = "<group>"; };
+		C9E6623719A54E9100B9CDAF /* Colors.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Colors.xcodeproj; path = "../../Framework Project/Colors.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E6624219A54E9800B9CDAF /* Colors.framework in Frameworks */,
 				C99B93B31860072B00084ACC /* CoreGraphics.framework in Frameworks */,
 				C99B93B51860072B00084ACC /* UIKit.framework in Frameworks */,
-				C99B93E91860075800084ACC /* Colors.framework in Frameworks */,
 				C99B93B11860072B00084ACC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +111,7 @@
 		C99B93A41860072B00084ACC = {
 			isa = PBXGroup;
 			children = (
+				C9E6623719A54E9100B9CDAF /* Colors.xcodeproj */,
 				C99B93B61860072B00084ACC /* Colorspace Conversion */,
 				C99B93D81860072B00084ACC /* Colorspace ConversionTests */,
 				C99B93AF1860072B00084ACC /* Frameworks */,
@@ -109,7 +131,6 @@
 		C99B93AF1860072B00084ACC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C99B93E81860075800084ACC /* Colors.framework */,
 				C99B93B01860072B00084ACC /* Foundation.framework */,
 				C99B93B21860072B00084ACC /* CoreGraphics.framework */,
 				C99B93B41860072B00084ACC /* UIKit.framework */,
@@ -164,6 +185,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C9E6623819A54E9100B9CDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6623D19A54E9100B9CDAF /* Colors.framework */,
+				C9E6623F19A54E9100B9CDAF /* ColorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,6 +208,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C9E6624119A54E9600B9CDAF /* PBXTargetDependency */,
 			);
 			name = "Colorspace Conversion";
 			productName = "Colorspace Conversion";
@@ -228,6 +259,12 @@
 			mainGroup = C99B93A41860072B00084ACC;
 			productRefGroup = C99B93AE1860072B00084ACC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C9E6623819A54E9100B9CDAF /* Products */;
+					ProjectRef = C9E6623719A54E9100B9CDAF /* Colors.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C99B93AC1860072B00084ACC /* Colorspace Conversion */,
@@ -235,6 +272,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C9E6623D19A54E9100B9CDAF /* Colors.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Colors.framework;
+			remoteRef = C9E6623C19A54E9100B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9E6623F19A54E9100B9CDAF /* ColorsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ColorsTests.xctest;
+			remoteRef = C9E6623E19A54E9100B9CDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C99B93AB1860072B00084ACC /* Resources */ = {
@@ -285,6 +339,11 @@
 			isa = PBXTargetDependency;
 			target = C99B93AC1860072B00084ACC /* Colorspace Conversion */;
 			targetProxy = C99B93D61860072B00084ACC /* PBXContainerItemProxy */;
+		};
+		C9E6624119A54E9600B9CDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Colors;
+			targetProxy = C9E6624019A54E9600B9CDAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

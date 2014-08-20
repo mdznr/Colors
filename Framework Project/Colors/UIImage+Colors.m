@@ -20,7 +20,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 {
 	// Values based off of "Just noticeable difference" of 2.3. Value determined by Mahy et al. (1994)
 	CGFloat JND = 2.3f;
-	switch ( contrast ) {
+	switch (contrast) {
 		case UIColorContrastLevelLow:    return JND * 8;
 		case UIColorContrastLevelMedium: return JND * 16;
 		case UIColorContrastLevelHigh:   return JND * 24;
@@ -79,16 +79,18 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 	UIImage *smallImage = [self scaleToSize:size
 				   withInterpolationQuality:kCGInterpolationLow];
 	
+	/*
 	// Create an array for all the colors
 	NSUInteger cap = size.height * size.width;
+	*/
 	
 	// Groups of colors
 	NSMutableArray *groups = [[NSMutableArray alloc] initWithCapacity:4];
 	
 	// Filter possible colors
 	unsigned char *pixelData = [smallImage rgbaPixels];
-	for ( unsigned int x=0; x < size.height; ++x ) {
-		for ( unsigned int y=0; y < size.width; ++y ) {
+	for (unsigned int x=0; x < size.height; ++x) {
+		for (unsigned int y=0; y < size.width; ++y) {
 			unsigned char r = pixelData[(x*((int)size.width)*4)+(y*4)];
 			unsigned char g = pixelData[(x*((int)size.width)*4)+(y*4)+1];
 			unsigned char b = pixelData[(x*((int)size.width)*4)+(y*4)+2];
@@ -108,37 +110,37 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 			
 			// Make sure it is a key color, if desired
 			// Checks for required brightness and saturation levels
-			if ( keyColor && ![newColor isKeyColorAppropriate] ) {
+			if (keyColor && ![newColor isKeyColorAppropriate]) {
 				continue;
 			}
 			
 			// Make sure it contrasts enough with the desired color and has enough saturation
 			BOOL failsTest = NO;
-			for ( UIColor *color in colors ) {
+			for (UIColor *color in colors) {
 				CGFloat distance = [UIColor differenceBetweenColor:newColor
 														  andColor:color];
-				if ( distance < requiredMinimumContrast ) {
+				if (distance < requiredMinimumContrast) {
 					failsTest = YES;
 					break;
 				}
 			}
 			
 			// Assign color to a group.
-			if ( !failsTest ) {
+			if (!failsTest) {
 				NSMutableArray *bestFitGroup = nil;
 				CGFloat smallestDistance = CGFLOAT_MAX;
 				// Check every group and see if it fits in
-				for ( NSMutableArray *group in groups ) {
+				for (NSMutableArray *group in groups) {
 					UIColor *groupColor = (UIColor *)[group objectAtIndex:0];
 					CGFloat distance = [UIColor differenceBetweenColor:newColor
 															  andColor:groupColor];
-					if ( distance < smallestDistance ) {
+					if (distance < smallestDistance) {
 						smallestDistance = distance;
 						bestFitGroup = group;
 					}
 				}
 				
-				if ( smallestDistance < requiredMinimumContrast ) {
+				if (smallestDistance < requiredMinimumContrast) {
 					// Add to group that had highest match
 					[bestFitGroup addObject:newColor];
 				} else {
@@ -151,7 +153,9 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 	}
 	
 	// Return nil if there aren't any buckets.
-	if ( !groups.count ) return nil;
+	if (!groups.count) {
+		return nil;
+	}
 	
 	// Sort groups of color in descending order of size
 	[groups sortWithOptions:NSSortConcurrent
@@ -164,7 +168,7 @@ CGFloat getContrastLevel(UIColorContrast contrast)
 	CGFloat L = 0.0f;
 	CGFloat a = 0.0f;
 	CGFloat b = 0.0f;
-	for ( UIColor *eachColor in group ) {
+	for (UIColor *eachColor in group) {
 		L += [eachColor CIELab_LValue];
 		a += [eachColor CIELab_aValue];
 		b += [eachColor CIELab_bValue];
